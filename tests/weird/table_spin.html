@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tests/Table~Border</title>
+        <meta charset="UTF-8"/>
+        <style>
+            @keyframes spin {0%{transform:rotate(0deg) translateY(-50%) translateX(-50%);}100%{transform:rotate(360deg) translateY(-50%) translateX(-50%);}}
+            body {animation-name:spin;animation-duration:2s;animation-iteration-count:infinite;animation-timing-function:linear;position:absolute;top:50%;left:50%;transform-origin:0% 0%;}
+            html {height:100%;width:100%;}
+        </style>
+    </head>
+    <body>
+        <h1>Table Spin</h1>
+        <table align="center" border="1">
+            <thead>
+                <tr>
+                    <th>Collumn 1</th>
+                    <th>Collumn 2</th>
+                    <th>Collumn 3</th>
+                    <th>Collumn 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                </tr>
+                <tr>
+                    <td>Cell 5</td>
+                    <td>Cell 6</td>
+                    <td>Cell 7</td>
+                    <td>Cell 8</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- yea... -->
+    </body>
+</html>
