@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Make a Good Kaizo Level (maglx3)</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body>
+    <table border="2">
+      <tr>
+        <th>Video</th>
+        <th>Level Name</th>
+      </tr>
+      <tr>
+        <td>
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/N_da0M6S4d8">
+          </iframe>
+        </td>
+        <td>No Hiding in Bullet Heaven</td>
+      </tr>
+      <tr>
+        <td>
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/hf0qn3yF9ic">
+          </iframe>
+        </td>
+        <td>SQUAWK by Nerx</td>
+      </tr>
+      <tr>
+        <td>
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/pbkBhr8LDkM">
+          </iframe>
+        </td>
+        <td>ULTRAVIOLE[N]T by Sturg</td>
+      </tr>
+    </table>
+  </body>
+</html>
