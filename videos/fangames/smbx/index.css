@@ -1,3 +1,4 @@
 th {background:black;color:white;}
 td:nth-child(2) {width:428px;text-align:center;font-size:20pt;}
+td:nth-child(3) {width:428px;text-align:center;font-size:20pt;}
 table {margin-inline-start:auto;margin-inline-end:auto;}
