@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Banjo-Kazooie 100%</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://mechdragon777.github.io/stylesheets/video.css"/>
+    <script src="https://mechdragon777.github.io/youtube.js" async></script>
+  </head>
+  <body>
+    <h2></h2>
+    <table border="2">
+      <tr>
+        <th>Video</th>
+        <th>Part</th>
+      </tr>
+      <tr>
+        <td><youtube href="https://www.youtube.com/watch?v=-58u8dX9pGk&list=PLCTSSl-SSV4myqkOhtynH-ph2PfgckD76&index=2"></youtube></td>
+        <td>1 Mumbo's Mountain</td>
+      </tr>
+      <tr>
+        <td><youtube href="https://www.youtube.com/watch?v=NYfAFpAhU5w&list=PLCTSSl-SSV4myqkOhtynH-ph2PfgckD76&index=2"></youtube></td>
+        <td>2 Treasure Trove Cove</td>
+      </tr>
+      <tr>
+        <td><youtube href="https://www.youtube.com/watch?v=mroEkAsws54&list=PLCTSSl-SSV4myqkOhtynH-ph2PfgckD76&index=3"></youtube></td>
+        <td>3 Clanker's Cavern and Bubblegloop Swamp</td>
+      </tr>
+      <tr>
+        <td><youtube href="https://www.youtube.com/watch?v=HrYOil6ybPQ&list=PLCTSSl-SSV4myqkOhtynH-ph2PfgckD76&index=4"></youtube></td>
+        <td>4 Freezeey Peak</td>
+      </tr>
+      <tr>
+        <td><youtube href="https://www.youtube.com/watch?v=f5_4cmdSNuM&list=PLCTSSl-SSV4myqkOhtynH-ph2PfgckD76&index=5"></youtube></td>
+        <td>5 Gobi's Valley</td>
+      </tr>
+      <tr>
+        <td><youtube href="https://www.youtube.com/watch?v=7XPZ1TjRO5s&list=PLCTSSl-SSV4myqkOhtynH-ph2PfgckD76&index=6"></youtube></td>
+        <td>6 Mad Monster Mansion</td>
+      </tr>
+      <tr>
+        <td><youtube href="https://www.youtube.com/watch?v=l9vI8cJJsis&list=PLCTSSl-SSV4myqkOhtynH-ph2PfgckD76&index=7"></youtube></td>
+        <td>7 Rusty Bucket Bay</td>
+      </tr>
+      <tr>
+        <td><youtube href="https://www.youtube.com/watch?v=MEFChmqHMXw&list=PLCTSSl-SSV4myqkOhtynH-ph2PfgckD76&index=8"></youtube></td>
+        <td>8 Click Clock Wood</td>
+      </tr>
+      <tr>
+        <td><youtube href="https://www.youtube.com/watch?v=AyFSt28ElEI&list=PLCTSSl-SSV4myqkOhtynH-ph2PfgckD76&index=9"></youtube></td>
+        <td> 9 Finallé</td>
+      </tr>
+    </table>
+  </body>
+</html>
