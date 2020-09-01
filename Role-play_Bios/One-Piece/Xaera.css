@@ -83,7 +83,7 @@ tr.white-row td:first-child {
 
 /* Current/active navbar link */
 .active {
-  background-color: #fa94dd;
+  background-color: #f8f8f8;
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
