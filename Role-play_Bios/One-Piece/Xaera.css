@@ -93,3 +93,28 @@ tr.white-row td:first-child {
     display: block;
   }
 }
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  height: 20;
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.xlevel {width: 11%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
+.xtp {width: 11%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
+.xstr {width: 7%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
+.xagi {width: 8%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
+.xper {width: 8%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
+.xint {width: 9%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
+.xend {width: 6%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
