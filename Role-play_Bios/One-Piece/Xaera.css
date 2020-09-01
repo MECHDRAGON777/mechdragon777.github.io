@@ -118,3 +118,11 @@ tr.white-row td:first-child {
 .xper {width: 8%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
 .xint {width: 9%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
 .xend {width: 6%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
+
+.x2level {width: 67%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
+.x2tp {width: 67%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
+.x2str {width: 67%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
+.x2agi {width: 67%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
+.x2per {width: 67%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
+.x2int {width: 67%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
+.x2end {width: 67%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
