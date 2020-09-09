@@ -128,32 +128,18 @@ ul.circle {
 /* Make sure that padding behaves as expected */
 * {box-sizing:border-box}
 
-/* Container for skill bars */
-.container {
-  width: 100%; /* Full width */
-  height: 20;
-  background-color: #ddd; /* Grey background */
+span {
+  display: inline-block;
+  text-align: right;
+  margin: 8px;
 }
 
-.skills {
-  text-align: right; /* Right-align text */
-  padding-top: 10px; /* Add top padding */
-  padding-bottom: 10px; /* Add bottom padding */
-  color: white; /* White text color */
+.flipH {
+  transform: scale(-1, 1);
+  color: #000000;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
-
-.xlevel {width: 11%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
-.xtp {width: 11%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
-.xstr {width: 7%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
-.xagi {width: 8%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
-.xper {width: 8%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
-.xint {width: 9%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
-.xend {width: 6%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
-
-.x2level {width: 73%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
-.x2tp {width: 73%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
-.x2str {width: 58%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
-.x2agi {width: 75%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
-.x2per {width: 67%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
-.x2int {width: 75%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
-.x2end {width: 92%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
