@@ -1,0 +1,159 @@
+/* page styles */
+body {
+    background-attachment: fixed;
+    background-size: cover;
+	background-color: #daeef3;
+	color:#000000;
+	margin-left:15vw;
+	margin-right:15vw;
+	font-family: Garamond
+}
+
+/* style overrides */
+h1 {
+	margin-top:0px;
+	color: #1f497d
+}
+h2 {
+	margin-top:0px;
+	color: #365d91;
+	margin-bottom: 0px;
+	margin-left: 8px;
+}
+
+ul {
+	margin-left: 15px;
+	margin-top: 0px;
+}
+
+/* table styles */
+table {
+  font-family: Garamond, serif;
+  border-collapse: collapse;
+  width: 99%;
+}
+
+td, th {
+  border: 1px solid #9bbb59;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #bbcace;
+}
+/* content styles */
+hr {
+	border:none;
+	height:1px;
+	background-color:#9bbb59;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+.p {
+	margin-left: 8px;
+}
+
+.p2 {
+	color:#008000;
+	margin-left: 8px;
+}
+
+.p3 {
+	color:#ff0000;
+	margin-left: 8px;
+}
+
+.outerb {
+	border-style: solid;
+	border:2px solid #5a89c2;
+}
+.outerm {
+	border-style: solid;
+	border: 4px solid #366092;
+}
+.outeri {
+	border-style: solid;
+	border: 2px solid #1f3754;
+}
+
+ul.circle {
+  list-style-type: circle;
+}
+
+.indent {
+	margin-left: 8px;
+	text-indent: 50px;
+}
+
+.center {
+	text-align: center;
+}
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #fa94dd;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: #442200;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #f8f8f8;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #f8f8f8;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  height: 20;
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.xlevel {width: 11%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
+.xtp {width: 11%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
+.xstr {width: 7%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
+.xagi {width: 8%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
+.xper {width: 8%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
+.xint {width: 9%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
+.xend {width: 6%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
+
+.x2level {width: 73%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
+.x2tp {width: 73%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
+.x2str {width: 58%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
+.x2agi {width: 75%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
+.x2per {width: 67%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
+.x2int {width: 75%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
+.x2end {width: 92%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
