@@ -99,7 +99,7 @@ tr.white-row td:first-child {
 
 /* Container for skill bars */
 .container {
-  width: 100%; /* Full width */
+  width: 50%; /* Full width */
   height: 20;
   background-color: #ddd; /* Grey background */
 }
