@@ -23,6 +23,13 @@
 		  {x: "Int", value: 12},
 		  {x: "End", value: 10},
 		 ];
+        var data2 = [
+		  {x: "Str", value: 9},
+		  {x: "Agi", value: 8},
+		  {x: "Per", value: 8},
+		  {x: "Int", value: 12},
+		  {x: "End", value: 8},
+		 ];
 		 // create radar chart
 		var chart = anychart.radar();
 
@@ -37,12 +44,18 @@
 
 		// create first series
 		chart.line(data1)
+	      
+		// create second series
+		chart.line(data2)
 		
 		// color alternating cells
 		chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
 
 		// create first series
-		chart.area(data1).name('Xæra Dhyleo Lambdadelta').markers(true).fill("#E55934", 0.3).stroke("#E55934")
+		chart.area(data1).name('Xæra Dhyleo Lambdadelta Current').markers(true).fill("#E55934", 0.3).stroke("#E55934")
+		
+	      	// create first series
+		chart.area(data1).name('Xæra Dhyleo Lambdadelta Previous').markers(true).fill("#852917", 0.3).stroke("#852917")
 
 		// set container id for the chart
 		chart.container('container');
