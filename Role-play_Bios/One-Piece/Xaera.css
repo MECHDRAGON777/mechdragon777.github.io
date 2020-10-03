@@ -99,25 +99,34 @@ tr.white-row td:first-child {
 
 /* Container for skill bars */
 .container {
-  width: 50%; /* Full width */
-  height: 20;
+  width: 73%; /* Full width */
+  height: 10;
+  border-radius: 5px;
+  background-color: #ddd; /* Grey background */
+}
+
+.containerH {
+  width: 58%; /* Full width */
+  height: 10;
+  border-radius: 5px;
   background-color: #ddd; /* Grey background */
 }
 
 .skills {
   text-align: right; /* Right-align text */
-  padding-top: 10px; /* Add top padding */
-  padding-bottom: 10px; /* Add bottom padding */
+  padding-top: 5px; /* Add top padding */
+  padding-bottom: 5px; /* Add bottom padding */
   color: white; /* White text color */
 }
 
-.xlevel {width: 18%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
-.xtp {width: 23%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
-.xstr {width: 18%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
-.xagi {width: 20%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
-.xper {width: 13%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
-.xint {width: 23%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
-.xend {width: 17%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
+.xlevel {width: 21%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xtp {width: 28%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xstr {width: 18%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xagi {width: 23%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xper {width: 17%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xint {width: 25%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xend {width: 20%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xwill {width: 1%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 
 .x2level {width: 73%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
 .x2tp {width: 73%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
