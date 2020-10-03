@@ -16,19 +16,14 @@
     <div id="container"></div>
     <script>
       anychart.onDocumentReady(function () {
-        var data1 = [
-		  {x: "Str", value: 11},
-		  {x: "Agi", value: 12},
-		  {x: "Per", value: 8},
-		  {x: "Int", value: 14},
-		  {x: "End", value: 10},
-		 ];
-        var data2 = [
-		  {x: "Str", value: 11},
-		  {x: "Agi", value: 12},
-		  {x: "Per", value: 8},
-		  {x: "Int", value: 12},
-		  {x: "End", value: 10},
+
+		var data1 = [
+			{x: "Lv", value: 12},
+			{x: "Str", value: 11},
+			{x: "Agi", value: 14},
+			{x: "Per", value: 10},
+			{x: "Int", value: 15},
+			{x: "End", value: 12},
 		 ];
 		 // create radar chart
 		var chart = anychart.radar();
@@ -39,23 +34,17 @@
 		// set chart yScale settings
 		chart.yScale()
 		  .minimum(5)
-		  .maximum(15)
+		  .maximum(20)
 		  .ticks({'interval':5});
 
 		// create first series
 		chart.line(data1)
-	      
-		// create second series
-		chart.line(data2)
 		
 		// color alternating cells
 		chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
 
 		// create first series
-		chart.area(data1).name('Xæra Dhyleo Lambdadelta Current').markers(true).fill("#E55934", 0.3).stroke("#E55934")
-		
-	      	// create second series
-		chart.area(data2).name('Xæra Dhyleo Lambdadelta Previous').markers(true).fill("#888888", 0.4).stroke("#852917")
+		chart.area(data1).name('Xæra Dhyleo Lambdadelta').markers(true).fill("#8888E5", 0.3).stroke("#8888E5")
 
 		// set container id for the chart
 		chart.container('container');
