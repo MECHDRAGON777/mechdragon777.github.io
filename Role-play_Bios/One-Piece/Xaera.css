@@ -119,10 +119,10 @@ tr.white-row td:first-child {
   color: white; /* White text color */
 }
 
-.xlevel {width: 21%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xtp {width: 28%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xstr {width: 18%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xagi {width: 23%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xlevel {width: 22%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xtp {width: 30%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xstr {width: 20%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xagi {width: 27%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xper {width: 17%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xint {width: 25%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xend {width: 20%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
