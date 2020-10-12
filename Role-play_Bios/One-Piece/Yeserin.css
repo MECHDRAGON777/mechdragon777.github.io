@@ -106,15 +106,16 @@ tr.white-row td:first-child {
 
 .skills {
   text-align: right; /* Right-align text */
-  padding-top: 10px; /* Add top padding */
-  padding-bottom: 10px; /* Add bottom padding */
+  padding-top: 5px; /* Add top padding */
+  padding-bottom: 5px; /* Add bottom padding */
   color: white; /* White text color */
 }
 
-.ylevel {width: 8%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
-.ytp {width: 8%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
-.ystr {width: 17%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
-.yagi {width: 12%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
-.yper {width: 3%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
-.yint {width: 3%; height: 20; background-color: #fa94dd; color: #442200;} /* Red */
-.yend {width: 3%; height: 20; background-color: #fa94dd; color: #442200;} /* Dark Grey */
+.ylevel {width: 8%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.ytp {width: 8%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.ystr {width: 17%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.yagi {width: 12%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.yper {width: 3%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.yint {width: 3%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.yend {width: 3%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.ywill {width: 1%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
