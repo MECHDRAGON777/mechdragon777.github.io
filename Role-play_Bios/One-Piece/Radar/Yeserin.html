@@ -19,11 +19,19 @@
 
 		var data1 = [
 			{x: "Lv", value: 5},
-			{x: "Str", value: 7},
+			{x: "Str", value: 10},
 			{x: "Agi", value: 7},
 			{x: "Per", value: 7},
 			{x: "Int", value: 2},
 			{x: "End", value: 2},
+		 ];
+		var data2 = [
+			{x: "Lv", value: 5},
+			{x: "Str", value: 13},
+			{x: "Agi", value: 9},
+			{x: "Per", value: 9},
+			{x: "Int", value: 1},
+			{x: "End", value: 3},
 		 ];
 		 // create radar chart
 		var chart = anychart.radar();
@@ -34,17 +42,17 @@
 		// set chart yScale settings
 		chart.yScale()
 		  .minimum(0)
-		  .maximum(10)
+		  .maximum(15)
 		  .ticks({'interval':5});
 
 		// create first series
-		chart.line(data1)
 		
 		// color alternating cells
 		chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
 
 		// create first series
-		chart.area(data1).name('Yeserin Zeanenne Arya Xynophis').markers(true).fill("#8888E5", 0.3).stroke("#8888E5")
+		chart.area(data1).name('Yeserin Zeanenne Arya Xynophis (Standard)').markers(true).fill("#8888E5", 0.3).stroke("#8888E5")
+		chart.area(data2).name('Yeserin Zeanenne Arya Xynophis (Full Moon/Sulong)').markers(true).fill("#8888E5", 0.3).stroke("#8888E5")
 
 		// set container id for the chart
 		chart.container('container');
