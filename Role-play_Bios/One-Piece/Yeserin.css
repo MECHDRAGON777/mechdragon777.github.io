@@ -100,7 +100,7 @@ tr.white-row td:first-child {
 /* Container for skill bars */
 .container {
   width: 50%; /* Full width */
-  height: 20;
+  height: 10;
   background-color: #ddd; /* Grey background */
 }
 
@@ -111,9 +111,9 @@ tr.white-row td:first-child {
   color: white; /* White text color */
 }
 
-.ylevel {width: 8%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.ytp {width: 8%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.ystr {width: 17%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.ylevel {width: 5%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.ytp {width: 12%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.ystr {width: 22%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .yagi {width: 12%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .yper {width: 3%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .yint {width: 3%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
