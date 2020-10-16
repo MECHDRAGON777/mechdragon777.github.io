@@ -111,11 +111,11 @@ tr.white-row td:first-child {
   color: white; /* White text color */
 }
 
-.ylevel {width: 10%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.ylevel {width: 11%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .ytp {width: 12%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.ystr {width: 22%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.yagi {width: 12%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.yper {width: 3%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.ystr {width: 25%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.yagi {width: 13%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.yper {width: 12%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .yint {width: 3%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .yend {width: 3%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .ywill {width: 1%; height: 10; background-color: #fa94dd; color: #442200; border-radius: 5px;}
