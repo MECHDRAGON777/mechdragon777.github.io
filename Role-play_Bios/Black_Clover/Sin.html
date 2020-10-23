@@ -1,0 +1,241 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Sin Ix</title>
+		<link rel="stylesheet" href="Sin.css">
+		<div class="navbar">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>			
+			<a href="#Abilities"> Abilities</a>
+			<a href="#Spells"> Spells</a>
+			<a href="#Backstory"> Backstory</a>
+			<a href="#Trivia"> Trivia</a>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="images/logo.png" alt="Logo" width="500px">
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Sin Ix</th>
+            </tr>
+			<tr class="pink-row">
+				<td>
+				<button onclick="show_div_fun('Human'); hide_div_fun('Changeling');" style="text-align: center; padding: 12px; background-color: #fa94dd; bordercolor: #fa94dd; color: #442200; text-decoration: none; font-size: 17px;"> Human</button>
+				</td>
+				<td>
+				<button onclick="hide_div_fun('Human'); show_div_fun('Changeling');" style="text-align: center; padding: 12px; background-color: #fa94dd; bordercolor: #fa94dd; color: #442200; text-decoration: none; font-size: 17px;"> Changeling</button>
+				</td>
+			</td>
+            <tr>
+                <td colspan="2">
+					<div id="Human" style="display:none">
+						<img src="images/Sin Ix Human.png" alt="Sin Ix" width="359px">
+					</div>
+					<div id="Changeling" style="display:block">
+						<img src="images/Sin Ix Changeling.png" alt="Sin Ix" width="359px">
+					</div>
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td>シン イックス</td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>Shin Ikkusu</td>
+            </tr>
+			<tr class="white-row">
+				<td>Affiliation:</td>
+				<td>Tota</td>
+			</tr>
+			<tr class="white-row">
+				<td>Occupation:</td>
+				<td>N/A</td>
+			<tr>
+			<tr class="white-row">
+				<td>Residence:</td>
+				<td>Tota</td>
+			</tr>
+			<tr class="white-row">
+				<td>Alias:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Status:</td>
+				<td>Alive</td>
+			</tr>
+			<tr class="white-row">
+				<td>Age:</td>
+				<td>Biological: 16</td>
+			</tr>
+			<tr class="white-row">
+				<td>Birthday:</td>
+				<td>Febuary 29th</td>
+			</tr>
+			<tr class="white-row">
+				<td>Height:</td>
+				<td>
+					5'3"
+					<br>
+					160 Cm
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Weight:</td>
+				<td>
+					100 Lbs 
+					<br>
+					45 Kg
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Blood Type:</td>
+				<td>AB+</td>
+			</tr>
+			<tr class="white-row">
+				<td>Afinity:</td>
+				<td>
+					Spacial
+					<br>
+					Water
+				</td>
+			</tr>
+        </table>
+		<div class="indent">
+			<h1 id="Demographics">♣️[ Demographics ]♣️</h1>
+			<br>
+			<div><strong>Name:</strong> Sin Ix</div>
+			<div><strong>Age:</strong> 16</div>
+			<div><strong>Gender:</strong> ♀</div>
+			<div><strong>Race:</strong> Changeling Hybrid</div>
+			<div><strong>Birthdate:</strong> February 29th</div>
+			<div><strong>Birthplace:</strong> Tota</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<h1 id="Physical Details">♣️[ Physical Details ]♣️</h1>
+			<br>
+			<div><strong>Height:</strong> 5’3 (160 Cm)</div>
+			<div><strong>Weight:</strong> 100 Lbs (45Kg)</div>
+			<div><strong>Blood Type:</strong> AB+</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<h1 id="Personal Details">♣️[ Personal Details ]♣️</h1>
+			<br>
+			<div><strong>Personality:</strong> Sin is a changeling that is a bit too friendly for her own good. Often social and is easy to be friends with, despite being a changeling who you would expect to trick and steal from you.</div>
+			<br>
+			<div><strong>Appearance:</strong> While in her True Form/Changeling Form, her skin becomes paler and the pupils of her eyes fade to white. Her Human form is near identical with her Changeling form besides of the obvious racial features. For being a Changeling Hybrid, she is more proud of her Changeling half and tends to not care which form she is in. Her Human appearance reflects this as the only differences is that her eyes are have color. Red and Blue heterochromia to be specific. Sin's skin is also less pale to the extent of a normal human's while in her human form. She wears a more military based long-sleeved shirt regardless of her form and dresses like the people of Tota otherwise.</div>
+			<br>
+			<div><strong>Aspiration(s):</strong> To prove she can be a magic knight, despite not being human.</div>
+			<div>
+				<strong>Likes:</strong>
+				<ul>
+					<li><em>Food and Drinks:</em> Fancy dishes</li>
+					<li><em>Colors:</em> Black, Gray, White</li>
+					<li><em>Animals:</em> Anti-Birds</li>
+					<li><em>Hobbies:</em> Travel</li>
+				</ul>
+			</div>
+
+			<div>
+				<strong>Likes:</strong>
+				<ul>
+					<li><em>Food and Drinks:</em> “Commoner food”</li>
+					<li><em>Colors:</em> bright colors such as pink and blue.</li>
+					<li><em>Animals:</em> N/A</li>
+					<li><em>Distastes:</em>  Racial Discrimination</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<h1 id="Affiliation">♣[ Affiliation ]♣</h1>
+			<br>
+			<div><strong>Magic Knight Squad:</strong> N/A</div>
+			<div><strong>Occupation:</strong> N/A</div>
+			<div><strong>Rank:</strong> N/A</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<h1 id="Abilities">♣[ Abilities ]♣</h1>
+			<br>
+			<div><strong>Attribute Name:</strong> Spacial Magic</div>
+			<div><strong>Description:</strong> This magic attribute allows the user to manipulate space at will. Most often, this magic takes the form of portals or doorways that connect two different locations. When two Spatial Magic spells clash, they explosively cancel each other out.</div>
+			<div><strong>Grimoire:</strong> Three Leaf</div>
+			<div><strong>Strengths:</strong> Teleportaion</div>
+			<div><strong>Weaknesses:</strong> Not well versed in fighting faster opponents.</div>
+			<br>
+			<div><strong>Attribute Name:</strong> Water Magic</div>
+			<div><strong>Description:</strong> This magic attribute allows the user to generate and manipulate water at will.</div>
+			<div><strong>Strengths:</strong> Great Power and Range</div>
+			<div><strong>Weaknesses:</strong> Not well versed in close-quarters combat.</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<h1 id="Spells">♣[ Spells ]♣</h1>
+			<br>
+			<div><strong>Spell’s name:</strong> Spacial Creation Magic: Fallen Angel Gate</div>
+			<div><strong>Spell’s description:</strong> <a href="https://blackclover.fandom.com/wiki/Fallen_Angel_Gate">Wiki</a></div>
+			<div><strong>Spell’s weakness:</strong> <a href="https://blackclover.fandom.com/wiki/Fallen_Angel_Gate">Wiki</a></div>
+			<br>
+			<div><strong>Spell’s name:</strong> Spacial Creation Magic: Fallen Angel Flapping</div>
+			<div><strong>Spell’s description:</strong> <a href="https://blackclover.fandom.com/wiki/Fallen_Angel_Flapping">Wiki</a></div>
+			<div><strong>Spell’s weakness:</strong> <a href="https://blackclover.fandom.com/wiki/Fallen_Angel_Gate">Wiki</a></div>
+			<br>
+			<div><strong>Spell’s name:</strong> Spacial Binding Magic: Fallen Angel Eternal Loop</div>
+			<div><strong>Spell’s description:</strong> Creates a Spacial Magic sphere around a target which will fall endlessly from one end of the sphere to the other.</div>
+			<div><strong>Spell’s weakness:</strong> Other Spacial Magic; Contact Activation.</div>
+			<br>
+			<div><strong>Spell’s name:</strong> Spacial Creation Magic: Archangel Gatling</div>
+			<div><strong>Spell’s description:</strong> Stronger version of "Fallen Angel Flapping" based on "<a href="https://blackclover.fandom.com/wiki/Archangel_Shootdown">Archangel Shootdown</a>". If any Spacial-Magic Orb hits the target, forcefuly teleports them somewhere the user has been.</div>
+			<div><strong>Spell’s weakness:</strong> While a lot of Spacial Orbs are hard to dodge, they are slow moving</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<h1 id="Backstory">♣[ Backstory ]♣</h1>
+			<h2><u><em>Early Life</em></u></h2>
+			<div style="text-indent: 24px;">While growing up in Tota, her Parents did not often get along.</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<h1 id="Trivia">♣[ Trivia ]♣</h1>
+			<div class="backstoryindent"></div>
+		</div>
+		<hr>
+	</body>
+</html>
