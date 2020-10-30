@@ -16,12 +16,12 @@
 				  {x: "End", value: 12},
 			   ];
 			  var data2 = [
-				  {x: "Lv", value: 16},
+				  {x: "Lv", value: 17},
 				  {x: "Str", value: 16},
-				  {x: "Agi", value: 20},
-				  {x: "Per", value: 12},
+				  {x: "Agi", value: 22},
+				  {x: "Per", value: 15},
 				  {x: "Int", value: 20},
-				  {x: "End", value: 12},
+				  {x: "End", value: 15},
 			   ];
 			   // create radar chart
 			  var chart = anychart.radar();
@@ -32,8 +32,8 @@
 			  // set chart yScale settings
 			  chart.yScale()
 				.minimum(0)
-				.maximum(20)
-				.ticks({'interval':10});
+				.maximum(25)
+				.ticks({'interval':15});
 	  
 			  // create first series
 			  chart.line(data1)
@@ -142,12 +142,12 @@
 		<div class="indent">
             <div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:250px; width:25%;"></div>
 			<h1 id="Statistics">[ Statistics ]</h1>
-			<div><strong>Level:</strong> 16 [80 AP]
+			<div><strong>Level:</strong> 17 [88 AP]
 				<div class="container">
 					<div class="skills xlevel"></div>
 				</div>
 			</div>
-			<div><strong>Technique Points (TP):</strong> 16+6 (2 Remaining)
+			<div><strong>Technique Points (TP):</strong> 17+8 (5 Remaining)
 				<div class="container">
 					<div class="skills xtp"></div>
 				</div>
@@ -157,12 +157,12 @@
 					<div class="skills xstr"></div>
 				</div>
 			</div>
-			<div><strong>Agility:</strong> 20
+			<div><strong>Agility:</strong> 22
 				<div class="container">
 					<div class="skills xagi"></div>
 				</div>
 			</div>
-			<div><strong>Perception:</strong> 12
+			<div><strong>Perception:</strong> 15
 				<div class="container">
 					<div class="skills xper"></div>
 				</div>
@@ -172,7 +172,7 @@
 					<div class="skills xint"></div>
 				</div>
 			</div>
-			<div><strong>Endurance:</strong> 12
+			<div><strong>Endurance:</strong> 15
 				<div class="container">
 					<div class="skills xend"></div>
 				</div>
