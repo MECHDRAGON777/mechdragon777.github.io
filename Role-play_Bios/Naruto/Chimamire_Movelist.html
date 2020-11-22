@@ -1,0 +1,451 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Chimamire Chinoike Moves</title>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  var data1 = [
+				  {x: "Lvl", value: 10},
+				  {x: "Str", value: 12},
+				  {x: "Agi", value: 10},
+				  {x: "Per", value: 6},
+				  {x: "Int", value: 10},
+				  {x: "End", value: 12},
+				  {x: "C.Con", value: 10},
+				  {x: "C.Pool", value: 11},
+				  {x: "C.Pot", value: 11},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(15)
+				.ticks({'interval':5});
+	  
+			  // create first series
+			  chart.line(data1)
+			  
+			  // color alternating cells
+			  chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
+	  
+			  // create first series
+			  chart.area(data1).name('Chimamire Chinoike').markers(true).fill("#8888E5", 0.3).stroke("#8888E5")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+		<link rel="stylesheet" href="Chimamire.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Statistics"> Statistics</a>
+			<a href="https://mechdragon777.github.io/Role-play_Bios/Naruto/Chimamire.html"> Character Bio</a>
+			<a class="active" href="https://mechdragon777.github.io/Role-play_Bios/Naruto/Chimamire_Movelist.html"> Movelist</a>
+		</div>
+		<hr>
+		<div class="center">
+			<img src="images/image1.png" alt="Logo">
+		</div>
+		<hr>
+		<table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Chimamire Chinoike</th>
+			</tr>
+			<tr class="white-row">
+				<td>E-Tier:</td>
+                <td>4</td>
+            </tr>
+			<tr class="white-row">
+                <td>D-Tier:</td>
+                <td>0</td>
+            </tr>
+			<tr class="white-row">
+                <td>C-Tier:</td>
+                <td>0</td>
+            </tr>
+			<tr class="white-row">
+                <td>B-Tier:</td>
+                <td>0</td>
+            </tr>
+			<tr class="white-row">
+                <td>A-Tier:</td>
+                <td>0</td>
+            </tr>
+			<tr class="white-row">
+                <td>S-Tier:</td>
+                <td>0</td>
+            </tr>
+		</table>
+		<div class="indent">
+			<h1 id="Demographics">[ Demographics ]</h1>
+			<div><strong>Name:</strong> Chimamire Chinoike</div>
+			<div><strong>Rank:</strong> Genin</div>
+			<div><strong>Grade:</strong> D- </div>
+			<div><strong>Weapons:</strong> Broken Katana</div>
+			<div><strong>Inventory:</strong> N/A</div>
+		</div>
+		<hr>
+		<div class="indent">
+            <div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:250px; width:25%;"></div>
+			<h1 id="Statistics">[ Statistics ]</h1>
+			<div><strong>Level:</strong> 10 [50 AP]
+				<div class="container">
+					<div class="skills clevel"></div>
+				</div>
+			</div>
+			<div><strong>Skill Points (SP):</strong> 10+0-4 (6 Remaining)
+				<div class="container">
+					<div class="skills csp"></div>
+				</div>
+			</div>
+			<div><strong>Strength:</strong> 21
+				<div class="container">
+					<div class="skills cstr"></div>
+				</div>
+			</div>
+			<div><strong>Agility:</strong> 22
+				<div class="container">
+					<div class="skills cagi"></div>
+				</div>
+			</div>
+			<div><strong>Perception:</strong> 15
+				<div class="container">
+					<div class="skills cper"></div>
+				</div>
+			</div>
+			<div><strong>Intellect:</strong> 20
+				<div class="container">
+					<div class="skills cint"></div>
+				</div>
+			</div>
+			<div><strong>Endurance:</strong> 15
+				<div class="container">
+					<div class="skills cend"></div>
+				</div>
+			</div>
+			<div><strong>Chakra Control:</strong> 10
+				<div class="container">
+					<div class="skills ccontrol"></div>
+				</div>
+			</div>
+			<div><strong>Chakra Pool:</strong> 11
+				<div class="container">
+					<div class="skills cpool"></div>
+				</div>
+			</div>
+			<div><strong>Chakra Potency:</strong> 11
+				<div class="container">
+					<div class="skills cpotency"></div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div>
+				<h1><u>Chakra Nature</u></h1>
+				<div><strong>Yin</strong> <em>(Afinity)</em></div>
+				<div><strong>Water</strong> <em>(Afinity)</em></div>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div>
+				<h1><u>Basic Jutsu and Techniques</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[E]</td>
+						<td><strong>Clone Jutsu</strong></td>
+						<td>N/A</td>
+						<td>Ram → Snake → Tiger</td>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[E]</td>
+						<td><strong>Transformation Jutsu</strong></td>
+						<td>N/A</td>
+						<td>Dog → Boar → Ram</td>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[E]</td>
+						<td><strong>Substitution Jutsu</strong></td>
+						<td>N/A</td>
+						<td>Ram → Snake → Tiger</td>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[E]</td>
+						<td><strong>Water Walking Jutsu</strong></td>
+						<td>N/A</td>
+						<td>N/A</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div>
+				<h1><u>Kekkei Genkai</u></h1>
+				<div style="color: #888;"><strong>Blood Style [Locked]</strong> 4 <strong>(SP)</strong></div>
+				<div><strong>Ketsuryūgan</strong> 2 <strong>(SP)</strong></div>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Ninjutsu [Locked] <strong>2 (SP)</strong></u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[C]</td>
+						<td><strong>Blood Style - Blood Extraction Jutsu</strong></td>
+						<td>Infuse chakra into blood, and manipulate it at will.</td>
+						<td>Dragon → Horse → Rat → Dragon → Monkey → Bird → Dragon → Boar → Serpent → Dragon → Bird</td>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[B]</td>
+						<td><strong>Blood Style - Iron Mold</strong></td>
+						<td>Create a Weapon or tool out of any Iron rich liquid.</td>
+						<td>Dragon → Bird → Tiger → Dragon</td>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[B]</td>
+						<td><strong>Blood Style - Animal Manipulation</strong></td>
+						<td>Control large masses of Blood or Iron rich water to create any animated animal and control them.</td>
+						<td>Dragon → Tiger</td>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[B]</td>
+						<td><strong>Blood Style - Blood Clone Jutsu</strong></td>
+						<td>Creates a sturdy clone made of blood.</td>
+						<td>Dragon → Tiger → Dog → Snake</td>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[A]</td>
+						<td><strong>Blood Style - Blood Dragon</strong></td>
+						<td>Creates a Blood Dragon that is five times stronger than Water Dragon Jutsu</td>
+						<td>Dragon → Ox → Monkey → Hare → Rat → Boar → Bird → Ox → Horse → Bird → Rat → Tiger → Dog → Tiger → Snake → Ox → Ram → Snake → Boar → Ram → Rat → Yang Water → Monkey → Bird → Dragon → Bird → Ox → Horse → Ram → Tiger → Snake → Rat → Monkey → Hare → Boar → Dragon → Ram → Rat → Ox → Monkey → Bird → Yang Water → Rat → Boar → Bird</td>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[S]</td>
+						<td><strong>Blood Style - Blood Poison Rain</strong></td>
+						<td>Causes sleet of cold blood that cuts through most objects.</td>
+						<td>Dragon → Bird → Ox → Dragon → Rat → Ox → Dragon → Bird → Horse → Boar → Snake → Bird → Dragon → Hare → Bird → Monkey → Tiger → Ram → Rat → Bird → Dragon → Monkey → Tiger → Ram → Snake → Boar → Dragon → Hare → Dragon → Monkey → Tiger → Horse → Dragon → Bird → Ox → Bird → Dragon → Rat → Boar → Bird</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Medical Ninjutsu [Locked] <strong>2 (SP)</strong></u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Genjutsu [Locked] <strong>2 (SP)</strong></u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Taijutsu [Locked] <strong>2 (SP)</strong></u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Bukijutsu [Locked] <strong>2 (SP)</strong></u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div>
+				<h1><u>Kenjutsu <strong>2 (SP)</strong></u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Fuinjutsu [Locked]</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Nintaijutsu [Locked]</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Ningenjutsu [Locked]</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+					<tr style="background-color:#f8f8f8">
+						<td>[C]</td>
+						<td><strong>Blood Style - Blood Shuriken</strong></td>
+						<td>The user throws a Shuriken made of blood at the target capable of causing a genjutsu reinforced with the Ketsuryūgan.</td>
+						<td>N/A</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>		
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Gentaijutsu [Locked]</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Sumoning [Locked]</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+					<tr style="background-color:#f8f8f8;">
+						<td>[A]</td>
+						<td><strong>Rinne-Summoning Jutsu</strong></td>
+						<td>Summons a Chamelleon</td>
+						<td>Rat → Ox → Tiger → Hare → Dragon → Snake → Horse → Ram → Monkey → Bird → Dog</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Kinjutsu [Locked]</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Juinjutsu [Locked]</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr><div class="indent">
+			<div style="color: #888;">
+				<h1><u>Senjutsu [Locked]</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div class="indent">
+			<div style="color: #888;">
+				<h1><u>Tailed Beast [Locked]</u></h1>
+				<table style="width: 100%; margin: 10px auto; position: relative; height: auto; text-align: center; padding: 0; border-collapse: collapse;">
+					<tr class="pink-row"><th>Rank</th>
+						<th>Jutsu</th>
+						<th>Description</th>
+						<th>Hand Seals</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<hr>
+	</body>
+</html>
