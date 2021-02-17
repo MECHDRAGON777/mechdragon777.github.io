@@ -1,0 +1,98 @@
+/* page styles */
+body {
+    background-attachment: fixed;
+    background-size: cover;
+	background-image: url("images/background.png");
+	color:#442200;
+	margin-left:15vw;
+	margin-right:15vw;
+}
+
+/* table styles */
+table {
+    border-color:#442200;
+    margin:8px;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table img {
+	background: radial-gradient(#ccc, #444);
+}
+hr {
+	border:none;
+	height:2px;
+	background-color:#442200;
+}
+td {
+	padding:0px;
+}
+
+/* style overrides */
+h1 {
+	margin-top:0px;
+}
+
+/* content styles */
+.white-row {
+    background-color:#f8f8f8;
+}
+.pink-row {
+    background-color:#fa94dd;
+}
+.center {
+	text-align: center;
+}
+.tab {
+	margin-left: 40px;
+}
+.indent {
+	padding-left: 48px;
+	border-left: 1px solid #442200;
+	margin-left: 15px;
+}
+
+tr.white-row td:first-child {
+    font-weight:bold;
+}
+
+.white-row td {
+    border-bottom:1px solid #442200;
+}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #fa94dd;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: #442200;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #f8f8f8;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #f8f8f8;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
