@@ -1,0 +1,125 @@
+/* page styles */
+body {
+    background-attachment: fixed;
+    background-size: cover;
+	background-color: #daeef3;
+	color:#000000;
+	margin-left:15vw;
+	margin-right:15vw;
+	font-family: Garamond
+}
+
+/* style overrides */
+h1 {
+	margin-top:0px;
+	color: #1f497d
+}
+h2 {
+	margin-top:0px;
+	color: #365d91;
+	margin-bottom: 0px;
+	margin-left: 8px;
+}
+
+h3 {
+	margin-top:0px;
+	color: #365d91;
+	margin-bottom: 0px;
+	margin-left: 8px;
+}
+
+ul {
+	margin-left: 15px;
+	margin-top: 0px;
+}
+/* content styles */
+hr {
+	border:none;
+	height:1px;
+	background-color:#9bbb59;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+.p {
+	margin-left: 8px;
+}
+
+.outerb {
+	border-style: solid;
+	border:2px solid #5a89c2;
+}
+.outerm {
+	border-style: solid;
+	border: 4px solid #366092;
+}
+.outeri {
+	border-style: solid;
+	border: 2px solid #1f3754;
+}
+
+ul.circle {
+  list-style-type: circle;
+}
+
+.indent {
+	margin-left: 8px;
+	text-indent: 50px;
+}
+
+.center {
+	text-align: center;
+}
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #fa94dd;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: #442200;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #f8f8f8;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #f8f8f8;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+span {
+  display: inline-block;
+  text-align: right;
+  margin: 8px;
+}
+
+.flipH {
+  transform: scale(-1, 1);
+  color: #000000;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
