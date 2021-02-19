@@ -119,13 +119,13 @@ tr.white-row td:first-child {
   color: white; /* White text color */
 }
 
-.xlevel {width: 37%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xtp {width: 62%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xlevel {width: 41%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xtp {width: 68%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xstr {width: 41%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xagi {width: 41%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xper {width: 25%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xint {width:50%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xend {width: 25%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xint {width:68%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xend {width: 28%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xwill {width: 1%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 
 .x2level {width: 73%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
