@@ -8,12 +8,12 @@
 			anychart.onDocumentReady(function () {
 	  
 			  var data1 = [
-				  {x: "Lv", value: 22},
+				  {x: "Lv", value: 24},
 				  {x: "Str", value: 25},
 				  {x: "Agi", value: 25},
 				  {x: "Per", value: 15},
-				  {x: "Int", value: 30},
-				  {x: "End", value: 15},
+				  {x: "Int", value: 41},
+				  {x: "End", value: 17},
 			   ];
 			  var data2 = [
 				  {x: "Lv", value: 24},
@@ -58,7 +58,7 @@
 			  var data1 = [
 				  {x: "Conquror's", value: 0},
 				  {x: "Armament", value: 0},
-				  {x: "Observasion", value: 0},
+				  {x: "Observasion", value: 25},
 			   ];
 			   // create radar chart
 			  var chart = anychart.radar();
@@ -69,8 +69,8 @@
 			  // set chart yScale settings
 			  chart.yScale()
 				.minimum(0)
-				.maximum(4)
-				.ticks({'interval':1});
+				.maximum(100)
+				.ticks({'interval':25});
 	  
 			  // create first series
 			  chart.line(data1)
@@ -127,7 +127,7 @@
             </tr>
 			<tr class="white-row">
                 <td>S-Tier:</td>
-                <td>2/3</td>
+                <td>3/3</td>
             </tr>
 			<tr class="white-row">
                 <td>Total:</td>
@@ -154,12 +154,12 @@
 		<div class="indent">
             <div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:250px; width:25%;"></div>
 			<h1 id="Statistics">[ Statistics ]</h1>
-			<div><strong>Level:</strong> 24 [123 AP]
+			<div><strong>Level:</strong> 26 [132 AP]
 				<div class="container">
 					<div class="skills xlevel"></div>
 				</div>
 			</div>
-			<div><strong>Technique Points (TP):</strong> 24+17 (5 Remaining)
+			<div><strong>Technique Points (TP):</strong> 26+18 (0 Remaining)
 				<div class="container">
 					<div class="skills xtp"></div>
 				</div>
@@ -169,12 +169,12 @@
 					<div class="skills xstr"></div>
 				</div>
 			</div>
-			<div><strong>Agility:</strong> 25
+			<div><strong>Agility:</strong> 30
 				<div class="container">
 					<div class="skills xagi"></div>
 				</div>
 			</div>
-			<div><strong>Perception:</strong> 15
+			<div><strong>Perception:</strong> 16 [20 Observation Haki]
 				<div class="container">
 					<div class="skills xper"></div>
 				</div>
@@ -184,7 +184,7 @@
 					<div class="skills xint"></div>
 				</div>
 			</div>
-			<div><strong>Endurance:</strong> 17
+			<div><strong>Endurance:</strong> 20
 				<div class="container">
 					<div class="skills xend"></div>
 				</div>
@@ -860,6 +860,34 @@
 						Allows the user to have greater immunity to the cold than normal granting somewhat immunity to cold-based attacks.
 					</td>
 				</tr>
+				<tr class="white-row">
+					<td>
+						<br>
+						<br>
+						Name:
+						<hr>
+						Class:
+						<hr>
+						Type:
+						<hr>
+						Requirements:
+						<hr>
+						Description:
+					</td>
+					<td>
+						<br>
+						<br>
+						Awakening
+						<hr>
+						S (8TP)
+						<hr>
+						Support
+						<hr>
+						At least one S-Tier Snow-Snow Fruit Abilites + 8 (TP) required.
+						<hr>
+						Unlocking the true potential of their Devil Fruit, this skill allows the user to drastically improve the range and power of their Devil Fruit abilities. Increasing Devil Fruit techniques’ power by .1x
+					</td>
+				</tr>
 				<tr class="white-row" style="color: #888">
 					<td>
 						<br>
@@ -935,34 +963,6 @@
 					<td>
 						<br>
 						<br>
-						Awakening &#128272;
-						<hr>
-						S (8TP)
-						<hr>
-						Support
-						<hr>
-						At least one S-Tier Snow-Snow Fruit Abilites + 8 (TP) required.
-						<hr>
-						Unlocking the true potential of their Devil Fruit, this skill allows the user to drastically improve the range and power of their Devil Fruit abilities. Increasing Devil Fruit techniques’ power by .1x
-					</td>
-				</tr>
-				<tr class="white-row" style="color:#888;">
-					<td>
-						<br>
-						<br>
-						&#128272; Name:
-						<hr>
-						Class:
-						<hr>
-						Type:
-						<hr>
-						Requirements:
-						<hr>
-						Description:
-					</td>
-					<td>
-						<br>
-						<br>
 						Logia (Snow) Reflex &#128272;
 						<hr>
 						A (6TP)
@@ -981,15 +981,20 @@
 			<div id="container2" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:363px; width:40%;"></div>
 			<h1 id="Haki">[ Haki]</h1>
 			<div><strong>Conquerors:</strong> Tier 0</div>
-			<div><strong>Observation</strong> Tier 0</div>
+			<div><strong>Observation</strong> Tier I</div>
 			<div><strong>Armament:</strong> Tier 0</div>
-			<div><strong>Will:</strong> ???
-			<div class="containerH">
-					<div class="skills xwill"></div>
+			<div><strong>Conquerors Will:</strong> 0
+				<div class="containerH">
+					<div class="skills xwillc"></div>
 				</div>
-			<br>
-			<br>
-			<br>
+			<div><strong>Armament Will:</strong> 0
+				<div class="containerH">
+					<div class="skills xwilla"></div>
+				</div>
+			<div><strong>Observasion Will:</strong> 25
+				<div class="containerH">
+					<div class="skills xwillo"></div>
+				</div>
 			<br>
 			<br>
 			<br>
