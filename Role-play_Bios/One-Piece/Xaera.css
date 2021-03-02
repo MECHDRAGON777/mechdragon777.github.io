@@ -122,11 +122,13 @@ tr.white-row td:first-child {
 .xlevel {width: 41%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xtp {width: 68%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xstr {width: 41%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xagi {width: 41%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xper {width: 25%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xagi {width: 50%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xper {width: 33%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .xint {width:68%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xend {width: 28%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.xwill {width: 1%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xend {width: 33%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xwillc {width: 1%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xwilla {width: 1%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.xwillo {width: 25%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 
 .x2level {width: 73%; height: 20; background-color: #fa94dd; color: #442200;} /* Green */
 .x2tp {width: 73%; height: 20; background-color: #fa94dd; color: #442200;} /* Blue */
