@@ -119,11 +119,11 @@ tr.white-row td:first-child {
   color: white; /* White text color */
 }
 
-.clevel {width: 18%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.csp {width: 20%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.cstr {width: 18%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.cagi {width: 18%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.cper {width: 43%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.clevel {width: 20%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.csp {width: 22%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.cstr {width: 20%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.cagi {width: 21%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.cper {width: 45%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .cint {width: 5%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
 .cend {width: 10%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
-.ccontrol {width: 30%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
+.ccontrol {width: 33%; height: 10px; background-color: #fa94dd; color: #442200; border-radius: 5px;}
