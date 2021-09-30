@@ -1,4 +1,8 @@
 body {
 	background-attachment: fixed;
 	background-size: cover
-		background-image: url("images/bacground.png);
+		background-image: url("Images/Background.png);
+		color:#442200;
+		margin-left:15vw;
+		margin-right:15vw;
+}
