@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <link rel="stylesheet" href="bio.css"/>
+		<meta charset="UTF-8"/>
+		<title>Luna</title>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+	</head>
+	<body>
+		<div id="Luna" style="display:block">
+				<div style="padding-left: 20px;">
+					<button onclick="show_div_fun('Azazel'); hide_div_fun('Luna');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Azazel</button>
+				</div>
+				<hr>
+				<div class="bar">
+					<h1>Luna</h1>
+				</div>
+				<hr>
+				<div class="bar">
+					<h2>Physical</h2>
+					<div><b>Age:</b> 23</div>
+					<div><b>Gender:</b> Female</div>
+					<div><b>Appearance:<b> </div>
+				</div>
+				<hr>
+				<div class="bar">
+					<h2>Mental</h2>
+					<div><b>Personality:</b> </div>
+					<div><b>Likes:</b> Insects, Moths</div>
+					<div><b>Dislikes:</b> Serina Warlock</div>
+				</div>
+				<hr>
+				<div class="bar">
+					<h2>About</h2>
+					<div><b>Background:</b> An old classmate of Serina Warlock who never really owned enough real cards to make a propper deck. Never really could see the joy of other dueling methods either. After her classes with Serina, she ended up gaining a weird hobby of tearing any card she does not think is useful to her in half and throwing them into the river (Sometimes forgetting to tear them first). She has gotten the most kick out of trashing her own cards that her enemies want most. She has stolen a few cards from top secrety places, but never found anything that would make use of her insect dueling style.</div>
+					<div><b>Occupation:</b> Entomologist (Lepidopterologist)</div>
+					<div><b>Character Type:</b> Villian/Antagonist</b></div>
+				</div>
+				<hr>
+				<div class="bar">
+					<h2>Deck Info</h2>
+					<div><b>Deck:</b>
+						<table>
+							<tr>
+								<th>Deck</th>
+								<th>Master</th>
+								<th>Turbo</th>
+								<th>Speed</th>
+								<th>Sky</th>
+							</tr>
+								<tr></td>
+								<th>Perfectly Ultimate Beat Down</th>
+								<td></td>
+								<td></td>
+								<td><a href="https://www.duelingbook.com/deck?id=8975682">Speed</a></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div><b>Numbers:</b> 35, 70, 77, 84</div>
+					<div><b>Prefered Dueling Style:</b> Speed</div>
+					<div><b>Other Dueling Styles:</b> N/A</div>
+				</div>
+				<hr>
+				<img src="images/Luna.png" alt="ID Card" id="idC"/>
+			</div>
+		</div>
+		<div id="Azazel" style="display:none">
+				<div style="padding-left: 20px;">
+					<button onclick="show_div_fun('Luna'); hide_div_fun('Azazel');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Luna</button>
+				</div>
+				<hr>
+				<div class="bar">
+					<h1>Azazel Leviathon</h1>
+				</div>
+				<hr>
+				<div class="bar">
+					<h2>Physical</h2>
+					<div><b>Age:</b> 14</div>
+					<div><b>Gender:</b> Female</div>
+					<div><b>Appearance:<b> </div>
+				</div>
+				<hr>
+				<div class="bar">
+					<h2>Mental</h2>
+					<div><b>Personality:</b> </div>
+					<div><b>Likes:</b> Darkness</div>
+					<div><b>Dislikes:</b> Light</div>
+				</div>
+				<hr>
+				<div class="bar">
+					<h2>About</h2>
+					<div><b>Background:</b> </div>
+					<div><b>Occupation:</b> tudent in the Turbo Duel program</div>
+					<div><b>Character Type:</b> Protagonist</b></div>
+				</div>
+				<hr>
+				<div class="bar">
+					<h2>Deck Info</h2>
+					<div><b>Deck:</b>
+						<table>
+							<tr>
+								<th>Deck</th>
+								<th>Master</th>
+								<th>Turbo</th>
+								<th>Speed</th>
+								<th>Sky</th>
+							</tr>
+								<tr></td>
+								<th>Fallen One</th>
+								<td><a href="https://www.duelingbook.com/deck?id=8991271">Master</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div><b>Numbers:</b> N/A</div>
+					<div><b>Prefered Dueling Style:</b> Master</div>
+					<div><b>Other Dueling Styles:</b> Speed, Sky (Learning)</div>
+				</div>
+				<hr>
+				<img src="images/IDCardAzazel.png" alt="ID Card" id="idC"/>
+			</div>	
+	</body>
+</html>

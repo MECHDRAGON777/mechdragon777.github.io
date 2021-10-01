@@ -1,8 +1,57 @@
 body {
-	background-attachment: fixed;
-	background-size: cover
-		background-image: url("Images/Background.png);
-		color:#442200;
-		margin-left:15vw;
-		margin-right:15vw;
+  color: #e8e8e8;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: linear-gradient(
+    90deg,
+    #00000000,
+    #00000080 8px,
+    #00000080 calc(100% - 8px),
+    #00000000
+  );
+   min-height: calc(200vh - 16px);
+   text-indent: -12px
+}
+html {
+  background-image: url("images/background.png");
+  background-size: cover;
+  background-position-x: center;
+  background-attachment: fixed;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+a:link, a:visited {
+  background-color: #00000080;
+  color: white;
+  padding: 2px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+.bar {
+	border-style: solid;
+	border:1px solid #e8e8e880;
+	border-left: solid;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	margin-left: 12px;
+	padding-left: 20px;
+}
+
+#idC  {
+float: center;    
+ margin: 0 15px 0 0;
 }
