@@ -4,9 +4,9 @@ body {
     background-size: cover;
 	background-color: #daeef3;
 	color:#000000;
-	margin-left:15vw;
-	margin-right:15vw;
-	font-family: Garamond
+	font-family: Garamond;
+	margin-left:5vw;
+	margin-right:5vw;
 }
 
 /* style overrides */
@@ -15,6 +15,13 @@ h1 {
 	color: #1f497d
 }
 h2 {
+	margin-top:0px;
+	color: #365d91;
+	margin-bottom: 0px;
+	margin-left: 8px;
+}
+
+h3 {
 	margin-top:0px;
 	color: #365d91;
 	margin-bottom: 0px;
@@ -32,6 +39,14 @@ hr {
 	background-color:#9bbb59;
 	margin-left: 6px;
 	margin-right: 6px;
+}
+
+.game{
+	margin-right:15vw;	
+}
+
+.pl{
+	margin-left:75vw;	
 }
 
 .p {
@@ -60,9 +75,44 @@ ul.circle {
 	text-indent: 50px;
 }
 
-.center {
-	text-align: center;
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
 }
+
+.column2 {
+  float: left;
+  padding: 10px;
+}
+
+.left{
+  width: 20%;
+}
+
+.right  {
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  
+  .column2 {
+    width: 100%;
+  }
+}
+
 /* Style the navigation bar */
 .navbar {
   width: 100%;
