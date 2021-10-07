@@ -30,180 +30,178 @@
 		</script>
     </head>
     <body>
-	
-	
-	<div class="row">
-		<div class="column2 left">
-			<div class="outerb">
-				<div class="outerm">
-					<div class="outeri">
-						<hr>
-						<h2 style="text-align:center">Hosts</h2>
-						<hr>
-						<ul>
-							<li>MECHDRAGON777&nbsp;&nbsp;</li>
-							<li>Uranus</li>
-						</ul>
-						<hr>
-						<h2 style="text-align:center">Player List</h2>
-						<hr>
-						<ul>
-							<li>SAStar777</li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-						<button onclick="show_div_fun('Game'); hide_div_fun('Start'); hide_div_fun('T1'); hide_div_fun('D1');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Game Rules and Role List</button>
-						<br>
-						<button onclick="show_div_fun('Start'); hide_div_fun('Game'); hide_div_fun('T1'); hide_div_fun('D1');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Game Start</button>
-						<br>
-						<button onclick="show_div_fun('T1'); hide_div_fun('Start'); hide_div_fun('Game'); hide_div_fun('D1');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Twilight 1 to Dawn 1</button>
-						<button onclick="show_div_fun('D1'); hide_div_fun('Game'); hide_div_fun('Start'); hide_div_fun('T1');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Dawn 1 to Twilight 2</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="column2 right">
-			<div class="outerb;">
-				<div class="outerm">
-					<div class="outeri">
-						<div id="Game" style="display:block">
+		<div class="row">
+			<div class="column2 left">
+				<div class="outerb">
+					<div class="outerm">
+						<div class="outeri">
 							<hr>
-							<h1 style="text-align:center">Watch What You Say</h1>
+							<h2 style="text-align:center">Hosts</h2>
 							<hr>
-							<h2>Introduction</h2>
+							<ul>
+								<li>MECHDRAGON777&nbsp;&nbsp;</li>
+								<li>Uranus</li>
+							</ul>
 							<hr>
-							<div class="p">This game of Mafia is brought to you by a Witch who is trying to kill everyone by the words they say.</div>
-							<h2>Mechanics</h2>
+							<h2 style="text-align:center">Player List</h2>
 							<hr>
-							<div class="p">Due to the way this game works, here are the Mechanics introduced so far and there binarry state of being on or off.</div>
-							<div class="p">
-								<ul class="circle">
-									<li>Mafia Visit: <strong>OFF</strong></li>
-									<li>Town Visit: <strong>OFF</strong></li>
-									<li>Vanilla Visit: <strong>OFF</strong></li>
-									<li>Cult Visit: <strong>OFF</strong></li>
-									<li>Last Will: <strong>ON</strong></li>
-									<li>Private Chatter: <strong>ON</strong></li>
-									<li>Mafia self-vote: <strong>OFF</strong></li>
-									<li>Heal Announcements: <strong>On</strong></li>
-								</ul>
-								<div>Phase Changes are between 22 and 28 and a half hours.</div>
-								<div>Propogandists have a 4000 character limit.</div>
-							</div>
-							<h2>Rules</h2>
-							<hr>
-								<ol>
-									<li>Players may not reveal there Last Will to another player.</li>
-									<li>Players may not quote either host via copy-paste.</li>
-									<li>Propogandist messages must be in pure text in order to keep ambiguidy. (Special formatting will be done if requested if possible and is requested.)</li>
-								</ol>
-							<h2>New Roles</h2>
-							<hr>
-							<div class="p" style="color:#000080;"><strong>Surgeon:</strong> Can protect a player and allows them to roleflip on death. Upon a nightkill attempt on the selected player that nightphase, stops the kill and prevents them from being protected any more.</div>
-							<div class="p" style="color:#ff0000;"><strong>Forger:</strong> Can modify one player's Last Will to be whatever they so desire. Forged wills have the same restrictions as real wills. Only works if the target dies the same night. Has three attempts.</div>
-							<div class="p" style="color:#8000ff;"><strong>Restricted Witch:</strong> Starts with full night protection. Can choose a word of five letters or longer excluding role names, role names, common words, and swears; if the word is said by anyone: they will perish and cuts through both the Restricted Witch and the Surgeon's protection.</div>
-							<h2>Win Conditions</h2>
-							<hr>
-							<div class="row">
-								<div class="column">
-									<h3 style="color:#ff0000;">Mafia</h3>
-									<div>Outnumber the Town and take down the Cult</div>
-								</div>
-								<div class="column">
-									<h3 style="color:#000080;">Town</h3>
-									<div>Take down the Mafia and the Cult</div>
-								</div>
-								<div class="column">
-									<h3 style="color:#8000ff;">Cult</h3>
-									<div>Either outnumber all other players or be one of the last three remaining players.</div>
-								</div>
-							<h2>Role list</h2>
-							<hr>
-							<div class="row">
-								<div class="column">
-									<h3>Mafia</h3>
-									<div class="p" style="color:#000080;"><strong>Consiglire</strong></div>
-									<div class="p" style="color:#ff0000;"><strong>Forger</strong></div>
-									<div class="p" style="color:#ff0000;"><strong>Propagandist</strong></div>
-									<br>
-								</div>
-								<div class="column">
-									<h3>Town</h3>
-									<div class="p" style="color:#000080;"><strong>Sheriff</strong></div>
-									<div class="p" style="color:#000080;"><strong>Propagandist</strong></div>
-									<div class="p" style="color:#000080;"><strong>Surgeon</strong></div>
-									<div class="p" style="color:#000080;"><strong>Escort</strong></div>
-									<div class="p" style="color:#008000;"><strong>Townie</strong></div>
-									<div class="p" style="color:#008000;"><strong>Townie</strong></div>
-									<div class="p" style="color:#008000;"><strong>Townie</strong></div>
-									<div class="p" style="color:#008000;"><strong>Townie</strong></div>
-									<div class="p" style="color:#008000;"><strong>Townie</strong></div>
-									<div class="p" style="color:#008000;"><strong>Townie</strong></div>
-									<div class="p" style="color:#ff0000;"><strong>Townie</strong></div>
-									<div class="p" style="color:#8000ff;"><strong>[NK]Townie</strong></div>
-									<br>
-								</div>
-								<div class="column">
-									<h3>Cult</h3>
-									<div class="p" style="color:#8000ff;"><strong>Witch</strong></div>
-								</div>
-							</div>
-						</div>
-						<div id="Start" style="display:none">
-							<hr>
-							<h1 style="text-align:center">Game has started</h1>
-							<hr>
-							<h2>Phase Change Time</h2>
-							</hr>
-						</div>
-						<div id="T1" style="display:none">
-							<hr>
-							<h1 style="text-align:center">Twilight 1 end</1>
-							<hr>
-							<h2>Phase Change Time</h2>
-							<hr>
-							<h2>News Paper Entry</h2>
-							<hr>
-							<h2>Last Wills</h2>
-							<hr>
-							<h2>Health Care Announcement</h2>
-							<hr>
-							<h2>Message of the day</h2>
-							<hr>
-						</div>
-						<div id="D1" style="display:none">
-							<hr>
-							<h1 style="text-align:center">Twilight 1 end</1>
-							<hr>
-							<h2>Phase Change Time</h2>
-							<hr>
-							<h2>News Paper Entry</h2>
-							<hr>
-							<h2>Last Wills</h2>
-							<hr>
-							<h2>Health Care Announcement</h2>
-							<hr>
-							<h2>Message of the night</h2>
-							<hr>
+							<ol>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+							<button onclick="show_div_fun('Game'); hide_div_fun('Start'); hide_div_fun('T1'); hide_div_fun('D1');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Game Rules and Role List</button>
+							<br>
+							<button onclick="show_div_fun('Start'); hide_div_fun('Game'); hide_div_fun('T1'); hide_div_fun('D1');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Game Start</button>
+							<br>
+							<button onclick="show_div_fun('T1'); hide_div_fun('Start'); hide_div_fun('Game'); hide_div_fun('D1');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Twilight 1 to Dawn 1</button>
+							<button onclick="show_div_fun('D1'); hide_div_fun('Game'); hide_div_fun('Start'); hide_div_fun('T1');" style="text-align: center; padding: 12px; background-color: #00000080; bordercolor: #000000; color: #e8e8e8; text-decoration: none; font-size: 16px;"> Dawn 1 to Twilight 2</button>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="column2 right">
+				<div class="outerb;">
+					<div class="outerm">
+						<div class="outeri">
+							<div id="Game" style="display:block">
+								<hr>
+								<h1 style="text-align:center">Watch What You Say</h1>
+								<hr>
+								<h2>Introduction</h2>
+								<hr>
+								<div class="p">This game of Mafia is brought to you by a Witch who is trying to kill everyone by the words they say.</div>
+								<h2>Mechanics</h2>
+								<hr>
+								<div class="p">Due to the way this game works, here are the Mechanics introduced so far and there binarry state of being on or off.</div>
+								<div class="p">
+									<ul class="circle">
+										<li>Mafia Visit: <strong>OFF</strong></li>
+										<li>Town Visit: <strong>OFF</strong></li>
+										<li>Vanilla Visit: <strong>OFF</strong></li>
+										<li>Cult Visit: <strong>OFF</strong></li>
+										<li>Last Will: <strong>ON</strong></li>
+										<li>Private Chatter: <strong>ON</strong></li>
+										<li>Mafia self-vote: <strong>OFF</strong></li>
+										<li>Heal Announcements: <strong>On</strong></li>
+									</ul>
+									<div>Phase Changes are between 22 and 28 and a half hours.</div>
+									<div>Propogandists have a 4000 character limit.</div>
+								</div>
+								<h2>Rules</h2>
+								<hr>
+									<ol>
+										<li>Players may not reveal there Last Will to another player.</li>
+										<li>Players may not quote either host via copy-paste.</li>
+										<li>Propogandist messages must be in pure text in order to keep ambiguidy. (Special formatting will be done if requested if possible and is requested.)</li>
+									</ol>
+								<h2>New Roles</h2>
+								<hr>
+								<div class="p" style="color:#000080;"><strong>Surgeon:</strong> Can protect a player and allows them to roleflip on death. Upon a nightkill attempt on the selected player that nightphase, stops the kill and prevents them from being protected any more.</div>
+								<div class="p" style="color:#ff0000;"><strong>Forger:</strong> Can modify one player's Last Will to be whatever they so desire. Forged wills have the same restrictions as real wills. Only works if the target dies the same night. Has three attempts.</div>
+								<div class="p" style="color:#8000ff;"><strong>Restricted Witch:</strong> Starts with full night protection and cannot be role blocked. Can choose a word of five letters or longer excluding role names, role names, common words, and swears; if the word is said by anyone: they will perish and cuts through both the Restricted Witch and the Surgeon's protection.</div>
+								<h2>Win Conditions</h2>
+								<hr>
+								<div class="row">
+									<div class="column">
+										<h3 style="color:#ff0000;">Mafia</h3>
+										<div>Outnumber the Town and take down the Cult</div>
+									</div>
+									<div class="column">
+										<h3 style="color:#000080;">Town</h3>
+										<div>Take down the Mafia and the Cult</div>
+									</div>
+									<div class="column">
+										<h3 style="color:#8000ff;">Cult</h3>
+										<div>Either outnumber all other players or be one of the last three remaining players.</div>
+									</div>
+								</div>
+								<h2>Role list</h2>
+								<hr>
+								<div class="row">
+									<div class="column">
+										<h3>Mafia</h3>
+										<div class="p" style="color:#000080;"><strong>Consiglire</strong></div>
+										<div class="p" style="color:#ff0000;"><strong>Forger</strong></div>
+										<div class="p" style="color:#ff0000;"><strong>Propagandist</strong></div>
+										<br>
+									</div>
+									<div class="column">
+										<h3>Town</h3>
+										<div class="p" style="color:#000080;"><strong>Sheriff</strong></div>
+										<div class="p" style="color:#000080;"><strong>Propagandist</strong></div>
+										<div class="p" style="color:#000080;"><strong>Surgeon</strong></div>
+										<div class="p" style="color:#000080;"><strong>Escort</strong></div>
+										<div class="p" style="color:#008000;"><strong>Townie</strong></div>
+										<div class="p" style="color:#008000;"><strong>Townie</strong></div>
+										<div class="p" style="color:#008000;"><strong>Townie</strong></div>
+										<div class="p" style="color:#008000;"><strong>Townie</strong></div>
+										<div class="p" style="color:#008000;"><strong>Townie</strong></div>
+										<div class="p" style="color:#008000;"><strong>Townie</strong></div>
+										<div class="p" style="color:#ff0000;"><strong>Townie</strong></div>
+										<div class="p" style="color:#8000ff;"><strong>[NK]Townie</strong></div>
+										<br>
+									</div>
+									<div class="column">
+										<h3>Cult</h3>
+										<div class="p" style="color:#8000ff;"><strong>Witch</strong></div>
+									</div>
+								</div>
+							</div>
+							<div id="Start" style="display:none">
+								<hr>
+								<h1 style="text-align:center">Game has started</h1>
+								<hr>
+								<h2>Phase Change Time</h2>
+								</hr>
+							</div>
+							<div id="T1" style="display:none">
+								<hr>
+								<h1 style="text-align:center">Twilight 1 end</1>
+								<hr>
+								<h2>Phase Change Time</h2>
+								<hr>
+								<h2>News Paper Entry</h2>
+								<hr>
+								<h2>Last Wills</h2>
+								<hr>
+								<h2>Health Care Announcement</h2>
+								<hr>
+								<h2>Message of the day</h2>
+								<hr>
+							</div>
+							<div id="D1" style="display:none">
+								<hr>
+								<h1 style="text-align:center">Twilight 1 end</1>
+								<hr>
+								<h2>Phase Change Time</h2>
+								<hr>
+								<h2>News Paper Entry</h2>
+								<hr>
+								<h2>Last Wills</h2>
+								<hr>
+								<h2>Health Care Announcement</h2>
+								<hr>
+								<h2>Message of the night</h2>
+								<hr>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		
-	</div>
     </body>
 </html>
