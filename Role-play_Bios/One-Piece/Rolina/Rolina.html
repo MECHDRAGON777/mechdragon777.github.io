@@ -98,16 +98,25 @@
 	<body>
 		<hr>
 		<div class="center">
-			<img src="Images/image1.png" alt="Logo">
+			<img src="images/image1.png" alt="Logo">
 		</div>
 		<hr>
         <table style="float:right">
             <tr class="pink-row">
                 <th colspan="2">Rolina Diana Yeunova</th>
+				<tr class="pink-row">
+					<td><button onclick="show_div_fun('Anime');hide_div_fun('Manga');">Anime</button></td>
+					<td><button onclick="show_div_fun('Manga');hide_div_fun('Anime');">Manga</button></td>
+				<tr>
             </tr>
             <tr>
                 <td colspan="2">
-					<img src="Images/image2.png" alt="Rolina Diana Yeunova" width="359px">
+					<div id = "Anime" style="display:block">
+						<img src="images/image3.png" alt="Rolina Diana Yeunova Anime" width="359px">
+					</div>
+					<div id = "Manga" style="display:none">
+						<img src="images/image4.png" alt="Rolina Diana Yeunova Manga" width="359px">
+					</div>
 				</td>
             </tr>
             <tr class="pink-row">
