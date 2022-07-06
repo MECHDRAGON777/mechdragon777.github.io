@@ -2,7 +2,7 @@
 body {
     background-attachment: fixed;
     background-size: cover;
-	background-image: url("Images/background.png");
+	background-image: url("images/background.png");
 	color:#442200;
 	margin-left:15vw;
 	margin-right:15vw;
@@ -59,6 +59,24 @@ tr.white-row td:first-child {
     border-bottom:1px solid #442200;
 }
 
+/* Navbar buttons on mouse-over */
+button {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  background-color: #fa94dd;
+  bordercolor: #41b0f7;
+  color: #442200;
+  text-decoration: none;
+  font-size: 17px;
+  width: 100%;
+}
+
+/* Navbar buttons on mouse-over */
+button:hover {
+  background-color: #f8f8f8;
+}
+
 /* Style the navigation bar */
 .navbar {
   width: 100%;
@@ -97,6 +115,7 @@ tr.white-row td:first-child {
 .navbar button:hover {
   background-color: #f8f8f8;
 }
+
 /* Current/active navbar link */
 .active {
   background-color: #f8f8f8;
