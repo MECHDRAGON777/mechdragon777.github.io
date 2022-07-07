@@ -19,6 +19,7 @@
 			<a href="#Stat"> Stats</a>
 			<a href="#Talents"> Talents</a>
 			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
 			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
 		</div>
 		<script type ="text/javascript">
@@ -98,24 +99,34 @@
 	<body>
 		<hr>
 		<div class="center">
-			<img src="images/image1.png" alt="Logo">
+			<img src="Images/image1.png" alt="Logo">
 		</div>
 		<hr>
         <table style="float:right">
             <tr class="pink-row">
                 <th colspan="2">Rolina Diana Yeunova</th>
 				<tr class="pink-row">
-					<td><button onclick="show_div_fun('Anime');hide_div_fun('Manga');">Anime</button></td>
-					<td><button onclick="show_div_fun('Manga');hide_div_fun('Anime');">Manga</button></td>
+					<td><button onclick="show_div_fun('BAnime');show_div_fun('Base Personal');hide_div_fun('BManga');hide_div_fun('SAnime');hide_div_fun('SManga');hide_div_fun('Sulong Personal');">Anime Base Form</button></td>
+					<td><button onclick="show_div_fun('BManga');show_div_fun('Base Personal');hide_div_fun('BAnime');hide_div_fun('SAnime');hide_div_fun('SManga');hide_div_fun('Sulong Personal');">Manga Base Form</button></td>
+				<tr>
+				<tr class="pink-row" style="height=14px;">
+					<td><button onclick="show_div_fun('SAnime');show_div_fun('Sulong Personal');hide_div_fun('BManga');hide_div_fun('BAnime');hide_div_fun('SManga');hide_div_fun('Base Personal');">Anime Sulong Form</button></td>
+					<td><button onclick="show_div_fun('SManga');show_div_fun('Sulong Personal');hide_div_fun('BAnime');hide_div_fun('BAnime');hide_div_fun('SManga');hide_div_fun('Base Personal');">Manga Sulong Form</button></td>
 				<tr>
             </tr>
             <tr>
                 <td colspan="2">
-					<div id = "Anime" style="display:block">
-						<img src="images/image3.png" alt="Rolina Diana Yeunova Anime" width="359px">
+					<div id = "BAnime" style="display:block">
+						<img src="Images/image3.png" alt="Rolina Diana Yeunova (Base form - Anime)" width="359px">
 					</div>
-					<div id = "Manga" style="display:none">
-						<img src="images/image4.png" alt="Rolina Diana Yeunova Manga" width="359px">
+					<div id = "BManga" style="display:none">
+						<img src="Images/image4.png" alt="Rolina Diana Yeunova (Base form - Manga)" width="359px">
+					</div>
+					<div id = "SAnime" style="display:none">
+						<img src="Images/image3.png" alt="Rolina Diana Yeunova (Sulong form - Anime)" width="359px">
+					</div>
+					<div id = "SManga" style="display:none">
+						<img src="Images/image4.png" alt="Rolina Diana Yeunova (Sulong form - Manga)" width="359px">
 					</div>
 				</td>
             </tr>
@@ -160,7 +171,15 @@
 			</tr>
 			<tr class="white-row">
 				<td>Alias:</td>
-				<td>Weather Girl (Lyon)</td>
+				<td>
+					Weather Girl (Lyon)
+					<br>
+					Electro Bunny (Lyon)
+					<br>
+					Electric Mouse (Amber)
+					<br>
+					Storm Empress (Sora)
+				</td>
 			</tr>
 			<tr class="white-row">
 				<td>Epithet:</td>
@@ -243,15 +262,27 @@
 			<hr>
 			<div class="indent">
 				<h1 id="Relationships">[ Relationships ]</h1>
+				<h2>Family</h2>
+				<div>N/A</div>
+				<h2>Friends</h2>
+				<div>N/A</div>
+				<h2>Enemies</h2>
 				<div>N/A</div>
 			</div>
 			<hr>
 			<div class="indent">
 				<h1 id="Personal Details">[ Personal Details ]</h1>
-				<div><strong>Personality:</strong> A quite cheerful girl who has taken a knack for the weather due to being raised in Weatheria. She seems to value her speed more so than her strength and is keen to read people quite carefully after her first reactions to the native Weatherians. She has always been one to observe first before striking when given the opportunity.</div>
-				<br>
-				<div><strong>Appearance:</strong> Rolina is a Snowshoe Rabbit Mink of slender build and of mid-back level hair length dyed blue with violetish-pink ends. She wears a cloak that is made of conductive materials laces inside.</div>
-				<br>
+				<div id = "Base Personal" style="display:block">
+					<div><strong>Personality:</strong> A quite cheerful girl who has taken a knack for the weather due to being raised in Weatheria. She seems to value her speed more so than her strength and is keen to read people quite carefully after her first reactions to the native Weatherians. She has always been one to observe first before striking when given the opportunity.</div>
+					<br>
+					<div><strong>Appearance:</strong> Rolina is a Snowshoe Rabbit Mink of slender build and of mid-back level hair length dyed blue with violetish-pink ends. She wears a cloak that is made of conductive materials laces inside.</div>
+				</div>
+				<div id = "Sulong Personal" style="display:none">
+					<div><strong>Personality:</strong> While in her Sulong form, Rolina is a tad more emotionaly driven and a lot easier to anger. She is not currently able to control her self at all under a full moon.</div>
+					<br>
+					<div><strong>Appearance:</strong> Rolina's Sulong form is quite feindish in appearance as her claws are a tad sharper. Her blue hair that fades to pink turns pitch white and her eyes dark from their natural light red appearance to a darker more crimson color. The fur from her tail forms a longer mane-like appearance of white hair that extends down to her feet.</div>
+				</div>
+					<br>
 				<div><strong>Aspiration(s):</strong> To obtain the Snow-Snow Fruit and visit her homeland once again.</div>
 				<div><strong>Likes:</strong> Clouds, Cold, Storms, General Weather, Writing</div>
 				<div><strong>Dislikes:</strong> Heat, Carrots, Water</div>
@@ -271,6 +302,7 @@
 					<strong>Crew Members:</strong>
 					<ol>
 						<li>Lyon K. Barbary (Captain)</li>
+						<li>Amber
 						<li>Rolina D. Yeunova (Navigator, First Mate, and Chronicler)</li>
 					</ol>
 				</div>
@@ -281,6 +313,8 @@
 				<div class="tab" style="text-indent: 50px;"><strong>Age 2:</strong> When Rolina was a young lass, she stumbled upon the Weatherian’s Balloon Ship and was not found til a day after Weatheria had long passed where Zou was. With little control over the direction and speed of where the Sky Island of Weatheria would travel due to the winds of the world, the Weatherians would take the young Mink in. The young Rolina would like the home she would be given in the sky, though every once in a while loaned for her normal island’s nature a tad bit which formed her refusal to abandon the speech-patterns associated with her tribe. She would still be too young to remember her actual parents from Zou.</div>
 				<div class="tab" style="text-indent: 50px;"><strong>Age 4:</strong> After living in the White Sea for a couple of years, she would soon become interested in what the Weatherians did and learned that the weather that she only experienced a little bit over her two years of living prior was due to what the Weatherians do every so often. This would also be around the point she started to understand that she had Electro in the first place due to being a Mink.</div>
 				<div class="tab" style="text-indent: 50px;">The Weatherians ended up teaching her quite a bit of the technological advancements of the Weatherians as well as other stuff that any young kid would need to know. She would end up being taught how to hold writing apparatus, but never how to read proper words. In the grand scheme of things, she ended up developing her own writing system unique to her that she could read as she got older.</div>
+				<div class="tab" style="text-indent: 50px;"><strong>Age 5:</strong> Around her sixth birthday, Rolina would find herself outside one of the buildings after the moon rose before accidently awakening her Sulong form for the first time. She would end up rampaging for a little bit before passing out in a an area that moonlight would not reach. From then after, Rolina was taught of reasons to avoid being in Moonlight for the time being.
+				</div>
 				<div class="tab" style="text-indent: 50px;"><strong>Age 6:</strong> When Rolina hit the six year mark on her life-span, she would start to develop her Electro a bit and one of the Weatherians would then toss her a Staff to train her in self-defense for when she would eventually need to leave Weatheria when she was old enough. He would note that her strikes would be electrifying and would note that she might be interested in learning that there is a special type of fruit in the world that grants people strange and mystical abilities at the cost of their ability to swim. After the time sparing, she was capable of holding off a standard nuciase trying to pick on her if she ever had to, but would hopefully never need to.</div>
 				<div class="tab" style="text-indent: 50px;"><strong>Age 7:</strong> When Rolina turned seven, she seemed to be more hesitant in her will to attack the Weatherian that would spar with her ever so often to train her. While she trained to keep herself safe, she started to want to focus more so on what her opponent’s would start to do before reacting with her own defensive parrys.</div>
 				<div class="tab" style="text-indent: 50px;">When she was finished with as much training the Weatherians could give her in sparring, they would notice that not once that the Mink picked up that the weapon they gave her to spar with was not a typical Bo-Staff, but instead a Climatact, despite being told of it’s potential. They hoped that one day, she would finally learn how to use the Climatact with the remaining knowledge they would have been passing down over the years.</div>
@@ -293,14 +327,22 @@
 		<div id = "Stats" style="display:none">
 			<div class="indent">
 				<h1 id="Fighting">[ Fighting Style ]</h1>
-				<div>Rolina never really got a grasp on how to use the weapon that she was given correctly and tends to use it as a standard Bo-Staff instead of as a tool for using the weather against her attackers.</div>
+				<div>Rolina never really got a grasp on how to use the weapon that she was given correctly and tends to use it as a standard Bo-Staff instead of as a tool for using the weather against her attackers. She has also independently picked up how to defend herself incase she would ever be without her Climatact using either her fists or her claws.</div>
 			</div>
 			<hr>
 			<div class="indent">
 				<h1 id="Techniques">[ Techniques ]</h1>
 				<div><strong>Electric Twirl:</strong> By spinning her Climatact like a standard Bo-Staff one-handed, she channels her Electro through the Climatact in an almost-spherical shape capable of blocking most standard projectiles.</div>
-				<div><strong>Electropop:</strong> After twirling her Climatact, Rolina can grip one end of her Climatact in a swinging motion to use the staff like a slicing blunt-spear charged with Electro.</div>
-				<div><strong>Electro-parry:</strong> When an opponent would launch a Melee attack, Rolina would hold her Climatact in such a way that she could use her opponent’s momentum against them effectively redirecting their blow back at them.</div>
+				<br>
+				<div><strong>Electropop:</strong> After twirling her Climatact, Rolina can grip one end of her Climatact in a swinging motion to use the staff like a slicing blunt-spear charged with Electro. The spinning combined with temporarily letting go of the Climatact slightly increases the speed it moves for minor improvement to damage.</div>
+				<br>
+				<div><strong>Electro-parry:</strong> When an opponent would launch a Melee attack, Rolina would hold her Climatact in such a way that she could use her opponent’s momentum against them effectively redirecting their blow back at them. Doing so allows Rolina to counter with a Melee technique of her own as a combo.<sup><a href="#fn1" id="ref1">[1]</a></sup></div>
+				<br>
+				<div><strong>Electric Punch:</strong> When Rolina does not have her Climatact in her hands, she can either punch, slap, or scratch at a foe. While she can do this with her free hand while holding her Climatact in her other hand, she tends to avoid such actions while in her <strong>base form</strong>. The contact with her hand or claw would feel slightly electrifying in nature due to her Electro.</div>
+				<br>
+				<div><strong>Electric Hop:</strong> By channeling Electro in her legs<sup><a href="#fn2" id="ref2">[2]</a></sup>, Rolina can jump off of a foe to some extent of height. In doing so, she can get some distance from an opponet while also kicking them at the same time.</div>
+				<br>
+				<div><strong>Usagi-bolt:</strong> Rolina can charge any item she is holding with Electro.</div>
 			</div>
 			<hr>
 			<div class="indent">
@@ -402,6 +444,12 @@
 					<div class="skills xwillc"></div>
 				</div>
 			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ref">[ References and Notes ]</h1>
+				<sup id="fn1">1. [Rolina would need need to pre-emptivly take this stance to combo out of this Parry.]<a href="#ref1" title="Return">↩</a></sup><br>
+				<sup id="fn2">2. [Rolina can currently only channel her Electro in one leg, thus making her kick and jump less effective.]<a href="#ref2" title="Return">↩</a></sup>
+			</diV>
 		<hr>
 	</body>
 </html>
