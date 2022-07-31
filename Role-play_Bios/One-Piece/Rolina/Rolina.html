@@ -54,16 +54,16 @@
 	  
 			  var data1 = [
 				  {x: "Str", value: 25},
-				  {x: "Agi", value: 25},
-				  {x: "Per", value: 20},
-				  {x: "End", value: 40},
+				  {x: "Agi", value: 50},
+				  {x: "Per", value: 25},
+				  {x: "End", value: 45},
 				  {x: "Sta", value: 25},
 			   ];
 			  var data2 = [
 				  {x: "Str", value: 25},
-				  {x: "Agi", value: 50},
-				  {x: "Per", value: 30},
-				  {x: "End", value: 20},
+				  {x: "Agi", value: 65},
+				  {x: "Per", value: 35},
+				  {x: "End", value: 25},
 				  {x: "Sta", value: 25},
 			   ];
 			   // create radar chart
@@ -74,9 +74,9 @@
 	  
 			  // set chart yScale settings
 			  chart.yScale()
-				.minimum(0)
-				.maximum(40)
-				.ticks({'interval':10});
+				.minimum(20)
+				.maximum(100)
+				.ticks({'interval':20});
 	  
 			  // create first series
 			  chart.line(data1)
@@ -400,17 +400,17 @@
 						<div class="skills xstr"></div>
 					</div>
 				</div>
-				<div><strong>Durability:</strong> 40 [20 Mink]
+				<div><strong>Durability:</strong> 45 [25 Mink]
 					<div class="container">
 						<div class="skills xend"></div>
 					</div>
 				</div>
-				<div><strong>Speed:</strong> 25 [50 Mink]
+				<div><strong>Speed:</strong> 50 [65 Mink]
 					<div class="container">
 						<div class="skills xagi"></div>
 					</div>
 				</div>
-				<div><strong>Reflexes:</strong> 20 [30 Mink]
+				<div><strong>Reflexes:</strong> 25 [35 Mink]
 					<div class="container">
 						<div class="skills xper"></div>
 					</div>
@@ -420,7 +420,7 @@
 						<div class="skills xhp"></div>
 					</div>
 				</div>
-				<div><strong>Doriki:</strong> 215
+				<div><strong>Doriki:</strong> 240
 					<div class="container">
 						<div class="skills xtot"></div>
 					</div>
