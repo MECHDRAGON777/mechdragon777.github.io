@@ -53,18 +53,18 @@
 			anychart.onDocumentReady(function () {
 	  
 			  var data1 = [
-				  {x: "Str", value: 55},
-				  {x: "Agi", value: 135},
-				  {x: "Per", value: 140},
-				  {x: "End", value: 95},
-				  {x: "Sta", value: 65},
+				  {x: "Str", value: 95},
+				  {x: "Agi", value: 200},
+				  {x: "Per", value: 200},
+				  {x: "End", value: 135},
+				  {x: "Sta", value: 81},
 			   ];
 			  var data2 = [
-				  {x: "Str", value: 55},
-				  {x: "Agi", value: 160},
-				  {x: "Per", value: 150},
-				  {x: "End", value: 75},
-				  {x: "Sta", value: 65},
+				  {x: "Str", value: 95},
+				  {x: "Agi", value: 225},
+				  {x: "Per", value: 210},
+				  {x: "End", value: 115},
+				  {x: "Sta", value: 81},
 			   ];
 			   // create radar chart
 			  var chart = anychart.radar();
@@ -75,8 +75,8 @@
 			  // set chart yScale settings
 			  chart.yScale()
 				.minimum(20)
-				.maximum(100)
-				.ticks({'interval':20});
+				.maximum(200)
+				.ticks({'interval':40});
 	  
 			  // create first series
 			  chart.line(data1)
@@ -404,32 +404,32 @@
 					<li><strong>-</strong>All stats -10 when exposed to fire or extremely hot weather</li>
 				</ol>
 				<h2>Statistics</h2>
-				<div><strong>Strength:</strong> 55
+				<div><strong>Strength:</strong> 95
 					<div class="container">
 						<div class="skills xstr"></div>
 					</div>
 				</div>
-				<div><strong>Durability:</strong> 95 [75 Mink]
+				<div><strong>Durability:</strong> 135 [115 Mink]
 					<div class="container">
 						<div class="skills xend"></div>
 					</div>
 				</div>
-				<div><strong>Speed:</strong> 135 [160 Mink]
+				<div><strong>Speed:</strong> 200 [225 Mink]
 					<div class="container">
 						<div class="skills xagi"></div>
 					</div>
 				</div>
-				<div><strong>Reflexes:</strong> 140 [150 Mink]
+				<div><strong>Reflexes:</strong> 200 [210 Mink]
 					<div class="container">
 						<div class="skills xper"></div>
 					</div>
 				</div>
-				<div><strong>Stamina:</strong> 65
+				<div><strong>Stamina:</strong> 81
 					<div class="container">
 						<div class="skills xhp"></div>
 					</div>
 				</div>
-				<div><strong>Doriki:</strong> 650
+				<div><strong>Doriki:</strong> 911
 					<div class="container">
 						<div class="skills xtot"></div>
 					</div>
@@ -446,7 +446,7 @@
 				<div class="containerH">
 					<div class="skills xele"></div>
 				</div>
-				<div><strong>Sulong:</strong> 20</div>
+				<div><strong>Sulong:</strong> 40</div>
 				<div class="containerH">
 					<div class="skills xsul"></div>
 				</div>
