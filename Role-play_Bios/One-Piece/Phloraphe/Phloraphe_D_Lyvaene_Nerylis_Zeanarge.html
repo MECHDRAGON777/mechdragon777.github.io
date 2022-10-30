@@ -1,0 +1,535 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Phloraphe D. Lyvaene Nerylis Zeanarge</title>
+		<link rel="stylesheet" href="Phloraphe.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Backstory"> Backstory</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Talents"> Talents</a>
+			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  //var data1 = [
+				  //{x: "Str", value: 15},
+				  //{x: "Agi", value: 20},
+				  //{x: "Per", value: 20},
+				  //{x: "End", value: 15},
+				  //{x: "Sta", value: 30},
+			   //];
+			  var data2 = [
+				  {x: "Str", value: 15},
+				  {x: "Agi", value: 50},
+				  {x: "Per", value: 50},
+				  {x: "End", value: 10},
+				  {x: "Sta", value: 10},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(50)
+				.ticks({'interval':10});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data2).name('Racial Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+		<script>
+		function TheLogin() {
+			var password = 'accessportfolio';
+			if (this.document.login.pass.value == "113886255762") {
+				hide_div_fun("Password Field");
+				show_div_fun("End Goal");
+				hide_div_fun("Classified age 1");
+				show_div_fun("Unclassified age 1");
+				hide_div_fun("Classified age 2");
+				show_div_fun("Unclassified age 2");
+				hide_div_fun("Classified Family");
+				show_div_fun("Unclassified Family");
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="Images/image1.png" alt="Logo">
+		</div>
+		<div id = "Password Field" style="display:block">
+			<hr>
+			<div class="indent">
+				<form name="login" style="margin: 0px" onsubmit="TheLogin(); return false;">
+					<label for="staff">Password to display staff relevant info only:</label>
+					<INPUT id = "Staff" TYPE="text" NAME="pass" size="17" style="width: 250px; margin: 5px; background-color: #1F1F1F; color:#FFFFFF83">
+					<input type="submit" value="CLICK TO ACCESS" style="width : 150px; margin: 10px; background-color: #BB86FC; color:#121212">
+				</form>
+			</div>
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Phloraphe D. Lyvaene Nerylis Zeanarge</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+					<img src="Images/image2.png" alt="Phloraphe D. Lyvaene Nerylis Zeanarge" width="500px">
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td>フロラフ ディー リバイーン ネライリス ジアナージ</td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>furorafu dī ribaiin nerairisu jianāji</td>
+            </tr>
+			<tr class="white-row">
+				<td>Affiliation:</td>
+				<td>
+				Impel Down
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Occupation:</td>
+				<td>
+					Guard of Impel Down
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Residence:</td>
+				<td>
+					Impel Down
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Alias:</td>
+				<td>
+					Bird of Impel Down
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Epithet:</td>
+				<td>"Shiroitori"</td>
+			</tr>
+			<tr class="white-row">
+				<td>Status:</td>
+				<td>Alive</td>
+			</tr>
+			<tr class="white-row">
+				<td>Age:</td>
+				<td id = "Classified age 1" style = "display:block">
+					Chronological: Classified
+					<br>
+					Biological: 10
+				</td>
+				<td id = "Unclassified age 1" style = "display:none">
+					Chronological: 20
+					<br>
+					Biological: 10
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Birthday:</td>
+				<td>Febuary 29th</td>
+			</tr>
+			<tr class="white-row">
+				<td>Height:</td>
+				<td>
+					2732174114 nm
+					<br>
+					(8"11.56591')
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Weight:</td>
+				<td>
+					73481963943 μg
+					<br>
+					(162.000000006614 lbs)
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Blood Type:</td>
+				<td>XF (RH+)</td>
+			</tr>
+			<tr class="white-row">
+				<td>Position:</td>
+				<td>Guard Recruit</td>
+			</tr>
+			<tr class="pink-row">
+                <th colspan="2">Devil Fruit</th>
+            </tr>
+			<tr class="white-row">
+				<td>Japanese Name:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>English Name:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Meaning:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Type:</td>
+				<td>N/A</td>
+			</tr>
+        </table>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id="Demographics">[ Demographics ]</h1>
+				<div><strong>Name:</strong> Phloraphe D. Lyvaene Nerylis Zeanarge</div>
+				<div id = "Classified age 2" style = "display:block">
+					<div><strong>Birth name:</strong> Classified</div>
+					<div><strong>Chronological Age:</strong> Classified</div>
+				</div>
+				<div id = "Unclassified age 2" style = "display:none">
+					<div><strong>Birth name:</strong> Anastasia</div>
+					<div><strong>Chronological Age:</strong> 20</div>
+				</div>
+				<div><strong>Biological Age:</strong> 10</div>
+				<div><strong>Gender:</strong> ♀</div>
+				<div><strong>Race:</strong> Harpy</div>
+				<div><strong>Birthdate:</strong> February 29th</div>
+				<div><strong>Homeland:</strong> Ice Island</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Physical Details ]</h1>
+				<div><strong>Height:</strong> 2732174114 nm</div>
+				<div><strong>Weight:</strong> 73481963943 μg</div>
+				<div><strong>Blood Type:</strong> XF (RH+)</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Relationships ]</h1>
+				<h2>Family</h2>
+				<div id="Classified Family" style = "display:block">
+					<div>Classified</div>
+				</div>
+				<div id="Unclassified Family" style = "display:none">
+					<div><strong>Name:</strong> ???</div>
+					<div><strong>Age:</strong> 43</div>
+					<div><strong>Rank:</strong> Queen of Ice Island</div>
+					<div><strong>Devil Fruit:</strong> N/A</div>
+					<div><strong>Status:</strong> Alive</div>
+					<div><strong>Race:</strong> Human</div>
+					<br>
+					<div><strong>Name:</strong> ???</div>
+					<div><strong>Age:</strong> 46</div>
+					<div><strong>Rank:</strong> King of Ice Island</div>
+					<div><strong>Devil Fruit:</strong> N/A</div>
+					<div><strong>Status:</strong> Alive</div>
+					<div><strong>Race:</strong> Human</div>
+					<br>
+					<div><strong>Name:</strong> ???</div>
+					<div><strong>Age:</strong> 21</div>
+					<div><strong>Rank:</strong> Crown Princess of Ice Island</div>
+					<div><strong>Devil Fruit:</strong> N/A</div>
+					<div><strong>Status:</strong> Alive</div>
+					<div><strong>Race:</strong> Human</div>
+					<br>
+					<div><strong>Name:</strong> ???</div>
+					<div><strong>Age:</strong> 16</div>
+					<div><strong>Rank:</strong> Prince of Ice Island</div>
+					<div><strong>Devil Fruit:</strong> N/A</div>
+					<div><strong>Status:</strong> Alive</div>
+					<div><strong>Race:</strong> Human</div>
+				</div>
+				<h2>Friends</h2>
+				<div>N/A</div>
+				<br>
+				<h2>Enemies</h2>
+				<div>Frithjof, The Mink Tribe</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Personal Details ]</h1>
+				<div><strong>Personality:</strong> Phloraphe is a harpy (who was once the princess of Ice Island). As a result of that, she has tendencies to behave a little upbeat compared to a standard individual. When given free reign, she has a few primal instincts in part due to the surgical genetic modifications she was forced to endure when she was younger. She has a high tendency to be forgetful as a side effect of her natural lifespan being extended in the opperation.</div>
+				<br>
+				<div><strong>Appearance:</strong> Phloraphe was a girl of high nobility in the new world and and before she was kidnapped and opperated on, had distinctive sky-blue eyes and wore sleeveless dresses. After the opperation that ended up givening her an extended life-span and the features of a bird, she has sense started wearing an outfit that can obscure her wings when needed to hide. Her legs were entirly turned into bird feet with sharp talons. Her natural pink hair ended up turning white as a feather and her wings that were a result of the opperation were full of elegant white feathers. Her right eye turned into a crimson red.</div>
+				<br>
+				<div><strong>Aspiration(s):</strong> To remember her past and take down Frithjof once and for all.</div>
+				<div><strong>Likes:</strong> Fighting, Fruit, and Swords</div>
+				<div><strong>Dislikes:</strong> Minks and Cats</div>
+				<div id = "End Goal" style="display:none">
+					<div><strong>Goal:</strong> To become a high-ranking officier, or to be free of laws that bind her instincts.</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ Affiliation ]</h1>
+				<div><strong>Aliases:</strong> Bird of Impel Down</div>
+				<div><strong>Faction:</strong> Impel Down</div>
+				<div><strong>Bounty:</strong> &#x1d56d;0</div>
+				<div><strong>Alignment:</strong> True Chaotic</div>
+				<div><strong>Occupation:</strong> Guard of Impel Down</div>
+				<div><strong>Native Sea:</strong> New World</div>
+				<br>
+				<div><strong>Crew Name:</strong> Unnammed</div>
+				<div>
+					<strong>Crew Members:</strong>
+					<ol>
+						<li>Phloraphe D. Lyvaene Nerylis Zeanarge</li>
+					</ol>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Backstory ]</h1>
+				<div id="Classified Backstory">
+					<div class="tab" style="text-indent: 50px;">When Phloraphe was a young girl, she was the Princess of Ice Island and was known as Anastasia. Anastasia was not as spoiled as: her sister, the Crown Princess or her brother, the prince; she was still treated with just the same aptitude. While she was unique in her family for not expecting such gifts, she would still use what she was given. When Anastasia was merely ten years of age, she was out venturing out in the cold wasteland where she would get lost from her guarding retainer and would be kidnapped at the age of nine. She would later learn to hate the Kidnapper and the race of people he aired from with great passion.</div>
+					<div class="tab" style="text-indent: 50px;">While her family would eventually put up "Wanted Alive Only" posters up, they would be mute as Anastasia would never look like herself again after what Frithjof would soon begin to do to her. The princess would eventually have her memories programmatically erased as she would be taught new things meticulously over the year of her torturous experimentation that would shorten her aging process giving her a longer natural life, turn her into a harpy, and turn one of her eyes red. Even the fact that she was the Princess of a kingdom at all would be striped from her. The only memories she would end up keeping would be that the island she was originaly from was very cold and almost desert like in appearance.</div>
+				</div>
+				<div id="Standard Backstory">
+					<div class="tab" style="text-indent: 50px;">When Phloraphe was a young human girl, she was kidnapped by Frithjof for experimentation from her home in the New World. While she has no memory of anything before the experiments done on her, she does remember being stripped of her humanity at the hands of that cat. As a result of what she endured at his paws, she has acquired a distinct dislike toward felines and Minks. While Phloraphe could only atone to the feelings of torture through her experimentation that led her to lose her humanity.</div>
+					<div class="tab" style="text-indent: 50px;">The young girl lived quite a while in isolation not knowing anything except for the horrors she was forced to witness day in and day out that she eventually wished the worst possible fate of her kidnapper. The lass lived in torment for years before she was finally rescued. When one would look at her, no one would recognize the lass that she was prior as her aging was slowed down, but not quite stopped to match her new racial appearance. As a result of the different surgeries done to her as well as what was planned to be done to her, She was never called by her birth name, but rather the long name that is befitting what she would soon be turned into. "Phloraphe D. Lyvaene Nerylis Zeanarge" is what the doc decided to name her.</div>
+					<div class="tab" style="text-indent: 50px;">While the attempt of changing her name and adding the "D" to her name was an attempt to create a being with the Will of D; that was ultimately a failure that the lass never understood. When she was finally rescued by the Marines, Phloraphe would have lost all of her memory of her life prior to being Kidnapped, including her original birth name. To the Marines found her, they would see a girl covered in feathery rags. Once found, they got her dressed in a spare Marine outfit while taking her to Marineford for questioning; however, they would soon find out that she had no knowledge what so ever except for the name of the person who did "this" to her and her own name.</div>
+					<div class="tab" style="text-indent: 50px;">While on the Marine Vessel, the Marines offered her a job if she did not have a place to go, but due to her awkward and savage appearance, they would actually offer a guard job at Impel Down instead. The lass did not know one way or the other and would actually accept the job. She would not yet know that her personality was programmatically altered as a side effect of what Frithjof did to her; Phloraphe would actually attack the walls of the ship out of instinct to learn that she has less to her humanity than what she could remember from the years of torturous experimentation.</div>
+					<div class="tab" style="text-indent: 50px;">As a deal of promise, the few Marines who were courageous enough to teach her would instruct her on how to defend herself from inmates should they get free as well as to put them back in their place. Noticing that she would only have talons for feet instead of arms, they would not think to train her wing-muscles at all and would opt to train her in kick-related attacks. She would learn of use her powerful talons like the blade of a sword instead of standard kicks while watching the Marines fail at trying to teach her.</div>
+					<div class="tab" style="text-indent: 50px;">After a week of off and on training from the Marines, Phloraphe would find the Marines to be less of a pain than the Mink that experimented on her, but would still be cautious around them. She would reveal her name that the doctors of Frithjof's lab gave her as "Phloraphe D. Lyvaene Nerylis Zeanarge" without knowing anything about the mysterious "D" in her altered name. The highest ranking Marine on the ship told her with a straight face to refrain from mentioning her full name when possible which lead herself to be known simply as "Phloraphe Zeanarge" when introducing herself.</div>
+					<div class="tab" style="text-indent: 50px;">Upon arriving at Impel Down, Phloraphe would be stationed to guard Levels 1 and 2 after being given a run down of how Impel Down has five levels and how things actually work in the prison. She was permitted time away every so often as long as she made sure prison transit she was a part of ran smoothly and no prisoners got anything over on her during her shifts. Her newly feral instincts would as a compromise have her take assault on the prisoners instead of the other way around; Phloraphe scratching anyone and everyone that would threaten her.</div>
+					<div class="tab" style="text-indent: 50px;">Phloraphe has been stationed at Impel Down for the majority of the past two years off and on ever since her introduction to the outside world from her noble abode in the New World. While she would have unknowingly enjoyed the warmer air compared to the wintery wasteland she was originally from, every so often, she would long for her homeland every once in a while without knowing anything about it. Any time she would visit Level 5 of Impel Down for any reason, the chills from the floor shock remnants of once delete memory.</div>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div id = "Stats" style="display:none">
+			<div class="indent">
+				<h1 id="Fighting">[ Fighting Style ]</h1>
+				<div>Phloraphe uses her sharpened talons to fight. She can hold a bladed weapon in her talons, but is not as adept as if she were to use her natural talons instead.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Techniques">[ Techniques ]</h1>
+					<h2><u>Base Techniques</u></h2>
+					<div><strong>Nail Drill:</strong> While in flight, Phloraphe can hold her wings into a spiral shape and allow the air to spin her like a drill as her tallons attempt to drill the target through.</div>
+					<ol style="padding-top:-20px; padding-bottom:-20px; list-style-type:none">
+						<li>+10 Strength</li>
+						<li>+10 Speed</li>
+						<li>-4 Stamina</li>
+					</ol>
+					<div style="color: #BB86FC;">▰▱▱▱▱</div>
+					<div><strong>Lore:</strong> After being rescued by the Marines before being taken to Impel Down, they trained her in ways to potentialy use her talons for combat.</div>
+					<div><strong>Requirements:</strong> Harpy, Bladed Weaponry 20%</div>
+					<div><strong>Who can learn it:</strong> Anyone who has Harpy Talons</div>
+					<br>
+					<div><strong>Nail Strike:</strong> Phloraphe will simply scratch her talons at a target.</div>
+					<ol style="padding-top:-20px; padding-bottom:-20px; list-style-type:none">
+						<li>+5 Strength</li>
+						<li>-2 Stamina</li>
+					</ol>
+					<div style="color: #BB86FC;">▰▱▱▱▱</div>
+					<div><strong>Lore:</strong> After being rescued by the Marines before being taken to Impel Down, they trained her in ways to potentialy use her talons for combat.</div>
+					<div><strong>Requirements:</strong> Harpy, Bladed Weaponry 20%</div>
+					<div><strong>Who can learn it:</strong> Anyone who has Harpy Talons</div>
+					<br>
+					<div><strong>Axed Nail Kick:</strong> By kicking bfore preforming a more pronounced Axe Kick where the talons are the driving force of the axe kick/drop kick, can add more stress to the target.</div>
+					<ol style="padding-top:-20px; padding-bottom:-20px; list-style-type:none">
+						<li>+15 Strength</li>
+						<li>-5 Stamina</li>
+					</ol>
+					<div style="color: #BB86FC;">▰▰▱▱▱</div>
+					<div><strong>Lore:</strong> After being rescued by the Marines before being taken to Impel Down, they trained her in ways to potentialy use her talons for combat.</div>
+					<div><strong>Requirements:</strong> Harpy, Bladed Weaponry 20%</div>
+					<div><strong>Who can learn it:</strong> Anyone who has Harpy Talons</div>
+					<br>
+					<div><strong>Nail Slash:</strong> Phloraphe's most basic form of attack in which she scratches or slashes at a target with her talons.</div>
+					<ol style="padding-top:-20px; padding-bottom:-20px; list-style-type:none">
+						<li>-1 Stamina</li>
+					</ol>
+					<div style="color: #BB86FC;">▰▱▱▱▱</div>
+					<div><strong>Lore:</strong> After being rescued by the Marines before being taken to Impel Down, they trained her in ways to potentialy use her talons for combat.</div>
+					<div><strong>Requirements:</strong> Harpy, Bladed Weaponry 0%</div>
+					<div><strong>Who can learn it:</strong> Anyone who has Harpy Talons</div>
+					<hr>
+					<h2><u>Super Techniques</u></h2>
+					<div><strong>Nail Kick Gatling:</strong> By chaining a flurry of kicks towards her target, she can preform a lot of quick and percise kicks to puncture the target five times per 100 miliseconds.</div>
+					<ol style="padding-top:-20px; padding-bottom:-20px; list-style-type:none">
+						<li>+100 Strength</li>
+						<li>+100 Speed</li>
+						<li>-80 Stamina</li>
+					</ol>
+					<div style="color: #BB86FC;">▰▱▱▱▱</div>
+					<div><strong>Lore:</strong> After being rescued by the Marines before being taken to Impel Down, they trained her in ways to potentialy use her talons for combat. When taught to do this, she passed out.</div>
+					<div><strong>Requirements:</strong> Harpy, Bladed Weaponry 20%, 50 Speed.</div>
+					<div><strong>Who can learn it:</strong> Anyone who has Harpy Talons</div>
+					<hr>
+					<h2><u>Ultimate Techniques</u></h2>
+					<div><strong>Nail Cyclone:</strong> By spinning either in the air or on the ground via balancing on one leg, Phloraphe can hit multiple times in quick sucession with rappid fire scratch marks from her talons to cause a lot of lacerations on her target.</div>
+					<ol style="padding-top:-20px; padding-bottom:-20px; list-style-type:none">
+						<li>+400 Strength</li>
+						<li>-150 Stamina</li>
+					</ol>
+					<div style="color: #BB86FC;">▰▱▱▱▱</div>
+					<div><strong>Lore:</strong> After being rescued by the Marines before being taken to Impel Down, they trained her in ways to potentialy use her talons for combat. When taught to do this, she passed out.</div>
+					<div><strong>Requirements:</strong> Harpy, Bladed Weaponry 20%, 50 Speed.</div>
+					<div><strong>Who can learn it:</strong> Anyone who has Harpy Talons</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Inventory">[ Inventory ]</h1>
+				<ul>
+					<li><h2>Impel Down Guard Uniform</h2></li>
+						<div>Uniform given to Phloraphe after joining the staff of Impel Down.</div>
+					<li><h2>Marine Uniform</h2></li>
+						<div>Uniform given to Phloraphe upon being rescued by the Marines.</div>
+					<li><h2>Casual Attire</h2></li>
+						<div>Outfit gifted to Phloraphe for use outside of Impel Down. Hides her wings and Talons without hindering them.</div>
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:450px; width:45%;"></div>
+				<h1 id="Stat">[ Statistics ]</h1>
+				<h2>Limits</h2>
+				<ol style="list-style-type:none">
+					<li>Experimented Human</li>
+				</ol>
+				<h2>Racial Perks (Human/Harpy)</h2>
+				<ol style="list-style-type:none">
+					<li><strong>+</strong>30 Speed while flying</li>
+					<li><strong>+</strong>30 Reflexes while flying</li>
+					<li><strong>+</strong>Can Fly</li>
+					<br>
+					<li><strong>-</strong>Double Stamina drain while airborne</li>
+					<li><strong>-</strong>20 Stamina</li>
+					<li><strong>-</strong>5 Durability</li>
+					<li><strong>-</strong>Unable to hold items normally. (Can use wing tips, though will have little to no grip.)</li>
+				</ol>
+				<h2>Statistics</h2>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 15
+					<div style="padding-bottom: 10px;" 	class="container">
+						<div class="skills xstr"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Durability:</strong> 15 [10 Harpy]
+					<br>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xend"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Speed:</strong> 20 [50 Harpy]
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xagi"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Reflexes:</strong> 20 [50 Harpy]
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xper"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Stamina:</strong> 30 [10 Harpy]
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xhp"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Doriki:</strong> 100
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xtot"></div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Talents">[ Talents ]</h1>
+				<div><strong>Bladed Weaponry:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwea"></div>
+				</div>
+				<div><strong>Six Powers:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xele"></div>
+				</div>
+				<div><strong>Paramecia/Logia:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xsul"></div>
+				</div>
+				<div><strong>???</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xnav"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Haki">[ Haki ]</h1>
+				<div><strong>Observasion:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillo"></div>
+				</div>
+				<div><strong>Armament:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwilla"></div>
+				</div>
+				<div><strong>Conqueror's</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillc"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ref">[ References and Notes ]</h1>
+			</diV>
+		<hr>
+	</body>
+</html>
