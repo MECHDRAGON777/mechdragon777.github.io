@@ -1,0 +1,412 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Velyrea</title>
+		<link rel="stylesheet" href="Velyrea.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Backstory"> Backstory</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Talents"> Talents</a>
+			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  //var data1 = [
+				  //{x: "Str", value: 15},
+				  //{x: "Agi", value: 20},
+				  //{x: "Per", value: 20},
+				  //{x: "End", value: 15},
+				  //{x: "Sta", value: 30},
+			   //];
+			  var data2 = [
+				  {x: "Str", value: 5},
+				  {x: "Agi", value: 5},
+				  {x: "Per", value: 5},
+				  {x: "End", value: 5},
+				  {x: "Sta", value: 50},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(50)
+				.ticks({'interval':10});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data2).name('Racial Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="Images/image1.png" alt="Logo">
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Velyrea</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+					<img src="Images/Velyrea.png" alt="Velyrea" width="350px">
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td>ブライリア</td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>burairia</td>
+            </tr>
+			<tr class="white-row">
+				<td>Affiliation:</td>
+				<td>
+				Impel Down Escapee
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Occupation:</td>
+				<td>
+					Lost Girl
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Residence:</td>
+				<td>
+					Random Jungle
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Alias:</td>
+				<td>
+					Storm Bird
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Epithet:</td>
+				<td>Storm Bird</td>
+			</tr>
+			<tr class="white-row">
+				<td>Status:</td>
+				<td>Alive</td>
+			</tr>
+			<tr class="white-row">
+				<td>Age:</td>
+				<td>
+					Biological: 23
+					<br>
+					Chronological: 23
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Birthday:</td>
+				<td>Febuary 29th</td>
+			</tr>
+			<tr class="white-row">
+				<td>Height:</td>
+				<td>
+					3327467136.5638766 nm
+					<br>
+					(10'11 3/1135")
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Weight:</td>
+				<td>
+					29483920657.988 μg
+					<br>
+					(65 7/7625 lbs)
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Blood Type:</td>
+				<td>XF (RH+)</td>
+			</tr>
+			<tr class="white-row">
+				<td>Position:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="pink-row">
+                <th colspan="2">Devil Fruit</th>
+            </tr>
+			<tr class="white-row">
+				<td>Japanese Name:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>English Name:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Meaning:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Type:</td>
+				<td>N/A</td>
+			</tr>
+        </table>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id="Demographics">[ Demographics ]</h1>
+				<div><strong>Name:</strong> Velyrea</div>
+				<div><strong>Birth name:</strong> Velyrea</div>
+				<div><strong>Chronological Age:</strong> 23</div>
+				<div><strong>Biological Age:</strong> 23</div>
+				<div><strong>Gender:</strong> ♀</div>
+				<div><strong>Race:</strong> Harpy</div>
+				<div><strong>Birthdate:</strong> February 29th</div>
+				<div><strong>Homeland:</strong> Sky Islands in the White White Sea surounding Impel Down</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Physical Details ]</h1>
+				<div><strong>Height:</strong> 3327467136.5638766 nm</div>
+				<div><strong>Weight:</strong> 29483920657.988 μg</div>
+				<div><strong>Blood Type:</strong> XF (RH+)</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Relationships ]</h1>
+				<h2>Family</h2>
+				<div>N/A</div>
+				<h2>Friends</h2>
+				<div>N/A</div>
+				<br>
+				<h2>Enemies</h2>
+				<div>Marines</div>
+				<div>World Goverment</div>
+				<div>Impel Down Staff</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Personal Details ]</h1>
+				<div><strong>Personality:</strong> Due to spending most of her life in isolation and imprisonment, Velyrea is a very skidish girl who values freedom. </div>
+				<br>
+				<div><strong>Appearance:</strong> A Harpy with tan feathers.</div>
+				<br>
+				<div><strong>Aspiration(s):</strong> To find a way to be as free as the Wind.</div>
+				<div><strong>Likes:</strong> Freedom, Writing</div>
+				<div><strong>Dislikes:</strong> Isolation,Lonliness, Heat, Cold, Jungles</div>
+				<div><strong>Goal:</strong> Tame the Winds of the White-White Sea</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ Affiliation ]</h1>
+				<div><strong>Aliases:</strong> Storm Bird</div>
+				<div><strong>Faction:</strong> N/A</div>
+				<div><strong>Bounty:</strong> &#x1d56d;0</div>
+				<div><strong>Alignment:</strong> True Chaotic</div>
+				<div><strong>Occupation:</strong> Impel Down Escapee and Fallen Dragon</div>
+				<div><strong>Crew Role:</strong> Chronicler and Navigator</div>
+				<div><strong>Native Sea:</strong> White Sea</div>
+				<br>
+				<div><strong>Crew Name:</strong> Speargun Pirates</div>
+				<div>
+					<strong>Crew Members:</strong>
+					<ol>
+						<li><strong>Gilman</strong> ~ Captain</li>
+						<li><strong>???</strong> ~ Vice Captain</li>
+						<li><strong>Area</strong> ~ ???</li>
+						<li><strong>Charlie</strong> ~ ???</li>
+						<li><strong>Tosen</strong> ~ ???</li>
+						<li><strong>Kido</strong> ~ ???</li>
+						<li><strong>Velyrea</strong> ~ Chronicler/Navigator</li>
+					</ol>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Backstory ]</h1>
+					<div class="tab" style="text-indent: 50px;">Velyrea was born to a Nobel Family That was once a family of Celestial Dragons. After her family left Marījoa for a Sky Island that they did not know was near Impel Down, they had a daughter. Due to the Island's location and the citizens of the island knowing the family, they quickly identified them as Celestial Dragons and took the family to a group of Scientists who were experimenting with both Human Lineage Factors and White Sea Clouds. Through a freak accident, their daugher "Velyrea" ended up being born with feathers and wings instead of a more standard humane apperance. Due to the location her family's research was was done, Velyrea was often taken by the Marines from the Prison Island in the Blue Sea as an experiment.</div>
+					<div class="tab" style="text-indent: 50px;">As a result of the Marines intervention as well as the World Government wanting her more for her blood and Lineage Factor to be used for Scientific Research, she often felt alone in the world and as if she was imprisoned for being alone and unique. Due to her Family tree, she would also often time get torment from the town members on the island who were against the World Government. In the end, she ended up feeling isolated and hating that aspect of herself as well as the World Government almost as much if not more than the ones that tormented her.</div>
+					<div class="tab" style="text-indent: 50px;">As one of the few outsiders to visit Impel Down, she has grown accustomed to hating extreme heat to the point that mild changes in temperature aggravate her. She often times would be taken to Level Five of Impel Down just for the Marines and World Goverment to experiment on her. She often lived in Levels Three and Four of Impel Down more so for tests on her rather than to keep her locked up. As a result of the place she had to sleep, she often time went days or weeks without food and when she did, she had to deal with unbearable heat that would nearly sear her feathers clean off for just touching the walls of the cell she was place in. Only leaving to Level five for experiments and occasionaly leaving the building for futher tests on her that could not be done inside Impel Down.</div>
+					<div class="tab" style="text-indent: 50px;">When Velyrea was in her 20s, she was finally taken away from the seas surrounding Impel Down and was able to board a ship that would be enroute to another secure place for more experimentation till she was able to get away during a Sea-King attack near the boarder of the Calm Belt and Paradise. Around the time of the attack, Velyrea would learn of the ability to fly as her Wings would not be for nothing; however, it would take her about a week of flying often needing to sleep in the ocean face up. Only eating random fish she would come across when she was exhausted.</div>
+					<div class="tab" style="text-indent: 50px;">She would spend years on a jungle like Island in Paradise alone in isolation struggling to survive off of the limited resources that would be available to her. While she would be accustomed to hunting fish and rabbits, she would mostly live in fear of the loneliness that she has succumbed to.</div>
+				</div>
+			<hr>
+		</div>
+		<div id = "Stats" style="display:none">
+			<div class="indent">
+				<h1 id="Fighting">[ Fighting Style ]</h1>
+				<div>Velyrea has no way of fighting.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Techniques">[ Techniques ]</h1>
+					<h2><u>Base Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Super Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Ultimate Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Inventory">[ Inventory ]</h1>
+				<ul>
+					<li><h2>Cloth</h2></li>
+						<div>A piece of fabric that is used like rudamentary clothing.
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:450px; width:45%;"></div>
+				<h1 id="Stat">[ Statistics ]</h1>
+				<h2>Limits</h2>
+				<ol style="list-style-type:none">
+					<li>Hybrid</li>
+					<li>Fallen Celestial Dragon</li>
+				</ol>
+				<h2>Racial Perks (Human/Harpy)</h2>
+				<ol style="list-style-type:none">
+					<li><strong>+</strong>30 Speed while flying</li>
+					<li><strong>+</strong>30 Reflexes while flying</li>
+					<li><strong>+</strong>Can Fly</li>
+					<br>
+					<li><strong>-</strong>Double Stamina drain while airborne</li>
+					<li><strong>-</strong>15 Strength</li>
+					<li><strong>-</strong>15 Durability</li>
+					<li><strong>-</strong>Unable to hold items normally. (Can use wing tips, though will have little to no grip.)</li>
+				</ol>
+				<h2>Statistics</h2>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 5
+					<div style="padding-bottom: 10px;" 	class="container">
+						<div class="skills xstr"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Durability:</strong> 5
+					<br>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xend"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Speed:</strong> 5
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xagi"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Reflexes:</strong> 5
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xper"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Stamina:</strong> 50
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xhp"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>AP:</strong> 70
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xtot"></div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Talents">[ Talents ]</h1>
+				<div><strong>Bladed Weaponry:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwea"></div>
+				</div>
+				<div><strong>Six Powers:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xele"></div>
+				</div>
+				<div><strong>Wind Wind Fruit:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xsul"></div>
+				</div>
+				<div><strong>Chronicler</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xnav"></div>
+				</div>
+				<div><strong>Navigator</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xnav"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Haki">[ Haki ]</h1>
+				<div><strong>Observasion:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillo"></div>
+				</div>
+				<div><strong>Armament:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwilla"></div>
+				</div>
+				<div><strong>Conqueror's</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillc"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ref">[ References and Notes ]</h1>
+			</diV>
+		<hr>
+	</body>
+</html>
