@@ -167,17 +167,19 @@ button:hover {
 
 
 
-.xstr {width: 2.5%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xstr {width: 1.6%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
-.xend {width: 2.5%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xend {width: 1.6%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
-.xagi {width: 25%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px; }
+.xagi {width: 1.6%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px; }
 
-.xper {width: 25%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xper {width: 1.6%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
-.xhp {width: 10%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xhp {width: 16.4%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
-.xtot {width: 10%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xtot {width: 23%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+
+.xspe {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
 .xwea {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 .xele {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
