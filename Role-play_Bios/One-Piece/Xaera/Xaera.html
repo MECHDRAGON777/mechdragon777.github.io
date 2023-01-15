@@ -1,0 +1,588 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Xæra</title>
+		<link rel="stylesheet" href="Xaera.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Backstory"> Backstory</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Talents"> Talents</a>
+			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  //var data1 = [
+				  //{x: "Str", value: 15},
+				  //{x: "Agi", value: 20},
+				  //{x: "Per", value: 20},
+				  //{x: "End", value: 15},
+				  //{x: "Sta", value: 30},
+			   //];
+			  var data2 = [
+				  {x: "Str", value: 40},
+				  {x: "Agi", value: 40},
+				  {x: "Per", value: 70},
+				  {x: "End", value: 40},
+				  {x: "Sta", value: 61},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(60)
+				.ticks({'interval':10});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data2).name('Racial Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="Images/image1.png" alt="Logo">
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Xæra</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+					<img src="Images/Xaera.png" alt="Xæra" width="450px">
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td>ズラ ドアイレオ ランブダデルタ</td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>Zura Doaireo Ranbudaderuta</td>
+            </tr>
+			<tr class="white-row">
+				<td>Affiliation:</td>
+				<td>
+					<ul>
+						<li>Chimera Pirates</li>
+						<li>Flevance</li>
+						<li>Weatheria</li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Occupation:</td>
+				<td>
+					<ul>
+						<li>Vice-Captain of the Chimera Pirates</li>
+						<li>Doctor</li>
+						<li>Chronicler</li>
+						<li>Navigator</li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Residence:</td>
+				<td>
+					Weatheria
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Alias:</td>
+				<td>
+					<ul>
+						<li>Zura</li>
+						<li>Sarah</li>
+						<li>Serah</li>
+						<li>Birdy</li>
+						<li>Snow Girl</li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Epithet:</td>
+				<td>
+					<ul>
+						<li>"The Eternal"</li>
+						<li>Wings of the Emporer</li>
+					</ul>
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Status:</td>
+				<td>Alive</td>
+			</tr>
+			<tr class="white-row">
+				<td>Age:</td>
+				<td>
+					Biological: 16
+					<br>
+					Chronological: 735
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Birthday:</td>
+				<td>Febuary 29th</td>
+			</tr>
+			<tr class="white-row">
+				<td>Height Pre-Surgery:</td>
+				<td>
+					157.48 Cm
+					<br>
+					(5'2")
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Height Post Surgery:</td>
+				<td>
+					426.466 Cm
+					<br>
+					(13'11.9")
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Weight Pre-Surgery:</td>
+				<td>
+					52 Kg
+					<br>
+					(115 Lbs)
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Weight Post Surgery:</td>
+				<td>
+					32 Kg
+					<br>
+					(70.5479 Lbs)
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Blood Type:</td>
+				<td>XF (RH+)</td>
+			</tr>
+			<tr class="white-row">
+				<td>Bounty:</td>
+				<td>&#x1d56d;2,459,670,000</td>
+			</tr>
+			<tr class="pink-row">
+                <th colspan="2">Devil Fruit</th>
+            </tr>
+			<tr class="white-row">
+				<td>Japanese Name:</td>
+				<td>ユキユキの実</td>
+			</tr>
+			<tr class="white-row">
+				<td>English Name:</td>
+				<td>Snow-Snow Fruit</td>
+			</tr>
+			<tr class="white-row">
+				<td>Meaning:</td>
+				<td>Snow</td>
+			</tr>
+			<tr class="white-row">
+				<td>Type:</td>
+				<td>Awakened Logia</td>
+			</tr>
+        </table>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id="Demographics">[ Demographics ]</h1>
+				<div><strong>Name:</strong> Xæra Dhyleo Lambdadelta</div>
+				<div><strong>Birth name:</strong> Xæra D. Lambdadelta</div>
+				<div><strong>Chronological Age:</strong> 735</div>
+				<div><strong>Biological Age:</strong> 16</div>
+				<div><strong>Gender:</strong> ♀</div>
+				<div><strong>Race:</strong> Harpy</div>
+				<div><strong>Birthdate:</strong> February 29th, 685</div>
+				<div><strong>Homeland:</strong> Weatheria</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Physical Details ]</h1>
+				<div><strong>Height:</strong> 157.48 Cm -> 426.466 Cm</div>
+				<div><strong>Weight:</strong> 52Kg -> 32 Kg</div>
+				<div><strong>Blood Type:</strong> XF (RH+)</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Relationships ]</h1>
+					<div><strong>Parents:</strong></div>
+						<div class="tab"><strong>Name:</strong> Æstrid D. Lambdadelta</div>
+						<div class="tab"><strong>Age:</strong> 39 (Time of death)</div>
+						<div class="tab"><strong>Bounty:</strong> 2,283,139,000 &#x1d56d;</div>
+						<div class="tab"><strong>Relation:</strong> Mother</div>
+						<div class="tab"><strong>Devil Fruit:</strong> Op-Op</div>
+						<div class="tab"><strong>Status:</strong> Deceased</div>
+						<div class="tab"><strong>Race:</strong> Human</div>
+						<br>
+						<div class="tab"><strong>Name:</strong> Æðelwine Lambdadelta</div>
+						<div class="tab"><strong>Age:</strong> 97 (Time of death)</div>
+						<div class="tab"><strong>Bounty:</strong> 0 &#x1d56d;</div>
+						<div class="tab"><strong>Relation:</strong> Father</div>
+						<div class="tab"><strong>Devil Fruit:</strong> Bird Bird Fruit; Model Falcon</div>
+						<div class="tab"><strong>Status:</strong> Deceased</div>
+						<div class="tab"><strong>Race:</strong> Human</div>
+					<div><strong>Sbiling(s):</strong></div>
+						<div class="tab">N/A</div>
+					<div><strong>Known Descendants(s):</strong></div>
+						<div class="tab"><strong>Name:</strong> Helloelle Lambdadelta</div>
+						<div class="tab"><strong>Age:</strong> 53 (Time of death)</div>
+						<div class="tab"><strong>Bounty:</strong> 30,000,000 &#x1d56d;</div>
+						<div class="tab"><strong>Relation:</strong> Daughter</div>
+						<div class="tab"><strong>Devil Fruit:</strong> N/A</div>
+						<div class="tab"><strong>Status:</strong> Deceased</div>
+						<div class="tab"><strong>Race:</strong> Harpy</div>
+					<br>
+						<div class="tab"><strong>Name:</strong> Sephyne Feraphine Yoryne Verophine</div>
+						<div class="tab"><strong>Age:</strong> 25</div>
+						<div class="tab"><strong>Bounty:</strong> 539,527,000 &#x1d56d;</div>
+						<div class="tab"><strong>Relation:</strong> Great(35th) Grand Daughter</div>
+						<div class="tab"><strong>Devil Fruit:</strong> Fuse Fuse Fruit</div>
+						<div class="tab"><strong>Status:</strong> Alive</div>
+						<div class="tab"><strong>Race:</strong> Harpy</div>
+				</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Personal Details ]</h1>
+				<div><strong>Personality:</strong> A level headed girl who tends to think rationally. Does not like the concept of Devil Fruits, but after her sister’s death, her mother became more protective of her thus not allowing for much freedom outside of studying medical practice. Xæra tends to think things through most of the time and can stay calm under unusually stressful situations. Has a gravely Germaphobic.</div>
+				<br>
+				<div><strong>Appearance:</strong> Xæra is a Harpy who was originally a Human with long white hair who often keeps her hair in the shape of cat-ears. She wears a Kimono whose sleeves are open enough to allow even her wings to fit in a concealed manner. She hides her tail in her Kimono while in public. She keeps a Plague Doctor Mask on to hide her age from others when she stays in an area too long as well as to keep her clean. Her eyes are a deep red and often appear to be calm and shy. The biggest giveaway about her not being human anymore would be her talons. Her wings are attached slightly below her shoulder.</div>
+				<br>
+				<div><strong>Aspiration(s):</strong> To keep her family ties of being a family of doctors as well as to save Flevance from the White Lead Disease.</div>
+				<div><strong>Likes:</strong> Clouds, Cold, Storms, Birds, Cats</div>
+				<div><strong>Dislikes:</strong> Devil Fruits</div>
+				<div><strong>Goals:</strong> Protect the Raion family, Cure Flevance, Find a way to mitigate the cold air of her home.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ Affiliation ]</h1>
+				<div><strong>Aliases:</strong> Sarah, Serah, Zura, Snow Girl, Birdy</div>
+				<div><strong>Faction:</strong> Pirate</div>
+				<div><strong>Bounty:</strong> &#x1d56d;2,459,670,000</div>
+				<div><strong>Alignment:</strong> True Chaotic</div>
+				<div><strong>Occupation:</strong> Doctor</div>
+				<div><strong>Crew Role:</strong> Vice-Captain , Doctor, Chronicler, and Navigator</div>
+				<div><strong>Native Sea:</strong> White Sea</div>
+				<br>
+				<div><strong>Crew Name:</strong> Chimera Pirates</div>
+				<div>
+					<strong>Crew Members:</strong>
+					<ol>
+						<li><strong>Lyon K. Raion</strong> ~ Captain</li>
+						<li><strong>Davy D. Jones</strong> ~ Navigator and Helmsman</li>
+						<li><strong>Xæra D. Lambdadelta</strong> ~ Vice Captain, Chronicler, Doctor, and Navigator</li>
+						<li><strong>Darby</strong> ~ Cook</li>
+					</ol>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Backstory ]</h1>
+					<div class="tab" style="text-indent: 50px;">Xæra was born over seven hundred years before the current Queen of the Harpies took the throne and lived a sheltered life for the first seventy or so years of her life after her younger sister died by falling to her death at the age of four. Xæra was eight at the time and was locked in a room in Weatheria as a result til her sixteenth birthday at which her mother, Æstrid, returned home in a gravely wounded state. When she found her mother was in such a “Wounded” state, she tried to help her mother out the best she could, but she lacked the proper medical knowledge at the time to save her. Over the last three days of her life, her mother decided to use her Devil Fruit’s ability on her daughter to give her ever-lasting youth. As a result, Xæra has the body of a sixteen year old Harpy.</div>
+					<div class="tab" style="text-indent: 50px;">After the sacrifice of the Ageless Surgery, her Father, Æðelwine Lambdadelta has taken her from island to island every so many years where she eventually found a guy who she fell in love with at the age of twenty, but due to her body’s secret, she was taken away from there four years later leaving a new-born Harpy in the North Blue before moving again. Before long, she carried the tradition of moving to a new island every five to ten years after her father died at the age of 97. Every time she arrives at a new island, she would claim to be sixteen and looking for work. In her spare time, she found hobbies of studying weather patterns like her family did originally before becoming a family of medical professionals.</div>
+					<div class="tab" style="text-indent: 50px;">Most of her time has been spent treating the ill on the new islands she explored every so often that she became seen as that of a plague doctor. She had little time to explore her passion for the weather and it took her decades to find a way to control the weather before eventually using her country’s research to eventually get a Clima Tact. She has used it to cause rainfall on the islands she visited more often than not and to stop rain when the islands were experiencing floods.</div>
+					<div class="tab" style="text-indent: 50px;">Around the age of 135, Xæra stopped visiting the White Sea all together to visit the Blues, although she could never fly through the Calm Belt; as a result, she always remained flying between the North Blue and the White Sea. After being seen as a plague doctor, she started carrying a plague doctor's mask with her which she always wears during an operation. The Islands she frequented the most would include the Lvneel Kingdom, Spider Miles, Flevance, Rubeck Island, Minion Island, Rakesh, and a few others. As she got older, she used her mask to hide her identity a bit more as Harpies became more and more prevalent in the world; however she would still not stay on the same island for more than two decades at a time when in hiding.</div>
+					<div class="tab" style="text-indent: 50px;">In the present day, She has moved to Flevance recently and those that last saw her in the region would have mostly forgotten about her. She has been in the town of Flevance for a few weeks at this point in time; she has not been seen without her mask since she has arrived. Xæra is often seen in the Hospital in Flevance since her arrival during the day and can sometimes be seen at night either sleeping on the southern shore or practicing fighting with a bo-staff near the outskirts of town. With the spread of the White Lead Disease in Flevance, she was able to find out it was not a contagious disease based on her past visits to Flevance and the average age of deaths in the victims declining.</div>
+					<div class="tab" style="text-indent: 50px;">Due to her realization with the cause of the Disease being the Lead itself and coming in contact with it, she has made it a goal of hers to find a cure for it at almost any cost. Over her years, she has spent most of her life trying to find a cure for White Lead Disease with not much luck. She has used her “Longevity” to her advantage looking for the cure; but has never found one in the North Blue.</div>
+					<div class="tab" style="text-indent: 50px;">Xæra often avoids Germa due to the stories of the sea farrying country due to their ruthless nature and their will to conquer the entire North Blue. She is however aware of Germa’s technology and potential to find a cure, she however would like to find a more trustworthy solution to save the country and town of Flevance. While working in Flevance for over a century off and on, she has picked up quite a bit of medical knowledge.</div>
+					<div class="tab" style="text-indent: 50px;"></div>
+					<div class="tab" style="text-indent: 50px;"></div>
+				</div>
+			<hr>
+		</div>
+		<div id = "Stats" style="display:none">
+			<div class="indent">
+				<h1 id="Fighting">[ Fighting Style ]</h1>
+				<div>Xæra tends to mix her Climatact in with her Snow Logia.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Techniques">[ Techniques ]</h1>
+					<h2><u>Rookie Class</u></h2>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Compression Snow</div>
+					<div><strong>Type:</strong> Passive</div>
+					<div><strong>Range:</strong> N/A</div>
+					<div><strong>Stats:</strong> N/A</div>
+					<div><strong>Description:</strong> Xæra can manipulate and compress snow at will around her to make it solid and dense, and even shape the snow into objects.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Snow Shell</div>
+					<div><strong>Type:</strong> Passive/Defensive</div>
+					<div><strong>Range:</strong> N/A</div>
+					<div><strong>Stats:</strong> N/A</div>
+					<div><strong>Description:</strong> Xæra can leave behind a copy of the monterous snow form she takes behind leaving it as a shell that can be used as a sheild. When paired with Snow Clones, this can be used to quickly transfer her real body from her real body and a clone.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Snow Waltz</div>
+					<div><strong>Type:</strong> Support</div>
+					<div><strong>Range:</strong> Self</div>
+					<div><strong>Stats:</strong> Agility x1.2</div>
+					<div><strong>Description:</strong> Allows the user to merge with snow and move through it freely.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit + Observasion Haki</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Cold Resistence</div>
+					<div><strong>Type:</strong> Passive</div>
+					<div><strong>Range:</strong> Self</div>
+					<div><strong>Stats:</strong> Agility x1.2</div>
+					<div><strong>Description:</strong> Allows the user to have greater immunity to the cold than normal granting somewhat immunity to cold-based attacks.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit</div>
+					<hr>
+					<h2><u>Supernova Class</u></h2>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Snow-Step</div>
+					<div><strong>Type:</strong> Support</div>
+					<div><strong>Range:</strong> Self</div>
+					<div><strong>Stats:</strong> Agility x1.2</div>
+					<div><strong>Description:</strong> Allows the user to merge with snow and move through it freely and quickly to speed one up even futher.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit + Observasion Haki + Blizzard (Weather condition)</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Snowfall Blizzard</div>
+					<div><strong>Type:</strong> Support/Debuff</div>
+					<div><strong>Range:</strong> Non-Observasion Haki users.</div>
+					<div><strong>Stats:</strong> Perception -10</div>
+					<div><strong>Description:</strong> Allows the user to merge with snow and move through it freely and quickly to speed one up even futher.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit + Observasion Haki + Blizzard (Weather condition)</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Snowdome</div>
+					<div><strong>Type:</strong> Defensive</div>
+					<div><strong>Range:</strong> 10 Meters</div>
+					<div><strong>Stats:</strong> x1.35 Endurance</div>
+					<div><strong>Description:</strong> Xæra generates snow in the area and manipulates it to form an igloo around a target made of highly compressed snow. The defensive power of this technique is equal to 1.25x the user's Endurance.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Feather Blade</div>
+					<div><strong>Type:</strong> Attack</div>
+					<div><strong>Range:</strong> 10 Meters</div>
+					<div><strong>Stats:</strong> x1.25 Strength, x0.5(x1.25 Strength) Agility</div>
+					<div><strong>Description:</strong> Xæra turns the feathers on her wings into sharp snow feathers and launches them at a target for explosive damage. Power equal to 1.25x the user's Strength, speed equal to half the power.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Snow Blade</div>
+					<div><strong>Type:</strong> Attack</div>
+					<div><strong>Range:</strong> Melee</div>
+					<div><strong>Stats:</strong> x1.35 Strength, x1.25 Endurance</div>
+					<div><strong>Description:</strong> Xæra turns any part of her flesh (including wings) into snow and compresses it to be dense enough to clash with blades or cut objects. Increases Strength and Endurance by 1.25x</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit</div>
+					<hr>
+					<h2><u>Powerhouse Class</u></h2>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Multilayer-Snowdome</div>
+					<div><strong>Type:</strong> Defensive</div>
+					<div><strong>Range:</strong> 10 Meters</div>
+					<div><strong>Stats:</strong> x1.5 Endurance</div>
+					<div><strong>Description:</strong> By piling up multiple layers of snow on top of each other, Xæra can strengthen the durability of the igloo and cause it to withstand stronger attacks. The defensive power of this technique is equal to 1.5x the user's Endurance.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Perpetual Snow</div>
+					<div><strong>Type:</strong> Transformation</div>
+					<div><strong>Range:</strong> 20 Meters</div>
+					<div><strong>Stats:</strong> x1.5 All Stats</div>
+					<div><strong>Description:</strong> Allows the user to transform into a Giant Snow Harpy strengthening the potency and effectiveness of the fruit eater's abilities while in that form.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit 80% + Armament Haki</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Cryoconite Blade</div>
+					<div><strong>Type:</strong> Attack</div>
+					<div><strong>Range:</strong> Melee</div>
+					<div><strong>Stats:</strong> x1.5 Strength, x1.5 Endurance</div>
+					<div><strong>Description:</strong> Xæra turns any part of her flesh (including wings) into snow and compresses it to be dense enough to clash with blades or cut objects. Afterwards, she incases the new blades in Armament Haki to increase Strength and Endurance by 1.5x </div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit 80%</div>
+					<h2><u>Emperor Class</u></h2>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Cryoconitedome</div>
+					<div><strong>Type:</strong> Defensive</div>
+					<div><strong>Range:</strong> 10 Meters</div>
+					<div><strong>Stats:</strong> x2 Endurance</div>
+					<div><strong>Description:</strong> By piling up multiple layers of snow on top of each other and infusing Armament Haki throughly throughout, Xæra can strengthen the durability of the igloo even further and cause it to withstand stronger attacks. The defensive power of this technique is equal to 2x the user's Endurance.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit 100% + Armament Haki</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Pykrete Blade</div>
+					<div><strong>Type:</strong> Melee</div>
+					<div><strong>Range:</strong> 20 Meters</div>
+					<div><strong>Stats:</strong> x2 Strength, x2 Endurance</div>
+					<div><strong>Description:</strong> Xæra turns any part of her flesh (including wings) into snow and compresses it to be dense enough to clash with blades or cut objects. Afterwards, she incases the new blades in Armament and Conqueror's Haki to increase Strength and Endurance by 2x</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit 100% + Armament Haki + Conqueror's Haki</div>
+					<h2><u>God Class</u></h2>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Snow Clone</div>
+					<div><strong>Type:</strong> Support</div>
+					<div><strong>Range:</strong> Self</div>
+					<div><strong>Stats:</strong> Endurance &#247; 100%</div>
+					<div><strong>Description:</strong> By condensing the snow just right, Xæra can create clones of herself that she can control at will. These clones are about as half as power as the user (physically and Devil Fruit), and are destroyed in a single hit.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit 100%</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Pykretedome</div>
+					<div><strong>Type:</strong> Defensive</div>
+					<div><strong>Range:</strong> 20 Meters</div>
+					<div><strong>Stats:</strong> x2.5 Endurance</div>
+					<div><strong>Description:</strong> By piling up multiple layers of snow on top of each other and infusing Armament and Conqueror's Haki throughly throughout, Xæra can strengthen the durability of the igloo even further and cause it to withstand stronger attacks. The defensive power of this technique is equal to 2x the user's Endurance.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit 100% + Armament Haki + Conqueror's Haki</div>
+					<div style="color:#BB86FC;"><strong>Name:</strong> Pykrete Shower</div>
+					<div><strong>Type:</strong> Defensive</div>
+					<div><strong>Range:</strong> 20 Meters</div>
+					<div><strong>Stats:</strong> x2.5 Strength</div>
+					<div><strong>Description:</strong> By infusing a blizzard with Armament and Conqueror's Haki, creates a deadly shower of what would appear as Sleet rather than snow due to high compression and the coating of Haki.</div>
+					<div><strong>Requirements:</strong> Snow-Snow Fruit 100% + Armament Haki + Conqueror's Haki</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Inventory">[ Inventory ]</h1>
+				<ul>
+					<li><h2>Plauge Doctor's Mask</h2></li>
+						<div>A mask that covers her face.</div>
+					<li><h2>Cloak</h2></li>
+						<div>A black cloak with red selvage. She can use the uper part of the fabric to conseal her wings when needed.</div>
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:450px; width:45%;"></div>
+				<h1 id="Stat">[ Statistics ]</h1>
+				<h2>Limits</h2>
+				<ol style="list-style-type:none">
+					<li><strong>High IQ</strong></li>
+					<ol style="list-style-type:none">
+						<li>Gets an extra tier of Profession (Loses 1 ability slot)</li>
+					</ol>
+					<li><strong>Hybrid</strong></li>
+					<ol style="list-style-type:none">
+						<li>Harpy (Bird-Humanoid hybrid)</li>
+					</ol>
+					<li><strong>Curse</strong></li>
+					<ol style="list-style-type:none">
+						<li>A strange and rare curse which is a phenomenon that helps the user.</li>
+						<li>Can see the death of a person in advance.</li>
+					</ol>
+				</ol>
+				<h2>Racial Perks (Human/Harpy)</h2>
+				<ol style="list-style-type:none">
+					<li><strong>+</strong>Can Fly</li>
+					<br>
+					<li><strong>-</strong>Unable to hold items normally. (Can use wing tips, though will have little to no grip.)</li>
+				</ol>
+				<h2>Statistics</h2>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 40 <strong>(B)</strong>
+					<div style="padding-bottom: 10px;" 	class="container">
+						<div class="skills xstr"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Durability:</strong> 40 <strong>(B)</strong>
+					<br>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xend"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Agility:</strong> 70 <strong>(S)</strong>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xagi"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Perception:</strong> 68 <strong>(S)</strong>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xper"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Stamina:</strong> 61 <strong>(S)</strong>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xhp"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>AP:</strong> 279
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xtot"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>SP:</strong> 61
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xspe"></div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Talents">[ Talents ]</h1>
+				<div><strong>Weathermancy:</strong> 40%</div>
+				<div class="containerH">
+					<div class="skills xwea"></div>
+				</div>
+				<div><strong>Snow-Snow Fruit:</strong> 100%</div>
+				<div class="containerH">
+					<div class="skills xsul"></div>
+				</div>
+				<div><strong>Devil Fruit Awakening:</strong> 100%</div>
+				<div class="containerH">
+					<div class="skills xsul"></div>
+				</div>
+				<div><strong>Chronicler</strong> 100%</div>
+				<div class="containerH">
+					<div class="skills xchr"></div>
+				</div>
+				<div><strong>Navigator</strong> 80%</div>
+				<div class="containerH">
+					<div class="skills xnav"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Haki">[ Haki ]</h1>
+				<div><strong>Observasion:</strong> 100%</div>
+				<div class="containerH">
+					<div class="skills xwillo"></div>
+				</div>
+				<div><strong>Armament:</strong> 100%</div>
+				<div class="containerH">
+					<div class="skills xwilla"></div>
+				</div>
+				<div><strong>Conqueror's</strong> 20%</div>
+				<div class="containerH">
+					<div class="skills xwillc"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ref">[ References and Notes ]</h1>
+			</diV>
+		<hr>
+	</body>
+</html>
