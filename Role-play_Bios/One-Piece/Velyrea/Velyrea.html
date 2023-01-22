@@ -101,9 +101,23 @@
             <tr class="pink-row">
                 <th colspan="2">Velyrea</th>
             </tr>
+			<tr>
+				<td colspan="1">
+					<button class="iButton"; onclick="show_div_fun('img1');hide_div_fun('img2')">Original Outfit</button>
+				</td>
+				<td>
+					<button class="iButton"; onclick="show_div_fun('img2');hide_div_fun('img1')">Current Outfit</button>
+					</div>
+				</td>
+			</tr>
             <tr>
                 <td colspan="2">
-					<img src="Images/Velyrea.png" alt="Velyrea" width="350px">
+					<div id="img1" class="navbar" style="display:none">
+						<img src="Images/Velyrea.png" alt="Velyrea" width="350px">
+					</div>
+					<div id="img2" class="navbar" style="display:block">
+						<img src="Images/Velyrea2.png" alt="Velyrea" width="350px">
+					<div>
 				</td>
             </tr>
             <tr class="pink-row">
@@ -361,12 +375,13 @@
 						<div class="skills xhp"></div>
 					</div>
 				</div>
-				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>AP:</strong> 70
-					<div style="padding-bottom: 10px;" class="container">
-						<div class="skills xtot"></div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>AP:</strong> 87
+					<div style="padding-bottom: 10px;" class="containerH">
+						<div class="skills xtot" style ="position: absolute; z-index: 9;"></div>
+						<div class="skills xunu" style ="position: absolute;"></div>
 					</div>
 				</div>
-				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>SP:</strong> 10
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>SP:</strong> 13
 					<div style="padding-bottom: 10px;" class="container">
 						<div class="skills xspe"></div>
 					</div>
@@ -383,9 +398,10 @@
 				<div class="containerH">
 					<div class="skills xele"></div>
 				</div>
-				<div><strong>Wind Wind Fruit:</strong> 0</div>
+				<div><strong>Wind Wind Fruit:</strong> 20%</div>
 				<div class="containerH">
-					<div class="skills xsul"></div>
+					<div class="skills xsul" style ="position: absolute; z-index: 9;"></div>
+					<div class="skills desi" style ="position: absolute;"></div>
 				</div>
 				<div><strong>Chronicler</strong> 0</div>
 				<div class="containerH">
