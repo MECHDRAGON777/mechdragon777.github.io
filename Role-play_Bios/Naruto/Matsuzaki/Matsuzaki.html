@@ -1,0 +1,490 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Matsuzaki Chinoike</title>
+		<link rel="stylesheet" href="Matsuzaki.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Ninja Details">Ninja Details</a>
+			<a href="#Backstory"> Backstory</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Chakra"> Chakra</a>
+			<a href="#Ref">References and Notes</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  //var data1 = [
+				  //{x: "Str", value: 15},
+				  //{x: "Agi", value: 20},
+				  //{x: "Per", value: 20},
+				  //{x: "End", value: 15},
+				  //{x: "Sta", value: 30},
+			   //];
+			  var data2 = [
+				  {x: "Strength", value: 1},
+				  {x: "Agility", value: 1},
+				  {x: "Perception", value: 12},
+				  {x: "Endurance", value: 1},
+				  {x: "Chakra Control", value: 1},
+				  {x: "Chakra Reserves", value: 1},
+				  {x: "Chakra Potency", value: 1},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(15)
+				.ticks({'interval':1});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data2).name('Racial Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="Images/image1.png" alt="Logo" width="500px">
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Matsuzaki Chinoike</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+					<img src="Images/image2.png" alt="Matsuzaki Chinoike" width="500px">
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td>血之池松崎</td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>Chinoike Matsuzaki</td>
+            </tr>
+			<tr class="white-row">
+				<td>Affiliation:</td>
+				<td>
+				Kumogakure
+				<br>
+				Chinoike Clan
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Occupation:</td>
+				<td>
+					Genin
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Residence:</td>
+				<td>
+					Valley of Hell [Yugakure] (Former)
+					<br>
+					Academy Dorms for transfer students [Kumogakure]
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Status:</td>
+				<td>Alive</td>
+			</tr>
+			<tr class="white-row">
+				<td>Age:</td>
+				<td>
+					Biological: 14
+					Chronological: 34
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Birthday:</td>
+				<td>Febuary 29th</td>
+			</tr>
+			<tr class="white-row">
+				<td>Height:</td>
+				<td>
+					165 cm
+					<br>
+					(5"4.9606')
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Weight:</td>
+				<td>
+					45.8 kg
+					<br>
+					(100.9 lbs)
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Blood Type:</td>
+				<td>AB+</td>
+			</tr>
+			<tr class="pink-row">
+                <th colspan="2">Jutsu</th>
+            </tr>
+			<tr class="white-row">
+				<td>Kekkei Genkai:</td>
+				<td>
+					<a href="https://naruto.fandom.com/wiki/Ketsury%C5%ABgan" style="color: #FFFFFF33;">Ketsuryūgan</a>
+					<br>
+					<a href="https://naruto.fandom.com/wiki/Genjutsu:_Ketsury%C5%ABgan" style="color: #FFFFFF33;">Genjutsu: Ketsuryūgan</a>
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Ninjutsu:</td>
+				<td>Blood Style: Blood Shuriken</td>
+			</tr>
+			<tr class="white-row">
+				<td>Genjutsu:</td>
+				<td>
+					<a href="https://naruto.fandom.com/wiki/Demonic_Illusion:_False_Surroundings_Technique" style="color: #FFFFFF33;">Demonic Illusion: False Surroundings</a>
+					<br>
+					<a href="https://naruto.fandom.com/wiki/Demonic_Illusion:_Double_False_Surroundings_Technique" style="color: #FFFFFF33;">Demonic Illusion: Double False Surroundings</a>
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Taijutsu:</td>
+				<td>
+					Yin Style: Illusionary Kick
+					<br>
+					Yin Style: Illusionary Punch
+				</td>
+			</tr>
+        </table>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id="Demographics">[ Demographics ]</h1>
+				<div><strong>Name:</strong> Matsuzaki Chinoike</div>
+				<div><strong>Chronological Age:</strong> 14</div>
+				<div><strong>Biological Age:</strong> 14</div>
+				<div><strong>Gender:</strong> ♀</div>
+				<div><strong>Clan:</strong> Chinoike</div>
+				<div><strong>Birthdate:</strong> February 29th</div>
+				<div><strong>Village:</strong> Village Hidden in Hot Water (Yugakure)</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Physical Details ]</h1>
+				<div><strong>Height:</strong> 165 cm</div>
+				<div><strong>Weight:</strong> 45.8 kg</div>
+				<div><strong>Blood Type:</strong> AB+</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Relationships ]</h1>
+				<h2>Family</h2>
+				<div><strong>Name:</strong> ??? Chinoike</div>
+				<div><strong>Age:</strong> 43</div>
+				<div><strong>Gender:</strong> ♀</div>
+				<div><strong>Relation:</strong> Mom</div>
+				<div><strong>Status:</strong> Dead</div>
+				<br>
+				<div><strong>Name:</strong> ??? Chinoike</div>
+				<div><strong>Age:</strong> 43</div>
+				<div><strong>Gender:</strong> ♂</div>
+				<div><strong>Relation:</strong> Dad</div>
+				<div><strong>Status:</strong> Dead</div>
+				<br>
+				<div><strong>Name:</strong> ??? Chinoike</div>
+				<div><strong>Age:</strong> 15</div>
+				<div><strong>Gender:</strong> ♀</div>
+				<div><strong>Relation:</strong> Sister</div>
+				<div><strong>Status:</strong> Alive</div>
+				<br>
+				<h2>Friends</h2>
+				<div>N/A</div>
+				<br>
+				<h2>Enemies</h2>
+				<div>N/A</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Personal Details ]</h1>
+				<div><strong>Personality:</strong> Matsuzaki is a sneaky lass who fights from a distance and hiding to keep her illusions intact. She can fight at close range using a sword made of chakra coated blood to further influence others around her with her strong genjutsu. While she will follow orders given to her, she often does not like following them and ends up doing so begrudgenly unless she respects the person one-hundred percent. She has a very artistic side to her which can be seen in her Blood Style Jutsu and the creativity she has with it. Quite well mannered for someone who was raised in the Valley of Hell.</div>
+				<br>
+				<div><strong>Appearance:</strong> Matsuzaki is a fair skinned girl of around five and a half feet tall and has long blonde hair that comes half-way down her back with her bangs covering her right (red) eye. This lock of hair covers her eye that she primordially uses for her Kekkei Genkai known as the <strong>Ketsuryūgan</strong>. She wears a full outfit of chainmail under her standard Yugakure Flak Jacket customized to have no sleeves specialized for her contact Genjutsu.</div>
+				<br>
+				<div><strong>Aspiration(s):</strong> End the descrimination of the Chinoike Clan.</div>
+				<div><strong>Likes:</strong> Blood, Poison, Rain, Soaring through the sky.</div>
+				<div><strong>Dislikes:</strong> Uchiha Clan</div>
+				<div><strong>Fears:</strong> Uchiha Clan, Others finding out she is of the Chinoike clan.</div>
+				<div><strong>Nindō:</strong> Keep those you value alive at all costs.</div>
+				<div><strong>Goal:</strong> Make Jōnin</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ninja Details">[ Ninja Details ]</h1>
+				<div><strong>Ninja ID:</strong>Yu-00460229</div>
+				<div><strong>Letter Rank:</strong>D-</div>
+				<div><strong>Rank:</strong>Genin</div>
+				<div><strong>Chakra Natures:</strong>Yin</div>
+				<div><strong>Kekkei Genkai:</strong>Ketsuryūgan, Blood Style</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ Affiliation ]</h1>
+				<div><strong>Alignment:</strong> True Chaotic</div>
+				<div><strong>Occupation:</strong> Kunoichi</div>
+				<div><strong>Village:</strong> Kumogakure</div>
+				<br>
+				<div><strong>Squad:</strong> Unnammed</div>
+				<div>
+					<strong>Squad Members:</strong>
+					<ol>
+						<li>Unknown Squad Leader</li>
+						<li>Katsumi Kenju</li>
+						<li>Matsuzaki Chinoike</li>
+						<li>Unknown Genin</li>
+					</ol>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Backstory ]</h1>
+					<h2><u>Pre-Academy</u></h2>
+					<div class="tab" style="text-indent: 50px;">Due to her Clan's history, the Chinoike were exhiled from Kumogakure into the Valley of Hell in the Steam Village. Due to the exhile of her clan, Matsuzaki begins to hate the Uchiha for being responsible for the incident. The life of those in the Valley were often harsh and cruel and as a result of the cruelty, leaving the Valley was often saut upon. Due to being of age to enroll at a Ninja Academy, she had the chance to go to another village to learn suggested she could get there.</div>
+					<div class="tab" style="text-indent: 50px;">The closest village to her new home would be The Village hidden in the Clouds where her family was recently exhiled from. Due to the Ketsuryūgan being the reason of the exhile in the first place, she was instructed to abstain from using it if possible and if she had to, make sure she had a way to hide her eyes while using it. The young lass would end up heading to the village head for the Steam Village to get an Academy Transfer to the Cloud Village in order to train to be a strong Kunoichi. After getting approved, she would set out to track across the wilderness that is Yukigakure, the Village hidden in the Snow.</div>
+					<div class="tab" style="text-indent: 50px;">Matsuzaki was not that skilled in the art of Bukijutsu or Kenjutsu before trecking through the snowy wilderness, but did know how to use her Ketsuryūgan to make weapons out of blood and she carried a small sword sheeth with her that was passed through her family to carry the iron water of the Valley of Hell. Most of her training in Kenjutsu came from her use of a Blood Katana she often made to slay any wild animals that got close to her so she could have somthing to eat.</div>
+					<div class="tab" style="text-indent: 50px;">Over the year it took her to get to the Cloud Village, she would have learned just enough Kenjutsu to hold her own against wild beasts, but would still have issues against those who knew how to actually use a sword. During the same time, she would also learn a bit of Taijutsu to quickly knock out the beasts when she did not need food using her Ketsuryūgan's genjutsu. Being of the infamous Chinoike Clan, she would learn to appreciate her Genjutsu prowess.</div>
+					<div class="tab" style="text-indent: 50px;">Eventually, Matsuzaki would end up crossing the boarder of the Village hidden in the Clouds at the age of 11. She was just a child ventureing out at the age of 10. When she got to the village, she was instructed to give her identification papers and reasoning for why she was showing up in the Hidden Village. Her documents showed her Ninja ID was Yu-00460229 and that she would be a Kunoichi to be inrolled in a Cloud Village Academy. The papers specificaly listed her name as "Matsuzaki of the Steam" omitting her last name and clan name due to the Chinoike past. The village staff would be reluctant to allow a Steam Village girl into the Cloud village so soon after the Chinoike clan was exhiled from the Cloud Village to the Steam Village without a last name on the paperwor, but would eventually let her in.</div>
+					<div class="tab" style="text-indent: 50px;">After getting into the Village officialy, she would be instructed to head straight to a village infirmary to help her with all of the wounds she aquired from the voyage to the Cloud Village. The creepiest part of her was that while she had a fair bit of blood loss from the wild beasts she had to kill for food, she actually carried the blood she lost with her. While it could not be used in a transfusion, it would be easy to tell that her blood type was AB+ from all of the blood she had on her.</div>
+					<div class="tab" style="text-indent: 50px;">With about a week in the infirmary, she would be released in just enough time to enroll in the Academy. Matsuzaki would be one of the youngest students enrolling, but would work towards the goal of being able to be a ninja regardless. On her arrival to class on the first day, she handed over a package to the instructor which contained a note about even more detail about the girl who was now in the class and a Steam Village Headband. She would be allowed to wear the Steam Headband after graduating suggested she also wore clotheing of the Cloud Village while in the Cloud Village and would be instructed to stay in the Cloud Village until she either turned eighteen or reached the rank of Jōnin.</div>
+					<h2><u>Academy</u></h2>
+					<div class="tab" style="text-indent: 50px;">While at the Academy, Matsuzaki would do quite well in her studies to become a Kunoichi; however would strugle with the Ninjutsu aspect of the examinations and classes. A weird notion about her is that she seemed to only be able to use Jutsu that did not matter the nature of Chakra used or specificaly used Yin Chakra. The Chakra nature often associated with Genjutsu. This would mostly fly under the radar; however, would be noted on her info that would be passed to her Squad Captain later on. As her days went on, she would often spar with the other students after class who agreed. She would use one of the training katanas from the school for Kenjutsu spars or her fists and feet for taijutsu sparing. She never actually used Genjutsu in her sparing sessions at the Academy with students.</div>
+					<div class="tab" style="text-indent: 50px;">By the time Genjutsu was taught to the class, Matsuzaki would excell due to her clan lineage. While she would not use her Kekkei Genkai, she would still be the student who was the top of the class in this feild of Ninja Art. The two Genjutsu she really picked up here would be <strong>Demonic Illusion: False Surroundings</strong> Jutsu and it's superior version, <strong>Demonic Illusion: Double False Surroundings</strong> Jutsu. In the long run, she ended up making the top 10 in the class in Genjutsu.</div>
+					<div class="tab" style="text-indent: 50px;">Due to Kumogakure's lean towards Lightning Style and Kenjutsu, Matsuzaki would be tasked into trying to use few Lightning Style Jutsu to no avail. She would fail the examination on Lightning Jutsu, but would be marked an exception due to her being a transfere from another Land in it's entirty. Though Despite this, she would still do better than exspected at Kenjutsu, even if she did not do the best at it. As days went on, she would eventually go to pass in the top 10% of the Academy that year in the fields that she could handel. Sure, there were others that did way better than her, but she did not look down on anyone or look discouraged on the matter.</div>
+					<div class="tab" style="text-indent: 50px;">In her free time, she ussualy got into fights to test her self since her Ninjutsu was sparse and Taijutsu and Genjutsu is mostly what she had going for her. She would often not actually win her fights due to not using her Ketsuryūgan; yet, she would improve enough to get a few wins under her belt that could help her after graduation and to not rely on her Kekkei Genkai as much.</div>
+					<div class="tab" style="text-indent: 50px;">As years at the Academy went on, Matsuzaki would end up not using her Ketsuryūgan Kekkei Genkai for the entire three years she was in Kumogakure in essense to hide her being of the Chinoike Clan. During her last year there, her Taijutsu would be nearly up to par with an average Genin starting out and due to her <strong>illusionary Taijutsu</strong>, she would be a step above the rest in Taijutsu when she could actually use it. She only would be able to use it on those who knew nothing of her clan which was few and far between.</div>
+					<h2><u>Acadamey Final Exam Spar</u></h2>
+					<div class="tab" style="text-indent: 50px;">During her finals, she would have to spar with one of the instructors to proove how well she could do as a Genin. At this point, the Acadamey could have caught on to her being one of those exhiled about a decade ago, but would still not say anything. She was instructed to go all out knowing that they would be able to win regardless of her strength. Before beginning, they would ask about her being of the Chinoike clan which caught her off guard completely. She did not exspect to hear it and froze. Her reaction to the name would have been enough answer to them. She was instructed to use her Ketsuryūgan if she could. Depending on how the spar went would determin if she was allowed to stay. She was hesitant, but would follow suit and activate her Ketsuryūgan specificaly in her left eye that was covered in her hair. Before doing so, they would notice her Heterochromia that is also often hidden by her hair and that for some reason, she only activated her Ketsuryūgan in her red eye.</div>
+					<div class="tab" style="text-indent: 50px;">After activating her Kekkei Genkai, she would quickly draw her Blood Katana to prepare to spar against the Jōnin. While she could not keep up with him at all in terms of speed, strength, or skill, she was able to keep up with his movements with her eyes to track him. She had uncanny Perception for a Pre-Genin, despite her Ketsuryūgan. Matsuzaki would barly be able to dodge him and her standard Genjutsu would appear to not work on him at all. It might have slowed him down a bit, but not enough to allow her to dodge his sword strikes that well. The proctor for the fight was someone who was well prepared to fight against the Ketsuryūgan and had a way to counter the Genjutsu.  Blow after blow, it would look like neither would faulter for quite a while, but her soon to be a Genin compared to the proctor being a Jōninm he was guarenteed to win the fight regardless. She would do quite well though landing a single sword slash onto him.</div>
+					<div class="tab" style="text-indent: 50px;">Despite actually cutting him with the sword, it was just a minor cut that barly drew any blood at all. That alone would have made her pass, but her being able to inflict a Genjutsu upon him would amplify that. She would not know he broke out of her Genjutsu, but would have another instructor stop the fight the moment Matsuzaki's blood katana drew his blood. The proctor would have been going easy on her and would have caught the lass by both of her arms after breaking her Genjutsu. While he did not have to do this, he would do this only to show that she did not win.</div>
+					<div class="tab" style="text-indent: 50px;">After breaking free, she would almost immediately be let go and told of her graduation. Matsuzaki would be told that no one besides the Jōnin that would be her squad captain would know about her being "Matsuzaki Chinoike". Her other two squad members would also be informed. She would then be handed the Steam Village headband that she would have originaly brougth with her without knowing that is what she had brought with her. After receiving her Headband from her village, she would almost cry out of happiness, but would wonder a bit.</div>
+					<div class="tab" style="text-indent: 50px;">"If I known for my clan that was ridiculed by the members of this village, why am I allowed to stay here then?" The proctors in the room would not answer her, but would reasure her that from the fight, they could tell she did not show any malicious intent. They would be a tad informative on why the requirement for her to stay til she turned eighteen or became a Jōnin herself was a requirement. It was an order to proove herself as trustworthy. There also was no incidents with the Chinoike for about a decade or longer at this point. With Matsuzaki Chinoike in the village for three to four years, there is no way she could have done anything. If she wanted to, she already would have.</div>
+					<h2><u>Genin</u></h2>
+					<div class="tab" style="text-indent: 50px;">After being promoted to Genin, she would be instructed to meet her squad at the training grounds so she can meet and greet everyone. She could introduce herself as just "Matsuzaki" if she wished or if she was brave enough, she could use her full name. This is where the story begins for her in this land.</div>
+				</div>
+			<hr>
+		</div>
+		<div id = "Stats" style="display:none">
+			<div class="indent">
+				<h1 id="Fighting">[ Fighting Style ]</h1>
+				<div>Matsuzaki fights using her own illusionary world boundy by her Ketsuryūgan. Anything goes and often likes to go to one of two extreams. Often at the same time using Double False Surroundings to hide a blood filled landscape often associated with Chinoike Genjutsu inside of a highly realistic illusion with minor deviations to have her opponets smack themselves in the fact by running into stray trees and rocks that are not there while also avoiding obsticles that look natural to the enviorment that are not really there. After learning how to control animals and create controlable animals out of blood, she can use them as either weapons to inflict her specialized Genjutsu or as intel gathering.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Techniques">[ Techniques ]</h1>
+					<h2><u>Taijutsu</u></h2>
+						<div><strong>Name of Technique:</strong> Yin Style: Illusionary Kick</div>
+						<div><strong>Rank:</strong><span style="color: #BB86FC;">▰▱▱▱▱</span> [D]</div>
+						<div><strong>Type of Jutsu:</strong> Contact Genjutsu</div>
+						<div><strong>Parent Jutsu (if any):</strong> Genjutsu: Ketsuryūgan</div>
+						<div><strong>Chakra Natures Required:</strong> Yin</div>
+						<div><strong>Hand Seals (if any):</strong>Dependant on Genjutsu to cast with this.</div>
+						<div><strong>Description:</strong>With the Ketsuryūgan active in one or both eyes, can trigger any genjutsu after landing a kick directly on the skin of the target.</div>
+						<div><strong>Drawbacks:</strong> Must have the Ketsuryūgan active.</div>
+						<div><strong>Appearance:</strong> Just a standard kick.</div>
+						<hr>
+						<div><strong>Name of Technique:</strong> Yin Style: Illusionary Punch</div>
+						<div><strong>Rank:</strong><span style="color: #BB86FC;">▰▱▱▱▱</span> [D]</div>
+						<div><strong>Type of Jutsu:</strong> Contact Genjutsu</div>
+						<div><strong>Parent Jutsu (if any):</strong> Genjutsu: Ketsuryūgan</div>
+						<div><strong>Chakra Natures Required:</strong> Yin</div>
+						<div><strong>Hand Seals (if any):</strong>Dependant on Genjutsu to cast with this.</div>
+						<div><strong>Description:</strong>With the Ketsuryūgan active in one or both eyes, can trigger any genjutsu after landing a punch directly on the skin of the target.</div>
+						<div><strong>Drawbacks:</strong> Must have the Ketsuryūgan active.</div>
+						<div><strong>Appearance:</strong> Just a standard punch.</div>
+						<hr>
+					<h2><u>Genjutsu</u></h2>
+						<div><strong>Name of Technique:</strong> Demonic Illusion: False Surroundings</div>
+						<div><strong>Rank:</strong><span style="color: #BB86FC;">▰▱▱▱▱</span> [D]</div>
+						<div><strong>Type of Jutsu:</strong> Genjutsu</div>
+						<div><strong>Parent Jutsu (if any):</strong> N/A</div>
+						<div><strong>Chakra Natures Required:</strong> Yin</div>
+						<div><strong>Hand Seals (if any):</strong>N/A</div>
+						<div><strong>Description:</strong>This technique layers an illusion over a location, causing it to look like a different location. Because of how wide an area the illusion can be placed over, that in turn makes it easy to trick others: any who enter the area will be affected by the illusion and see the false location. But to create an illusion on such a large scale and to potentially deceive so many people raises the chances that the trick will be discovered by someone who is familiar with genjutsu.</div>
+						<div><strong>Drawbacks:</strong> "..."</div>
+						<div><strong>Appearance:</strong> Dependant on enviorment</div>
+						<hr>
+						<div><strong>Name of Technique:</strong> Demonic Illusion: Double False Surroundings</div>
+						<div><strong>Rank:</strong><span style="color: #BB86FC;">▰▰▱▱▱</span> [C]</div>
+						<div><strong>Type of Jutsu:</strong> Genjutsu</div>
+						<div><strong>Parent Jutsu (if any):</strong> Demonic Illusion: False Surroundings</div>
+						<div><strong>Chakra Natures Required:</strong> Yin</div>
+						<div><strong>Hand Seals (if any):</strong>N/A</div>
+						<div><strong>Description:</strong>This technique places another illusion within another illusion created by the user. When the target dispels the first illusion, they will not realise that a second is in place.</div>
+						<div><strong>Drawbacks:</strong> Same as "Demonic Illusion: False Surroundings"</div>
+						<div><strong>Appearance:</strong> Dependant on enviorment</div>
+					<hr>
+					<h2><u>Ninjutsu</u></h2>
+						<div><strong>Name of Technique:</strong> Blood Style: Blood Shuriken</div>
+						<div><strong>Rank:</strong><span style="color: #BB86FC;">▰▰▱▱▱</span> [C]</div>
+						<div><strong>Type of Jutsu:</strong> Ninjutsu and Genjutsu</div>
+						<div><strong>Parent Jutsu (if any):</strong> Genjutsu: Ketsuryūgan</div>
+						<div><strong>Chakra Natures Required:</strong> Yin</div>
+						<div><strong>Hand Seals (if any):</strong>N/A</div>
+						<div><strong>Description:</strong>The user throws a Shuriken made of blood at the target to cause damage and potentialy cast a genjutsu if the blood shuriken draws blood.</div>
+						<div><strong>Drawbacks:</strong> Genjutsu is not cast if the shuriken does not draw blood.</div>
+						<div><strong>Appearance:</strong> Dependant on user.</div>
+						<hr>
+						<div><strong>Name of Technique:</strong> Blood Style: Iron Mold</div>
+						<div><strong>Rank:</strong><span style="color: #BB86FC;">▰▰▰▱▱</span> [B]</div>
+						<div><strong>Type of Jutsu:</strong> Ninjutsu, Kenjutsu, and Genjutsu</div>
+						<div><strong>Parent Jutsu (if any):</strong> Genjutsu: Ketsuryūgan</div>
+						<div><strong>Chakra Natures Required:</strong> Yin</div>
+						<div><strong>Hand Seals (if any):</strong>N/A</div>
+						<div><strong>Description:</strong>Create a Weapon or tool out of any Iron rich liquid that is coated or drenched in the user's chakra. If the tool cuts a target, the user can cast a genjutsu on the target from the drawn blood.</div>
+						<div><strong>Drawbacks:</strong> Genjutsu is not cast if the shuriken does not draw blood.</div>
+						<div><strong>Appearance:</strong> Dependant on tool; however Matsuzaki typicaly uses this to make a Kunai or a Serated Sword.</div>
+					<hr>
+					<h2><u>Kekkei Genkai</u></h2>
+						<div><strong>Name of Technique:</strong> Genjutsu: Ketsuryūgan</div>
+						<div><strong>Rank:</strong><span style="color: #BB86FC;">▰▰▱▱▱</span> [C]</div>
+						<div><strong>Type of Jutsu:</strong> Genjutsu (Kekkei Genkai)</div>
+						<div><strong>Parent Jutsu (if any):</strong> N/A</div>
+						<div><strong>Chakra Natures Required:</strong> Yin</div>
+						<div><strong>Hand Seals (if any):</strong>N/A</div>
+						<div><strong>Description:</strong>By establishing direct skin or eye contact with a target, the user can lock them within a genjutsu for one of various purposes. They can brainwash them into mindless drones with a set order to follow, or trap them into a dream-like state. For more defensive means, this technique can create a powerful barrier against mind reading, protecting information from being acquired. It also allows the user to place genjutsu guards upon their mind and see through the target's memories.</div>
+						<div><strong>Drawbacks:</strong> Sharingan</div>
+						<div><strong>Appearance:</strong> Dependant on user.</div>
+					
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Inventory">[ Inventory ]</h1>
+				<ul>
+					<li><h2>Sword Scabbard</h2></li>
+						<div>A scabbard that normally holds a katana. Used to store blood or other iron rich fluids.
+					<li><h2>Steam Village Headband</h2></li>
+						<div>A headband from the Land of Hot Water.</div>
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:450px; width:45%;"></div>
+				<h1 id="Stat">[ Statistics ]</h1>
+				<h2>Rolls</h2>
+				<ol style="list-style-type:none">
+					<li><strong>Clan:</strong> <del>Shirogane clan</del></li>
+					<li><strong>Chakra Nature:</strong> Yin</li>
+					<li><strong>Trait:</strong> Falcon Eyes</li>
+				</ol>
+				<h2>Trait Perks</h2>
+				<ol style="list-style-type:none">
+					<li><strong>+</strong>Perception +1 rank</li>
+				</ol>
+				<h2>Dōjutsu Perks</h2>
+				<div><strong>The Ketsuryūgan (血龍眼):</strong> The dōjutsu kekkei genkai of the Chinoike Clan; which is gifted to all members of the clan. Below are the list of unlockable skills</div>
+					<ul>
+						<li>Innate Ketsuryūgan: +2X Perception [BLOOD MANIPULATION UNLOCKED]</li>
+					</ul>
+				<ol style="list-style-type:none">
+					<li><strong>+</strong>Perception +2 rank</li>
+				</ol>
+				<h2>Statistics</h2>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> D-
+					<div style="padding-bottom: 10px;" 	class="container">
+						<div class="skills xstr"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Enduramce:</strong> D-
+					<br>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xend"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Agility:</strong> D-
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xagi"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Perception:</strong> C- [A- Ketsuryūgan + Falcon Eyes]
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xper"></div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Chakra">[ Chakra ]</h1>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Chakra Control:</strong> D-
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xchac"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Chakra Reserves:</strong> D-
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xchar"></div>
+					</div>
+				</div><div style="color:#BB86FC; padding-bottom: 10px;"><strong>Chakra Potency:</strong> D-
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xchap"></div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent"><img src="Images/image3.png" alt="Info Card" width="100%vw"></div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ref">[ References and Notes ]</h1>
+			</diV>
+		<hr>
+	</body>
+</html>
