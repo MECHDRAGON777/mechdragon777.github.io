@@ -1,0 +1,202 @@
+/* page styles */
+body {
+    background-attachment: fixed;
+    background-size: cover;
+	/*background-image: url("Images/background.png");*/
+	background-color: #121212;
+	/*color:#442200;*/
+	color:#FFFFFF33;
+	margin-left:15vw;
+	margin-right:15vw;
+}
+
+/* table styles */
+table {
+    border-color:#442200;
+    margin:8px;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+table img {
+	background: radial-gradient(#ccc, #444);
+}
+hr {
+	border:none;
+	height:2px;
+	background-color:#2C2C2C;
+}
+td {
+	padding:0px;
+}
+
+/* style overrides */
+h1 {
+	color:#FFFFFF83;
+	margin-top:0px;
+}
+
+/* content styles */
+.white-row {
+	background-color:#1F1F1F;
+	color:#FFFFFF33
+}
+.pink-row {
+	background-color:#2C2C2C;
+	color:#FFFFFF83
+}
+.center {
+	text-align: center;
+}
+.tab {
+	margin-left: 40px;
+}
+.indent {
+	padding-left: 48px;
+	border-left: 1px solid #2C2C2C;
+	margin-left: 15px;
+}
+
+tr.white-row td:first-child {
+    font-weight:bold;
+}
+
+.white-row td {
+    border-bottom:1px solid #121212;
+}
+
+.iButton {
+	float: left;
+	text-align: center;
+	padding: 12px;
+	background-color: #1F1F1F;
+	cursor: pointer;
+	outline: none;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.iButton:hover {background-color: #2C2C2C;}
+
+.iButton:active {
+  background-color: #3e8e41;
+}
+
+
+/* Navbar buttons on mouse-over */
+button {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  background-color: #fa94dd;
+  bordercolor: #41b0f7;
+  color: #442200;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* Navbar buttons on mouse-over */
+button:hover {
+  background-color: #f8f8f8;
+}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #1F1F1F;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  width: 13%;
+  text-align: center;
+  padding: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #2C2C2C;
+}
+
+/* Navbar buttons on mouse-over */
+.navbar button {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  background-color: #1F1F1F;
+  bordercolor: #FFFFFF;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar buttons on mouse-over */
+.navbar button:hover {
+  background-color: #2C2C2C;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #f8f8f8;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  height: 10;
+  border-radius: 5px;
+  background-color: #2C2C2C; /* Grey background */
+}
+
+
+.containerH {
+  width: 100%; /* Full width */
+  height: 10;
+  border-radius: 5px;
+  position: relative;
+  background-color: #2C2C2C; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 5px; /* Add top padding */
+  padding-bottom: 5px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+
+
+
+
+
+.crew {
+	width: 1000px;
+	height: 1100px;
+	 background-color: #A41FB6;
+}
+
+.bounty1 {width: 55.747153404%; height: 10px; background-color: #088F8F; color: #442200; border-radius: 5px;}
+.bounty2 {width: 67.866099797%; height: 10px; background-color: #50C878; color: #442200; border-radius: 5px;} 
+.bounty3 {width: 77.5612569112%; height: 10px; background-color: #C62513; color: #442200; border-radius: 5px;}
+.bounty4 {width: 85.5360006391%; height: 10px; background-color: #00FFFF; color: #442200; border-radius: 5px;}
+.bounty5 {width: 92.9574899031%; height: 10px; background-color: #E63136; color: #442200; border-radius: 5px;}
+.bounty6 {width: 99.9999676828%; height: 10px; background-color: #90EE90; color: #442200; border-radius: 5px;}
+.bounty7 {width: 100%; height: 10px; background-color: #2E8B57; color: #442200; border-radius: 5px;}

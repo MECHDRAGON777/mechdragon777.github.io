@@ -1,0 +1,195 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Mizaru Mizaru no mi, Model: Sun wukong | One Blue New Dawn</title>
+		<link rel="stylesheet" href="devil-fruit.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Backstory"> Backstory</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Talents"> Talents</a>
+			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  //var data1 = [
+				  //{x: "Str", value: 15},
+				  //{x: "Agi", value: 20},
+				  //{x: "Per", value: 20},
+				  //{x: "End", value: 15},
+				  //{x: "Sta", value: 30},
+			   //];
+			  var data2 = [
+				  {x: "Str", value: 10},
+				  {x: "Agi", value: 5},
+				  {x: "Per", value: 5},
+				  {x: "End", value: 33},
+				  {x: "Sta", value: 30},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(50)
+				.ticks({'interval':10});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data2).name('Racial Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="../general_images/logo.png" alt="Logo">
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Mizaru Mizaru no mi, Model: Sun wukong</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+					<div>
+						<img src="images/wukong.png" alt="Monkey Monkey Fruit; Model Monkey God" width="350px">
+					</div>
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td>見ざる見ざるの未モデル"孫悟空</td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>Mizaru Mizaru no mi, Model: Son Goku (Sun Wukong)</td>
+            </tr>
+			<tr class="white-row">
+				<td>English Name:</td>
+				<td>Monkey Monkey Fruit; Model Monkey God</td>
+			</tr>
+			<tr class="white-row">
+				<td>Meaning:</td>
+				<td>Monkey, Monkey King</td>
+			</tr>
+			<tr class="white-row">
+				<td>Type:</td>
+				<td>Mythical Zoan</td>
+			</tr>
+			<tr class="white-row">
+				<td>Current User:</td>
+				<td>N/A</td>
+			</tr>
+        </table>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id="Demographics">[ Mizaru Mizaru no mi, Model: Sun wukong ]</h1>
+				<div>The <strong>Mizaru Mizaru no mi, Model: Sun wukong</strong> is a Mythical zoan-type Devil fruit that allows the user to transform into a hybrid and full version of a monkey god at will.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Etymology ]</h1>
+				<ul>
+					<li>Mizaru(見ざる) references the 3 wise monkeys.</li>
+					<li>Sun Wukong(孫悟空) is the Chinese name of the Monkey King.
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Strengths and Weaknesses ]</h1>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Usage ]</h1>
+				<h2>Techniques</h2>
+				<h3>Fighting Style</h3>
+				<h4>Divine Style of Sun Wukong</h4>
+				<ol>
+					<li><strong>Staff of a Thousand Transformations:</strong> Inspired by Sun Wukong's ability to change his form, this ability imbues your bo staff with shapeshifting powers. With a swift twirl, your staff can transform into various weapons or objects, adapting to different combat situations. Each transformation grants you unique abilities, such as a spear for long-range attacks or a shield for increased defense.</li>
+					<li>Golden Nimbus: This ability envelops your bo staff in a radiant golden aura, mimicking Sun Wukong's famous cloud. By leaping or striking the ground with your staff, you summon the Nimbus, allowing you to soar through the air, granting you enhanced speed, agility, and the ability to traverse great distances effortlessly.</li>
+					<li>Divine Monkey's Trickery: This ability reflects Sun Wukong's mischievous nature. When activated, your bo staff becomes infused with cunning energy. As you strike the ground, illusions of multiple staffs materialize, confusing your opponents and making it difficult for them to anticipate your attacks. You can also create illusions of yourself, bewildering enemies and allowing you to strike from unexpected angles.</li>
+					<li>Immortal's Resilience: Drawing from Sun Wukong's immortality, this ability enhances your bo staff with divine resilience. When activated, your staff glows with an ethereal light, granting you enhanced durability and regeneration. It allows you to withstand powerful blows and quickly recover from injuries, making the user an unyielding force on the battlefield.</li>
+				</ol>
+				<h2>Server Data</h2>
+				<div class="tab"><strong>Partial Transformation (20%):</strong> Upon consuming the Mizaru Mizaru no Mi, the user undergoes a slight transformation into a golden-furred anthropomorphic monkey-human hybrid form, embodying the essence of the Monkey King, Sun Wukong. In this hybrid state, their body undergoes notable changes - a prominent addition being a long and agile tail. This tail functions as an extra limb, granting the user exceptional dexterity to grasp objects, maneuver swiftly, and even support their own weight. Alongside their tail, their limbs also undergo a slight elongation, enhancing their reach and providing an added advantage in combat and acrobatic maneuvers.</div>
+				<div class="tab"><strong>Animal Form (40%):</strong> When the user activates their full animal form, they undergo a complete transformation into a magnificent golden-furred monkey with samurai style armor. Standing at an impressive height, the monkey possesses a robust and muscular physique, exuding an aura of strength and power. Its fur shimmers in the sunlight, radiating a regal and awe-inspiring presence.</div>
+				<div class="tab">The monkey’s facial features are reminiscent of the legendary Monkey King, Sun Wukong. It boasts a wise and charismatic expression, with piercing eyes that reflect an ancient wisdom. Sharp, pointed ears adorn the top of its head, further accentuating its alertness and acute senses.</div>
+				<div class="tab">In this animal form, the user’s limbs are highly agile and adept, allowing for swift movements and acrobatic feats. Their hands and feet are equipped with sharp, retractable claws that can be used for both offensive strikes and climbing various surfaces with ease.</div>
+				<div class="tab">The full animal form retains the tail, a defining feature of the Mizaru Mizaru no Mi. The tail is long and flexible, serving as an extension of the monkey’s balance and agility. It can be skillfully utilized for intricate maneuvers, aiding in climbing, and even as an additional limb to grasp objects.</div>
+				<div class="tab"><strong>Hybrid Form (60%):</strong> the users hair takes on a radiant golden hue, flowing and shimmering in the light.Not only does their hair turn golden, but the user’s entire body is adorned with a luxurious coat of golden fur. This fur is soft to the touch, gleaming with a lustrous sheen that further highlights their majestic presence. Alongside their enhanced physical attributes, their frame grows taller and more muscular, representing a significant increase in strength and power.</div>
+				<div class="tab">The user’s tail, already a notable aspect of their hybrid form, undergoes further enhancements. It becomes even stronger and more agile, granting them exceptional control and maneuverability. With this improved tail, the user gains increased stability, enabling them to perform astounding acrobatic feats and maintain balance even in the most precarious of situations.</div>
+				<div class="tab">Moreover, the user’s heightened abilities and mastery of the Mizaru Mizaru no Mi result in their incredible capability to wield their powers with finesse and precision. They exhibit an innate understanding of the fruit’s abilities, effortlessly executing complex techniques and utilizing illusions and cloning techniques to their fullest potential. Their tactical and strategic prowess become second nature.</div>
+				<div class="tab"><strong>Zoan Awakening (100%):</strong> The user gains the ability to summon the Nimbus cloud at will, a celestial transportation device steeped in myth and legend. This cloud materializes beneath their feet, serving as their aerial steed, granting them great mobility and maneuverability in the skies.They can soar through the air with unmatched swiftness and grace, traversing vast distances effortlessly and gaining a vantage point over their adversaries.</div>
+				<div class="tab">They can summon gusts of wind, manipulating the air currents to their advantage. With a spin if the users staff they can conjure powerful winds or. This newfound power over wind allows them to create barriers, deflect projectiles, or generate forceful gusts that can either propel themselves or hinder the movement of their foes.</div>
+				<div class="tab">But perhaps the most captivating aspect of their awakened abilities lies in their perfected illusion manipulation. The user’s illusions become incredibly sophisticated and lifelike, surpassing mere visual trickery. They can create intricate and immersive illusions that engage all the senses, captivating their targets and ensnaring them in a world of fabricated reality.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ History ]</h1>
+				<div class="tab">Long ago, an enigmatic group known as the Monkey Tribe inhabited a secluded island, their profound connection with monkeys fueling their desire to harness the legendary powers of Sun Wukong, the Monkey King. After years of dedicated study, they stumbled upon a hidden cache of Devil Fruits, among them the revered Mizaru Mizaru no Mi.</div>
+				<div class="tab">Recognizing the fruit’s immense potential, the Monkey Tribe guarded its powers diligently, passing down the knowledge through generations. They became masters of the Mizaru Mizaru no Mi, honing their skills and delving deep into its capabilities. The fruit became an emblem of their lineage, endowing them with extraordinary abilities reminiscent of the Monkey King himself.</div>
+				<div class="tab">United by their unwavering bond with the Mizaru Mizaru no Mi and their indomitable spirit, the Monkey Tribe repelled invaders time and again. Their legendary exploits spread far and wide, dissuading would-be conquerors with the formidable defenses and enigmatic powers wielded by those who possessed the fruit.</div>
+				<div class="tab">As time marched on, the Monkey Tribe gradually withdrew from the outside world, seeking seclusion to preserve their ancestral traditions. The Mizaru Mizaru no Mi remained protected, its secrets entrusted to a select few within the tribe. Over the centuries, knowledge of the fruit waned, transforming it into a cryptic relic whispered about in hushed tones, enticing those daring enough to seek its profound power.</div>
+				<div class="tab">In the present era of the One Piece world, the Mizaru Mizaru no Mi and the tales of the Monkey Tribe exist as legends and subjects of speculation. Pirates, marines, and adventurers embark on perilous quests, their hearts ablaze with the burning desire to uncover the truth behind the ancient Monkey Tribe and the extraordinary powers bestowed by the Mizaru Mizaru no Mi.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Trivia ]</h1>
+			<hr>
+		</div>
+	</body>
+</html>

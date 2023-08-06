@@ -1,0 +1,168 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Kaze Kaze no Mi | One Blue New Dawn</title>
+		<link rel="stylesheet" href="devil-fruit.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Backstory"> Backstory</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Talents"> Talents</a>
+			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  //var data1 = [
+				  //{x: "Str", value: 15},
+				  //{x: "Agi", value: 20},
+				  //{x: "Per", value: 20},
+				  //{x: "End", value: 15},
+				  //{x: "Sta", value: 30},
+			   //];
+			  var data2 = [
+				  {x: "Str", value: 10},
+				  {x: "Agi", value: 5},
+				  {x: "Per", value: 5},
+				  {x: "End", value: 33},
+				  {x: "Sta", value: 30},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(50)
+				.ticks({'interval':10});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data2).name('Racial Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="../general_images/logo.png" alt="Logo">
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Kaze Kaze no Mi</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+					<div>
+						<img src="images/wind.png" alt="Wind Wind Fruit" width="350px">
+					</div>
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td>風風の実</td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>Kaze Kaze no Mi</td>
+            </tr>
+			<tr class="white-row">
+				<td>English Name:</td>
+				<td>Wind Wind Fruit</td>
+			</tr>
+			<tr class="white-row">
+				<td>Meaning:</td>
+				<td>Wind</td>
+			</tr>
+			<tr class="white-row">
+				<td>Type:</td>
+				<td>Logia</td>
+			</tr>
+			<tr class="white-row">
+				<td>Current User:</td>
+				<td>N/A</td>
+			</tr>
+        </table>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id="Demographics">[ Kaze Kaze no Mi ]</h1>
+				<div>The <strong>Kaze Kaze no Mi</strong> is a Logia-type Devil Fruit that allows the user to create, control, and transform into the element of "wind" at will, turning the user into a <strong>Wind Human</strong> (風人間, Kaze Ningen). The fruit is currently in circulation.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Etymology ]</h1>
+				<ul>
+					<li>"Kaze" (風) means "wind" in Japanese.</li>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Strengths and Weaknesses ]</h1>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Usage ]</h1>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ History ]</h1>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Trivia ]</h1>
+			<hr>
+		</div>
+	</body>
+</html>

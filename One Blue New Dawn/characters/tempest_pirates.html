@@ -1,0 +1,484 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Tempest Pirates | One Blue New Dawn</title>
+		<link rel="stylesheet" href="tempest_pirates.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Backstory"> Backstory</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Talents"> Talents</a>
+			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  //var data1 = [
+				  //{x: "Str", value: 15},
+				  //{x: "Agi", value: 20},
+				  //{x: "Per", value: 20},
+				  //{x: "End", value: 15},
+				  //{x: "Sta", value: 30},
+			   //];
+			  var data2 = [
+				  {x: "Str", value: 15},
+				  {x: "Agi", value: 5},
+				  {x: "Per", value: 5},
+				  {x: "End", value: 35},
+				  {x: "Sta", value: 5},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(50)
+				.ticks({'interval':10});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data2).name('Racial Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="../general_images/logo.png" alt="Logo">
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Tempest Pirates</th>
+            </tr>
+			<tr>
+                <td colspan="2">
+					<img src="../general_images/npa.png" alt="Jolly Roger" width="350px">
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td></td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td></td>
+            </tr>
+			<tr class="white-row">
+                <td>Official English Name:</td>
+                <td>Tempest Pirates</td>
+            </tr>
+			<tr class="white-row">
+                <td>First Appearance:</td>
+                <td>Gale Island Arc</td>
+            </tr>
+			<tr class="white-row">
+				<td>Captain:</td>
+				<td>
+				<a href="tempest-pirates/velyrea.html">Saint Yesenia Celeste</a>
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Main Ship:</td>
+				<td>
+					N/A 
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Total Bounty:</td>
+				<td>
+					<div class="bountyN1">&#x1d56d;309,432,840</div>
+				</td>
+			</tr>
+		</table>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id="Demographics">[ Demographics ]</h1>
+				<div class="tab" style="text-indent: 50px;">The Tempest Pirates are a Pirate-crew led by Velyrea D. Elizabetha (True Name: Yesenia Celeste) composed of seven persons that was formed on Gale Island.</div>
+				<div class="tab" style="text-indent: 50px;">Despite being a recent crew, and thus not having a bounty that large nor a good amount of accomplishments, the Tempest Pirates are still considered a threat because of their captain’s status; Yesenia is the daughter of a former Celestial Dragon, who was experimented on as a punishment for leaving Marījoa, the goal of the experiments being the creation of a weapon to use against the Revolutionary Army.</div>
+				<div class="tab" style="text-indent: 50px;">Because of that being a secret, the World Government left Velyrea in the Level 1 of Impel Down: The Crimson Hell, which she eventually escaped from thanks to her wings, a result of the experiments done on her mother before her birth.</div>
+				<div class="tab" style="text-indent: 50px;">The fact that Velyrea is a secret weapon of the government and an Impel Down escapee, while not making a lot of noise on the world due to the W-G silencing everything, still makes her a huge threat due to her memories and knowledge, and thus became a target, unknowingly becoming one of the biggest threats to the World Order.</div>
+				<div class="tab" style="text-indent: 50px;">In conclusion, despite being a fairly recent crew, the Tempest Pirates are still considered a huge threat due to the status of their captain.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Jolly Roger ]</h1>
+				<div class="tab" style="text-indent: 50px;">Not decided yet</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Crew Members ]</h1>
+				<h2>Main Crew</h2>
+				<div class="tab" style="text-indent: 50px;">The Tempest Pirates are led by Yesenia Celeste, with the vice-captain being Alco Vinsmoke. Their crew was formed for the occasion of the Gale Festival, a huge event which defined the ruler(s) of the entire Gale Island.</div>
+				<div class="tab" style="text-indent: 50px;">Despite not knowing what a Captain even is due to her poor education, Velyrea will propose to become the leader of the crew, with each member agreeing due to different reasons.</div>
+				<div style="padding-bottom: 0px;">
+					<div class="crew">
+						<div style="color:#FF0000;font-size:55px;text-align:center">Tempest Pirates</div>
+						<hr>
+						<table style="margin:-2px;margin-top:-10px;margin-bottom:-10px;">
+							<tr>
+								<td><img src="tempest-pirates/images/velyrea_face.png" alt="Yesenia" width="200px"></td>
+								<td><img src="../general_images/npa.png" alt="Alco" width="200px"></td>
+								<td><img src="tempest-pirates/images/chalybe_face.png" alt="Chalybe" width="200px"></td>
+								<td><img src="tempest-pirates/images/helios_face.png" alt="Helios" width="200px"></td>
+								<td><img src="tempest-pirates/images/kiko_face.png" alt="Kiko" width="200px"></td>
+							</tr>
+							<tr style="color:#FF0000;font-size:33px;text-align:center">
+								<td>Yesenia Celeste</td>
+								<td>Alco Vinsmoke</td>
+								<td>Chalybe D. Dorei</td>
+								<td>Helios Johnson</td>
+								<td>Kiko Samui</td>
+							</tr>
+							<tr>
+								<td><img src="../general_images/npa.png" alt="Ryori" width="200px"></td>
+								<td><img src="tempest-pirates/images/keno_face.png" alt="Keno" width="200px"></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr style="color:#FF0000;font-size:33px;text-align:center">
+								<td>Ryori Sarugami</td>
+								<td>Keno Kleinstein</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+						<hr>
+						<div style="color:#FF0000;font-size:55px;text-align:center">Companions</div>
+						<hr>
+						<div style="color:#FF0000;font-size:55px;text-align:center">Ships</div>
+						<hr>
+						<div style="color:#FF0000;font-size:55px;text-align:center">Allies</div>
+						<hr>
+						<table style="margin:-2px;margin-top:-10px;margin-bottom:-10px;">
+							<tr>
+								<td><img src="../general_images/npa.png" alt="Alco" width="200px"></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr style="color:#FF0000;font-size:33px;text-align:center">
+								<td>Calamity Pirates</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="tab" style="text-indent: 50px;">The Tempest Pirates contain a lot of very different people, like having a former Celestial and a member of the D. Clan under the same roof, which makes them one of the most unpredictable crews on the sea at the moment.</div>
+				<h2>Sub-Groups</h2>
+				<div></div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Territories ]</h1>
+				<div></div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ Crew Strength ]</h1>
+				<div></div>
+				<h2>Fighting Capabilities</h2>
+				<div class="tab" style="text-indent: 50px;">The Tempest Pirates are a well rounded crew, with solid fighters like Dorei, and more speedy ones like Kiko. Due to spars that took place between some members of the crew, we know that Yesenia is stronger than Helios, while Dorei and Kiko are roughly equals, with Dorei barely beating the latter. However, we do not know Keno, Alco, and Ryori’s fighting capabilities and effectiveness yet.</div>
+				<h2>Specializations and Teamwork</h2>
+				<div class="tab" style="text-indent: 50px;">While no teamwork in battle has been shown yet, it is safe to say that the Tempest Pirates aren’t that great when fighting together, as they are a recent pirate crew, which means its members aren’t that familiar with their partners’s strenghts and weaknesse</div>
+				<div class="tab" style="text-indent: 50px;">That being said, each member has their own abilities; for instance, Yesenia is the only member of the crew who can fly (for now) while Helios fights with a bo-staff. Kiko is currently the fastest member, and Dorei is the most resistant, finally,  Keno is by far the best shot of the crew.</div>
+				<h2>Allies and Subordinates</h2>
+				<div class="tab" style="text-indent: 50px;"></div>
+				<h2>Weaknesses</h2>
+				<div class="tab" style="text-indent: 50px;">The Tempest Pirates doesn’t have any striking weaknesses as a whole that was shown right now. However, it is important to acknowledge that their crew do not have a doctor, and so they are especially weak to illnesses and deep wounds…</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Professions and Capabilities ]</h1>
+				<table stlye="width:100%vw;">
+					<tr class="pink-row">
+						<th>Name</th>
+						<th>Age</th>
+						<th>Progession</th>
+						<th>Capabilities</th>
+						<th>Epithet</th>
+					</tr>
+					<tr style="border-bottom:1px solid #121212;background-color:#1F1F1F;color:#FFFFFF33;">
+						<td>Yesenia Celeste</td>
+						<td>23</td>
+						<td>Captain;<br>Chronicler</td>
+						<td>
+							<ul>
+								<li>Vector Vector Fruit?</li>
+								<ul>
+									<li>False Art of Vector Manipulation</li>
+								</ul>
+							</ul>
+						</td>
+						<td><strong>"Vector Goddess"</strong></td>
+					</tr>
+					<tr style="border-bottom:1px solid #121212;background-color:#1F1F1F;color:#FFFFFF33;">
+						<td style="border-right">Alco Vinsmoke</td>
+						<td style="border-right"></td>
+						<td style="border-right">Vice-Captain;<br>Shipwright</td>
+						<td style="border-right"></td>
+						<td style="border-right"></td>
+					</tr>
+					<tr style="border-bottom:1px solid #121212;background-color:#1F1F1F;color:#FFFFFF33;">
+						<td style="border-right">Chalybe D. Dorei</td>
+						<td style="border-right"></td>
+						<td style="border-right">Second-Mate;<br>Weaponsmith</td>
+						<td style="border-right">
+							<ul>
+								<li>Steel Steel Fruit</li>
+								<li>Anchored Kusari</li>
+							</ul>
+						</td>
+						<td style="border-right"></td>
+					</tr>
+					<tr style="border-bottom:1px solid #121212;background-color:#1F1F1F;color:#FFFFFF33;">
+						<td style="border-right">Helios Johnson</td>
+						<td style="border-right"></td>
+						<td style="border-right">Navigator</td>
+						<td style="border-right">
+							<ul>
+								<li>Monkey Monkey Fruit, Model: Monkey King</li>
+							</ul>
+						</td>
+						<td style="border-right"></td>
+					</tr>
+					<tr style="border-bottom:1px solid #121212;background-color:#1F1F1F;color:#FFFFFF33;">
+						<td style="border-right">Ryori Sarugami</td>
+						<td style="border-right"></td>
+						<td style="border-right">Cook</td>
+						<td style="border-right">
+							<ul>
+								<li>Shadow Shadow Fruit</li>
+							</ul>
+						<td style="border-right"></td>
+					</tr>
+					<tr style="border-bottom:1px solid #121212;background-color:#1F1F1F;color:#FFFFFF33;">
+						<td style="border-right">Kiko Samui</td>
+						<td style="border-right"></td>
+						<td style="border-right">Musician</td>
+						<td style="border-right">
+							<ul>
+								<li>Snow Snow Fruit</li>
+								<li>Musical Spear: Biwa</li>
+							</ul>
+						</td>
+						<td style="border-right"></td>
+					</tr>
+					<tr style="border-bottom:1px solid #121212;background-color:#1F1F1F;color:#FFFFFF33;">
+						<td style="border-right">Keno Kleinstein</td>
+						<td style="border-right"></td>
+						<td style="border-right">Musician</td>
+						<td style="border-right">
+							<ul>
+								<li>Revive Revive Fruit</li>
+							</ul>
+						</td>
+						<td style="border-right"></td>
+					</tr>
+				</table>
+			<hr>
+		</div>
+		<div id = "Stats" style="display:none">
+			<div class="indent">
+				<h1 id="Fighting">[ Fighting Style ]</h1>
+				<h2>Anchored Kusari</h2>
+				<div><strong>History:</strong> What, no one else thought about using an anchor as a weapon? All you need is an anchor or a similar weapon to swing around in this armor-busting style. A chain is also required for such techniques.</div>
+				<div><strong>Breaching Chain:</strong> The base level of this unique combat style. With use of a chain or rope, the user can potentially throw their weapon at the opponent, proceeding ot either pull the opponent towards them, or pull themselves towards the opponent or target location. The fighting style itself involves either faster close-ranged swings, or longer ranged slams with the chain. The user's attacks and techniques deal additional damage based on their Durability.</div>
+				<div style="color: #BB86FC;">▰▱▱▱</div>
+				<div><strong>Crusher:</strong> A technique that involves swinging the weapon wildly before unleashing a crushing overhead strike. The user's attacks are now harder to interrupt, and can break through an opponent's defenses quite easily.</div>
+				<div style="color: #BB86FC;">▰▰▱▱</div>
+				<div><strong>Anchors Aweigh!:</strong> The user can throw their anchor MUCH farther than before, so long as they have enough chain to make use of this powerful toss. The user's attacks will deal greater damage the more damage they take.</div>
+				<div style="color: #BB86FC;">▰▰▰▱</div>
+				<div><strong>Weightless Slam:</strong> The user can now swing their anchor as fast as a swordsman swings his blade. Even being barely missed by the anchor is enough to smash through one's defenses. The user can now unleash the Frenzy of Chains technique without drawback.</div>
+				<div style="color: #BB86FC;">▰▰▰▰</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Techniques">[ Techniques ]</h1>
+					<h2><u>Base Techniques</u></h2>
+					<div><strong>Heavy Crusher:</strong> The user crashes into the opponent with their body or a smashing weapon. This Technique is more powerful the more Durability the user has.</div>
+						<div style="tab">+5 Durability for 3 turns or until used again. Can stack.</div>
+					<div style="color: #BB86FC;">▰▱▱▱▱</div>
+					<div><strong>Type:</strong> Offensive</div>
+					<div><strong>Range: Close</div>
+					<hr>
+					<h2><u>Standard Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Super Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Ultimate Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Finisher Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Combo Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Inventory">[ Inventory ]</h1>
+				<ul>
+					<li><h2>N/A</h2></li>
+						<div></div>
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:450px; width:45%;"></div>
+				<h1 id="Stat">[ Statistics ]</h1>
+				<h2>Limits</h2>
+				<ol style="list-style-type:none">
+					<li><strong>Dryad</strong></li>
+				</ol>
+				<h2>Racial Perks (Dryad)</h2>
+				<ol style="list-style-type:none">
+					<li>+Vitality/Stamina regen in sunlight or when near at least one plant. Effect stacks</li>
+					<li>+Highest stat is increased by 50% when in sunlight or nature.</li>
+					<li>+Agility is increased by 50% when in sunlight or nature.</li>
+					<li>-Take additional Fire damage.</li>			
+				</ol>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h2>Statistics</h2>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 15
+					<div style="padding-bottom: 10px;" 	class="container">
+						<div class="skills xstr"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Durability:</strong> 35
+					<br>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xend"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Agility:</strong> 5
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xagi"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Perception:</strong> 5
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xper"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Stamina:</strong> 5
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xhp"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>AP:</strong> 65
+					<div style="padding-bottom: 10px;" class="containerH">
+						<div class="skills xtot" style ="position: absolute; z-index: 9;"></div>
+						<div class="skills xunu" style ="position: absolute;"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>SP:</strong> 10
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xspe"></div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Talents">[ Talents ]</h1>
+				<div><strong>Anchored Kusari:</strong> 1</div>
+				<div class="containerH">
+					<div class="skills xwea"></div>
+				</div>
+				<div><strong>Steel Steel Fruit:</strong> 10%</div>
+				<div class="containerH">
+					<div class="skills xsul" style ="position: absolute; z-index: 9;"></div>
+					<div class="skills desi" style ="position: absolute;"></div>
+				</div>
+				<div><strong>Weaponsmith</strong> 1</div>
+				<div class="containerH">
+					<div class="skills xnav"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Haki">[ Haki ]</h1>
+				<div><strong>Observasion:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillo"></div>
+				</div>
+				<div><strong>Armament:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwilla"></div>
+				</div>
+				<div><strong>Conqueror's</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillc"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ref">[ References and Notes ]</h1>
+			</diV>
+		<hr>
+	</body>
+</html>

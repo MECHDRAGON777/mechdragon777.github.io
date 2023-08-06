@@ -1,0 +1,482 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Xalbadora Y. Montgomery | One Blue New Dawn</title>
+		<link rel="stylesheet" href="xalbadora.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Backstory"> Backstory</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Talents"> Talents</a>
+			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  //var data1 = [
+				  //{x: "Str", value: 15},
+				  //{x: "Agi", value: 20},
+				  //{x: "Per", value: 20},
+				  //{x: "End", value: 15},
+				  //{x: "Sta", value: 30},
+			   //];
+			  var data2 = [
+				  {x: "Str", value: 45},
+				  {x: "Agi", value: 25},
+				  {x: "Per", value: 22},
+				  {x: "End", value: 24},
+				  {x: "Sta", value: 27},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(50)
+				.ticks({'interval':10});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data2).name('Racial Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="../../general_images/logo.png" alt="Logo">
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Xalbadora Montgomery</th>
+            </tr>
+			<tr>
+                <td colspan="2">
+					<img src="Images/xalbadora.png" alt="Xalbadora Montgomery" width="350px">
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td></td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>Xalbadora Montgomery</td>
+            </tr>
+			<tr class="white-row">
+				<td>Affiliation:</td>
+				<td>
+				World Goverment
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Occupation:</td>
+				<td>
+					Warlord of Skypiea 
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Residence:</td>
+				<td>
+					Upperyard
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Alias:</td>
+				<td>
+					Heavenly Writer
+					<br>
+					Writer of Fate
+					<br>
+					Xalby
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Epithet:</td>
+				<td>Writer of Fate</td>
+			</tr>
+			<tr class="white-row">
+				<td>Status:</td>
+				<td>Alive</td>
+			</tr>
+			<tr class="white-row">
+				<td>Age:</td>
+				<td>
+					Biological: 20
+					<br>
+					Chronological: 20
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Birthday:</td>
+				<td>October 31st</td>
+			</tr>
+			<tr class="white-row">
+				<td>Height:</td>
+				<td>
+					170.815 cm
+					<br>
+					(5'7.25")
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Weight:</td>
+				<td>
+					58.967 kg
+					<br>
+					(130 lbs)
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Blood Type:</td>
+				<td>XF (RH-)</td>
+			</tr>
+			<tr class="white-row">
+				<td>Bounty:</td>
+				<td>&#x1d56d;777,235,132</td>
+			</tr>
+			<tr class="pink-row">
+                <th colspan="2">Traits</th>
+            </tr>
+			<tr class="white-row">
+				<td>Sacred Trait 1</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Sacred Trait 2</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Void Trait</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="pink-row">
+                <th colspan="2">Devil Fruit</th>
+            </tr>
+			<tr class="white-row">
+				<td>Japanese Name:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>English Name:</td>
+				<td>Script Script Fruit</td>
+			</tr>
+			<tr class="white-row">
+				<td>Meaning:</td>
+				<td>Writing</td>
+			</tr>
+			<tr class="white-row">
+				<td>Type:</td>
+				<td>(Awakened) Paramecia</td>
+			</tr>
+        </table>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id="Demographics">[ Demographics ]</h1>
+				<div><strong>Name:</strong> Xalbadora Y. Montgomery</div>
+				<div><strong>Birth name:</strong> Xalbadora Y. Montgomery</div>
+				<div><strong>Chronological Age:</strong> 20</div>
+				<div><strong>Biological Age:</strong> 20</div>
+				<div><strong>Gender:</strong> ♂️</div>
+				<div><strong>Race:</strong> Birkian</div>
+				<div><strong>Birthdate:</strong> October 31st</div>
+				<div><strong>Homeland:</strong> Birka</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Physical Details ]</h1>
+				<div><strong>Height:</strong> 170.815cm</div>
+				<div><strong>Weight:</strong> 58.967 kg</div>
+				<div><strong>Blood Type:</strong> XF (RH-)</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Relationships ]</h1>
+				<h2>Family</h2>
+					<div class="tab"><strong>Name:</strong> [Redacted]</div>
+					<div class="tab"><strong>Age:</strong> 45</div>
+					<div class="tab"><strong>Bounty:</strong> &#x1d56d;0</div>
+					<div class="tab"><strong>Relation:</strong> Father</div>
+					<div class="tab"><strong>Devil Fruit:</strong> N/A</div>
+					<div class="tab"><strong>Status:</strong> Deceased</div>
+					<div class="tab"><strong>Race:</strong> Birkian</div>
+					<br>
+					<div class="tab"><strong>Name:</strong> [Redacted]</div>
+					<div class="tab"><strong>Age:</strong> 43</div>
+					<div class="tab"><strong>Bounty:</strong> &#x1d56d;0</div>
+					<div class="tab"><strong>Relation:</strong> Mother</div>
+					<div class="tab"><strong>Devil Fruit:</strong> N/A</div>
+					<div class="tab"><strong>Status:</strong> Deceased</div>
+					<div class="tab"><strong>Race:</strong> Birkian</div>
+					<br>
+				<h2>Friends</h2>
+				<div>N/A</div>
+				<br>
+				<h2>Enemies</h2>
+				<ul>
+				<li>Gance Lionheart</li>
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Personal Details ]</h1>
+				<div><strong>Personality:</strong> </div>
+				<br>
+				<div><strong>Appearance:</strong> ???</div>
+				<br>
+				<div><strong>Aspiration(s):</strong> To take over the entirty of the White Sea under the notion of Goddess.</div>
+				<div><strong>Likes:</strong> Writing</div>
+				<div><strong>Dislikes:</strong> Getting her hands dirty</div>
+				<div><strong>Goal:</strong> Conquor the Sky</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ Affiliation ]</h1>
+				<div><strong>Aliases:</strong> Writer of Fate</div>
+				<div><strong>Faction:</strong> World Goverment</div>
+				<div><strong>Bounty:</strong> &#x1d56d;777.235.132</div>
+				<div class="containerH">
+					<div class="skills bounty1" style ="position: absolute; z-index: 9;"></div>
+					<div class="skills bounty2" style ="position: absolute; z-index: 8;"></div>
+					<div class="skills bounty3" style ="position: absolute; z-index: 7;"></div>
+					<div class="skills bounty4" style ="position: absolute; z-index: 6;"></div>
+					<div class="skills bounty5" style ="position: absolute; z-index: 5;"></div>
+					<div class="skills bounty6" style ="position: absolute; z-index: 4;"></div>
+					<div class="skills bounty7" style ="position: absolute; z-index: 3;"></div>
+				</div>
+				<div><strong>Alignment:</strong> Lawful Evil</div>
+				<div><strong>Occupation:</strong> Writer</div>
+				<div><strong>Crew Role:</strong> Captain</div>
+				<div><strong>Native Sea:</strong> White-White Sea</div>
+				<br>
+				<div><strong>Crew Name:</strong> Heavenly Sky Pirates</div>
+				<div>
+					<strong>Crew Members:</strong>
+					<ol>
+						<li><strong>Xalbadora Y. Montgomery</strong> ~ Captain/Chronicler</li>
+						<li><strong>[Redacted]</strong> ~ Vice Captain/Doctor </li>
+						<li><strong>[Redacted]</strong> ~ Cook</li>
+						<li><strong>[Redacted]</strong> ~ Navigator</li>
+						<li><strong>[Redacted]</strong> ~ Archeologist</li>
+						<li><strong>[Redacted]</strong> ~ Scientist</li>
+						<li><strong>[Redacted]</strong> ~ Entertainer</li>
+					</ol>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Backstory ]</h1>
+					<div class="tab" style="text-indent: 50px;"></div>
+					<div class="tab" style="text-indent: 50px;"></div>
+					<div class="tab" style="text-indent: 50px;"></div>
+					<div class="tab" style="text-indent: 50px;"></div>
+					<div class="tab" style="text-indent: 50px;"></div>
+					<div class="tab" style="text-indent: 50px;"></div>
+					<div class="tab" style="text-indent: 50px;"></div>
+				</div>
+			<hr>
+		</div>
+		<div id = "Stats" style="display:none">
+			<div class="indent">
+				<h1 id="Fighting">[ Fighting Style ]</h1>
+				<h2>Anchored Kusari</h2>
+				<div><strong>History:</strong> What, no one else thought about using an anchor as a weapon? All you need is an anchor or a similar weapon to swing around in this armor-busting style. A chain is also required for such techniques.</div>
+				<div><strong>Breaching Chain:</strong> The base level of this unique combat style. With use of a chain or rope, the user can potentially throw their weapon at the opponent, proceeding ot either pull the opponent towards them, or pull themselves towards the opponent or target location. The fighting style itself involves either faster close-ranged swings, or longer ranged slams with the chain. The user's attacks and techniques deal additional damage based on their Durability.</div>
+				<div style="color: #BB86FC;">▰▱▱▱</div>
+				<div><strong>Crusher:</strong> A technique that involves swinging the weapon wildly before unleashing a crushing overhead strike. The user's attacks are now harder to interrupt, and can break through an opponent's defenses quite easily.</div>
+				<div style="color: #BB86FC;">▰▰▱▱</div>
+				<div><strong>Anchors Aweigh!:</strong> The user can throw their anchor MUCH farther than before, so long as they have enough chain to make use of this powerful toss. The user's attacks will deal greater damage the more damage they take.</div>
+				<div style="color: #BB86FC;">▰▰▰▱</div>
+				<div><strong>Weightless Slam:</strong> The user can now swing their anchor as fast as a swordsman swings his blade. Even being barely missed by the anchor is enough to smash through one's defenses. The user can now unleash the Frenzy of Chains technique without drawback.</div>
+				<div style="color: #BB86FC;">▰▰▰▰</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Techniques">[ Techniques ]</h1>
+					<h2><u>Base Techniques</u></h2>
+					<div><strong>Heavy Crusher:</strong> The user crashes into the opponent with their body or a smashing weapon. This Technique is more powerful the more Durability the user has.</div>
+						<div style="tab">+5 Durability for 3 turns or until used again. Can stack.</div>
+					<div style="color: #BB86FC;">▰▱▱▱▱</div>
+					<div><strong>Type:</strong> Offensive</div>
+					<div><strong>Range: Close</div>
+					<hr>
+					<h2><u>Standard Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Super Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Ultimate Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Finisher Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u>Combo Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Inventory">[ Inventory ]</h1>
+				<ul>
+					<li><h2>N/A</h2></li>
+						<div></div>
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:450px; width:45%;"></div>
+				<h1 id="Stat">[ Statistics ]</h1>
+				<h2>Limits</h2>
+				<ol style="list-style-type:none">
+					<li><strong>Birkian</strong></li>
+				</ol>
+				<h2>Racial Perks (Birkian)</h2>
+				<ol style="list-style-type:none">
+					<li>+Early Observasion Haki</li>			
+				</ol>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h2>Statistics</h2>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 45
+					<div style="padding-bottom: 10px;" 	class="container">
+						<div class="skills xstr"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Durability:</strong> 24
+					<br>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xend"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Agility:</strong> 25
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xagi"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Perception:</strong> 22
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xper"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Stamina:</strong> 27
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xhp"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>AP:</strong> 143
+					<div style="padding-bottom: 10px;" class="containerH">
+						<div class="skills xtot" style ="position: absolute; z-index: 9;"></div>
+						<div class="skills xunu" style ="position: absolute;"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>SP:</strong> 25
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xspe"></div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Talents">[ Talents ]</h1>
+				<div><strong>Scythe Mastery:</strong> 3</div>
+				<div class="containerH">
+					<div class="skills xwea"></div>
+				</div>
+				<div><strong>Devil Fruit Specialist:</strong> 3</div>
+				<div class="containerH">
+					<div class="skills xele"></div>
+				</div>
+				<div><strong>Script Script Fruit:</strong> 100%</div>
+				<div class="containerH">
+					<div class="skills xsul" style ="position: absolute; z-index: 9;"></div>
+					<div class="skills desi" style ="position: absolute;"></div>
+				</div>
+				<div><strong>Chonicler</strong> 3</div>
+				<div class="containerH">
+					<div class="skills xnav"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Haki">[ Haki ]</h1>
+				<div><strong>Observasion:</strong> 3</div>
+				<div class="containerH">
+					<div class="skills xwillo"></div>
+				</div>
+				<div><strong>Armament:</strong> 1</div>
+				<div class="containerH">
+					<div class="skills xwilla"></div>
+				</div>
+				<div><strong>Conqueror's</strong> 1</div>
+				<div class="containerH">
+					<div class="skills xwillc"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ref">[ References and Notes ]</h1>
+			</diV>
+		<hr>
+	</body>
+</html>

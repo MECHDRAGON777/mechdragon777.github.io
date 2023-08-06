@@ -1,0 +1,475 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Kiko Samui | One Blue New Dawn</title>
+		<link rel="stylesheet" href="kiko.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Backstory"> Backstory</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Talents"> Talents</a>
+			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
+			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  var data1 = [
+				  {x: "Str", value: 12},
+				  {x: "Agi", value: 32},
+				  {x: "Per", value: 17},
+				  {x: "End", value: 10},
+				  {x: "Sta", value: 14},
+			   ];
+			  var data2 = [
+				  {x: "Str", value: 12},
+				  {x: "Agi", value: 22},
+				  {x: "Per", value: 17},
+				  {x: "End", value: 10},
+				  {x: "Sta", value: 14},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(50)
+				.ticks({'interval':10});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data1).name('Traits').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+			  chart.area(data2).name('base').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="../../general_images/logo.png" alt="Logo">
+		</div>
+		<hr>
+        <table style="float:right">
+            <tr class="pink-row">
+                <th colspan="2">Kiko</th>
+            </tr>
+			<tr>
+                <td colspan="2">
+					<img src="Images/kiko.png" alt="Kiko" width="350px">
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics</td>
+            </tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td></td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>kiko</td>
+            </tr>
+			<tr class="white-row">
+				<td>Affiliation:</td>
+				<td>
+				N/A
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Occupation:</td>
+				<td>
+					Wanderer 
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Residence:</td>
+				<td>
+					Snowy Mountains (former)
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Alias:</td>
+				<td>
+					Musical Psychopath
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Epithet:</td>
+				<td>Musical Psychopath</td>
+			</tr>
+			<tr class="white-row">
+				<td>Status:</td>
+				<td>Alive</td>
+			</tr>
+			<tr class="white-row">
+				<td>Age:</td>
+				<td>
+					Biological: 26
+					<br>
+					Chronological: 26
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Birthday:</td>
+				<td>December 21st</td>
+			</tr>
+			<tr class="white-row">
+				<td>Height:</td>
+				<td>
+					? nm
+					<br>
+					(6'3")
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Weight:</td>
+				<td>
+					77 kg
+					<br>
+					(170 lbs)
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Blood Type:</td>
+				<td>F (RH-)</td>
+			</tr>
+			<tr class="white-row">
+				<td>Bounty:</td>
+				<td>&#x1d56d;24,676,476</td>
+			</tr>
+			<tr class="pink-row">
+                <th colspan="2">Traits</th>
+            </tr>
+			<tr class="white-row">
+				<td>Common Trait</td>
+				<td>Speedster</td>
+			</tr>
+			<tr class="white-row">
+				<td>Sacred Trait</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Void Trait</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="pink-row">
+                <th colspan="2">Devil Fruit</th>
+            </tr>
+			<tr class="white-row">
+				<td>Japanese Name:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>English Name:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Meaning:</td>
+				<td>N/A</td>
+			</tr>
+			<tr class="white-row">
+				<td>Type:</td>
+				<td>N/A</td>
+			</tr>
+        </table>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id="Demographics">[ Demographics ]</h1>
+				<div><strong>Name:</strong> Kiko Samui</div>
+				<div><strong>Birth name:</strong> Kiko Samui</div>
+				<div><strong>Chronological Age:</strong> 26</div>
+				<div><strong>Biological Age:</strong> 26</div>
+				<div><strong>Gender:</strong> ♂️</div>
+				<div><strong>Race:</strong> Human</div>
+				<div><strong>Birthdate:</strong> December 21st</div>
+				<div><strong>Homeland:</strong> Snowy Mountains</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Physical Details ]</h1>
+				<div><strong>Height:</strong>  m</div>
+				<div><strong>Weight:</strong> 77 kg</div>
+				<div><strong>Blood Type:</strong> F (RH-)</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Relationships ]</h1>
+				<h2>Family</h2>
+				<div>N/A</div>
+				<h2>Friends</h2>
+				<div>N/A</div>
+				<br>
+				<h2>Enemies</h2>
+				<ul>
+				<li>N/A</li>
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Personal Details ]</h1>
+				<div><strong>Personality:</strong> Kiko is a sadistic individual, who has fun in ending his victims in the most suffering of ways, be it with his attacks or a sharp tongue. His demeanor caused him quite the number of problems during his life, but he couldn’t care less.</div>
+				<div>While most people like him would be considered loners, Kiko is actually fairly charismatic enough to socialize with people he deems worthy of his time and efforts. He even could be considered a team player on some occasions, as long as his teammates are as deranged as himself in terms of fights.</div>
+				<div>So while he is an absolutely despicable person, he is able to hold a conversation and even become ‘friends’ with people</div>
+				<br>
+				<div><strong>Appearance:</strong> ???</div>
+				<br>
+				<div><strong>Aspiration(s):</strong> Just to have fun, Kiko is just in a silly mood. To be more honest, he wants to torment strong people for fun.</div>
+				<div><strong>Likes:</strong> Playing the biwa, Cold Climates, Shrimps, To taunt his opponets.</div>
+				<div><strong>Dislikes:</strong> Hot Climates, Vegetables, To be looked down on.</div>
+				<div><strong>Goal:</strong>
+					<ul>
+						<li>Tame the Winds of the White-White Sea</li>
+						<li>to take down the Celestial Dragons and be free of chains of fate</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ Affiliation ]</h1>
+				<div><strong>Aliases:</strong> Frost Devil</div>
+				<div><strong>Faction:</strong> N/A</div>
+				<div><strong>Bounty:</strong> &#x1d56d;24,676,476</div>
+				<div class="containerH">
+					<div class="skills bounty1" style ="position: absolute; z-index: 9;"></div>
+					<div class="skills bounty2" style ="position: absolute; z-index: 8;"></div>
+					<div class="skills bounty3" style ="position: absolute; z-index: 7;"></div>
+					<div class="skills bounty4" style ="position: absolute; z-index: 6;"></div>
+					<div class="skills bounty5" style ="position: absolute; z-index: 5;"></div>
+					<div class="skills bounty6" style ="position: absolute; z-index: 4;"></div>
+					<div class="skills bounty7" style ="position: absolute; z-index: 3;"></div>
+				</div>
+				<div><strong>Alignment:</strong> Chaotic Evil</div>
+				<div><strong>Occupation:</strong> Musical Assassin</div>
+				<div><strong>Crew Role:</strong> Entertainer</div>
+				<div><strong>Native Sea:</strong> North Blue</div>
+				<br>
+				<div><strong>Crew Name:</strong> Tempest Pirates</div>
+				<div>
+					<strong>Crew Members:</strong>
+					<ol>
+						<li><strong><a href="Velyrea.html";>Saint Yesenia Celeste</a></strong> ~ Captain/Chronicler</li>
+						<li><strong>Alco Vinsoke</strong> ~ Vice Captain/Shipwright </li>
+						<li><strong><a href="chalybe.html";>"Chalybe D. Dorei</a></strong> ~ Weaponsmith</li>
+						<li><strong><a href="helios.html";>Helios Johnson</a></strong> ~ Navigator</li>
+						<li><strong>Ryori Sarugami</strong> ~ Cook</li>
+						<li><strong><a href="kiko.html";>Kiko Samui</a></strong> ~ Entertainer</li>
+						<li><strong>Keno Kleinstein</strong> ~ Entertainer</li>
+					</ol>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Backstory ]</h1>
+				<div class="tab" style="text-indent: 50px;">Born on an island where winter is everyday, Kiko was the son of lumberjacks, appreciated in the village for bringing to the inhabitants logs to burn and warm up homes in this unforgiving climate.</div>
+				<div class="tab" style="text-indent: 50px;">Kiko himself, however, never truly understood why his parents worked their backs off for people who barely even paid them, or did anything in return at all. And so, instead of doing like his parents, he decided to learn to play the Biwa, an instrument that was fairly popular on the nearby islands…</div>
+				<div class="tab" style="text-indent: 50px;">However, wood and trees in general started to become rarer, until the villagers begged Kiko’s parents to go search for new ones further in the mountains. His parents, which were both absolute monsters in terms of resistance to cold, ended up complying and left in the constant snowstorm. They, however, never came back, and the villagers, thinking Kiko’s parents had left them to fend for themselves against the cold, took it out on him out of anger. Kiko, who thankfully had the same resistance to the cold as his parents, saw them coming, and fled, as the villagers opted to destroy his house to warm themselves up.</div>
+				<div class="tab" style="text-indent: 50px;">Some weeks later, words in the villages revealed that multiple cases of people disappearing after venturing out in the snow started to spread, as other rumors commented on the witnesses of a humanoid figure in the snow-storms, carrying a Biwa, and luring intruders with the music to kill them, either from frostbite in the storm, or from tiredness…</div>
+				<div class="tab" style="text-indent: 50px;">Needless to say that this figure, that the villagers suspected to be a ghost or an evil spirit, coming back to haunt them, was actually Kiko, who had started to take revenge on those who decided to send his parents away, and burn his house to the ground. Kiko himself started to enjoy this process, and soon became a bonafide psychopath, killing people for fun, as the thrill of the kill, anger towards others, and pain had morphed into a pure sense of sadism.</div>
+				<div class="tab" style="text-indent: 50px;">However, as he tried to kill one more person with his usual method, he noticed that this victim simply wasn’t scared of the cold, nor of him, they were just… ignoring everything. As his confusion grew, he revealed himself to the person, who laughed and told him “You want to kill ? Why stop at tired bystanders !? There are plenty of strong people out there in our world ! Some that defeating would change the state of the seas ! So, are you a coward, or a killer !?”</div>
+				<div class="tab" style="text-indent: 50px;">Touched by those words, Kiko decided to let his interlocutor live, as the latter continued to walk in the snow, coming out of the storm unscathed…</div>
+				<div class="tab" style="text-indent: 50px;">Kiko now travels on the sea, his trusty Biwa in hand, and he is determined to…</div>
+				<div class="tab" style="text-indent: 50px;">Have some fun ! What else !?</div>
+			</div>
+			<hr>
+		</div>
+		<div id = "Stats" style="display:none">
+			<div class="indent">
+				<h1 id="Fighting">[ Fighting Style ]</h1>
+				<div><strong>Musical Spear: Biwa</strong> A Fighting style revolving around the use of a modified Biwa to be used as a spear.</div>
+				<div><strong>History</strong> In the cold mountains, a certain psychopath, who used to lure poor trespassers during snowstorms by strumming the cords of a Biwa, decided to add a… sharper accent to his art, creating his fighting style out of pure sadism.</div>
+				<div><strong>Musical Thrusts ~ Mahaha:</strong> This technique allows the user to send a flurry of thrusts at the enemy, creating a whole chord of music, the user can also end the technique with a stronger blow, resulting in a longer and louder note.</div>
+				<div style="color: #BB86FC;">▰▱▱▱</div>
+				<div><strong>Musical Thrusts ~ Chenoo:</strong> A technique that involves swinging the weapon wildly before unleashing a crushing overhead strike. The user's attacks are now harder to interrupt, and can break through an opponent's defenses quite easily.</div>
+				<div style="color: #BB86FC;">▰▰▱▱</div>
+				<div><strong>Sharp Art ~ Yuki Onna:</strong> The user is now fast enough to create two afterimages of themselves: One fights with the spear, the other plays the Biwa, distracting the opponent. The hits from the spear combined with the Biwa result in a whole concert, with each performance being unique. It is even more effective in misty areas or snowstorms, or even any environment that blocks the opponents view.</div>
+				<div style="color: #BB86FC;">▰▰▰▱</div>
+				<div><strong>Sharp Art ~ Kuraokami:</strong> The fighting style’s ultimate art. Each thrust of the spear and note produced by the strings sends a sound shockwave towards the opponent, wounding and weakening them further and blowing their ear-drums after too much exposure. The hits are also much faster and stronger than before, with the final hit of the final hit of **Musical Thrusts: Chenoo** being able to pierce through the opponent’s defenses</div>
+				<div style="color: #BB86FC;">▰▰▰▰</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Techniques">[ Techniques ]</h1>
+				<h2><u>Base Techniques</u></h2>
+				<div><strong>Melodic Introduction:</strong> The user lunges with incredible speed and pierces the target with their spear. The damage dealt to an opponent depends on the Agility stat of the user.</div>
+				<div style="color: #BB86FC;">▰▱▱▱▱</div>
+				<div><strong>Type:</strong> Offensive</div>
+				<div><strong>Range:</strong> Mid</div>
+				<div><strong>Solo:</strong> Kiko lunges and jumps against multiple obstacles, making his speed increase more and more. Each jump makes a note, thus playing a song all around the opponent.</div>
+				<div style="tab">+5 Agility each post he is using it. Can stack up to +20 Agility. If he stops using it between two posts, the stacks go back to 0.</div>
+				<div style="color: #BB86FC;">▰▱▱▱▱</div>
+				<div><strong>Type:</strong> Offensive</div>
+				<div><strong>Range:</strong> Close</div>
+				<hr>
+				<h2><u>Standard Techniques</u></h2>
+				<div><strong>N/A</strong></div>
+				<hr>
+				<h2><u>Super Techniques</u></h2>
+				<div><strong>N/A</strong></div>
+				<hr>
+				<h2><u>Ultimate Techniques</u></h2>
+				<div><strong>N/A</strong></div>
+				<hr>
+				<h2><u>Finisher Techniques</u></h2>
+				<div><strong>N/A</strong></div>
+				<hr>
+				<h2><u>Combo Techniques</u></h2>
+				<div><strong>N/A</strong></div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Inventory">[ Inventory ]</h1>
+				<ul>
+					<li><h2>N/A</h2></li>
+						<div></div>
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:450px; width:45%;"></div>
+				<h1 id="Stat">[ Statistics ]</h1>
+				<h2>Limits</h2>
+				<ol style="list-style-type:none">
+					<li><strong>N/A</strong></li>
+				</ol>
+				<h2>Racial Perks (Human)</h2>
+				<ol style="list-style-type:none">
+					<li>N/A</li>			
+				</ol>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h2>Statistics</h2>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 12
+					<div style="padding-bottom: 10px;" 	class="container">
+						<div class="skills xstr"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Durability:</strong> 10
+					<br>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xend"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Agility:</strong> 22 (32)
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xagi"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Perception:</strong> 17
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xper"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Stamina:</strong> 14
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xhp"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>AP:</strong> 75
+					<div style="padding-bottom: 10px;" class="containerH">
+						<div class="skills xtot" style ="position: absolute; z-index: 9;"></div>
+						<div class="skills xunu" style ="position: absolute;"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>SP:</strong> 12
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xunu" style = "position: absolute; z-index: 9;"></div>
+						<div class="skills xspe" style = "position: absolute;"></div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Talents">[ Talents ]</h1>
+				<div><strong>Musical Spear ~ Biwa:</strong> I</div>
+				<div class="containerH">
+					<div class="skills xwea"></div>
+				</div>
+				<div><strong>Snow Snow Fruit:</strong> 10%</div>
+				<div class="containerH">
+					<div class="skills xsul" style ="position: absolute; z-index: 9;"></div>
+					<div class="skills desi" style ="position: absolute;"></div>
+				</div>
+				<div><strong>Musician</strong> I</div>
+				<div class="containerH">
+					<div class="skills xnav"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Haki">[ Haki ]</h1>
+				<div><strong>Observasion:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillo"></div>
+				</div>
+				<div><strong>Armament:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwilla"></div>
+				</div>
+				<div><strong>Conqueror's</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillc"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ref">[ References and Notes ]</h1>
+			</div>
+		<hr>
+		</div>
+	</body>
+</html>
