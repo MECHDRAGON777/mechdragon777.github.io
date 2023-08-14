@@ -1,8 +1,15 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Velyrea D. Elizabetha | One Blue New Dawn</title>
 		<link rel="stylesheet" href="Velyrea.css">
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://mechdragon777.github.io/One%20Blue%20New%20Dawn/characters/tempest-pirates/velyrea.html" />
+		<meta property="og:title" content="Velyrea D. Elizabetha / Saint Yesenia Celeste | One Blue New Dawn" />
+		<meta property="og:description" content="Yesenia is a Fallen Celestial Dragon who escaped Impel Down..." />
+		<meta property="og:image" content="https://github.com/MECHDRAGON777/mechdragon777.github.io/blob/master/One%20Blue%20New%20Dawn/characters/revolutionary_army/images/aestella_face.png?raw=true" />
+		<meta name="theme-color" content="#FF4C00">
 		<div id="Nav" class="navbar" style="display:block">
 			<a href="#Demographics"> Demographics</a>
 			<a href="#Physical Details"> Physical Details</a>
@@ -10,7 +17,13 @@
 			<a href="#Personal Details"> Personal Details</a>
 			<a href="#Affiliation"> Affiliation</a>
 			<a href="#Backstory"> Backstory</a>
-			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+		</div>
+		<div id="Navb" class="navbar" style="display:block">
+			<div style="width: 100%;">
+				<button style="background-color: #2C2C2C; width: 33.3333%;">Biography</button>
+				<button style="width: 33.3333%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Navb');toggle_div_fun('Nav2b');toggle_div_fun('Bio');toggle_div_fun('Stats');">Skills</button>
+				<button style="width: 33.3333%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav3');toggle_div_fun('Navb');toggle_div_fun('Nav3b');toggle_div_fun('Bio');toggle_div_fun('Feats');">Feats</button>
+			</div>
 		</div>
 		<div id="Nav2" class="navbar" style="display:none">
 			<a href="#Fighting"> Fighting Style</a>
@@ -20,7 +33,29 @@
 			<a href="#Talents"> Talents</a>
 			<a href="#Haki"> Haki</a>
 			<a href="#Ref">References and Notes</a>
-			<button onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+		</div>
+		<div id="Nav2b" class="navbar" style="display:none">
+			<div style="width: 100%;">
+				<button style="width: 33.3333%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Navb');toggle_div_fun('Nav2b');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+				<button style="background-color: #2C2C2C; width: 33.3333%;">Stats</button>
+				<button style="width: 33.3333%;" onclick="toggle_div_fun('Nav2');toggle_div_fun('Nav3');toggle_div_fun('Nav2b');toggle_div_fun('Nav3b');toggle_div_fun('Stats');toggle_div_fun('Feats');">Feats</button>
+			</div>
+		</div>
+		<div id="Nav3" class="navbar" style="display:none">
+			<a href="#Impel"> Impel Down Act 1</a>
+			<a href="#Baratie"> Baratie</a>
+			<a href="#Agar"> Agar Island</a>
+			<a href="#Gale"> Gale Island</a>
+			<a href="#Mirror"> Vasolona Island</a>
+			<a href="#Upside-Down"> Upside-Down-Island</a>
+			<a href="#Alabasta"> Alabasta</a>
+		</div>
+		<div id="Nav3b" class="navbar" style="display:none">
+			<div style="width: 100%;">
+				<button style="width: 33.3333%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav3');toggle_div_fun('Navb');toggle_div_fun('Nav3b');toggle_div_fun('Bio');toggle_div_fun('Feats');">Biography</button>
+				<button style="width: 33.3333%;" onclick="toggle_div_fun('Nav2');toggle_div_fun('Nav3');toggle_div_fun('Nav2b');toggle_div_fun('Nav3b');toggle_div_fun('Stats');toggle_div_fun('Feats');">Skills</button>
+				<button style="background-color: #2C2C2C; width: 33.3333%;">Feats</button>
+			</div>
 		</div>
 		<script type ="text/javascript">
 			function toggle_div_fun(id) {
@@ -60,7 +95,7 @@
 				  //{x: "Sta", value: 30},
 			   //];
 			  var data2 = [
-				  {x: "Str", value: 13},
+				  {x: "Str", value: 20},
 				  {x: "Agi", value: 5},
 				  {x: "Per", value: 5},
 				  {x: "End", value: 35},
@@ -103,33 +138,53 @@
             </tr>
 			<tr>
 				<td colspan="1">
-					<div id="button1";><button class="iButton"; onclick="show_div_fun('img1');hide_div_fun('img2');hide_div_fun('img3');hide_div_fun('img4')">Original Outfit</button></div>
+					<div id="button1off" style="display:block">
+						<button class="iButton"; onclick="show_div_fun('button1on'); hide_div_fun('button1off'); hide_div_fun('button2on'); show_div_fun('button2off'); hide_div_fun('button3on'); show_div_fun('button3off'); hide_div_fun('button4on'); show_div_fun('button4off'); show_div_fun('img1'); hide_div_fun('img2'); hide_div_fun('img3'); hide_div_fun('img4'); show_div_fun('apperance1'); hide_div_fun('apperance2'); hide_div_fun('apperance3'); hide_div_fun('apperance4');">Prison Outfit</button>
+					</div>
+					<div id="button1on" style="display:none">
+						<button class="iButton"; style="background-color: #3e8e41">Prison Outfit</button>
+					</div>
 				</td>
 				<td>
-					<button class="iButton"; onclick="show_div_fun('img2');hide_div_fun('img1');hide_div_fun('img3');hide_div_fun('img4')">Current Outfit</button>
+					<div id="button2off" style="display:block">
+						<button class="iButton"; onclick="show_div_fun('button2on'); hide_div_fun('button2off'); hide_div_fun('button1on'); show_div_fun('button1off'); hide_div_fun('button3on'); show_div_fun('button3off'); hide_div_fun('button4on'); show_div_fun('button4off'); show_div_fun('img2'); hide_div_fun('img1'); hide_div_fun('img3'); hide_div_fun('img4'); show_div_fun('apperance1'); hide_div_fun('apperance2'); hide_div_fun('apperance3'); hide_div_fun('apperance4');">Escapee Outfit</button>
+					</div>
+					<div id="button2on" style="display:none">
+						<button class="iButton"; style="background-color: #3e8e41">Escapee Outfit</button>
+					</div>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<button class="iButton"; onclick="show_div_fun('img3');hide_div_fun('img1');hide_div_fun('img2');hide_div_fun('img4')">Wind Form</button>
+					<div id="button3off" style="display:none">
+						<button class="iButton"; onclick="show_div_fun('button3on'); hide_div_fun('button3off'); hide_div_fun('button1on'); show_div_fun('button1off'); hide_div_fun('button2on'); show_div_fun('button2off'); hide_div_fun('button4on'); show_div_fun('button4off'); show_div_fun('img3'); hide_div_fun('img1'); hide_div_fun('img2'); hide_div_fun('img4'); show_div_fun('apperance1'); hide_div_fun('apperance2'); hide_div_fun('apperance3'); hide_div_fun('apperance4');">Wind Form</button>
+					</div>
+					<div id="button3on" style="display:block">
+						<button class="iButton"; style="background-color: #3e8e41">Wind Form</button>
+					</div>
 				</td>
 				<td>
-					<button class="iButton"; onclick="show_div_fun('img4');hide_div_fun('img1');hide_div_fun('img3');hide_div_fun('img2')">Post Timeskip</button>
+					<div id="button4off" style="display:block">
+						<button class="iButton"; onclick="show_div_fun('button4on'); hide_div_fun('button4off'); hide_div_fun('button1on'); show_div_fun('button1off'); hide_div_fun('button2on'); show_div_fun('button2off'); hide_div_fun('button3on'); show_div_fun('button3off'); show_div_fun('img4'); hide_div_fun('img1'); hide_div_fun('img2'); hide_div_fun('img3'); show_div_fun('apperance1'); hide_div_fun('apperance2'); hide_div_fun('apperance3'); hide_div_fun('apperance4');">Post Timeskip</button>
+					</div>
+					<div id="button4on" style="display:none">
+						<button class="iButton"; style="background-color: #3e8e41">Post Timeskip</button>
+					</div>
 				</td>
 			</tr>
             <tr>
                 <td colspan="2">
 					<div id="img1" class="navbar" style="display:none">
-						<img src="images/Velyrea.png" alt="Velyrea" width="350px">
+						<img src="images/velyrea.png" alt="Velyrea" width="400px">
 					</div>
 					<div id="img2" class="navbar" style="display:none">
-						<img src="images/Velyrea2.png" alt="Velyrea" width="350px">
+						<img src="images/velyrea2.png" alt="Velyrea" width="400px">
 					</div>
 					<div id="img3" class="navbar" style="display:block">
-						<img src="images/Velyrea3.png" alt="Velyrea" width="350px">
+						<img src="images/velyrea3.png" alt="Velyrea" width="400px">
 					</div>
 					<div id="img4" class="navbar" style="display:none">
-						<img src="images/Velyrea4.png" alt="Velyrea" width="350px">
+						<img src="images/velyrea4.png" alt="Velyrea" width="400px">
 					</div>
 				</td>
             </tr>
@@ -153,24 +208,30 @@
 			<tr class="white-row">
 				<td>Occupation:</td>
 				<td>
-					Lost Girl
+					Captain of the Tempest Pirates
 				</td>
 			</tr>
 			<tr class="white-row">
 				<td>Residence:</td>
 				<td>
-					Random Jungle
+					<ul>
+						<li>Impel Down (Former)</li>
+						<li>Gale Island</li>
+					</ul>
 				</td>
 			</tr>
 			<tr class="white-row">
 				<td>Alias:</td>
 				<td>
-					Storm Bird
+					<ul>
+						<li>Storm Bird</li>
+						<li>Birdy</li>
+					</ul>
 				</td>
 			</tr>
 			<tr class="white-row">
 				<td>Epithet:</td>
-				<td>Storm Bird</td>
+				<td>Vector Demon</td>
 			</tr>
 			<tr class="white-row">
 				<td>Status:</td>
@@ -197,11 +258,19 @@
 				</td>
 			</tr>
 			<tr class="white-row">
-				<td>Weight:</td>
+				<td>Weight pre-Devil Fruit:</td>
 				<td>
-					29483920657.988 μg
+					80159800 μg
 					<br>
 					(65 7/7625 lbs)
+				</td>
+			</tr>
+			<tr class="white-row">
+				<td>Current Weight:</td>
+				<td>
+					0.08 kg
+					<br>
+					(2.827553735 oz)
 				</td>
 			</tr>
 			<tr class="white-row">
@@ -236,22 +305,62 @@
             </tr>
 			<tr class="white-row">
 				<td>Japanese Name:</td>
-				<td>N/A</td>
+				<td>
+					ベクベクの実 (Beku Beku no Mi)
+					<br>
+					(風風の実 (Kaze Kaze no Mi))
+				</td>
 			</tr>
 			<tr class="white-row">
 				<td>English Name:</td>
-				<td>N/A</td>
+				<td>
+					Vector-Vector Fruit
+					<br>
+					(Wind Wind Fruit)
+				</td>
 			</tr>
 			<tr class="white-row">
 				<td>Meaning:</td>
-				<td>N/A</td>
+				<td>Vector; Wind</td>
 			</tr>
 			<tr class="white-row">
 				<td>Type:</td>
-				<td>N/A</td>
+				<td>
+					Paramecia
+					<br>
+					(Logia)
+				</td>
 			</tr>
         </table>
 		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id = "Yesenia">Saint Yesenia Celeste</h1>
+				<div>Yesenia is a Fallen Celestial Dragon who escaped Impel Down on Febuary 28th of the 1111th year.</div>
+				<table style = "width=500px">
+					<tr>
+						<th>Contents</th>
+						<td>
+							<button onclick="toggle_div_fun('contentsA');toggle_div_fun('contentsB');toggle_div_fun('contentsC');" id="contentsA">
+								[ hide ]
+							</button>
+							<button style="width: 100%; display:none" onclick="toggle_div_fun('contentsA');toggle_div_fun('contentsB');toggle_div_fun('contentsC');" id="contentsB">
+								[ show ]
+							</button>
+						</td>
+					</tr>
+					<tr>
+					<div id = "contentsC">
+						<tr><td><a class="special-link" href="#Demographics"> Demographics</a></td></tr>
+						<tr><td><a class="special-link" href="#Physical Details"> Physical Details</a></td></tr>
+						<tr><td><a class="special-link" href="#Relationships"> Relationships</a></td></tr>
+						<tr><td><a class="special-link" href="#Personal Details"> Personal Details</a></td></tr>
+						<tr><td><a class="special-link" href="#Affiliation"> Affiliation</a></td></tr>
+						<tr><td><a class="special-link" href="#Backstory"> Backstory</a></td></tr>
+					</div>
+					</tr>
+				</table>
+			</div>
+			<hr>
 			<div class="indent">
 				<h1 id="Demographics">[ Demographics ]</h1>
 				<div><strong>Name:</strong> Velyrea Dahlia Elizabetha</div>
@@ -267,7 +376,7 @@
 			<div class="indent">
 				<h1 id="Physical Details">[ Physical Details ]</h1>
 				<div><strong>Height:</strong> 3327467136.5638766 nm</div>
-				<div><strong>Weight:</strong> 29483920657.988 μg</div>
+				<div><strong>Weight:</strong> 80159800 μg</div>
 				<div><strong>Blood Type:</strong> XF (RH+)</div>
 			</div>
 			<hr>
@@ -291,7 +400,10 @@
 				<h1 id="Personal Details">[ Personal Details ]</h1>
 				<div><strong>Personality:</strong> Due to spending most of her life in isolation and imprisonment, Velyrea is a very skidish girl who values freedom. </div>
 				<br>
-				<div><strong>Appearance:</strong> A Harpy with tan feathers.</div>
+				<div id="apperance1" style="display:none"><strong>Appearance:</strong> A Harpy with tan feathers.</div>
+				<div id="apperance2" style="display:none"><strong>Appearance:</strong> A Harpy with tan feathers.</div>
+				<div id="apperance3" style="display:block"><strong>Appearance:</strong> A girl of average statue.</div>
+				<div id="apperance4" style="display:none"><strong>Appearance:</strong> A Harpy with tan feathers.</div>
 				<br>
 				<div><strong>Aspiration(s):</strong> To find a way to be as free as the Wind.</div>
 				<div><strong>Likes:</strong> Freedom, Writing</div>
@@ -309,6 +421,9 @@
 				<div><strong>Aliases:</strong> Storm Bird and Demon of the Wind</div>
 				<div><strong>Faction:</strong> N/A</div>
 				<div><strong>Bounty:</strong> &#x1d56d;172,500,000</div>
+				<div style="height: 200px;">
+					<div>Yesenia</div>
+				</div>
 				<div class="containerH">
 					<div class="skills bounty1" style ="position: absolute; z-index: 9;"></div>
 					<div class="skills bounty2" style ="position: absolute; z-index: 8;"></div>
@@ -318,6 +433,7 @@
 					<div class="skills bounty6" style ="position: absolute; z-index: 4;"></div>
 					<div class="skills bounty7" style ="position: absolute; z-index: 3;"></div>
 				</div>
+				<br>
 				<div><strong>Alignment:</strong> True Chaotic</div>
 				<div><strong>Occupation:</strong> Impel Down Escapee and Fallen Dragon</div>
 				<div><strong>Crew Role:</strong> Chronicler and Captain</div>
@@ -327,9 +443,9 @@
 				<div>
 					<strong>Crew Members:</strong>
 					<ol>
-						<li><strong><a href="velyrea.html";>Saint Yesenia Celeste</a></strong> ~ Captain/Chronicler</li>
+						<li><strong><a href="Velyrea.html";>Saint Yesenia Celeste</a></strong> ~ Captain/Chronicler</li>
 						<li><strong>Alco Vinsoke</strong> ~ Vice Captain/Shipwright </li>
-						<li><strong><a href="chalybe.html";>"Chalybe D. Dorei</a></strong> ~ Weaponsmith</li>
+						<li><strong><a href="chalybe.html";>Chalybe D. Dorei</a></strong> ~ Weaponsmith</li>
 						<li><strong><a href="helios.html";>Helios Johnson</a></strong> ~ Navigator</li>
 						<li><strong>Ryori Sarugami</strong> ~ Cook</li>
 						<li><strong><a href="kiko.html";>Kiko Samui</a></strong> ~ Entertainer</li>
@@ -433,8 +549,9 @@
 					<br>
 					<li><strong>-</strong>Unable to hold items normally. (Can use wing tips, though will have little to no grip.)</li>
 				</ol>
+				<br>
 				<h2>Statistics</h2>
-				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 13
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 20
 					<div style="padding-bottom: 10px;" 	class="container">
 						<div class="skills xstr"></div>
 					</div>
@@ -460,41 +577,38 @@
 						<div class="skills xhp"></div>
 					</div>
 				</div>
-				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>AP:</strong> 88
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>AP:</strong> 95
 					<div style="padding-bottom: 10px;" class="containerH">
-						<div class="skills xtot" style ="position: absolute; z-index: 9;"></div>
-						<div class="skills xunu" style ="position: absolute;"></div>
+						<div class="skills xtot"></div>
+						
 					</div>
 				</div>
-				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>SP:</strong> 16
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>SP:</strong> 18
 					<div style="padding-bottom: 10px;" class="container">
-						<div class="skills xspe"></div>
+						<div class="skills xspe" style ="position: absolute; z-index: 9;"></div>
+						<div class="skills xunu" style ="position: absolute;"></div>
 					</div>
 				</div>
 			</div>
 			<hr>
 			<div class="indent">
 				<h1 id="Talents">[ Talents ]</h1>
-				<div><strong>Bladed Weaponry:</strong> 0</div>
+				<div><strong>False Art of Vector Manipulation ~ Vector Boosts:</strong> III</div>
 				<div class="containerH">
-					<div class="skills xwea"></div>
+					<div class="skills xvec"></div>
 				</div>
 				<div><strong>Six Powers:</strong> 0</div>
 				<div class="containerH">
-					<div class="skills xele"></div>
+					<div class="skills xsix"></div>
 				</div>
-				<div><strong>Wind Wind Fruit:</strong> 15%</div>
+				<div><strong>Wind Wind Fruit:</strong> 20%</div>
 				<div class="containerH">
-					<div class="skills xsul" style ="position: absolute; z-index: 9;"></div>
+					<div class="skills xfruit" style ="position: absolute; z-index: 9;"></div>
 					<div class="skills desi" style ="position: absolute;"></div>
 				</div>
-				<div><strong>Chronicler</strong> 0</div>
+				<div><strong>Chronicler ~ Writer of Fate:</strong> III</div>
 				<div class="containerH">
-					<div class="skills xnav"></div>
-				</div>
-				<div><strong>Navigator</strong> 0</div>
-				<div class="containerH">
-					<div class="skills xnav"></div>
+					<div class="skills xchr"></div>
 				</div>
 			</div>
 			<hr>
@@ -518,6 +632,28 @@
 				<h1 id="Ref">[ References and Notes ]</h1>
 			</div>
 		<hr>
+		</div>
+		<div id = "Feats" style="display:none">
+			<div class="indent">
+				<h1 id="Impel">[ Impel Down ]</h1>
+				<div><img src="../../general_images/feat_5.png" alt="Feat_5" height="100px;"> [Redacted]</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Baratie">[ Baratie ]</h1>
+				<div><img src="../../general_images/feat_1.png" alt="Feat_1" height="100px;">While at the Baratie, Yesenia would have learned about death and the passage of time. She would spend Wyane's last day talking to him that would mostly land in Yesenia learning her birthday was on February 29th of the 1088th year. While they were talking, three others would soon arive later that evening. Kido, Fuyuki, and Draco D. Damon. The resulting aftermath lead to Fuyuki and Draco killing Wyane and taking Kido prisoner. At the same time, Yesenia would become even more annoyed at the Marines she already detested. She would have been frozen in fear at seeing their sights. After they left, she would fly Wyane towards a random island that would end up being Agar Island looking for medical treatment for Wyane; however, Wyane would have died from the gunshot wound well before Yesenia could even get to Agar Island.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Agar">[ Agar Island ]</h1>
+				<div><img src="../../general_images/feat_1.png" alt="Feat_1" height="100px;"></div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Gale">[ Gale Island ]</h1>
+				<div><img src="../../general_images/feat_3.png" alt="Feat_3" height="100px;"></div>
+			</div>
+			<hr>
 		</div>
 	</body>
 </html>
