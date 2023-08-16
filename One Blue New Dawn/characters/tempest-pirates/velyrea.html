@@ -340,23 +340,23 @@
 					<tr>
 						<th>Contents</th>
 						<td>
-							<button onclick="toggle_div_fun('contentsA');toggle_div_fun('contentsB');toggle_div_fun('contentsC');" id="contentsA">
+							<button style="width: 100%, display:block" onclick="toggle_div_fun('contentsA'); toggle_div_fun('contentsB'); hide_div_fun('contentsC');" id="contentsA">
 								[ hide ]
 							</button>
-							<button style="width: 100%; display:none" onclick="toggle_div_fun('contentsA');toggle_div_fun('contentsB');toggle_div_fun('contentsC');" id="contentsB">
+							<button style="width: 100%; display:none" onclick="toggle_div_fun('contentsA'); toggle_div_fun('contentsB'); show_div_fun('contentsC');" id="contentsB">
 								[ show ]
 							</button>
 						</td>
 					</tr>
-					<tr>
-					<div id = "contentsC">
-						<tr><td><a class="special-link" href="#Demographics"> Demographics</a></td></tr>
-						<tr><td><a class="special-link" href="#Physical Details"> Physical Details</a></td></tr>
-						<tr><td><a class="special-link" href="#Relationships"> Relationships</a></td></tr>
-						<tr><td><a class="special-link" href="#Personal Details"> Personal Details</a></td></tr>
-						<tr><td><a class="special-link" href="#Affiliation"> Affiliation</a></td></tr>
-						<tr><td><a class="special-link" href="#Backstory"> Backstory</a></td></tr>
-					</div>
+					<tr> 
+						<div style = "display:block" id = "contentsC">
+							<tr><td><a class="special-link" href="#Demographics"> Demographics</a></td></tr>
+							<tr><td><a class="special-link" href="#Physical Details"> Physical Details</a></td></tr>
+							<tr><td><a class="special-link" href="#Relationships"> Relationships</a></td></tr>
+							<tr><td><a class="special-link" href="#Personal Details"> Personal Details</a></td></tr>
+							<tr><td><a class="special-link" href="#Affiliation"> Affiliation</a></td></tr>
+							<tr><td><a class="special-link" href="#Backstory"> Backstory</a></td></tr>
+						</div>
 					</tr>
 				</table>
 			</div>
