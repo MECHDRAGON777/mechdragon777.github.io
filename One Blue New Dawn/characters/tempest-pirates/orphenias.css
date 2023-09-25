@@ -209,25 +209,25 @@ button:hover {
 
 .xstr {width: 25%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
-.xend {width: 1.66666666666666667%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xend {width: 3.33333333333%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
 .xagi {width: 41.666666666666667%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px; }
 
 .xper {width: 50%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
-.xhp {width: 6.66666666666666666667%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xhp {width: 13.3333333333%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
-.xunu {width: 13.833333333%; height: 10px; background-color: #9c27b0; color: #442200; border-radius: 5px;}
+.xunu {width: 6.66666666667%; height: 10px; background-color: #9c27b0; color: #442200; border-radius: 5px;}
 
-.xtot {width: 13.833333333%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xtot {width: 28.3333333333%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
-.xspe {width: 13.833333333%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xspe {width: 23.3333333333%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
-.xwea {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
-.xele {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
-.xsul {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xra {width: 28.5714285714%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xhe {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xsc {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
+.xfruit {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 .desi {width: 1%; height: 10px; background-color: #9c27b0; color: #442200; border-radius: 5px;}
-.xnav {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 
 .xwillc {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
 .xwilla {width: 1%; height: 10px; background-color: #BB86FC; color: #442200; border-radius: 5px;}
@@ -247,7 +247,7 @@ button:hover {
 	border-bottom: 2px;
 	border-right: 2px;
 	border-left: 2px;
-	background-color: 2C2C2C;
+	background-color: #2C2C2C;
 	margin-left: -2px;
 	margin-top: 2px;
 	width: 154px;
