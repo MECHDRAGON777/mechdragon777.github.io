@@ -88,15 +88,15 @@
 			anychart.onDocumentReady(function () {
 	  
 			  //var data1 = [
-				  //{x: "Str", value: 15},
-				  //{x: "Agi", value: 20},
-				  //{x: "Per", value: 20},
-				  //{x: "End", value: 15},
-				  //{x: "Sta", value: 30},
+				  {x: "Str", value: 45},
+				  {x: "Agi", value: 15},
+				  {x: "Per", value: 5},
+				  {x: "End", value: 35},
+				  {x: "Sta", value: 30},
 			   //];
 			  var data2 = [
 				  {x: "Str", value: 20},
-				  {x: "Agi", value: 5},
+				  {x: "Agi", value: 15},
 				  {x: "Per", value: 5},
 				  {x: "End", value: 35},
 				  {x: "Sta", value: 30},
@@ -117,6 +117,7 @@
 			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
 	  
 			  // create first series
+			  chart.area(data2).name('Trait Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
 			  chart.area(data2).name('Racial Bonus').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
 	  
 			  // set container id for the chart
@@ -279,18 +280,22 @@
 			</tr>
 			<tr class="white-row">
 				<td>Bounty:</td>
-				<td>&#x1d56d;172,500,000</td>
+				<td>&#x1d56d;240,000,000</td>
 			</tr>
 			<tr class="pink-row">
                 <th colspan="2">Traits</th>
             </tr>
+			<tr class="white-row">
+				<td>Common Trait 1</td>
+				<td>Solitairst</td>
+			</tr>
 			<tr class="white-row">
 				<td>Sacred Trait 1</td>
 				<td>Voice of All Things</td>
 			</tr>
 			<tr class="white-row">
 				<td>Sacred Trait 2</td>
-				<td>N/A</td>
+				<td>Devil Child</td>
 			</tr>
 			<tr class="white-row">
 				<td>Void Trait 1</td>
@@ -447,9 +452,9 @@
 						<li><strong>Alco Vinsoke</strong> ~ Vice Captain/Shipwright </li>
 						<li><strong><a href="chalybe.html";>Chalybe D. Dorei</a></strong> ~ Weaponsmith</li>
 						<li><strong><a href="helios.html";>Helios Johnson</a></strong> ~ Navigator</li>
-						<li><strong>Ryori Sarugami</strong> ~ Cook</li>
+						<li><strong>Fishstick Westing</strong> ~ Doctor</li>
 						<li><strong><a href="kiko.html";>Kiko Samui</a></strong> ~ Entertainer</li>
-						<li><strong>Keno Kleinstein</strong> ~ Entertainer</li>
+						<li><strong><a href="orphenias.html">Orphenias Blackwell</a></strong> ~ Helmsman, Cook, and Scientist</li>
 					</ol>
 				</div>
 			</div>
@@ -551,7 +556,7 @@
 				</ol>
 				<br>
 				<h2>Statistics</h2>
-				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 20
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 20 (45 Solitarist)
 					<div style="padding-bottom: 10px;" 	class="container">
 						<div class="skills xstr"></div>
 					</div>
@@ -562,7 +567,7 @@
 						<div class="skills xend"></div>
 					</div>
 				</div>
-				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Agility:</strong> 5
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Agility:</strong> 15
 					<div style="padding-bottom: 10px;" class="container">
 						<div class="skills xagi"></div>
 					</div>
@@ -593,7 +598,7 @@
 			<hr>
 			<div class="indent">
 				<h1 id="Talents">[ Talents ]</h1>
-				<div><strong>False Art of Vector Manipulation ~ Vector Boosts:</strong> III</div>
+				<div><strong>False Art of Vector Manipulation ~ Crude Immitation:</strong> I</div>
 				<div class="containerH">
 					<div class="skills xvec"></div>
 				</div>
@@ -609,6 +614,10 @@
 				<div><strong>Chronicler ~ Writer of Fate:</strong> III</div>
 				<div class="containerH">
 					<div class="skills xchr"></div>
+				</div>
+				<div><strong>Merchant:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xmer"></div>
 				</div>
 			</div>
 			<hr>
