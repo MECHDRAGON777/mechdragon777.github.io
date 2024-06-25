@@ -1,0 +1,115 @@
+body {
+	font-family: 'Rubik';
+	font-size: 22px;
+	margin-left:10vw;
+	margin-right:10vw;
+}
+label {
+	width:50px;
+	height:20px;
+	position: relative;
+	display: block;
+	background: #ebebeb;
+	border-radius: 200px;
+	box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+	cursor: pointer;
+	transition: 0.3s;
+}
+label:after {
+	content: "";
+	width:18px;
+	height: 18px;
+	position: absolute;
+	top:1px;
+	left:1px;
+	background: linear-gradient(180deg,#ffcc89,#d8860b);
+	border-radius: 180px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+input {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+input:checked + label {
+	background: #242424;
+}
+input:checked + label:after {
+	left:49px;
+	transform: translateX(-100%);
+	background: linear-gradient(180deg,#777,#3a3a3a);
+}
+label:active:after{
+	width: 26px;
+}
+.background {
+	margin-left: -10vw;
+	margin-top: -5vw;
+	width:100vw;
+	height: 800vh;
+	background: #fff;
+	z-index: -1;
+	position: absolute;
+	transition: 0.3s;
+}
+input:checked + label + .background {
+	background:#242424;
+}
+label svg {
+	position: absolute;
+	width: 12px;
+	top:4px;
+	z-index: 100;
+}
+label svg.sun {
+	left:4px;
+	fill:#fff;
+	transition: 0.3s;
+}
+label svg.moon {
+	left:34px;
+	fill:#7e7e7e;
+	transition: 0.3s;
+}
+input:checked + label svg.sun {
+	fill:#7e7e7e;
+}
+input:checked + label svg.moon {
+	fill:#fff;
+}
+
+hr {
+	border:none;
+	height:2px;
+	background-color:#2C2C2C;
+}
+.white-row {
+	background-color:#1F1F1F;
+	color:#FFFFFF33
+}
+.pink-row {
+	background-color:#2C2C2C;
+	color:#FFFFFF83
+}
+.red-cell {
+	background-color:#FF0000;
+	color:#FFFFFF
+}
+.tab {
+	margin-left: 40px;
+}
+.indent {
+	padding-left: 48px;
+	border-left: 1px solid #2C2C2C;
+	margin-left: 15px;
+}
+
+.history:before {
+	content: "6." counter(elementcounter) ". ";
+	counter-increment: elementcounter;
+}
+.ignition:before {
+	content: "1." counter(elementcounter) ". ";
+	counter-increment: elementcounter;
+}
