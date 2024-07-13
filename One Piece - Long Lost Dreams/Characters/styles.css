@@ -105,6 +105,44 @@ hr {
 	margin-left: 15px;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
 .history:before {
 	content: "6." counter(elementcounter) ". ";
 	counter-increment: elementcounter;
@@ -112,4 +150,20 @@ hr {
 .ignition:before {
 	content: "1." counter(elementcounter) ". ";
 	counter-increment: elementcounter;
+}
+.sp:before {
+	content: "2." counter(elementcounter) ". ";
+	counter-increment: elementcounter;
+}
+.outerb {
+	border-style: solid;
+	border:2px solid #5a89c2;
+}
+.outerm {
+	border-style: solid;
+	border: 4px solid #366092;
+}
+.outeri {
+	border-style: solid;
+	border: 2px solid #1f3754;
 }
