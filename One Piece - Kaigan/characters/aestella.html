@@ -1,0 +1,822 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Æstella D. Lambdadelta | One Piece Kaigan</title>
+		<link rel="stylesheet" href="aestella.css">
+		<div id="Nav" class="navbar" style="display:block">
+			<a href="#Demographics"> Demographics</a>
+			<a href="#Physical Details"> Physical Details</a>
+			<a href="#Relationships"> Relationships</a>
+			<a href="#Personal Details"> Personal Details</a>
+			<a href="#Affiliation"> Affiliation</a>
+			<a href="#Backstory"> Backstory</a>
+			<a href="#Trivia"> Trivia</a>
+			<br>
+			<div style="width: 100%;">
+				<button style="background-color: #2C2C2C; width: 25%;">Biography</button>
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Stats</button>
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav3');toggle_div_fun('Bio');toggle_div_fun('Feats');">Feats</button>
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav4');toggle_div_fun('Character');toggle_div_fun('Bio');toggle_div_fun('DF')">Devil Fruit</button>
+			</div>
+		</div>
+		<div id="Nav2" class="navbar" style="display:none">
+			<a href="#Fighting"> Fighting Style</a>
+			<a href="#Techniques"> Techniques</a>
+			<a href="#Inventory"> Inventory</a>
+			<a href="#Stat"> Stats</a>
+			<a href="#Talents"> Talents</a>
+			<a href="#Haki"> Haki</a>
+			<a href="#Ref">References and Notes</a>
+			<br>
+			<div style="width: 100%;">
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav2');toggle_div_fun('Bio');toggle_div_fun('Stats');">Biography</button>
+				<button style="background-color: #2C2C2C; width: 25%;">Stats</button>
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav2');toggle_div_fun('Nav3');toggle_div_fun('Stats');toggle_div_fun('Feats');">Feats</button>
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav2');toggle_div_fun('Nav4');toggle_div_fun('Character');toggle_div_fun('Stats');toggle_div_fun('DF')">Devil Fruit</button>
+			</div>
+		</div>
+		<div id="Nav3" class="navbar" style="display:none">
+			<a href="#Drum"> Drum Island</a>
+			<a href="#Alabasta"> Alabasta</a>
+			<a href="#Jaya"> Jaya</a>
+			<a href="#W7"> Water 7</a>
+			<br>
+			<div style="width: 100%;">
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav3');toggle_div_fun('Bio');toggle_div_fun('Feats');">Biography</button>
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav2');toggle_div_fun('Nav3');toggle_div_fun('Stats');toggle_div_fun('Feats')">Stats</button>
+				<button style="background-color: #2C2C2C; width: 25%;">Feats</button>
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav3');toggle_div_fun('Nav4');toggle_div_fun('Character');toggle_div_fun('Feats');toggle_div_fun('DF')">Devil Fruit</button>
+			</div>
+		</div>
+		<div id="Nav4" class="navbar" style="display:none">
+			<a href="#DFDemographics"> Demographics</a>
+			<a href="#Physical%20Details"> Etymology</a>
+			<a href="#Relationships"> Strengths and Weaknesses </a>
+			<a href="#Personal%20Details"> Usage</a>
+			<a href="#Affiliation"> History</a>
+			<a href="#Backstory"> Trivia</a>
+			<br>
+			<div style="width: 100%;">
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav');toggle_div_fun('Nav4');toggle_div_fun('Character');toggle_div_fun('Bio');toggle_div_fun('DF');">Biography</button>
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav2');toggle_div_fun('Nav4');toggle_div_fun('Character');toggle_div_fun('Stats');toggle_div_fun('DF');">Stats</button>
+				<button style="width: 25%;" onclick="toggle_div_fun('Nav3');toggle_div_fun('Nav4');toggle_div_fun('Character');toggle_div_fun('Feats');toggle_div_fun('DF');">Feats</button>
+				<button style="background-color: #2C2C2C; width: 25%;">Devil Fruit</button>
+			</div>
+		</div>
+		<script type ="text/javascript">
+			function toggle_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+				else
+					divelement.style.display = 'none'
+			}
+			function show_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'none')
+					divelement.style.display = 'block'
+			}
+			function hide_div_fun(id) {
+			
+				var divelement =document.getElementById(id);
+				
+				if(divelement.style.display == 'block')
+					divelement.style.display = 'none'
+			}
+		</script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+		<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+		<script>
+			anychart.onDocumentReady(function () {
+	  
+			  var data1 = [
+				  {x: "Str", value: 230},
+				  {x: "Agi", value: 180},
+				  {x: "Per", value: 130},
+				  {x: "End", value: 210},
+			   ];
+			  var data2 = [
+				  {x: "Str", value: 230},
+				  {x: "Agi", value: 90},
+				  {x: "Per", value: 130},
+				  {x: "End", value: 420},
+			   ];
+			   var data3 = [
+				  {x: "Str", value: 230},
+				  {x: "Agi", value: 360},
+				  {x: "Per", value: 130},
+				  {x: "End", value: 105},
+			   ];
+			   // create radar chart
+			  var chart = anychart.radar();
+	  
+			  // set chart title
+			  chart.title("Stats");
+	  
+			  // set chart yScale settings
+			  chart.yScale()
+				.minimum(0)
+				.maximum(1000)
+				.ticks({'interval':100});
+	  
+			  // color alternating cells
+			  chart.yGrid().palette(["#2C2C2C", "#1F1F1F"]);
+	  
+			  // create first series
+			  chart.area(data1).name('Raw Distribution').markers(false).fill("#360036", 0.3).stroke("#BB86FC")
+			  chart.area(data2).name('Flame Mode').markers(false).fill("#BB86FC", 0.3).stroke("#BB86FC")
+			  chart.area(data3).name('Flame Release Mode').markers(false).fill("#37AA48", 0.3).stroke("#BB86FC")
+	  
+			  // set container id for the chart
+			  chart.container('container');
+			  // initiate chart drawing
+			  chart.draw();
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div class="center">
+			<img src="../general_images/logo.png" alt="Logo">
+		</div>
+		<hr>
+		<div id="Character">
+			<table style="float:right">
+				<tr class="pink-row">
+					<th colspan="2">Æstella</th>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div id="img1" class="navbar">
+							<img src="images/aestella.png" alt="Æstella" width="450px">
+						</div>
+					</td>
+				</tr>
+				<tr class="pink-row">
+					<th colspan="2">Statistics</td>
+				</tr>
+				<tr class="white-row">
+					<td>Japanese Name:</td>
+					<td>N/A</td>
+				</tr>
+				<tr class="white-row">
+					<td>Romanized Name:</td>
+					<td>Æstella Deva Fukuhara</td>
+				</tr>
+				<tr class="white-row">
+					<td>Affiliation:</td>
+					<td>
+					Revolutionary Army
+					</td>
+				</tr>
+				<tr class="white-row">
+					<td>Occupation:</td>
+					<td>
+						Songstress/Singer/Musician
+					</td>
+				</tr>
+				<tr class="white-row">
+					<td>Residence:</td>
+					<td>Water 7</td>
+				</tr>
+				<tr class="white-row">
+					<td>Alias:</td>
+					<td>Stella</td>
+				</tr>
+				<tr class="white-row">
+					<td>Epithet:</td>
+					<td>Songstress</td>
+				</tr>
+				<tr class="white-row">
+					<td>Status:</td>
+					<td>Alive</td>
+				</tr>
+				<tr class="white-row">
+					<td>Age:</td>
+					<td>
+						Biological: 20
+						<br>
+						Chronological: 20
+					</td>
+				</tr>
+				<tr class="white-row">
+					<td>Birthday:</td>
+					<td>February 29th, 1120</td>
+				</tr>
+				<tr class="white-row">
+					<td>Height:</td>
+					<td>3'624'565'737 nm</td>
+				</tr>
+				<tr class="white-row">
+					<td>Weight:</td>
+					<td>684'219'883'197'183 ng</td>
+				</tr>
+				<tr class="white-row">
+					<td>Blood Type:</td>
+					<td>XF (RH+)</td>
+				</tr>
+				<tr class="white-row">
+					<td>Bounty:</td>
+					<td>&#x1d56d;0</td>
+				</tr>
+				<tr class="pink-row">
+					<th colspan="2">Traits</th>
+				</tr>
+				<tr class="white-row">
+					<td>Primary Trait</td>
+					<td>N/A</td>
+				</tr>
+				<tr class="white-row">
+					<td>Secondary Trait</td>
+					<td>N/A</td>
+				</tr>
+				<tr class="pink-row">
+					<th colspan="2">Devil Fruit</th>
+				</tr>
+				<tr class="white-row">
+					<td>Japanese Name:</td>
+					<td>♪N/A♪</td>
+				</tr>
+				<tr class="white-row">
+					<td>English Name:</td>
+					<td>♪N/A♪</td>
+				</tr>
+				<tr class="white-row">
+					<td>Meaning:</td>
+					<td>♪N/A♪</td>
+				</tr>
+				<tr class="white-row">
+					<td>Type:</td>
+					<td>♪N/A♪</td>
+				</tr>
+			</table>
+		</div>
+		<div id = "Bio" style="display:block">
+			<div class="indent">
+				<h1 id = "Yesenia">Æstella D. Fukuhara</h1>
+				<div><strong>ᛇᛊᛏᛖᛚᛚᚨ ᛞᛖᚢᚨ ᚠᚢᚲᚢᚺᚨᚱᚨ (Æstella Deva Fukuhara)</strong> is an original character in <strong>One Piece: Kaigan<strong>. She is a <strong>Lunarian</strong>, and a former Revolutionary Army member & is a Idol.</div>
+				<table style = "width=500px">
+					<tr>
+						<th>&#8194;&#8194;&#8194;&#8194;Contents&#8194;&#8194;&#8194;&#8194;</th>
+						<td>
+							<button style="display:block" onclick="hide_div_fun('contentsA');show_div_fun('contentsB');hide_div_fun('contentsC');hide_div_fun('contentsD');hide_div_fun('contentsE');hide_div_fun('contentsF');hide_div_fun('contentsF');hide_div_fun('contentsG');hide_div_fun('contentsH');hide_div_fun('contentsI');" id="contentsA">
+								[ hide ]
+							</button>
+							<button style="width: 100%; display:none" onclick="show_div_fun('contentsA');hide_div_fun('contentsB');show_div_fun('contentsC');show_div_fun('contentsD');show_div_fun('contentsE');show_div_fun('contentsF');show_div_fun('contentsG');show_div_fun('contentsH');show_div_fun('contentsI');" id="contentsB">
+								[ show ]
+							</button>
+						</td>
+					</tr>
+					<tr style="display:block" id = "contentsC"><td><a class="special-link" href="#Demographics"> Demographics</a></td><td><pre>   </pre></td></tr>
+					<tr style="display:block" id = "contentsD"><td><a class="special-link" href="#Physical Details"> Physical Details</a></td><td><pre>   </pre></td></tr>
+					<tr style="display:block" id = "contentsE"><td><a class="special-link" href="#Relationships"> Relationships</a></td><td><pre>   </pre></td></tr>
+					<tr style="display:block" id = "contentsF"><td><a class="special-link" href="#Personal Details"> Personal Details</a></td><td><pre>   </pre></td></tr>
+					<tr style="display:block" id = "contentsG"><td><a class="special-link" href="#Affiliation"> Affiliation</a></td><td><pre>   </pre></td></tr>
+					<tr style="display:block" id = "contentsH"><td><a class="special-link" href="#Backstory"> Backstory</a></td><td><pre>   </pre></td></tr>
+					<tr style="display:block" id = "contentsI"><td><a class="special-link" href="#Trivia"> Trivia</a></td><td><pre>   </pre></td></tr>
+				</table>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Demographics">[ Demographics ]</h1>
+				<div><strong>Name:</strong> ᛇᛊᛏᛖᛚᛚᚨ ᛞᛖᚢᚨ ᚠᚢᚲᚢᚺᚨᚱᚨ</div>
+				<div><strong>Birth name:</strong> ᛇᛊᛏᛖᛚᛚᚨ</div>
+				<div><strong>Chronological Age:</strong> 20</div>
+				<div><strong>Biological Age:</strong> 20</div>
+				<div><strong>Gender:</strong> ♀</div>
+				<div><strong>Race:</strong> Lunarian</div>
+				<div><strong>Birthdate:</strong> February 29th, 1120</div>
+				<div><strong>Homeland:</strong> Unknown</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Physical Details ]</h1>
+				<div><strong>Height:</strong> 3'624'565'737 nm</div>
+				<div><strong>Weight:</strong> 684'219'883'197'183 ng</div>
+				<div><strong>Blood Type:</strong> XF (RH+)</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Relationships ]</h1>
+					<div><strong>Grand parents:</strong></div>
+						<div class="tab"><strong>Name:</strong> ???</div>
+						<div class="tab"><strong>Age:</strong> ???</div>
+						<div class="tab"><strong>Bounty:</strong> &#x1d56d;???</div>
+						<div class="tab"><strong>Relation:</strong> Grandmother</div>
+						<div class="tab"><strong>Devil Fruit:</strong> ???</div>
+						<div class="tab"><strong>Status:</strong> Deceased</div>
+						<div class="tab"><strong>Race:</strong> Lunarian</div>
+						<br>
+						<div class="tab"><strong>Name:</strong> ???</div>
+						<div class="tab"><strong>Age:</strong> ???</div>
+						<div class="tab"><strong>Bounty:</strong> &#x1d56d;???</div>
+						<div class="tab"><strong>Relation:</strong> Grandfather</div>
+						<div class="tab"><strong>Devil Fruit:</strong> ???</div>
+						<div class="tab"><strong>Status:</strong> Deceased</div>
+						<div class="tab"><strong>Race:</strong> Lunarian</div>
+					<div><strong>Parents:</strong></div>
+						<div class="tab"><strong>Name:</strong> ???</div>
+						<div class="tab"><strong>Age:</strong> ???</div>
+						<div class="tab"><strong>Bounty:</strong> &#x1d56d;???</div>
+						<div class="tab"><strong>Relation:</strong> Mother</div>
+						<div class="tab"><strong>Devil Fruit:</strong> ???</div>
+						<div class="tab"><strong>Status:</strong> Deceased</div>
+						<div class="tab"><strong>Race:</strong> Lunarian</div>
+						<br>
+						<div class="tab"><strong>Name:</strong> ???</div>
+						<div class="tab"><strong>Age:</strong> ???</div>
+						<div class="tab"><strong>Bounty:</strong> &#x1d56d;???</div>
+						<div class="tab"><strong>Relation:</strong> Father</div>
+						<div class="tab"><strong>Devil Fruit:</strong> ???</div>
+						<div class="tab"><strong>Status:</strong> Deceased</div>
+						<div class="tab"><strong>Race:</strong> Lunarian</div>
+					<div><strong>Sbiling(s):</strong></div>
+						<div class="tab"><strong>Name:</strong> Kokone Fukuhara</div>
+						<div class="tab"><strong>Age:</strong> 18</div>
+						<div class="tab"><strong>Bounty:</strong> &#x1d56d;0</div>
+						<div class="tab"><strong>Relation:</strong> Adopted-Sister</div>
+						<div class="tab"><strong>Devil Fruit:</strong> N/A</div>
+						<div class="tab"><strong>Status:</strong> Alive</div>
+						<div class="tab"><strong>Race:</strong> Human</div>
+					<div><strong>Known Family Members(s):</strong></div>
+						<div class="tab"><strong>Name:</strong> Masao Fukuhara</div>
+						<div class="tab"><strong>Age:</strong> 78 (At the time of Death)</div>
+						<div class="tab"><strong>Bounty:</strong> &#x1d56d;0</div>
+						<div class="tab"><strong>Relation:</strong> Adopted-Father</div>
+						<div class="tab"><strong>Devil Fruit:</strong> N/A</div>
+						<div class="tab"><strong>Status:</strong> Dead</div>
+						<div class="tab"><strong>Race:</strong> Snow-Bunny Mink</div>
+					
+				</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Personal Details ]</h1>
+				<h2>Personality</h2>
+				<div><strong>Kūdere:</strong> While in combat, ᛇᛊᛏᛖᛚᛚᚨ can be calm and emotionless while not using her voice. She has a divine-level composure over her vocal cadence and expression at most times.</div>
+				<div><strong>Energetic:</strong> ᛇᛊᛏᛖᛚᛚᚨ has a peppy tone while on stage and has a tendency to intentionally slip and let her emotions show during concerts.</div>
+				<br>
+				<div><strong>Appearance:</strong> A girl with heterochromatic eyes that shimmer a Medium Orchid in her right eye and Cornflower left eye. </div>
+				<br>
+				<div><strong>Aspiration(s):</strong> Spread world peace and host a concert on as many islands as possible.</div>
+				<div><strong>Likes:</strong> Singing, Making People Happy</div>
+				<div><strong>Dislikes:</strong> World Goverment</div>
+				<div><strong>Goal:</strong>
+					<ul>
+						<li>Become a World Famous Idol</li>
+						<li>Have the entire world watch her concerts free from the World Goverment's grasp</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ Affiliation ]</h1>
+				<div><strong>Aliases:</strong> "Songstress" Estella</div>
+				<div><strong>Faction:</strong> Revolutionary/Pirate</div>
+				<div><strong>Bounty:</strong> &#x1d56d;0</div>
+				<div class="containerH">
+				</div>
+				<div><strong>Alignment:</strong> True Good</div>
+				<div><strong>Occupation:</strong> Idol/Songstress</div>
+				<div><strong>Crew Role:</strong> Entertainer</div>
+				<div><strong>Native Sea:</strong> Paradise</div>
+				<br>
+				<div><strong>Crew Name:</strong> ???</div>
+				<div>
+					<strong>Crew Members:</strong>
+					<ol>
+						<li><strong><a href="aestella.html";>ᛇᛊᛏᛖᛚᛚᚨ ᛞᛖᚢᚨ ᚠᚢᚲᚢᚺᚨᚱᚨ</a></strong> ~ Entertainer</li>
+						<li><strong>Kokone Fukuhara/Kokone ᚠᚢᚲᚢᚺᚨᚱᚨ</strong> ~ Entertainer/Cook</li>
+					</ol>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Backstory ]</h1>
+				<div class="tab" style="text-indent: 50px;">ᛇᛊᛏᛖᛚᛚᚨ believes she was abandoned on Drum Island as an infant, but in reality both of her parents were slaughtered by a Marine Commodore for their lineage when they took ᛇᛊᛏᛖᛚᛚᚨ to the local doctors on Drum Island while passing through. ᛇᛊᛏᛖᛚᛚᚨ's existence was not made public by them except to the doctors of Drum Island. By the time ᛇᛊᛏᛖᛚᛚᚨ would recover, she would have no memory of her family and would assume that the local orphanage was her own family due to not having anybody around that would know her besides the doctors that helped her. ᛇᛊᛏᛖᛚᛚᚨ was left with what could be a pronunciation guide from her family on how to read and write their own family's own system for secrecy where she ended up growing up to be a dual-linguistic, albeit her speech ends up on the destructive pitches when using it while younger; she does eventually learn to switch tones on a fly; but her writing as a result of secrecy has always been Runic in nature. Masao Fukuhara would as a result be seen as a Father Figure to ᛇᛊᛏᛖᛚᛚᚨ and would know the Lunarian Child as simply "Stella" from when the doctors took her to him.</div>
+				<div class="tab" style="text-indent: 50px;">Later on, when ᛇᛊᛏᛖᛚᛚᚨ was six years of age, she would often play in the snow around Drum Island while she would sing awfully. With no one around, she could practice to her heart's content without be reprimanded for how bad she was at singing like the average child would be. One day, while she was waltzing through the island, she would stumble upon a young Kokone right before a Blizzard would end up spurring about and without thinking, ᛇᛊᛏᛖᛚᛚᚨ would bring the young-lass to Masao for care. While ᛇᛊᛏᛖᛚᛚᚨ was not yet smart enough to understand he would not be able to help her that well, he was kind enough to welcome the new adoptive sister of ᛇᛊᛏᛖᛚᛚᚨ into the house with a somewhat warm embrace. While the girl was skittish upon waking up next to the flames of the fireplace, ᛇᛊᛏᛖᛚᛚᚨ would be their to welcome her which would most likely terrified the young human girl.</div>
+				<div class="tab" style="text-indent: 50px;">For the next four years, ᛇᛊᛏᛖᛚᛚᚨ  would practice her singing, albeit usually while in private until Kokone witnessed her singing first hand as well as the semblance of flame breath while she sung. While finding her sister singing, she would end up getting a minor burn from ᛇᛊᛏᛖᛚᛚᚨ  blindly singing thinking she was had privacy enough to not be found. Around this time, she was no where near good or great enough to be an idol, but she would have vastly improved after watching all of the traveling musicians come through Drum Island in the two years since she found Kokone. She would be reluctant to sing again after burning her sister, but would still yearn for the freedom it grants her, and would keep singing in private. After the incident, Kokone would bring up the talents of both of the two to Masao who would find a way to get the sisters to Jaya for their dreams as a way to cheer ᛇᛊᛏᛖᛚᛚᚨ on and allow both of the sisters to not only get better, but also try to make a name for themselves.</div>
+				<div class="tab" style="text-indent: 50px;">While on Jaya, their performances were of a mediocre accord that would cause them to struggle to make money for a bit. Eventually, the main town on Jaya would eventually come around to watch the sisters preform new songs every week as they grew in skill and repertoire for their talents. While still no where near a master of their crafts, the flame breath of ᛇᛊᛏᛖᛚᛚᚨ during the concerts would often be thought of to be that of a Dragon Zoan or another Devil Fruit being used as a spectacle since ᛇᛊᛏᛖᛚᛚᚨ's wings and the flame on her back were always hidden. The so-called Devil Singer of Jaya for the misconception of ᛇᛊᛏᛖᛚᛚᚨ having a Devil Fruit grew in popularity along with her masked Sister and were soon to be known around Jaya as the "Fukuhara Twins", despite not looking anything alike. Over the five years of them hosting Concerts, they barley had enough to scrape by until the Revolutionary Army happened to come through and pick the sisters up for a short period of time as "potential new recruits."</div>
+				<div class="tab" style="text-indent: 50px;">While spending two years with the Revolutionary Army, ᛇᛊᛏᛖᛚᛚᚨ learned how to wield a scythe in the most basic form to defend herself and as a result, has a custom microphone built into a retractable scythe in the cases that she would ever be attacked while on stage. The Revolutionary Army would also impart the knowledge of how bad the World Government and the Marines truly are on ᛇᛊᛏᛖᛚᛚᚨ which changes the tone of her concerts to be more so about peace and free from the World Government. She would begin to be seen as the mastermind behind her concerts and would be branded as a potential threat going forward if she preaches too much negativity on the World Government and her lineage of being a Lunarian gets out as she has effectively silently declared War on the World Government without actually declaring war on them. While with the Revolutionary Army, she would have mostly gotten by with her sister's cooking as a way to keep her pseudo-humanity in tact and well grounded in realism as she hones her strength for self-defense. She would also occasionally watch her sister's combat training while she was exhausted as well to see it was not just her trying to be strong for the other's sake.</div>
+				<div class="tab" style="text-indent: 50px;">Eventually, on ᛇᛊᛏᛖᛚᛚᚨ's effective 18th birthday, the sisters would be taken to Water 7 by the Revolutionary Army with being tasked to return as a proper recruit in the future after they see the world with their own eyes. ᛇᛊᛏᛖᛚᛚᚨ would go scouting around the island to locate where to host a concert while her sister looked for living quarters for the two. ᛇᛊᛏᛖᛚᛚᚨ would make quick use of her new understanding of her own biology to relatively quickly scout locations for concerts and would eventually meet back up with Kokone. With them locating what they need, ᛇᛊᛏᛖᛚᛚᚨ would start up a conversation with her usually tone of singing to ask Kokone if she would help set the world straight with peace. While ᛇᛊᛏᛖᛚᛚᚨ cannot perfectly control her flames, she has gotten to the point she can manifest constructs of flames using vocal signatures, but still needs the small Sea-prism Stone device from the Revolutionary Army to block her linage factor from manifesting flames while she sings.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Trivia">[ Trivia ]</h1>
+				<div class="tab">ᛇᛊᛏᛖᛚᛚᚨ's Height and Weight through the ages:</div>
+				<table>
+					<tr class="pink-row">
+						<th>Age</th>
+						<th>Height(nanometers)</th>
+						<th>Height (ft'in)</th>
+						<th>Weight (nanograms)&#8195;</th>
+						<th>Weight (lbs)</th>
+					</tr>
+					<tr class="white-row">
+						<td>&#8194;6</td>
+						<td>1'512'482'937 nm</td>
+						<td>&#8194;4'11.5"</td>
+						<td>&#8194;66'432'198'412'583 ng</td>
+						<td>&#8194;146.4 lbs</td>
+					</tr>
+					<tr class="white-row">
+						<td>&#8194;8</td>
+						<td>1'883'612'437 nm</td>
+						<td>&#8194;6'2.1"</td>
+						<td>112'564'321'988'483 ng</td>
+						<td>&#8194;248.1 lbs</td>
+					</tr>
+					<tr class="white-row">
+						<td>12</td>
+						<td>2'314'905'237 nm</td>
+						<td>&#8194;7'7.1"</td>
+						<td>198'725'116'472'183 ng</td>
+						<td>&#8194;438.1 lbs</td>
+					</tr>
+					<tr class="white-row">
+						<td>15</td>
+						<td>2'764'218'837 nm</td>
+						<td>&#8194;9'.08"</td>
+						<td>314'892'335'166'783 ng</td>
+						<td>&#8194;694.2 lbs</td>
+					</tr>
+					<tr class="white-row">
+						<td>17</td>
+						<td>3'128'471'137 nm</td>
+						<td>10'3.2"</td>
+						<td>448'612'904'755'983 ng</td>
+						<td>&#8194;989.1 lbs</td>
+					</tr>
+					<tr class="white-row">
+						<td>20</td>
+						<td>3'624'565'737 nm</td>
+						<td>11'10.7"</td>
+						<td>684'219'883'197'183 ng</td>
+						<td>1'508.4 lbs</td>
+					</tr>
+					<tr class="white-row">
+						<td>24</td>
+						<td>4'172'394'637 nm</td>
+						<td>13'8.3"</td>
+						<td>952'441'706'311'283 ng</td>
+						<td>2'099.8 lbs</td>
+					</tr>
+				</table>
+			</div>
+			<hr>
+		</div>
+		<div id = "Stats" style="display:none">
+			<div class="indent">
+				<h1 id="Fighting">[ Fighting Style ]</h1>
+				<h2 style="color:#BB86FC;">Ignition</h2>
+				<div class="tab">
+					<div style="text-indent: 50px;">Lunarians have the ability to emit fire from their bodies that they can control and weaponize in combat: allowing them to unleash powerful fire blasts or gatlings, clad their limbs and weapons in fire to empower their melee attacks, and even shape their flames into constructs, including very large ones. It furthermore seems that a lunarian can release their fire from their entire body in all directions, unleashing a massive explosion. At their strongest, a Lunarian's flames can be so potent that they appear to take on the consistency of magma. However, it is unknown if a lunarian's excessive use of their flames causes them any kind of drawback.</div>
+					<div style="text-indent: 50px;">Other than that, lunarians are noted for their superhuman vitality and resilience, something that supposedly contributed to them being called "gods" before nearly going extinct. Lunarians have been shown the ability to withstand multiple extremely powerful attacks in succession without shedding a single drop of blood. More than that, lunarians either lose, after some time, or can deliberately turn off the flames burning at their back, which will cause them to temporarily lose said characteristic endurance, although this loss comes in exchange for a drastic boost in mobility, allowing members of this tribe to reach speeds faster than the untrained eye can follow.</div>
+					<h3 style="color:#BB86FC;">ᛚᚢᚾᚨᚱᛟᚨᚾ ᛊᛁᛜᛖᚱ</h3>
+					<div class="tab">
+						<div><strong>ᛚᚢᚾᚨᚱᛟᚨᚾ ᛊᛁᛜᛖᚱ</strong> known more simply as "<strong>Lunarian Singer</strong>" is a limited form of the Lunarian's Ignition racial ability tied to the voice of the user as a metric of control. It makes use of the Lunarian ᛇᛊᛏᛖᛚᛚᚨ ᛞᛖᚢᚨ ᚠᚢᚲᚢᚺᚨᚱᚨ known more simply as just "Æstella" singing tallents as a control mechanism for the invincible flame. Depending on the type of song the user sings, the type of flame and the formation of the flames that emit from the user's mouth differ. The flames produced from a musical Lunarian tend to be more note-shaped and the stronger the user is as well as skilled in singing, the more complex note-structure they can conjure from their voice.</div>
+						<div><strong>History:</strong> Due to having fear of burning others without intent again after burning her sister while she was younger; as a result, she has learned to channel her flames though a conduit which in her case, was her singing. On the contrary, due to this weird training, she also would end up losing the ability to speak without singing it.</div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▱▱▱▱</div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▰▱▱▱</div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▰▰▱▱</div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▰▰▰▱</div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▰▰▰▰</div>
+					</div>
+					<h3 style="color:#BB86FC;">ᛊᚲᛁᚦᛖ ᛟᚠ ᚦᛖ ᛚᚢᚾᚨᚱᛟᚨᚾ ᚠᛚᚨᛗᛖ</h3>
+					<div class="tab">
+						<div><strong>ᛚᚢᚾᚨᚱᛟᚨᚾ ᛊᛁᛜᛖᚱ</strong> known more simply as "<strong>Scythe of the Lunarian Flame</strong>" is a Lunarian combat style developed by ᛇᛊᛏᛖᛚᛚᚨ after being trained on Scythemanship by someone of the Revolutionary Army. Using Ignition with normal weapon-art skills, the user is able to channel flames through a scythe to carve flames. ᛇᛊᛏᛖᛚᛚᚨ uses the microphone in her scythe to rpoduce a small electrical charge through the channeling of her flames from ignition allowing the scythe to not only burn with heat, but produce an electrical burn and shock that is harder to deal with.</div>
+						<div><strong>History:</strong> </div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▱▱▱▱</div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▰▱▱▱</div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▰▰▱▱</div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▰▰▰▱</div>
+						<div><strong>???:</strong> </div>
+						<div style="color: #BB86FC;">▰▰▰▰▰</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Techniques">[ Techniques ]</h1>
+					<h2><u style="color:#BB86FC;">Base Techniques</u></h2>
+					<div><strong style="color:#BB86FC;">ᛒᚨᛚᛚᚨᛞ ᛟᚠ ᚦᛖ ᚠᛚᚨᛗᛖ (Ballad of the Flame):</strong> The most basic form of the Singer varriation of Ignition that requires the user to so hit up to six notes in a song that will appear as if she was breathing fire-balls in the shape of music notes.. This type of assault is generaly triggered from ᛇᛊᛏᛖᛚᛚᚨ's "<strong>Ballad of the Flame</strong>" song.</div>
+						<div style="tab">+? Strength, Flame Mode</div>
+					<div style="color: #BB86FC;">▰▱▱▱▱▱▱</div>
+					<div><strong>Type:</strong> Offensive</div>
+					<div><strong>Range:</strong> Any</div>
+					<div><strong style="color:#BB86FC;">ᚠᛚᚨᛗᛖ ᛒᛖᚱᚲᛖᚢᛊᛖ (Flame Berceuse):</strong> A more advanced technique that has ᛇᛊᛏᛖᛚᛚᚨ bounce her voice off of a wall or another solid object before producing a flaming note. ᛇᛊᛏᛖᛚᛚᚨ ussualy sings a lullaby by the name of "<strong>Flame Berceuse</strong>" while using this ability. Her most basic form of this move comes from bouncing her voice off of air molecules to rain six musicly shaped fireballs from the sky onto a target.</div>
+						<div style="tab">+? Strength, +? Flame Mode</div>
+					<div style="color: #BB86FC;">▰▱▱▱▱▱▱</div>
+					<div><strong>Type:</strong> Offensive</div>
+					<div><strong>Range:</strong>Mid</div>
+					<div><strong style="color:#BB86FC;">ᛞᛖᚠᛖᚾᛊᛖ ᚲᚨᛞᛖᚾᚲᛖ (Defense Cadence):</strong> By keeping a steady cadence in her song, ᛇᛊᛏᛖᛚᛚᚨ can keep a rhyhmic sheild of fire from her mouth.</div>
+						<div style="tab">+? Durability, Flame Mode</div>
+					<div style="color: #BB86FC;">▰▱▱▱▱▱▱</div>
+					<div><strong>Type:</strong> Offensive</div>
+					<div><strong>Range:</strong> Close</div>
+					<div><strong style="color:#BB86FC;">ᚠᛚᚨᛗᛖ ᛞᛁᛊᛊᛟᚾᚨᚾᚲᛖ (Flame Dissonance):</strong> By singing at a dissonance or by just singing with anger, ᛇᛊᛏᛖᛚᛚᚨ essentialy creates a more dragonic Flame Breath. The attack is not associated with any specific song and is just known as "<strong>Flame Dissonance</strong>" by those watching.</div>
+						<div style="tab">+? Strength, Flame Mode</div>
+					<div style="color: #BB86FC;">▰▱▱▱▱▱▱</div>
+					<div><strong>Type:</strong> Offensive</div>
+					<div><strong>Range:</strong> Close</div>
+					<hr>
+					<h2><u style="color:#BB86FC;">Standard Techniques</u></h2>
+					<div><strong style="color:#BB86FC;">Quarter Rain:</strong> By singing a steady beat while outside of the Sing-World, the user can cause a needle rain using quarter notes. The faster the user can sing, the denser the rain of Quarter Note Senbon.</div>
+						<div style="tab">+?</div>
+					<div style="color: #BB86FC;">▰▰▱▱▱▱▱</div>
+					<div><strong>Type:</strong> Offensive</div>
+					<div><strong>Range:</strong> Close AoE</div>
+					<div><strong style="color:#BB86FC;">Rhythmic Shock:</strong> By combining the sticky nature of a musical measure with the ability to use electrical currents into the fruit's summons; can summon a music measure triple the user's height made of sticky lightning that will shock a target magneticaly drawn to it til they either match the pitch of the song the user used to summon it or after two seconds.</div>
+						<div style="tab">+?</div>
+					<div style="color: #BB86FC;">▰▰▱▱▱▱▱</div>
+					<div><strong>Type:</strong> Supportive</div>
+					<div><strong>Range:</strong> Mid</div>		
+					<hr>
+					<h2><u style="color:#BB86FC;">Super Techniques</u></h2>
+					<div><strong style="color:#BB86FC;">Lullaby of the Heavens:</strong> The user is able to sing a lullaby to put all within the user's unamplified voice range to sleep for a round. An untrained user will not be able to move for a bit after singing this lullaby.</div>
+						<div style="tab">+?</div>
+					<div style="color: #BB86FC;">▰▰▰▱▱▱▱</div>
+					<div><strong>Type:</strong> Supportive</div>
+					<div><strong>Range:</strong> Omni AoE</div>
+					<hr>
+					<h2><u style="color:#BB86FC;">Hyper Techniques</u></h2>
+					<div>N/A</div>
+					<hr>
+					<h2><u style="color:#BB86FC;">Ultimate Techniques</u></h2>
+					<div><strong style="color:#BB86FC;">Sing-World Morph: Skewer:</strong> The user quickly morphs the world itself while in the Sing-World to attempt to Skewer a target in a quick Gatling style barrage.</div>
+						<div style="tab">+?</div>
+					<div style="color: #BB86FC;">▰▰▰▰▰▱▱</div>
+					<div><strong>Type:</strong> Offensive</div>
+					<div><strong>Range:</strong> Omni AoE</div>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u style="color:#BB86FC;">Finisher Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+					<hr>
+					<h2><u style="color:#BB86FC;">Combo Techniques</u></h2>
+					<div><strong>N/A</strong></div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Inventory">[ Inventory ]</h1>
+				<ul>
+					<li><h2>Fireproof Coat</h2></li>
+						<div>A piece of fabric that is used to stop Æstella from burning the clothes off her back.</div>
+					<li><h2>Seaprism Stone Hairpin</h2></li>
+						<div>A piece of "tech" made out of seaprism stone to surpress her Flame Voice while preforming a concert. Just weak enoguh to surpress her power without weakening herself.</div>
+					<li><h2>Microphone Scythe</h2></li>
+						<div>A retractable scythe with a a built in microphone to double as a microphone stand.</div>
+				</ul>
+			</div>
+			<hr>
+			<div class="indent">
+				<div id="container" style="border-radius: 3px; border:#442200 solid 2px; float:right; height:450px; width:45%;"></div>
+				<h1 id="Stat">[ Statistics ]</h1>
+				<h2>Limits</h2>
+				<ol style="list-style-type:none">
+					<li><strong>Lunarian</strong></li>				
+				</ol>
+				<h2>Racial Perks (Lunarian)</h2>
+				<ol style="list-style-type:none">
+					<li>±<strong>Pyrokinetic abilities</strong></li>
+					<li>+<strong>Perfect Defense</strong> (+10 Durability per every ten levels.)</li>
+					<li>+<strong><strike>Flight</strike></strong></li>
+				</ol>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<h2>Statistics</h2>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Strength:</strong> 230
+					<div style="padding-bottom: 10px;" 	class="container">
+						<div class="skills xstr"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Durability:</strong> 180 (Double/Half Lunarian Flame Mode)
+					<br>
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xend"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Agility:</strong> 130 (Double/Half Lunarian Flame Release Mode)
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xagi"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Perception:</strong> 210
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xper"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Stamina:</strong> 10
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xhp"></div>
+					</div>
+				</div>
+				<div style="color:#BB86FC; padding-bottom: 10px;"><strong>Doriki:</strong> 750
+					<div style="padding-bottom: 10px;" class="containerH">
+						<div class="skills xtot" style ="position: absolute; z-index: 9;"></div>
+					</div>
+				</div>
+				<!--<div style="color:#BB86FC; padding-bottom: 10px;"><strong>SP:</strong> 10
+					<div style="padding-bottom: 10px;" class="container">
+						<div class="skills xunu" style ="position: absolute;">
+							<div class="skills xspe" style = "position: absolute; z-index: 9;"></div>
+						</div>
+					</div>
+				</div>-->
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Talents">[ Talents ]</h1>
+				<div><strong>Ignition:</strong> I</div>
+				<div class="containerH">
+					<div class="skills xi"></div>
+				</div>
+				<div><strong>Lunarian Singer:</strong> I</div>
+				<div class="containerH">
+					<div class="skills xfla"></div>
+				</div>
+				<div><strong>Scythe of the Lunarian Flame:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwea"></div>
+				</div>
+				<div><strong><a href="">Sing Sing Fruit:</a></strong> 20% Desire, 0% Mastery</div>
+					<div class="containerH" style="position: relative; height: 10px; background-color: #333; border-radius: 5px;">
+						<div class="skills xdesire" style="position: absolute; z-index: 1;"></div>
+						<div class="skills xfruit" style="position: absolute; z-index: 9;"></div>
+					</div>
+				<div><strong>Entertainer:</strong> II</div>
+				<div class="containerH">
+					<div class="skills xmusic"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Haki">[ Haki ]</h1>
+				<div><strong>Observasion:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillo"></div>
+				</div>
+				<div><strong>Armament:</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwilla"></div>
+				</div>
+				<div><strong>Conqueror's</strong> 0</div>
+				<div class="containerH">
+					<div class="skills xwillc"></div>
+				</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Ref">[ References and Notes ]</h1>
+			</div>
+		<hr>
+		</div>
+		<div id = "Feats" style="display:none">
+			<div class="indent">
+				<h1 id="Impel">[ Momoiro Island ]</h1>
+				<div><img src="../../general_images/feat_1.png" alt="Feat_1" height="100px;"> [Redacted]</div>
+			</div>
+			<hr>
+		</div>
+		<div id = "DF" style="display:none">
+			<table style="float:right">
+            <tbody><tr class="pink-row">
+                <th colspan="2">Uta Uta no Mi</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+					<div>
+						<img src="images/sing.png" alt="Sing Sing Fruit" width="350px">
+					</div>
+				</td>
+            </tr>
+            <tr class="pink-row">
+                <th colspan="2">Statistics
+            </th></tr>
+            <tr class="white-row">
+                <td>Japanese Name:</td>
+                <td>ウタウタの実</td>
+            </tr>
+			<tr class="white-row">
+                <td>Romanized Name:</td>
+                <td>Uta Uta no Mi</td>
+            </tr>
+			<tr class="white-row">
+				<td>English Name:</td>
+				<td>Sing-Sing Fruit</td>
+			</tr>
+			<tr class="white-row">
+				<td>Meaning:</td>
+				<td>Song</td>
+			</tr>
+			<tr class="white-row">
+				<td>Type:</td>
+				<td>Special Paramecia<br>Substance Generation<br>Enviormental Manipulation</td>
+			</tr>
+			<tr class="white-row">
+				<td>Current User:</td>
+				<td>ᛇᛊᛏᛖᛚᛚᚨ</td>
+			</tr>
+        </tbody></table>
+			<div class="indent">
+				<h1 id="DFDemographics">[ Uta Uta no Mi ]</h1>
+				<div>The <strong>Uta Uta no Mi</strong> is a Paramecia-type Devil Fruit that allows the user to teleport people's consciousnesses into a virtual space by singing.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Physical Details">[ Etymology ]</h1>
+				<ul>
+					<li>Uta (歌) is the Japanese word for "song".</li>
+			</ul></div>
+			<hr>
+			<div class="indent">
+				<h1 id="Relationships">[ Strengths and Weaknesses ]</h1>
+				<div>The weakness of the ability is that Uta World can only be maintained as long as the user remains awake. It also consumes a lot of stamina to maintain the ability for long periods of time. Potential targets can also protect themselves from the user's power by blocking their hearing from the user's music. This even applies in the Virtual World, where a target can either hide in soundproof areas or contain the user in a soundproof containment-like field. They also can not manipulate the will of others, though they can alter their spirit bodies. This applies to objects as well. Other than that, the user is affected by the standard Devil Fruit weaknesses.</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Personal Details">[ Usage ]</h1>
+				<h2>Techniques</h2>
+				<strong style="color:#BB86FC;"><u>Standard Techniques</u></strong>
+				<div style="color:#BB86FC;">▰▱▱▱</div>
+				<div><strong style="color:#BB86FC;">Quarter Rain:</strong> By singing a steady beat while outside of the Sing-World, the user can cause a needle rain using quarter notes. The faster the user can sing, the denser the rain of Quarter Note Senbon.</div>
+				<div><strong style="color:#BB86FC;">Rhythmic Shock:</strong> By combining the sticky nature of a musical measure with the ability to use electrical currents into the fruit's summons; can summon a music measure triple the user's height made of sticky lightning that will shock a target magneticaly drawn to it til they either match the pitch of the song the user used to summon it or after two seconds.</div>
+				<strong style="color:#BB86FC;"><u>Ultimate Techniques</u></strong>
+				<div style="color:#BB86FC;">▰▰▱▱</div>
+				<div><strong style="color:#BB86FC;">Lullaby of the Heavens:</strong> The user is able to sing a lullaby to put all within the user's unamplified voice range to sleep for a round. An untrained user will not be able to move for a bit after singing this lullaby.</div>
+				<div><strong style="color:#BB86FC;">Sing-World Morph: Skewer:</strong> The user quickly morphs the world itself while in the Sing-World to attempt to Skewer a target in a quick Gatling style barrage.</div>
+				<strong style="color:#BB86FC;"><u>Ultimate Form-Techniques</u></strong>
+				<div style="color:#BB86FC;">▰▰▰▱</div>
+				<div><strong style="color:#BB86FC;">Tot-Musica</strong></div>
+					<ul>
+						<li></li>
+					</ul>
+				<strong style="color:#BB86FC;"><u>Awakened Techniques</u></strong>
+				<div style="color:#BB86FC;">▰▰▰▰</div>
+				<h2>Server Data</h2>
+				<div class="tab"><strong style="color:#BB86FC;">Level 1:</strong> At this stage, the user can only generate music notes and solid musical measures.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 5:</strong> After training with the Sing-Sing Fruit, the user can create objects out of musical notes. A few key examples include a circular shield made of interlocking music notes or a sword  with a musical note design.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 9:</strong> Grants access to the Technique: "Quarter Rain"</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 10:</strong> At this level, the fruit's power is tied directly to the user's musical level and only can make people drowsy if the user sings a lullaby. The fruit can only be used three times each lasting two rounds each at this stage.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 12:</strong> At this level, the fruit user's musical constructs can be made of Iron</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 15:</strong> The user can generate denser streams of musical bars that can be melded at will and appear to be made of different substances to suit the user's need. Examples being a sticky musical measure to trap foes of lower levels or notes of ice to use as a throwing knife. They generated notes can be made of Steel.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 20:</strong> Gains access to the Ultimate Technique: "Lullaby of the Heavens"</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 25:</strong> Grants the ability to carve out a dome in space-time of the size of the user's vocal range. To the deaf or incapable of hearing her song, will not see any differences to the real world and the new space they reside. Those whose <strong>Character Level</strong> exceed the level of Mastery of the Devil Fruit can freely walk in and out of the area as if it was not their at all. The user also gains the ability to make music notes out of basic elemental materials such as snow.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 28:</strong> Grants the ability to buff the user and allies while in the area of space-time carved out by the user's song.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 30:</strong> Grants the elemental material of constructs made from the voice of the Fruit User to tune into more advanced elements such as Electricity, Fire, and Water.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 32:</strong> Grants access to the Technique: "Rhythmic Shock"</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 33:</strong> Grants the ability to debuff anyone while in the area of space-time carved out by the user's song.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 35:</strong> The user of the fruit can now have more freedom in the design of the space-time dome carved out collectively called the "Sing-World" and can alter it's appearance and physical manifestation once per song-change to suit the user's environmental need. Elements being manipulated by another fruit user cannot be affected by the user's voice if they have a higher fruit mastery level than the Sing-Sing-Fruit user.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 40:</strong> The fruit user is able to morph the world itself to form an armor around them that can protect them from a specific type of damage based on the situation. Armor types cannot be changed without changing to a new song.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 45:</strong> </div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 50:</strong> Grants access to the Ultimate Technique: "Sing-World Morph: Skewer" and allows the user to generate constructs out of Titanium.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 55:</strong> </div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 60:</strong> </div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 65:</strong> </div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 70:</strong> </div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 75:</strong> </div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 80:</strong> Awakening Potential</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 85:</strong> Grants the ability to copy physical attributes from those the user knows well enough to sing a requiem in their image.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 90:</strong> Further expands the range of attribute copying to weaker versions of a person's Devil Fruit if the user can harmonize with the Devil Fruit's soul or personality with their song.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 95:</strong> Allows the user to infuse objects inside the space-time dome carved out by the Fruit user's song with Conquror's Haki.</div>
+				<div class="tab"><strong style="color:#BB86FC;">Level 100:</strong> Grants access to the Ultimate Form: "Tot-Musica"</div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Affiliation">[ History ]</h1>
+				<div class="tab"></div>
+				<div class="tab"></div>
+				<div class="tab"></div>
+				<div class="tab"></div>
+				<div class="tab"></div>
+			</div>
+			<hr>
+			<div class="indent">
+				<h1 id="Backstory">[ Trivia ]</h1>
+				<ul style="list-style-type: disc">
+					<li>This is one of two musical-themed Devil Fruits, the other being the Tone-Tone Fruit.</li>
+					<ul style="list-style-type: disc">
+						<li>Both Devil Fruits share the same weakness, where the target is only affected by the user's power if they can hear the user's music.</li>
+					</ul>
+				</ul>
+			</div>
+			<hr>
+		</div>
+	</body>
+</html>
