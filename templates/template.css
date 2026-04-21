@@ -1,0 +1,9 @@
+.template-tools { background: #23272a; padding: 20px; border: 1px solid #7289da; border-radius: 8px; margin-bottom: 30px; display: flex; flex-direction: column; gap: 10px; }
+.tool-header { color: #7289da; font-family: 'Special Elite', monospace; font-size: 1.1em; margin: 0; }
+.serialization-box { width: 100%; background: #1a1a1a; color: #00ff00; border: 1px solid #444; padding: 10px; font-family: monospace; font-size: 0.8em; resize: none; }
+.tool-btn-group { display: flex; gap: 10px; }
+.tool-btn { flex: 1; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: 'Montserrat', sans-serif; transition: 0.3s; }
+.export-btn { background: #7289da; color: white; }
+.export-btn:hover { background: #5b70be; }
+.import-btn { background: #43b581; color: white; }
+.import-btn:hover { background: #369267; }
