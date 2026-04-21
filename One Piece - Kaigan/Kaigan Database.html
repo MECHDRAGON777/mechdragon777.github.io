@@ -3,68 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Kaigan Database</title>
+	<link rel="stylesheet" href="sidebar.css">
 	<style>
-		body { background-color: #1a1a1a; color: white; font-family: sans-serif; padding: 20px; }
-		
-		/* Tab Button Container */
-		#tab-navigation { margin-bottom: 0px; display: flex; }
-
-		.tab-btn {
-			background: #23272a;
-			color: #99aab5;
-			border: 1px solid #444;
-			padding: 10px 25px;
-			cursor: pointer;
-			font-weight: bold;
-			border-radius: 8px 8px 0 0;
-			margin-right: 5px;
-			transition: 0.2s;
-		}
-
+		body { background-color: #1a1a1a; color: white; font-family: 'Montserrat', sans-serif; margin: 0; display: flex; overflow-x: hidden; }
+		#guide-content { margin-left: 350px; padding: 40px; flex-grow: 1; transition: margin-left 0.4s ease; box-sizing: border-box; display: block; }
+		h1 { margin-top: 0; font-family: 'Special Elite', monospace; }
+		#tab-navigation { margin-bottom: 20px; display: flex; flex-wrap: wrap; width: 100%; border-bottom: 2px solid #7289da; }
+		.tab-btn { background: #23272a; color: #99aab5; border: 1px solid #444; border-bottom: none; padding: 10px 20px; cursor: pointer; font-weight: bold; border-radius: 8px 8px 0 0; margin-right: 5px; transition: 0.2s; font-family: 'Special Elite', monospace; font-size: 0.85em; }
 		.tab-btn:hover { background: #32353b; color: white; }
-
-		.tab-btn.active {
-			background: #7289da; /* Discord Blurple */
-			color: white;
-			border-color: #7289da;
-		}
-
-		/* Search Bar Styling */
-		#searchInput {
-			width: 100%;
-			padding: 12px;
-			background: #23272a;
-			color: white;
-			border: 1px solid #444;
-			border-radius: 0 5px 5px 5px; /* Rounded corners except top-left */
-			margin-bottom: 20px;
-			box-sizing: border-box;
-		}
-
+		.tab-btn.active { background: #7289da; color: white; border-color: #7289da; }
+		#searchInput { width: 100%; padding: 12px; background: #23272a; color: white; border: 1px solid #444; border-radius: 5px; margin-bottom: 20px; box-sizing: border-box; font-family: 'Montserrat', sans-serif; display: block; }
+		#data-container { width: 100%; display: block; overflow-x: auto; }
 		table { border-collapse: collapse; width: 100%; background: #2c2f33; }
-		th { background-color: #7289da; color: white; padding: 12px; text-align: left; }
+		th { background-color: #7289da; color: white; padding: 12px; text-align: left; font-family: 'Special Elite', monospace; }
 		td { padding: 10px; border: 1px solid #444; font-size: 14px; }
+		.loading { padding: 20px; color: #7289da; font-family: 'Special Elite', monospace; }
 	</style>
 </head>
 <body>
-    <h1>Kaigan Database</h1>
+	<main id="guide-content">
+		<h1>Kaigan Database</h1>
 
-    <div id="tab-navigation">
-        <button class="tab-btn active" onclick="switchTab('OC Database', this)">OC Database</button>
-        <button class="tab-btn" onclick="switchTab('NPC Database', this)">NPC Database</button>
-        <button class="tab-btn" onclick="switchTab('DF', this)">DF</button>
-        <button class="tab-btn" onclick="switchTab('Meitos', this)">Meitos</button>
-        <button class="tab-btn" onclick="switchTab('Meijos', this)">Meijos</button>
-        <button class="tab-btn" onclick="switchTab('Haki Database', this)">Haki Database</button>
-        <button class="tab-btn" onclick="switchTab('Caps', this)">Caps</button>
-        <button class="tab-btn" onclick="switchTab('Income Tiers', this)">Income Tiers</button>
-        <button class="tab-btn" onclick="switchTab('Territory List', this)">Territory List</button>
-        </div>
+		<div id="tab-navigation">
+			<button class="tab-btn active" onclick="switchTab('OC Database', this)">OC Database</button>
+			<button class="tab-btn" onclick="switchTab('Spin-Off Database', this)">Romance Dawn Character Database</button>
+			<button class="tab-btn" onclick="switchTab('NPC Database', this)">NPC Database</button>
+			<!--<button class="tab-btn" onclick="switchTab('DF', this)">DF</button>-->
+			<button class="tab-btn" onclick="switchTab('Meitos', this)">Meitos</button>
+			<button class="tab-btn" onclick="switchTab('Meijos', this)">Meijos</button>
+			<button class="tab-btn" onclick="switchTab('Technology', this)">Technology</button>
+			<button class="tab-btn" onclick="switchTab('Haki Database', this)">Haki Database</button>
+			<button class="tab-btn" onclick="switchTab('Trait Caps', this)">Caps</button>
+			<button class="tab-btn" onclick="switchTab('Income Tiers', this)">Income Tiers</button>
+			<button class="tab-btn" onclick="switchTab('Territory List', this)">Territory List</button>
+			</div>
 
-    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search current tab...">
-    
-    <div id="data-container">Establishing connection...</div>
+		<input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search current tab...">
+		
+		<div id="data-container">Establishing connection...</div>
 
+	</main>	
+	<script src="sidebar.js"></script>
     <script>
         // --- CONFIGURATION ---
 		const API_KEY = atob("QUl6YVN5Q2RBN1RJWVRMcmY4MU94bkxKM3VnRzU0THk1QVJBVWxv");

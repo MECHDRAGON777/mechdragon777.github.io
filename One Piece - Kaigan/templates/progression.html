@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaigan | Operational Manual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        /* [ CORE STYLES ] */
+        body { background-color: #050505; margin: 0; padding: 0; font-family: 'Special Elite', monospace; color: #fff; display: flex; }
+        
+        /* [ SIDEBAR NAVIGATION ] */
+        #guide-sidebar {
+            width: 300px;
+            height: 100vh;
+            background: #0A0A0A;
+            border-right: 2px solid #2C2C2C;
+            position: fixed;
+            padding: 30px 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar-header {
+            color: #BB86FC;
+            font-size: 1.2em;
+            border-bottom: 2px solid #BB86FC;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .nav-group { margin-bottom: 25px; }
+        .nav-group-label { color: #555; font-size: 0.7em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        
+        .nav-link {
+            display: block;
+            color: #FFFFFF88;
+            text-decoration: none;
+            font-size: 0.85em;
+            padding: 8px 0;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: #BB86FC; padding-left: 5px; }
+
+        /* [ MAIN CONTENT AREA ] */
+        #guide-content {
+            margin-left: 340px;
+            padding: 50px;
+            max-width: 900px;
+        }
+
+        .guide-section {
+            background: #111;
+            border: 1px solid #2C2C2C;
+            margin-bottom: 60px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .guide-section::before {
+            content: "SYSTEM_DOC_v1.0";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #000;
+            padding: 0 10px;
+            font-size: 0.7em;
+            color: #6D9E73;
+        }
+
+        .section-title { color: #BB86FC; font-size: 1.5em; margin-bottom: 20px; text-transform: uppercase; }
+
+        /* [ TEMPLATE BOXES ] */
+        .template-box {
+            background: #050505;
+            border-left: 4px solid #6D9E73;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #FFFFFFCC;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        .field { color: #BB86FC; font-weight: bold; }
+        .comment { color: #555; font-size: 0.85em; display: block; margin-top: 2px; }
+
+        footer { margin-top: 50px; color: #333; font-size: 0.7em; text-align: center; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+
+    <nav id="guide-sidebar">
+        <div class="sidebar-header">KAIGAN HANDBOOK</div>
+        
+        <div class="nav-group">
+            <span class="nav-group-label">Core Submissions</span>
+            <a href="#Character-Sub" class="nav-link">Character Submission</a>
+            <a href="#Progress-Log" class="nav-link">Progress Log</a>
+        </div>
+
+        <div class="nav-group">
+            <span class="nav-group-label">Mastery & Combat</span>
+            <a href="#DF-Sub" class="nav-link">Devil Fruit Submission</a>
+            <a href="#Style-Sub" class="nav-link">Fighting Style Submission</a>
+            <a href="#Tech-Sub" class="nav-link">Technique Submission</a>
+        </div>
+
+        <div class="nav-group">
+            <span class="nav-group-label">Equipment & Items</span>
+            <a href="#Weapon-Sub" class="nav-link">Weapon Submission</a>
+            <a href="#Craft-Sub" class="nav-link">Craft Submissions</a>
+        </div>
+
+        <div class="nav-group">
+            <span class="nav-group-label">World Entities</span>
+            <a href="#Beast-Sub" class="nav-link">Beast Submissions</a>
+            <a href="#NPC-Sub" class="nav-link">NPC Submissions</a>
+        </div>
+    </nav>
+
+    <main id="guide-content">
+
+        <section class="guide-section" id="Character-Sub">
+            <h2 class="section-title">Character Submission</h2>
+            <p>Guidelines for creating and submitting your character for approval.</p>
+            <div class="template-box">
+                <span class="field">Name:</span> [Character Name]<br>
+                <span class="field">Epithet:</span> [Optional]<br>
+                <span class="field">Age:</span> [Numeric]<br>
+                <span class="comment">// Ensure all fields in the dossier are completed before submission.</span>
+            </div>
+        </section>
+
+        <section class="guide-section" id="Progress-Log">
+            <h2 class="section-title">Progress Log Protocol</h2>
+            <p>Tracking training, travel, and combat rewards.</p>
+            <div class="template-box">
+                <span class="field">Participant(s):</span> &lt;@USER&gt;<br>
+                <span class="field">Doriki:</span> ✪ OLD ✪ ➔ ✪ NEW ✪<br>
+                <span class="comment">// (CLEAN FORMAT + PROOF + FLOW = APPROVAL)</span>
+            </div>
+        </section>
+
+        <section class="guide-section" id="Weapon-Sub">
+            <h2 class="section-title">Weapon Submission</h2>
+            <p>For custom-built or purchased specialized weaponry.</p>
+            <div class="template-box">
+                <span class="field">Weapon Name:</span> [Name]<br>
+                <span class="field">Grade:</span> [Common / Skillful / Great / Supreme]<br>
+                <span class="field">Abilities:</span> [Description of unique properties]<br>
+                <span class="comment">// Provide shop link or craft log for verification.</span>
+            </div>
+        </section>
+
+        <p style="color: #444; font-size: 0.8em; text-align: center;">Additional sections (DF, Styles, Techs, Crafts, Beasts, NPCs) go here...</p>
+
+        <footer>
+            KAIGAN_SYSTEM_ARCHIVE //Grand Line Data// @MECHDRAGON777
+        </footer>
+    </main>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Update URL hash without jumping
+                    history.pushState(null, null, '#' + targetId);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

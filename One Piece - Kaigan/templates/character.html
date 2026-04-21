@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Template | One Piece Kaigan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+    <link rel="stylesheet" href="../sidebar.css">
+    <link rel="stylesheet" href="template.css">
+    <style>
+        body { background-color: #121212; color: #FFFFFF83; margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.6; display: flex; }
+        #guide-content { margin-left: 350px; padding: 50px; width: 100%; transition: 0.4s; }
+        [contenteditable="true"] { border-bottom: 1px dashed #444; outline: none; transition: 0.3s; }
+        [contenteditable="true"]:focus { border-bottom: 1px solid #BB86FC; background: rgba(187, 134, 252, 0.05); }
+        .sync-input { background: #1a1a1a; border: none; border-bottom: 1px dashed #444; color: #FFFFFF83; font-family: inherit; font-size: inherit; width: auto; outline: none; transition: 0.3s; }
+        .sync-input:focus { border-bottom: 1px solid #BB86FC; background: rgba(187, 134, 252, 0.05); }
+        select.sync-input option { background-color: #1a1a1a; color: #FFFFFF83; }
+        .runic-text { font-family: 'Special Elite', serif; letter-spacing: 2px; color: #fff; }
+        .indent { padding-left: 48px; border-left: 1px solid #2C2C2C; margin-left: 15px; }
+        .section-content { display: none; padding-top: 20px; }
+        .section-content.active { display: block; }
+        details { margin-bottom: 10px; border-bottom: 1px solid #2C2C2C; }
+        summary { font-family: 'Special Elite', system-ui; padding: 10px 0; letter-spacing: 2px; color: #FFFFFF83; text-transform: uppercase; font-size: 1.5em; cursor: pointer; list-style: none; outline: none; }
+        summary:hover { color: #BB86FC; }
+        details[open] summary { border-bottom: 2px solid #BB86FC; margin-bottom: 15px; }
+        aside.infobox { float: right; width: 320px; background-color: #1A1A1A; border: 1px solid #442200; margin-left: 20px; margin-bottom: 20px; font-size: 0.8em; }
+        aside.infobox .header { background: #2C2C2C; color: #FFFFFF83; text-align: center; padding: 10px; font-family: 'Special Elite'; text-transform: uppercase; border-bottom: 1px solid #442200; }
+        aside.infobox .subheader { background: #121212; color: #FFFFFF55; text-align: center; padding: 3px; font-size: 0.8em; text-transform: uppercase; border-top: 1px solid #442200; border-bottom: 1px solid #442200; }
+        aside.infobox table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        aside.infobox td { padding: 6px; border-bottom: 1px solid #2C2C2C; vertical-align: top; }
+        aside.infobox .label { color: #FFFFFF55; font-weight: bold; width: 45%; }
+        aside.infobox .data { color: #FFFFFF83; text-align: right; }
+        .navbar { background-color: #1A1A1A; border: 1px solid #442200; padding: 10px; margin-top: 10px; text-align: center; }
+        .nav-buttons { display: flex; width: 100%; margin-top: 10px; gap: 2px; }
+        .nav-buttons button { flex: 1; padding: 10px; cursor: pointer; border: 1px solid #442200; background: #121212; color: #fff; font-weight: bold; font-size: 0.8em; }
+        .nav-buttons button.active { background: #2C2C2C; color: #BB86FC; border-bottom: 2px solid #BB86FC; }
+        .bounty-bar-bg { width: 100%; height: 12px; background: #1a1a1a; border-radius: 6px; margin-top: 5px; border: 1px solid #2C2C2C; overflow: hidden; }
+        .bounty-bar-fill { height: 100%; background: #BB86FC; transition: 1s; }
+        .template-tools { background: #1A1A1A; border: 1px solid #BB86FC; padding: 15px; margin-bottom: 30px; }
+        .serialization-box { width: 100%; height: 60px; background: #000; color: #BB86FC; border: 1px solid #2C2C2C; padding: 10px; font-family: monospace; font-size: 0.8em; margin-bottom: 10px; }
+        .detail-box { padding: 10px 0; font-size: 0.95em; }
+        .data span[contenteditable="true"], .detail-box span[contenteditable="true"] { display: inline-block; min-width: 20px; vertical-align: bottom; }
+    </style>
+</head>
+<body>
+
+    <main id="guide-content">
+        <div class="template-tools">
+            <h3 class="tool-header">Character Data Tools</h3>
+            <textarea id="serialization-code" class="serialization-box" placeholder="Paste Base64 here to load..."></textarea>
+            <div class="tool-btn-group">
+                <button class="tool-btn export-btn" onclick="KaiganData.export()">EXPORT (COPY CODE)</button>
+                <button class="tool-btn import-btn" onclick="KaiganData.import(document.getElementById('serialization-code').value)">IMPORT (LOAD CODE)</button>
+                <button class="tool-btn" style="background: #4A90E2; color: white;" onclick="downloadHTML()">DOWNLOAD .HTML</button>
+                <button class="tool-btn" style="background: #BB86FC; color: #000;" onclick="copyPageHTML()">COPY PAGE SOURCE</button>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <div class="nav-buttons">
+                <button id="btn-Bio" class="active" onclick="showTab('Bio')">Biography</button>
+                <button id="btn-Stats" onclick="showTab('Stats')">Stats</button>
+                <button id="btn-DF" onclick="showTab('DF')">Devil Fruit</button>
+            </div>
+        </div>
+
+        <div id="tab-Bio" class="section-content active">
+            <aside class="infobox">
+                <div class="header runic-text" id="info-name-header" contenteditable="true" onkeyup="syncData('info-name-header', 'demo-name-full'); mirrorHeader(this)">CHARACTER NAME</div>
+                <div class="portrait-cell" style="background:#000; height:300px; display:flex; align-items:center; justify-content:center; color: #444;">[ Image ]</div>
+                
+                <div class="subheader">Biographical Information</div>
+                <table>
+                    <tr><td class="label">Romanized Name:</td><td class="data"><span id="info-name-rom" contenteditable="true" onkeyup="syncData('info-name-rom', 'demo-name-full')">Name</span></td></tr>
+                    <tr><td class="label">Kanji:</td><td class="data runic-text" id="info-name-runic" contenteditable="true">名前</td></tr>
+                    <tr><td class="label">Alias:</td><td class="data"><span id="info-alias" contenteditable="true" onkeyup="syncData('info-alias', 'aff-aliases')">Alias</span></td></tr>
+                    <tr><td class="label">Epithet:</td><td class="data" id="info-epithet" contenteditable="true">Epithet</td></tr>
+                </table>
+
+                <div class="subheader">Personal Description</div>
+                <table>
+                    <tr><td class="label">Age:</td><td class="data"><span id="info-age-quick" contenteditable="true" onkeyup="syncAge('info-age-quick')">0</span></td></tr>
+                    <tr><td class="label">Birthday:</td><td class="data">
+                        <select id="info-month-quick" class="sync-input" onchange="syncData('info-month-quick', 'demo-birth-month')">
+                            <option value="January">Jan</option><option value="February">Feb</option><option value="March">Mar</option><option value="April">Apr</option><option value="May">May</option><option value="June">Jun</option><option value="July">Jul</option><option value="August">Aug</option><option value="September">Sep</option><option value="October">Oct</option><option value="November">Nov</option><option value="December">Dec</option>
+                        </select>
+                        <span id="info-day-quick" contenteditable="true" onkeyup="syncData('info-day-quick', 'demo-birth-day')">0</span>, <span class="calc-year">1140</span>
+                    </td></tr>
+                    <tr><td class="label">Height:</td><td class="data"><span id="info-height-quick" contenteditable="true" onkeyup="syncData('info-height-quick', 'info-height')">0 nm</span></td></tr>
+                    <tr><td class="label">Weight:</td><td class="data"><span id="info-weight-quick" contenteditable="true" onkeyup="syncData('info-weight-quick', 'info-weight')">0 ng</span></td></tr>
+                    <tr><td class="label">Blood Type:</td><td class="data">
+                        <select id="info-blood-type-quick" class="sync-input" onchange="syncData('info-blood-type-quick', 'demo-blood-type')">
+                            <option value="X">X</option><option value="F">F</option><option value="XF">XF</option><option value="S">S</option>
+                        </select>
+                        <select id="info-blood-rh-quick" class="sync-input" onchange="syncData('info-blood-rh-quick', 'demo-blood-rh')">
+                            <option value="(RH+)">(RH+)</option><option value="(RH-)">(RH-)</option>
+                        </select>
+                    </td></tr>
+                    <tr><td class="label">Race/Tribe:</td><td class="data"><span id="info-race-quick" contenteditable="true" onkeyup="syncData('info-race-quick', 'info-race')">Human</span></td></tr>
+                </table>
+
+                <div class="subheader">Professional Status</div>
+                <table>
+                    <tr><td class="label">Occupation:</td><td class="data"><span id="info-job" contenteditable="true" onkeyup="syncData('info-job', 'aff-job')">Occupation</span></td></tr>
+                    <tr><td class="label">Residence:</td><td class="data"><span id="info-residence" contenteditable="true" onkeyup="syncData('info-residence', 'demo-homeland')">Water 7</span></td></tr>
+                    <tr><td class="label">Faction:</td><td class="data">
+                        <select id="info-faction-quick" class="sync-input" onchange="syncData('info-faction-quick', 'demo-faction')">
+                            <option value="Civilian">Civilian</option>
+                            <option value="Revolutionary Army">Revolutionary Army</option>
+                            <option value="Pirate">Pirate</option>
+                            <option value="Marine">Marine</option>
+                            <option value="Cipher Pol">Cipher Pol</option>
+                            <option value="Bounty Hunter">Bounty Hunter</option>
+                        </select>
+                    </td></tr>
+                    <tr class="rank-row" style="display:none;"><td class="label">Rank:</td><td class="data"><span id="info-rank-quick" contenteditable="true" onkeyup="syncData('info-rank-quick', 'demo-rank')">Rank</span></td></tr>
+                    <tr><td class="label">Status:</td><td class="data">
+                        <select id="info-status-quick" class="sync-input" onchange="syncData('info-status-quick', 'demo-status')">
+                            <option value="Alive">Alive</option><option value="Unknown">Unknown</option><option value="Deceased">Deceased</option>
+                        </select>
+                    </td></tr>
+                    <tr><td class="label">Bounty:</td><td class="data">฿ <span id="info-bounty" contenteditable="true" onkeyup="syncData('info-bounty', 'aff-bounty-text')">0</span></td></tr>
+                </table>
+            </aside>
+
+            <div class="indent">
+                <div class="wiki-header" style="margin-bottom: 20px;">
+                    <h1 id="summary-header" style="font-family: 'Special Elite'; font-size: 2em; margin-bottom: 10px;">[ CHARACTER NAME ]</h1>
+                    <p style="font-size: 1.1em; line-height: 1.5;">
+                        <strong id="summary-char-name">Character Name</strong> is an original character in <strong>One Piece: Kaigan</strong>. 
+                        She is a <span id="summary-race" contenteditable="true" style="border-bottom: 1px dashed #444;">[Race]</span>, and a 
+                        <span id="summary-faction" contenteditable="true" style="border-bottom: 1px dashed #444;">[Role/Faction]</span>.
+                    </p>
+                </div>
+
+                <div class="contents-box" style="background: #1A1A1A; border: 1px solid #2C2C2C; width: fit-content; padding: 10px 20px; margin-bottom: 30px; font-size: 0.9em;">
+                    <div style="font-weight: bold; text-align: center; margin-bottom: 5px; font-family: 'Special Elite';">
+                        Contents <a href="javascript:void(0)" id="contents-toggle-btn" onclick="toggleContents()" style="color: #BB86FC; text-decoration: none; font-size: 0.8em; margin-left: 10px;">[ hide ]</a>
+                    </div>
+                    <div id="contents-list">
+                        <div style="color: #FFFFFF55; font-weight: bold; margin-top: 5px;">I. BIOGRAPHY</div>
+                        <ul style="list-style: none; padding-left: 15px; margin: 5px 0;">
+                            <li>• <a href="#Demographics" style="color: #BB86FC; text-decoration: none;">Demographics</a></li>
+                            <li>• <a href="#PhysicalDetails" style="color: #BB86FC; text-decoration: none;">Physical Details</a></li>
+                            <li>• <a href="#Relationships" style="color: #BB86FC; text-decoration: none;">Relationships</a></li>
+                            <li>• <a href="#PersonalDetails" style="color: #BB86FC; text-decoration: none;">Personal Details</a></li>
+                            <li>• <a href="#Affiliation" style="color: #BB86FC; text-decoration: none;">Affiliation</a></li>
+                            <li>• <a href="#Backstory" style="color: #BB86FC; text-decoration: none;">Backstory</a></li>
+                            <li>• <a href="#Trivia" style="color: #BB86FC; text-decoration: none;">Trivia</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-well" style="margin-right: 340px;">
+                    <details id="Demographics" open>
+                        <summary>[ Demographics ]</summary>
+                        <div class="detail-box">
+                            <p><strong>Name:</strong> <span id="demo-name-full" contenteditable="true" onkeyup="syncData('demo-name-full', 'info-name-rom')">Full Name</span></p>
+                            <p><strong>Birth Name:</strong> <span id="demo-name-birth" contenteditable="true">Original Name</span></p>
+                            <p><strong>Age:</strong> <span id="info-age" contenteditable="true" onkeyup="syncAge('info-age')">0</span></p>
+                            <p><strong>Gender:</strong> <span id="demo-gender" contenteditable="true">♀</span></p>
+                            <p><strong>Race/Tribe:</strong> <span id="info-race" contenteditable="true" onkeyup="syncData('info-race', 'info-race-quick')">Human</span></p>
+                            <p><strong>Birthday:</strong> 
+                                <select id="demo-birth-month" class="sync-input" onchange="syncData('demo-birth-month', 'info-month-quick')">
+                                    <option value="January">January</option><option value="February">February</option><option value="March">March</option><option value="April">April</option><option value="May">May</option><option value="June">June</option><option value="July">July</option><option value="August">August</option><option value="September">September</option><option value="October">October</option><option value="November">November</option><option value="December">December</option>
+                                </select>
+                                <span id="demo-birth-day" contenteditable="true" onkeyup="syncData('demo-birth-day', 'info-day-quick')">1</span>, <span class="calc-year">1140</span>
+                            </p>
+                            <p><strong>Homeland:</strong> <span id="demo-homeland" contenteditable="true" onkeyup="syncData('demo-homeland', 'info-residence')">Unknown</span></p>
+                            <p><strong>Native Sea:</strong> 
+                                <select id="demo-native-sea" class="sync-input">
+                                    <option value="East Blue">East Blue</option><option value="West Blue">West Blue</option><option value="North Blue">North Blue</option><option value="South Blue">South Blue</option><option value="White Sea">White Sea</option><option value="White White Sea">White White Sea</option><option value="The Calm Belt">The Calm Belt</option><option value="Paradise">Paradise</option><option value="New World">New World</option>
+                                </select>
+                            </p>
+                        </div>
+                    </details>
+
+                    <details id="PhysicalDetails" open>
+                        <summary>[ Physical Details ]</summary>
+                        <div class="detail-box">
+                            <p><strong>Height:</strong> <span id="info-height" contenteditable="true" onkeyup="syncData('info-height', 'info-height-quick')">0 nm</span></p>
+                            <p><strong>Weight:</strong> <span id="info-weight" contenteditable="true" onkeyup="syncData('info-weight', 'info-weight-quick')">0 ng</span></p>
+                            <p><strong>Blood Type:</strong> 
+                                <select id="demo-blood-type" class="sync-input" onchange="syncData('demo-blood-type', 'info-blood-type-quick')">
+                                    <option value="X">X</option><option value="F">F</option><option value="XF">XF</option><option value="S">S</option>
+                                </select>
+                                <select id="demo-blood-rh" class="sync-input" onchange="syncData('demo-blood-rh', 'info-blood-rh-quick')">
+                                    <option value="(RH+)">(RH+)</option><option value="(RH-)">(RH-)</option>
+                                </select>
+                            </p>
+                        </div>
+                    </details>
+
+                    <details id="Relationships" open>
+                        <summary>[ Relationships ]</summary>
+                        <div class="detail-box">
+                            <p><strong>Grandparents:</strong> <span id="rel-grandparents" contenteditable="true">??? | Age: ??? | Bounty: ฿??? | Relation: ??? | Status: ??? | Race: ???</span></p>
+                            <p><strong>Parents:</strong> <span id="rel-parents" contenteditable="true">??? | Age: ??? | Bounty: ฿??? | Relation: ??? | Status: ??? | Race: ???</span></p>
+                            <p><strong>Sibling(s):</strong> <span id="rel-siblings" contenteditable="true">None</span></p>
+                            <p><strong>Known Family Member(s):</strong> <span id="rel-family" contenteditable="true">None</span></p>
+                        </div>
+                    </details>
+
+                    <details id="PersonalDetails" open>
+                        <summary>[ Personal Details ]</summary>
+                        <div class="detail-box">
+                            <h2 id="header-personality" contenteditable="true">Personality</h2>
+                            <p id="bio-personality-desc" contenteditable="true">Describe the character's temperament, moral compass, and how they interact with others...</p>
+                            <h2 id="header-appearance" contenteditable="true">Appearance</h2>
+                            <p id="bio-appearance-desc" contenteditable="true">Describe their physical features, clothing, and any unique physiological traits...</p>
+                            <p><strong>Aspiration(s):</strong> <span id="bio-aspirations" contenteditable="true">Primary ambition...</span></p>
+                            <p><strong>Likes:</strong> <span id="bio-likes" contenteditable="true">...</span> | <strong>Dislikes:</strong> <span id="bio-dislikes" contenteditable="true">...</span></p>
+                            <p><strong>Goal:</strong></p>
+                            <ul id="bio-goals-list" contenteditable="true">
+                                <li>Major objective one</li>
+                                <li>Major objective two</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details id="Affiliation" open>
+                        <summary>[ Affiliation ]</summary>
+                        <div class="detail-box">
+                            <h2 id="header-affiliation" contenteditable="true">Affiliation</h2>
+                            <p><strong>Aliases:</strong> <span id="aff-aliases" contenteditable="true" onkeyup="syncData('aff-aliases', 'info-alias')">Nicknames or Codenames</span></p>
+                            <p><strong>Faction:</strong> 
+                                <select id="demo-faction" class="sync-input" onchange="syncData('demo-faction', 'info-faction-quick')">
+                                    <option value="Civilian">Civilian</option><option value="Revolutionary Army">Revolutionary Army</option><option value="Pirate">Pirate</option><option value="Marine">Marine</option><option value="Cipher Pol">Cipher Pol</option><option value="Bounty Hunter">Bounty Hunter</option>
+                                </select>
+                            </p>
+                            <p class="rank-row" style="display:none;"><strong>Rank:</strong> <span id="demo-rank" contenteditable="true" onkeyup="syncData('demo-rank', 'info-rank-quick')">Rank</span></p>
+                            <p><strong>Status:</strong> 
+                                <select id="demo-status" class="sync-input" onchange="syncData('demo-status', 'info-status-quick')">
+                                    <option value="Alive">Alive</option><option value="Unknown">Unknown</option><option value="Deceased">Deceased</option>
+                                </select>
+                            </p>
+                            <p><strong>Bounty:</strong> 𝕭 <span id="aff-bounty-text" contenteditable="true" onkeyup="syncData('aff-bounty-text', 'info-bounty')">0</span></p>
+                            <div class="bounty-bar-bg"><div id="bounty-fill" class="bounty-bar-fill" style="width: 0%;"></div></div>
+                            <p><strong>Occupation:</strong> <span id="aff-job" contenteditable="true" onkeyup="syncData('aff-job', 'info-job')">Job Title</span> | <strong>Role:</strong> <span id="aff-role" contenteditable="true">Crew Position</span></p>
+                            <h2 id="header-crew" contenteditable="true">Crew Membership</h2>
+                            <p><strong>Crew Name:</strong> <span id="aff-crew-name" contenteditable="true">Name of Organization</span></p>
+                            <ol id="aff-crew-list" contenteditable="true">
+                                <li>Member Name ~ Position</li>
+                            </ol>
+                        </div>
+                    </details>
+
+                    <details id="Backstory" open>
+                        <summary>[ Backstory ]</summary>
+                        <div class="detail-box">
+                            <h2 id="header-backstory" contenteditable="true">Backstory</h2>
+                            <p id="backstory-content" contenteditable="true">Enter the character's history and major life events here...</p>
+                        </div>
+                    </details>
+
+                    <details id="Trivia" open>
+                        <summary>[ Trivia ]</summary>
+                        <div class="detail-box">
+                            <h2 id="header-trivia" contenteditable="true">Trivia & Measurements</h2>
+                            <table style="width:100%; border-collapse: collapse; font-size: 0.8em; text-align: left;" id="trivia-table">
+                                <thead>
+                                    <tr style="background:#2C2C2C; color:#fff;">
+                                        <th style="padding:8px;">Age</th>
+                                        <th style="padding:8px;">Height (nm)</th>
+                                        <th style="padding:8px;">Height (ft'in)</th>
+                                        <th style="padding:8px;">Weight (ng)</th>
+                                        <th style="padding:8px;">Weight (lbs)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="trivia-rows" contenteditable="true">
+                                    <tr style="border-bottom:1px solid #2C2C2C;">
+                                        <td>0</td><td>0 nm</td><td>0'0"</td><td>0 ng</td><td>0 lbs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-Stats" class="section-content">
+            <div class="indent">
+                <div style="background: #1A1A1A; border: 1px solid #442200; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 20px;">
+                    <div style="font-family: 'Special Elite'; font-size: 0.9em; color: #FFFFFF55; text-transform: uppercase;">Total Power Level (DKI)</div>
+                    <div style="font-size: 3em; font-weight: bold; color: #fff; margin: 5px 0;"><span id="display-doriki" contenteditable="true">0</span> DKI</div>
+                    <div class="bounty-bar-bg"><div id="tier-progress-fill" class="bounty-bar-fill" style="width: 0%;"></div></div>
+                    <div style="display: inline-block; padding: 5px 20px; background: #2C2C2C; border-radius: 20px; color: #BB86FC; font-weight: bold; border: 1px solid #BB86FC;">RANK: <span id="display-tier">F</span></div>
+                </div>
+                <div id="radar-container" style="width: 100%; height: 400px; background: #1a1a1a; border: 1px solid #442200;"></div>
+            </div>
+        </div>
+
+        <div id="tab-DF" class="section-content">
+            <div class="indent">
+                <h2 id="df-name-header" contenteditable="true">Devil Fruit Name</h2>
+                <details open>
+                    <summary>[ Description ]</summary>
+                    <p id="df-desc" contenteditable="true">Details on fruit abilities, classification, and weaknesses...</p>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <script src="../sidebar.js"></script>
+    <script src="template.js"></script>
+    <script>
+        // --- 1. KAIGAN DATA MANAGER (Final Stable Version) ---
+        window.KaiganData = {
+            export: function() {
+                const data = {};
+                // Scans all elements with an ID that are editable or selects
+                document.querySelectorAll('[id]').forEach(el => {
+                    const isEditable = el.getAttribute('contenteditable') === 'true';
+                    const isSelect = el.tagName === "SELECT";
+                    if (isEditable || isSelect) {
+                        data[el.id] = isSelect ? el.value : el.innerText;
+                    }
+                });
+                
+                try {
+                    const jsonStr = JSON.stringify(data);
+                    // Standard Base64
+                    const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
+                    
+                    const codeBox = document.getElementById('serialization-code');
+                    codeBox.value = encoded; // Set value first
+                    
+                    // Force copy to clipboard
+                    codeBox.select();
+                    document.execCommand('copy');
+                    alert("Character code exported and copied to clipboard!");
+                } catch (err) {
+                    console.error("Export Error:", err);
+                    alert("Export failed. Check console.");
+                }
+            },
+
+            import: function(code) {
+                if (!code || code.trim() === "") {
+                    // Fallback: try to grab from the textarea if the argument was empty
+                    code = document.getElementById('serialization-code').value;
+                }
+                
+                if (!code) return alert("Please paste a code into the box first.");
+
+                try {
+                    const decodedStr = decodeURIComponent(escape(atob(code.trim())));
+                    const data = JSON.parse(decodedStr);
+                    
+                    console.log("Importing Data:", data);
+
+                    Object.keys(data).forEach(id => {
+                        const el = document.getElementById(id);
+                        if (el) {
+                            if (el.tagName === "SELECT") {
+                                el.value = data[id];
+                            } else {
+                                el.innerText = data[id];
+                            }
+                        }
+                    });
+
+                    this.refreshUI();
+                    alert("Import successful!");
+                } catch (e) {
+                    console.error("Import Error:", e);
+                    alert("Import failed. Ensure the code is a valid Base64 string.");
+                }
+            },
+
+            refreshUI: function() {
+                if (document.getElementById('info-age')) syncAge('info-age');
+                const nameHeader = document.getElementById('info-name-header');
+                if (nameHeader) mirrorHeader(nameHeader);
+                
+                const fQuick = document.getElementById('info-faction-quick');
+                if (fQuick) toggleRank(fQuick.value);
+
+                // Update Bounty Bar
+                const bSpan = document.getElementById('aff-bounty-text');
+                if (bSpan) {
+                    const bNum = parseInt(bSpan.innerText.replace(/\D/g, '')) || 0;
+                    const fill = document.getElementById('bounty-fill');
+                    if (fill) fill.style.width = Math.min((bNum / 1000000000) * 100, 100) + "%";
+                }
+            }
+        };
+
+        // --- 2. MIRRORING & SUMMARY LOGIC ---
+        function mirrorHeader(parent) {
+            const mirror = document.getElementById('summary-header');
+            const summaryName = document.getElementById('summary-char-name');
+            if (mirror) mirror.innerText = "[ " + parent.innerText + " ]";
+            if (summaryName) summaryName.innerText = parent.innerText;
+        }
+
+        // --- 3. CONTENTS TOGGLE ---
+        function toggleContents() {
+            const list = document.getElementById('contents-list');
+            const btn = document.getElementById('contents-toggle-btn');
+            const isHidden = list.style.display === "none";
+            list.style.display = isHidden ? "block" : "none";
+            btn.innerText = isHidden ? "[ hide ]" : "[ show ]";
+        }
+
+        // --- 4. SMART SYNC & FACTION LOGIC ---
+        function syncData(sourceId, targetId) {
+            const source = document.getElementById(sourceId);
+            const target = document.getElementById(targetId);
+            if (!source || !target) return;
+
+            const val = (source.tagName === "SELECT") ? source.value : source.innerText;
+            if (target.tagName === "SELECT") { target.value = val; } 
+            else { target.innerText = val; }
+
+            if (sourceId === 'info-faction-quick' || sourceId === 'demo-faction') {
+                toggleRank(val);
+            }
+        }
+
+        function toggleRank(faction) {
+            const rankRows = document.querySelectorAll('.rank-row');
+            const govFactions = ["Marine", "Cipher Pol", "Revolutionary Army"];
+            const showRank = govFactions.includes(faction);
+            
+            rankRows.forEach(row => {
+                row.style.display = showRank ? (row.tagName === "TR" ? "table-row" : "block") : "none";
+                const label = row.querySelector('.label');
+                if (label) {
+                    label.innerText = (faction === "Cipher Pol") ? "CP Rank:" : "Rank:";
+                }
+            });
+        }
+
+        // --- 5. AGE & YEAR CALCULATION ---
+        function syncAge(sourceId) {
+            const source = document.getElementById(sourceId);
+            const targetId = (sourceId === 'info-age') ? 'info-age-quick' : 'info-age';
+            const target = document.getElementById(targetId);
+            const yearDisplays = document.querySelectorAll('.calc-year');
+            if (source && target) {
+                target.innerText = source.innerText;
+                const currentYear = 1140;
+                const ageMatch = source.innerText.match(/\d+/);
+                if (ageMatch) {
+                    const birthYear = currentYear - parseInt(ageMatch[0]);
+                    yearDisplays.forEach(el => el.innerText = birthYear);
+                }
+            }
+        }
+
+        // --- 6. NAVIGATION ---
+        function showTab(tabName) {
+            document.querySelectorAll('.section-content').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-buttons button').forEach(b => b.classList.remove('active'));
+            const targetTab = document.getElementById('tab-' + tabName);
+            const targetBtn = document.getElementById('btn-' + tabName);
+            if (targetTab) targetTab.classList.add('active');
+            if (targetBtn) targetBtn.classList.add('active');
+            if (tabName === 'Stats') renderRadar();
+        }
+
+        // --- 7. RADAR CHART ---
+        window.renderRadar = function() {
+            const container = document.getElementById('radar-container');
+            if (!container) return;
+            container.innerHTML = '';
+            const chart = anychart.radar();
+            const dkiText = document.getElementById('display-doriki').innerText;
+            const dki = parseInt(dkiText.replace(/[',]/g, '')) || 0;
+            chart.data([{x: "Current Power", value: dki}]);
+            chart.yScale().minimum(0).maximum(5000);
+            chart.container('radar-container').draw();
+        };
+
+        // --- 8. FILE UTILS ---
+        function downloadHTML() {
+            const docClone = document.documentElement.cloneNode(true);
+            const tools = docClone.querySelector('.template-tools');
+            if (tools) tools.remove();
+            const htmlContent = "<!DOCTYPE html>\n" + docClone.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const a = document.createElement('a');
+            const charName = document.getElementById('info-name-rom').innerText || "character";
+            a.href = URL.createObjectURL(blob);
+            a.download = charName.toLowerCase().replace(/\s+/g, '_') + ".html";
+            a.click();
+        }
+
+        function copyPageHTML() {
+            const docClone = document.documentElement.cloneNode(true);
+            const tools = docClone.querySelector('.template-tools');
+            if (tools) tools.remove();
+            navigator.clipboard.writeText("<!DOCTYPE html>\n" + docClone.outerHTML).then(() => {
+                alert("Source copied!");
+            });
+        }
+
+        // --- 9. INITIALIZATION ---
+        document.addEventListener("DOMContentLoaded", () => {
+            if (document.getElementById('info-age')) syncAge('info-age');
+            const nameHeader = document.getElementById('info-name-header');
+            if (nameHeader) mirrorHeader(nameHeader);
+            const fField = document.getElementById('info-faction-quick');
+            if (fField) toggleRank(fField.value);
+        });
+    </script>
+</body>
+</html>
