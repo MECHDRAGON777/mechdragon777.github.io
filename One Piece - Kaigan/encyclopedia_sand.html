@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encyclopædia: Suna Suna no Mi</title>
+    
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/fruit.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@400;700&display=swap');
+
+        body {
+            background-color: #050505;
+            color: #DDD;
+            font-family: 'Special Elite', monospace;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: #121212;
+            border: 1px solid #333;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* CRT Scanline Overlay */
+        .container::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 10;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #BB86FC;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .title-block { width: 75%; }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: #BB86FC;
+            margin: 0;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        rt {
+            font-family: 'Special Elite', monospace;
+            font-size: 0.4em;
+            letter-spacing: 3px;
+            color: rgba(187, 134, 252, 0.7);
+            margin-bottom: 5px;
+        }
+
+        .fruit-cutout {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px double #BB86FC;
+            background: #000;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(187, 134, 252, 0.3);
+            position: relative;
+        }
+
+        .fruit-cutout img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .tier-box {
+            border-left: 3px solid #BB86FC;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .glitch-active {
+            color: #444;
+            filter: blur(1.5px);
+            position: relative;
+            animation: shiver 0.15s infinite;
+            user-select: none;
+        }
+
+        @keyframes shiver {
+            0% { transform: translate(1px, 0.5px); opacity: 0.8; }
+            25% { transform: translate(-1px, -0.5px); color: #ff000044; }
+            50% { transform: translate(1.5px, -1px); text-shadow: 2px 0 #BB86FC88; }
+            100% { transform: translate(0, 0); }
+        }
+
+        .ability-node {
+            display: block;
+            color: #BB86FC;
+            font-size: 0.85em;
+            margin-top: 8px;
+            padding-left: 15px;
+        }
+
+        .status-tag {
+            background: #BB86FC;
+            color: #000;
+            padding: 2px 8px;
+            font-size: 0.7em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .info-text { font-size: 0.85em; line-height: 1.6; color: #BBB; }
+        strong { color: #fff; }
+        
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { position: relative; padding-left: 20px; margin-bottom: 5px; font-size: 0.9em;}
+        li::before { content: "⦿"; position: absolute; left: 0; color: #BB86FC; }
+    </style>
+</head>
+<body>
+
+    <div id="fruit-carousel-inject"></div>
+
+    <div class="container">
+        <div class="header-section">
+            <div class="title-block">
+                <h1 id="main-fruit-title">SCANNING...</h1>
+                <p style="color: #FFFFFF55; font-size: 0.9em; margin-top: 10px;"><strong>Name:</strong> Sand-Sand Fruit</p>
+                <p style="color: #FFFFFF55; font-size: 0.9em;"><strong>Model Classification:</strong> Natural Logia</p>
+            </div>
+            <div class="fruit-cutout">
+                <img src="previews/sand.gif" alt="Suna Suna Preview">
+            </div>
+        </div>
+
+        <div class="info-text" style="margin-bottom: 25px;">
+            <p><strong>Description:</strong> The Suna Suna no Mi allows the user to create, control, and manipulate sand. This Logia-type power is exceptionally versatile, offering devastating dehydration abilities alongside standard elemental intangibility.</p>
+        </div>
+
+        <div class="info-text" style="margin-bottom: 30px; border: 1px solid #333; padding: 15px; background: #0F0F0F;">
+            <p style="margin-bottom: 10px;"><strong>Weakness:</strong></p>
+            <ul>
+                <li>Standard Devil Fruit weaknesses apply: Seastone and water.</li>
+                <li><strong>Liquid Contact:</strong> Unlike most Logias, any liquid (water, blood, etc.) solidifies the user's sand, completely negating intangibility.</li>
+                <li>Armament Haki bypasses elemental properties.</li>
+            </ul>
+        </div>
+
+        <h2 style="font-family: 'Cinzel'; font-size: 1.2em; color: #BB86FC; border-bottom: 1px solid #333; padding-bottom: 5px; margin-bottom: 20px;">𝐓𝐈𝐄𝐑 𝐏𝐑𝐎𝐆𝐑𝐄𝐒𝐒𝐈𝐎𝐍</h2>
+
+        <div class="tier-box">
+            <div class="status-tag" style="background: #4CAF50;">[ MASTERY REVEALED ]</div>
+            <div style="font-size: 1.1em; color: #fff; margin-bottom: 10px;">𝐓𝐈𝐄𝐑 𝟏 — 𝐏𝐑𝐎𝐏𝐄𝐑𝐓𝐘 𝐂𝐎𝐍𝐓𝐑𝐎𝐋</div>
+            <span class="ability-node">⦿ <strong>All Dried Up:</strong> Drain moisture from targets to inflict a 20% DKI Debuff.</span>
+            <span class="ability-node">⦿ <strong>Desert Constructs:</strong> Create sand-based shields with 10% durability.</span>
+            <span class="ability-node">⦿ <strong>Quick Sand:</strong> Disrupt enemy movement and speed (-5% Speed).</span>
+            <span class="ability-node">⦿ <strong>Shifting Sands:</strong> Float on sand to increase personal mobility (+5% Speed).</span>
+            <span class="ability-node">⦿ <strong>Intangibility:</strong> [LOCKED] - Inaccessible at Tier 1.</span>
+        </div>
+
+        <div class="tier-box" style="border-left-color: #333;">
+            <div class="status-tag" style="background: #444; color: #888;">[ DATA FRAGMENTED ]</div>
+            <div class="glitch-active" style="font-size: 1.1em; font-weight: bold;">𝐓𝐈𝐄𝐑 𝟐 — [𝐄𝐍𝐂𝐑𝐘𝐏𝐓𝐄𝐃]</div>
+            <p class="glitch-active" style="font-size: 0.8em; margin-top: 5px;">Sᛖᚾᛊᛟᚱ ᛞᛖᚠᛖᚲᛏ... ᛊᚢᚾᚨ_ᚱᛖᛊᛟᚾᚨᚾᚲᛖ_ᛚᛟᚹ...</p>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; border-top: 1px solid #222; text-align: center; font-size: 0.8em; color: #555;">
+            <p><strong>CURRENT USER:</strong> <span id="fruit-owner">SCANNING...</span></p>
+            <p style="margin-top: 5px;"><strong>Possession:</strong> Kaveh Eldridge (@chromatica)</p>
+        </div>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/database.js"></script>
+    <script src="../js/fruit.js"></script>
+    <script src="../js/sidebar.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Sync Owner from Database
+            if (typeof syncFruitOwner === "function") {
+                syncFruitOwner("Sand-Sand Fruit"); 
+            }
+
+            // 2. Dynamic Title with Ruby Tags
+            const titleElem = document.getElementById('main-fruit-title');
+            if (titleElem && typeof window.useJapanese !== 'undefined') {
+                if (window.useJapanese) {
+                    titleElem.innerHTML = `<ruby>砂砂の実 <rt>SUNA SUNA NO MI</rt></ruby>`;
+                } else {
+                    titleElem.innerText = "𝐒𝐀𝐍𝐃-𝐒𝐀𝐍𝐃 𝐅𝐑𝐔𝐈𝐓";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
