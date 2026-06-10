@@ -1,14 +1,22 @@
 /* --- KAIGAN GLOBAL CONFIGURATION v1.6 --- */
 
 // 1. Root & Path Calculation
-const pathArray = window.location.pathname.split('/');
-const projectFolderName = window.location.pathname.includes('One%20Piece%20-%20Kaigan') 
-    ? 'One%20Piece%20-%20Kaigan' 
-    : 'One Piece - Kaigan';
+const path = window.location.pathname;
+const segments = path.split('/').filter(Boolean);
 
-const projectIndex = pathArray.indexOf(projectFolderName);
-const depth = pathArray.length - projectIndex - 2;
-const root = depth > 0 ? "../".repeat(depth) : "./";
+// Determine depth based on the folder structure from the file itself
+let depth = 0;
+if (segments.length > 0) {
+    // If the file is inside a subfolder directory (characters, devil_fruits, items)
+    if (path.includes('/characters/') || path.includes('/devil_fruits/') || path.includes('/items/') || path.includes('/previews/')) {
+        depth = 1;
+    } else if (path.includes('/bounty_posters/')) {
+        depth = 1;
+    }
+}
+
+// Enforce a maximum fallback check to ensure it never throws more than one parent jump block
+const root = depth === 1 ? "../" : "./";
 
 const paths = {
     database: `${root}Kaigan Database.html`,
