@@ -1,0 +1,103 @@
+/* --- KAIGAN FRUIT CAROUSEL: ARC SYSTEM v2.6 --- */
+
+#fruit-carousel-inject {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.fruit-carousel {
+    width: 100%;
+    max-width: 1000px;
+    overflow-x: auto;
+    padding: 50px 0;
+    perspective: 1200px; 
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.fruit-carousel::-webkit-scrollbar { display: none; }
+
+.carousel-track {
+    display: flex;
+    gap: 40px;
+    padding: 0 50px;
+    width: max-content;
+}
+
+.fruit-card {
+    min-width: 160px;
+    background: #1A1A1A;
+    border: 1px solid #333;
+    padding: 20px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: rotateY(20deg) scale(0.9);
+    transform-style: preserve-3d;
+}
+
+.fruit-card:hover {
+    border-color: #BB86FC;
+    transform: rotateY(0deg) scale(1.1) translateY(-15px);
+    box-shadow: 0 15px 30px rgba(187, 134, 252, 0.4);
+    background: #252525;
+    z-index: 100;
+}
+
+.fruit-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #BB86FC;
+    margin-bottom: 15px;
+    object-fit: cover;
+    filter: drop-shadow(0 0 5px rgba(187, 134, 252, 0.5));
+}
+
+.fruit-card span {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8em;
+    color: #BB86FC;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* --- ACQUISITION DYNAMICS --- */
+
+/* Force-Fed: Subtle Shiver & Ominous Red Pulse */
+.force-fed-glitch {
+    animation: force-fed-shiver 0.2s infinite, red-shift 4s infinite alternate;
+}
+
+@keyframes red-shift {
+    0%, 90% { color: inherit; text-shadow: none; }
+    95% { color: #FF5252; text-shadow: 0 0 8px rgba(255, 82, 82, 0.8); }
+    100% { color: #D32F2F; text-shadow: 0 0 12px rgba(211, 47, 47, 1); }
+}
+
+@keyframes force-fed-shiver {
+    0% { transform: translate(0.5px, 0.5px); }
+    50% { transform: translate(-0.5px, -0.5px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Theme color overrides for specific pages/fruits */
+body[data-fruit="Uta-Uta"] .fruit-card img,
+body[data-fruit="Uta-Uta"] h1 {
+    border-color: #ff80ab;
+    color: #ff80ab;
+}
+
+body[data-fruit="Snow"] .fruit-card img,
+body[data-fruit="Snow"] h1 {
+    border-color: #A0E7E5;
+    color: #A0E7E5;
+}

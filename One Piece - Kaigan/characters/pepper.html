@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepper | One Piece Kaigan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/character.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/bounty.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+
+</head>
+<body data-char-id="pepper">
+    <div class="navbar">
+        <div class="nav-buttons">
+            <button id="btn-Bio" class="active" onclick="showTab('Bio')">Biography</button>
+            <button id="btn-Stats" onclick="showTab('Stats')">Stats</button>
+            <!--<button id="btn-DF" onclick="showTab('DF')">Devil Fruit</button>-->
+        </div>
+    </div>
+    
+    <div id="tab-Bio" class="section-content active">
+        <aside class="infobox">
+            <div class="header" id="bio-name">Pepper</div>
+            <div class="portrait-cell"><a id="bio-portrait-link" href="#"><img id="bio-portrait" src="" alt="Portrait"></a></div>
+            
+            <div class="subheader">Biographical Information</div>
+            <table id="bio-demographics-table"></table>
+
+            <div class="subheader">Personal Description</div>
+            <table id="bio-physical-table"></table>
+
+            <div class="subheader">Professional Status</div>
+            <table id="bio-professional-table"></table>
+        </aside>
+
+        <div class="indent">
+            <div class="content-well" style="margin-right: 340px;">
+                <details id="Overview" open>
+                    <summary>[ Pepper ]</summary>
+                    <p><strong>Pepper (胡椒)</strong> is an original character in and a <strong>One Piece: Kaigan</strong>. She is a <strong>Mink</strong>, and is An <strong>Truth Seeking Archaeologist</strong>& a future seeing Prophet</p>
+                    
+                    <div id="contents-box" style="background:#1A1A1A; border:1px solid #2C2C2C; width: 280px; padding: 15px; margin: 20px 0; font-family: 'Special Elite', monospace;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2C2C2C; margin-bottom: 10px; padding-bottom: 5px;">
+                            <span style="font-weight:bold; color: #fff; letter-spacing: 1px;">Contents</span>
+                            <span id="contents-toggle" style="color: #BB86FC; cursor: pointer; font-size: 0.8em;">[ hide ]</span>
+                        </div>
+
+                        <div id="contents-list">
+                            <div style="color: #FFFFFF55; font-size: 0.75em; text-transform: uppercase; margin-top: 5px; border-bottom: 1px solid #2C2C2C; padding-bottom: 2px; margin-bottom: 5px;">I. Biography</div>
+                            <ul style="font-size: 0.85em; color: #BB86FC; line-height: 1.8; padding-left: 5px; margin: 0; list-style: none;">
+                                <li><a href="#Demographics" style="color: #BB86FC; text-decoration: none;">[ Demographics ]</a></li>
+                                <li><a href="#Appearance" style="color: #BB86FC; text-decoration: none;">[ Physical Details ]</a></li>
+                                <li><a href="#Relationships" style="color: #BB86FC; text-decoration: none;">[ Relationships ]</a></li>
+                                <li><a href="#PersonalDetails" style="color: #BB86FC; text-decoration: none;">[ Personal Details ]</a></li>
+                                <li><a href="#Affiliation" style="color: #BB86FC; text-decoration: none;">[ Affiliation ]</a></li>
+                                <li><a href="#Backstory" style="color: #BB86FC; text-decoration: none;">[ Backstory ]</a></li>
+                                <li><a href="#Trivia" style="color: #BB86FC; text-decoration: none;">[ Trivia ]</a></li>
+                                <li><a href="#Gallery" style="color: #BB86FC; text-decoration: none;">[ Gallery ]</a></li>
+                            </ul>
+
+                            <div style="color: #FFFFFF55; font-size: 0.75em; text-transform: uppercase; margin-top: 15px; border-bottom: 1px solid #2C2C2C; padding-bottom: 2px; margin-bottom: 5px;">II. Combat & Stats</div>
+                            <ul style="font-size: 0.85em; color: #BB86FC; line-height: 1.8; padding-left: 5px; margin: 0; list-style: none;">
+                                <li><a href="#Profession" style="color: #BB86FC; text-decoration: none;">[ Profession ]</a></li>
+                                <li><a href="#FightingStyle" style="color: #BB86FC; text-decoration: none;">[ Fighting Style ]</a></li>
+                                <li><a href="#Techniques" style="color: #BB86FC; text-decoration: none;">[ Techniques ]</a></li>
+                                <li><a href="#Inventory" style="color: #BB86FC; text-decoration: none;">[ Inventory ]</a></li>
+                                <li><a href="#Statistics" style="color: #BB86FC; text-decoration: none;">[ Combat Ratings ]</a></li>
+                                <li><a href="#TribalPerks" style="color: #BB86FC; text-decoration: none;">[ Tribal Perks & Limits ]</a></li>
+                                <!--<li><a href="#tab-DF" style="color: #BB86FC; text-decoration: none;">[ Sing-Sing Fruit ]</a>
+                                    <ul style="list-style: none; padding-left: 15px; font-size: 0.9em;">
+                                        <li><a href="#DF-Documentation" style="color: #FFFFFF55; text-decoration: none;">↳ Devil Fruit Documentation</a></li>
+                                        <li><a href="#DF-Progression" style="color: #FFFFFF55; text-decoration: none;">↳ Tier Progression</a></li>
+                                        <li><a href="#DF-Techniques-Header" style="color: #FFFFFF55; text-decoration: none;">↳ Sing-Sing Fruit Techniques</a></li>
+                                    </ul>
+                                </li>-->
+                            </ul>
+
+                            <div style="color: #FFFFFF55; font-size: 0.75em; text-transform: uppercase; margin-top: 15px; border-bottom: 1px solid #2C2C2C; padding-bottom: 2px; margin-bottom: 5px;">III. Media</div>
+                            <ul style="font-size: 0.85em; color: #BB86FC; line-height: 1.8; padding-left: 5px; margin: 0; list-style: none;">
+                                <li><a href="#tab-Songs" style="color: #BB86FC; text-decoration: none;">[ Songs (Repertoire) ]</a>
+                                    <ul style="list-style: none; padding-left: 15px; font-size: 0.9em;">
+                                        <li><a href="#S1GL" style="color: #FFFFFF55; text-decoration: none;">↳ Track 01: Giant's Lullaby</a></li>
+                                        <li><a href="#S2SU" style="color: #FFFFFF55; text-decoration: none;">↳ Track 02: The Serpent's Unbending</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+
+                <details id="Demographics" open><summary>[ Demographics ]</summary><div id="bio-demographics-text"></div></details>
+                <details id="PhysicalDetails" open><summary>[ Physical Details ]</summary><div id="bio-physical-text"></div></details>
+
+                <details id="Relationships" open>
+                    <summary>[ Relationships ]</summary>
+                    <p><strong>Grandparents:</strong> ??? | Age: ??? | Bounty: 𝕭??? | Relation: Grandmother/Grandfather | Status: Deceased | Race: Mink</p>
+                    <p><strong>Parents:</strong> ??? | Age: ??? | Bounty: 𝕭??? | Relation: Mother/Father | Status: Deceased | Race: Mink</p>
+                    <!--<p><strong>Sibling(s):</strong> <a href="aestellaR.html">ᛖᛊᛏᛖᛚᚨ ᛞᛖᚠᚨ ᚠᚢᚲᚨᚺᚨᚱᚨ</a> | Age: 20 | Bounty: 𝕭0 | Relation: Adopted-Sister | Status: Alive | Race: Lunarian</p>
+                    <p><strong>Known Family Member(s):</strong> Masao Fukuhara | Age: 78 (at Death) | Bounty: 𝕭0 | Relation: Adopted-Father | Status: Dead | Race: Snow-Bunny Mink</p>-->
+                </details>
+
+                <details id="PersonalDetails" open>
+                    <summary>[ Personal Details ]</summary>
+                    <div class="discord-header"># Personality</div>
+                    <p>Pepper, at her core, is an honest person in a world that so often rejects the truth. Due to a lifetime of ridicule and rejection by her peers, Pepper is profoundly lonely, having never known what it feels like to be trusted by those around her. Despite everything, the young mink has remained steadfast in her belief and only grows more determined to reveal the truths of this world. Hoping that one day, if she pushes hard enough, someone somewhere somehow will believe her… maybe then the whole world will.</p>
+                    <div class="discord-header"># Appearance</div>
+                    <p>???</p>
+                    <p><strong>Aspiration(s):</strong> To convince the world they can see the future.</p>
+                    <p><strong>Likes:</strong> ??? | <strong>Dislikes:</strong> ???</p>
+                    <p><strong>Goal:</strong></p>
+                    <ul>
+                        <li>Learn the truth of the Void Century.</li>
+                        <li>Find a group that accepts and belives in her.</li>
+                        <li>Shine a light on forgotten or ignored truths.</li>
+                    </ul>
+                </details>
+
+                <div id="dynamic-affiliation-inject"></div>
+
+                <details id="Backstory" open>
+                    <summary>[ Backstory ]</summary>
+                    <div style="background: #1A1A1A; border: 1px solid #2C2C2C; padding: 25px; border-radius: 4px; margin-bottom: 20px;">
+                        
+                        <h1 style="font-family: 'Special Elite', monospace; color: var(--accent-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-top: 0; text-transform: uppercase;">
+                            𝐂𝐇𝐑𝐎𝐍𝐈𝐂𝐋𝐄𝐒 𝐎𝐅 𝐓𝐇𝐄 SOOTHSAYER
+                        </h1>
+
+                        <div style="margin-bottom: 30px;">
+                            <h2 style="font-family: 'Special Elite', monospace; color: #fff; text-decoration: underline; text-transform: uppercase; font-size: 1.1em; margin-bottom: 15px;">
+                                Arc I: The Boy Who Cried Wolf
+                            </h2>
+                            <div style="font-size: 0.9em; line-height: 1.8; color: #DDD; text-align: justify;">
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    Pepper was born the youngest of many children to a family of Mink on the island of Zou. From very early on in her life, it became clear that something was different about the child. For whatever reason, it was not an uncommon occurrence for Pepper to start crying moments before a loud noise rang out through the area. Though this was quite off-putting for her family, it was ultimately chalked up to a weird coincidence, even if it was a bit unsettling. Unfortunately, this ambivalence would not hold as the child grew older and the occurrences grew even stranger. Soon after Pepper learned to speak, the opinion her village held of her began to plummet rapidly.
+                                </div>
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    The first major catalyst for this was her prophetic vision of a burning town somewhere in town and an attempt to warn the owner. The young Pepper was dismissed, of course, and even scolded by her parents for daring to make a joke in such poor taste. Pepper, of course, denied it was false and insisted she had seen it was going to happen, but was simply brought home to be grounded for lying and scolded harshly, being told to tell only the truth.
+                                </div>
+                                <div style="text-indent: 50px;">
+                                    Much to everyone's surprise, except Pepper, the business soon burned down in the coming weeks. The locals in town at first thought it was a strange coincidence until the young mink decided it was a good idea to proclaim that she had warned everyone this would happen and wasn’t a liar. Though the others around her scolded her harshly and again said not to make such jokes, it was in this attempt to cast aside the accusation that she was lying that she accidentally planted seeds of contempt in the hearts of the locals.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <h2 style="font-family: 'Special Elite', monospace; color: #fff; text-decoration: underline; text-transform: uppercase; font-size: 1.1em; margin-bottom: 15px;">
+                                Arc II: The Rule of Three
+                            </h2>
+                            <div style="font-size: 0.9em; line-height: 1.8; color: #DDD; text-align: justify;">
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    Though nobody gave it serious thought at the time, the thought that young Pepper may have started the fire to try to seem like she was in the right crossed through the minds of a few. After these things died down for a time, Pepper received no further visions of the future and only kept insisting she was telling the truth the last time. The next major strike against her would occur a few years later when Pepper gained a vision of a pulley elevator that would injure a few of the locals. Again, Pepper attempted to warn those involved, and again it fell on deaf ears.
+                                </div>
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    For her troubles, Pepper was again severely reprimanded and scolded by her family. It was at this time that the eldest of her sisters began to keep a particular eye on Pepper, believing these delusions stemmed from a desire for attention. It was only a few days later when the accident occurred as predicted yet again, and suspicions fell on the young mink. Last time, she was far younger, so any suspicions about her had been dismissed quickly, but this time, she was not so lucky, as the people of the village had yet to forget the last incident.
+                                </div>
+                                <div style="text-indent: 50px;">
+                                    This time, she was outright accused of staging the accident for attention, and a few villagers demanded that she face retribution for the crime. Despite her adamant denial of wrongdoing, Pepper would have suffered severe punishment if not for the intervention of her sister, who testified that Pepper was nowhere near the pulley elevator at any time near the accident. It was due to the good graces of her sisters and the belief the tone had in her that Pepper was allowed to walk free. After this, the sister demanded that Pepper stop these attention-seeking antics and expressed her fear that next time she wouldn’t be able to protect her little sibling. She scolded Pepper harshly and demanded that in the future the young mink tell nothing but the truth. After this incident, things returned to a sense of normalcy, although the suspicion placed on Pepper never seemed quite to fade, following her around like a bad stench.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <h2 style="font-family: 'Special Elite', monospace; color: #fff; text-decoration: underline; text-transform: uppercase; font-size: 1.1em; margin-bottom: 15px;">
+                                Arc III: The Archaeologist's Oath
+                            </h2>
+                            <div style="font-size: 0.9em; line-height: 1.8; color: #DDD; text-align: justify;">
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    The family of Pepper had all but given up on her, except for her beloved eldest sister, who remained by her side through it all, even if she didn’t believe the claims of Pepper. Much like comedy, tragedies often occur in the rule of three, and it was this thief tragedy that marked the final strike against Pepper. One morning, a particularly horrifying version manifested to Pepper of her eldest sister's death that very day. In a panic, Pepper attempted to warn her sister of this fate, only to be quickly shut down again, as any patience her sister may have had years ago had long since run dry.
+                                </div>
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    Running late for work, she had Pepper swear an oath to tell nothing but the truth and went off for the day, leaving a younger sibling kicking and screaming behind. That was when the predicted fate befell her sister, and more than suspicion fell on the soothsayer as a mob of townsfolk sought to bring her to trial. By the time the mob arrived at her abode to drag her away, they would find Pepper had already fled the scene, having wisely assumed that things would go badly for her if she stayed. The mink, only in her teenage years, would be forced to flee the island of Zou and make her way to the seas below, knowing she couldn’t return home until she made the people believe her.
+                                </div>
+                                <div style="text-indent: 50px;">
+                                    The last promise she made to her sister still rings in her mind to tell nothing but the truth. In the coming years, Pepper would find herself drawn to archeology, fascinated by the prospect of uncovering the secret truths of the past long since forgotten. She dedicated herself to these studies, believing that no truth should be ignored and hoping that something she uncovers might prove her abilities. Now fully grown, Pepper finds herself sailing the seas in search of answers and the acceptance she is sorely lacking.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 40px; text-align: center; color: #555; font-size: 0.75em; font-family: 'Special Elite', monospace; letter-spacing: 2px;">
+                            --- END OF RECORDED CHRONICLE ---
+                        </div>
+                    </div>
+                </details>
+
+                <details id="Trivia" open>
+                    <summary>[ Trivia ]</summary>
+                    <p>TBD</p>
+                </details>
+
+                <details id="Gallery" open>
+                    <summary>[ Gallery ]</summary>
+                    <div class="discord-header"># Active Bounty Poster</div>
+                    <div class="poster-workspace-wrapper" style="width: 386px; margin-bottom: 30px;">
+                        <div class="export-controls" style="margin-bottom: 15px; display: flex; gap: 10px; justify-content: center;">
+                            <button onclick="exportBountyPoster('color')" class="btn-export">Export Color</button>
+                            <button onclick="exportBountyPoster('bw')" class="btn-export">Export B&W</button>
+                        </div>
+                        <div id="export-wrapper" style="width: 386px; height: 577px; overflow: hidden;">
+                            <div id="smart-poster-inject"></div>
+                        </div>
+                    </div>
+                    <div class="discord-header"># Face Claim: ???</div>
+                    <div class="gallery-grid">
+                        <!--<div class="gallery-item"><img src="images/gallery/Ninomiya-Asuka1.png" alt="Profile"><span>Profile Reference</span></div>
+                        <div class="gallery-item"><img src="images/gallery/Ninomiya-Asuka2.png" alt="Combat"><span>Combat Stance</span></div>
+                        <div class="gallery-item"><img src="images/gallery/Ninomiya-Asuka3.png" alt="Overview"><span>Detailed Overview</span></div>
+                        <div class="gallery-item"><img src="images/gallery/Ninomiya-Asuka4.png" alt="Action"><span>Dynamic Action</span></div>-->
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+    <div id="tab-Stats" class="section-content active">
+        <div class="indent">
+            <div class="content-well">
+
+                <details id="Profession" open>
+                    <summary>[ Profession ]</summary>
+                    <div id="dynamic-jobs-inject"></div>
+                </details>
+
+                <details id="FightingStyle" open>
+                    <summary>[ Fighting Style ]</summary>
+                    <div id="dynamic-fight-inject"></div>
+                </details>
+
+                <details id="Techniques" open>
+                    <summary>[ Techniques ]</summary>
+                    <div style="background: var(--accent-color); color: #fff; text-align: center; font-family: 'Special Elite'; padding: 5px; letter-spacing: 5px; font-weight: bold; margin-bottom: 2px; opacity: 0.8;">TECHNIQUES</div>
+                    
+                    <div id="tech-list-container">
+                        </div>
+                </details>
+
+                <details id="Inventory" open>
+                    <summary>[ Inventory ]</summary>
+                    <div id="dynamic-inventory-inject"></div>
+                </details>
+
+                <details id="Statistics" open>
+                    <summary>[ Combat Ratings ]</summary>
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                        <div id="radar-container" style="flex: 1; min-width: 300px; height: 400px; background: #1a1a1a; border: 1px solid #442200;"></div>
+                        
+                        <div id="stat-bars-container" style="flex: 1; min-width: 300px;">
+                            <div style="background: #1A1A1A; border: 1px solid #442200; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 20px;">
+                                <div style="font-family: 'Special Elite'; font-size: 0.9em; color: #FFFFFF55; text-transform: uppercase;">Total Power Level (DKI)</div>
+                                <div style="font-size: 3em; font-weight: bold; color: #fff; margin: 5px 0;"><span id="display-doriki">0</span> DKI</div>
+                                
+                                <div style="width: 80%; height: 6px; background: #000; margin: 10px auto; border-radius: 3px; overflow: hidden; border: 1px solid #2C2C2C;">
+                                    <div id="tier-progress-fill" style="width: 0%; height: 100%; transition: width 1.5s ease-in-out;"></div>
+                                </div>
+
+                                <div id="rank-badge" style="display: inline-block; padding: 5px 20px; background: #2C2C2C; border-radius: 20px; font-weight: bold; border: 1px solid;">RANK: <span id="display-tier">F</span></div>
+                            </div>
+
+                            <div id="dynamic-mastery-list" style="background: #1A1A1A; border: 1px solid #2C2C2C; padding: 20px; border-radius: 4px; font-family: 'Special Elite';">
+                                </div>
+                        </div>
+                    </div>
+                </details>
+
+               <div id="unified-physiology-container"></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 1. Data Definitions First -->
+    <script src="../js/database.js"></script>
+    <script src="../js/jobs.js"></script>
+    <script src="../js/fight.js"></script>
+    <script src="../js/techniques.js"></script>
+    <script src="../js/items.js"></script>
+    <script src="../js/tribe.js"></script>
+    <script src="../js/trait.js"></script>
+    
+    <!-- 2. Logic & Config Middle -->
+    <script src="../js/config.js"></script>
+    <script src="../js/bounty.js"></script> 
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/character.js"></script>
+
+    <!-- 3. Execution Engine Last (Reads the data defined above) -->
+    <script src="../js/stats.js"></script>
+</body>
+</html>

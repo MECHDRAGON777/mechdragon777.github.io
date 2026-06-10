@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokone | One Piece Kaigan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/character.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/bounty.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+
+</head>
+<body data-char-id="kokone_fukuhara">
+    <div class="navbar">
+        <div class="nav-buttons">
+            <button id="btn-Bio" class="active" onclick="showTab('Bio')">Biography</button>
+            <button id="btn-Stats" onclick="showTab('Stats')">Stats</button>
+            <button id="btn-Songs" onclick="showTab('Songs')">Songs</button>
+            <button id="btn-DF" onclick="showTab('DF')">Devil Fruit</button>
+        </div>
+    </div>
+    
+    <div id="tab-Bio" class="section-content active">
+        <aside class="infobox">
+            <div class="header" id="bio-name">Kokone Fukuhara</div>
+            <div class="portrait-cell"><a id="bio-portrait-link" href="#"><img id="bio-portrait" src="" alt="Portrait"></a></div>
+            
+            <div class="subheader">Biographical Information</div>
+            <table id="bio-demographics-table"></table>
+
+            <div class="subheader">Personal Description</div>
+            <table id="bio-physical-table"></table>
+
+            <div class="subheader">Professional Status</div>
+            <table id="bio-professional-table"></table>
+        </aside>
+
+        <div class="indent">
+            <div class="content-well" style="margin-right: 340px;">
+                <details id="Overview" open>
+                    <summary>[ Kokone Fukuhara ]</summary>
+                    <p><strong>Kokone Fukuhara (福原心音)</strong> is an original character in <strong>One Piece: Kaigan</strong>. She is a <strong>Human</strong>, and is An <strong>Entertainer and COOK</strong>. She aspires to bring hope for the ones who're lost!</p>
+                    
+                    <div id="contents-box" style="background:#1A1A1A; border:1px solid #2C2C2C; width: 280px; padding: 15px; margin: 20px 0; font-family: 'Special Elite', monospace;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2C2C2C; margin-bottom: 10px; padding-bottom: 5px;">
+                            <span style="font-weight:bold; color: #fff; letter-spacing: 1px;">Contents</span>
+                            <span id="contents-toggle" style="color: #BB86FC; cursor: pointer; font-size: 0.8em;">[ hide ]</span>
+                        </div>
+
+                        <div id="contents-list">
+                            <div style="color: #FFFFFF55; font-size: 0.75em; text-transform: uppercase; margin-top: 5px; border-bottom: 1px solid #2C2C2C; padding-bottom: 2px; margin-bottom: 5px;">I. Biography</div>
+                            <ul style="font-size: 0.85em; color: #BB86FC; line-height: 1.8; padding-left: 5px; margin: 0; list-style: none;">
+                                <li><a href="#Demographics" style="color: #BB86FC; text-decoration: none;">[ Demographics ]</a></li>
+                                <li><a href="#Appearance" style="color: #BB86FC; text-decoration: none;">[ Physical Details ]</a></li>
+                                <li><a href="#Relationships" style="color: #BB86FC; text-decoration: none;">[ Relationships ]</a></li>
+                                <li><a href="#PersonalDetails" style="color: #BB86FC; text-decoration: none;">[ Personal Details ]</a></li>
+                                <li><a href="#Affiliation" style="color: #BB86FC; text-decoration: none;">[ Affiliation ]</a></li>
+                                <li><a href="#Backstory" style="color: #BB86FC; text-decoration: none;">[ Backstory ]</a></li>
+                                <li><a href="#Trivia" style="color: #BB86FC; text-decoration: none;">[ Trivia ]</a></li>
+                                <li><a href="#Gallery" style="color: #BB86FC; text-decoration: none;">[ Gallery ]</a></li>
+                            </ul>
+
+                            <div style="color: #FFFFFF55; font-size: 0.75em; text-transform: uppercase; margin-top: 15px; border-bottom: 1px solid #2C2C2C; padding-bottom: 2px; margin-bottom: 5px;">II. Combat & Stats</div>
+                            <ul style="font-size: 0.85em; color: #BB86FC; line-height: 1.8; padding-left: 5px; margin: 0; list-style: none;">
+                                <li><a href="#Profession" style="color: #BB86FC; text-decoration: none;">[ Profession ]</a></li>
+                                <li><a href="#FightingStyle" style="color: #BB86FC; text-decoration: none;">[ Fighting Style ]</a></li>
+                                <li><a href="#Techniques" style="color: #BB86FC; text-decoration: none;">[ Techniques ]</a></li>
+                                <li><a href="#Inventory" style="color: #BB86FC; text-decoration: none;">[ Inventory ]</a></li>
+                                <li><a href="#Statistics" style="color: #BB86FC; text-decoration: none;">[ Combat Ratings ]</a></li>
+                                <li><a href="#TribalPerks" style="color: #BB86FC; text-decoration: none;">[ Tribal Perks & Limits ]</a></li>
+                                <!--<li><a href="#tab-DF" style="color: #BB86FC; text-decoration: none;">[ Sing-Sing Fruit ]</a>
+                                    <ul style="list-style: none; padding-left: 15px; font-size: 0.9em;">
+                                        <li><a href="#DF-Documentation" style="color: #FFFFFF55; text-decoration: none;">↳ Devil Fruit Documentation</a></li>
+                                        <li><a href="#DF-Progression" style="color: #FFFFFF55; text-decoration: none;">↳ Tier Progression</a></li>
+                                        <li><a href="#DF-Techniques-Header" style="color: #FFFFFF55; text-decoration: none;">↳ Sing-Sing Fruit Techniques</a></li>
+                                    </ul>
+                                </li>-->
+                            </ul>
+
+                            <div style="color: #FFFFFF55; font-size: 0.75em; text-transform: uppercase; margin-top: 15px; border-bottom: 1px solid #2C2C2C; padding-bottom: 2px; margin-bottom: 5px;">III. Media</div>
+                            <ul style="font-size: 0.85em; color: #BB86FC; line-height: 1.8; padding-left: 5px; margin: 0; list-style: none;">
+                                <li><a href="#tab-Songs" style="color: #BB86FC; text-decoration: none;">[ Songs (Repertoire) ]</a>
+                                    <ul style="list-style: none; padding-left: 15px; font-size: 0.9em;">
+                                        <li><a href="#S1GL" style="color: #FFFFFF55; text-decoration: none;">↳ Track 01: Giant's Lullaby</a></li>
+                                        <li><a href="#S2SU" style="color: #FFFFFF55; text-decoration: none;">↳ Track 02: The Serpent's Unbending</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+
+                <details id="Demographics" open><summary>[ Demographics ]</summary><div id="bio-demographics-text"></div></details>
+                <details id="PhysicalDetails" open><summary>[ Physical Details ]</summary><div id="bio-physical-text"></div></details>
+
+                <details id="Relationships" open>
+                    <summary>[ Relationships ]</summary>
+                    <p><strong>Grandparents:</strong> ??? | Age: ??? | Bounty: 𝕭??? | Relation: Grandmother/Grandfather | Status: Deceased | Race: Human</p>
+                    <p><strong>Parents:</strong> ??? | Age: ??? | Bounty: 𝕭??? | Relation: Mother/Father | Status: Deceased | Race: Human</p>
+                    <p><strong>Sibling(s):</strong> <a href="aestellaR.html">ᛖᛊᛏᛖᛚᚨ ᛞᛖᚠᚨ ᚠᚢᚲᚨᚺᚨᚱᚨ</a> | Age: 20 | Bounty: 𝕭0 | Relation: Adopted-Sister | Status: Alive | Race: Lunarian</p>
+                    <p><strong>Known Family Member(s):</strong> Masao Fukuhara | Age: 78 (at Death) | Bounty: 𝕭0 | Relation: Adopted-Father | Status: Dead | Race: Snow-Bunny Mink</p>
+                </details>
+
+                <details id="PersonalDetails" open>
+                    <summary>[ Personal Details ]</summary>
+                    <div class="discord-header"># Personality</div>
+                    <p>Kokone is a <u>Kind</u> girl who hopes to bring hope to the ones who're lost. She's also very shy and can't even find the courage to sing when showing her face around people. But also <u>Determined</u> to bring joy with her songs.</p>
+                    <div class="discord-header"># Appearance</div>
+                    <p>Kokone is an average girl who stands at 5 '2 and 98 pounds. She's usually found wearing dark colored clothing, the main colors being black and blue. She hides herself in her long hair and walks around in her boots.</p>
+                    <p><strong>Aspiration(s):</strong> To bring hope to those in despair</p>
+                    <p><strong>Likes:</strong> Singing, Cooking, dancing, freedom, being kind to people | <strong>Dislikes:</strong> Slavery, world government, corrupted marines</p>
+                    <p><strong>Goal:</strong></p>
+                    <ul>
+                        <li>Become one of the best dancer and singer in the world</li>
+                        <li>Freeing everyone from despair and sadness</li>
+                        <li>Help as much people as she can</li>
+                    </ul>
+                </details>
+
+                <div id="dynamic-affiliation-inject"></div>
+
+                <details id="Backstory" open>
+                    <summary>[ Backstory ]</summary>
+                    <div style="background: #1A1A1A; border: 1px solid #2C2C2C; padding: 25px; border-radius: 4px; margin-bottom: 20px;">
+                        
+                        <h1 style="font-family: 'Special Elite', monospace; color: var(--accent-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-top: 0; text-transform: uppercase;">
+                            𝐂𝐇𝐑𝐎𝐍𝐈𝐂𝐋𝐄𝐒 𝐎𝐅 𝐓𝐇𝐄 𝐒𝐈𝐋𝐄𝐍𝐓 𝐅𝐋AME
+                        </h1>
+
+                        <div style="margin-bottom: 30px;">
+                            <h2 style="font-family: 'Special Elite', monospace; color: #fff; text-decoration: underline; text-transform: uppercase; font-size: 1.1em; margin-bottom: 15px;">
+                                Arc I: The Frozen Scarf of Drum Island
+                            </h2>
+                            <div style="font-size: 0.9em; line-height: 1.8; color: #DDD; text-align: justify;">
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    Abandoned as a mere child on the frigid wastes of Drum Island, Kokone’s only connection to her past was the name "Kokone" meticulously sewn into the fabric of her scarf. For two agonizing years, the young girl survived on little more than matches, her tattered scarf, and a desperate will to live. At four years of age, her body finally reached its limit during a brutal winter day; starved and numb, her vision blurred as a blizzard loomed on the horizon.
+                                </div>
+                                <div style="text-indent: 50px;">
+                                    Before the cold could claim her, she was lifted by a stranger. Collapsing into a warm embrace, she fainted instantly, only to wake up beside a crackling fireplace. It was here she first met ᛖᛊᛏᛖᛚᚨ, whose presence—specifically the flickering flames manifesting behind her—initially intimidated the skittish human girl. Despite the fear, this moment marked the beginning of her new life as part of the Fukuhara family.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <h2 style="font-family: 'Special Elite', monospace; color: #fff; text-decoration: underline; text-transform: uppercase; font-size: 1.1em; margin-bottom: 15px;">
+                                Arc II: The Masked Melody of Jaya
+                            </h2>
+                            <div style="font-size: 0.9em; line-height: 1.8; color: #DDD; text-align: justify;">
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    Four years passed as Kokone dedicated herself to being a supportive sister and daughter, mastering domestic skills like laundry and cooking to aid her adoptive family. At age eight, she accidentally discovered ᛖᛊᛏᛖᛚᚨ singing in private, sustaining a minor burn when the startled Lunarian's flames flared. Rather than faltering, Kokone saw the light in her sister's eyes and encouraged their father to send them to Jaya so their talents wouldn't go to waste.
+                                </div>
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    Arrival at Jaya was a harsh reality check for the young duo. Inexperienced and penniless, their early shows were mediocre and largely ignored. To cope with her stage fright and find her true voice, Kokone began wearing a mask, performing as the mysterious "Masked Kone." This persona, combined with weekly song releases, eventually catapulted the "Fukuhara Twins" into local stardom.
+                                </div>
+                                <div style="text-indent: 50px;">
+                                    After five years of carving out a reputation in Jaya's cutthroat music scene, their momentum took a sharp turn. Just as they were finding their rhythm, the Revolutionary Army arrived, identifying the sisters as individuals with the spirit and potential to aid their cause.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <h2 style="font-family: 'Special Elite', monospace; color: #fff; text-decoration: underline; text-transform: uppercase; font-size: 1.1em; margin-bottom: 15px;">
+                                Arc III: Paladin of the Revolution
+                            </h2>
+                            <div style="font-size: 0.9em; line-height: 1.8; color: #DDD; text-align: justify;">
+                                <div style="text-indent: 50px; margin-bottom: 15px;">
+                                    Within the Revolutionary Army, Kokone’s roles were twofold: she refined her culinary talents to nourish her sister and the troops, and she honed a specialized self-defense style. Focusing on immobilization and deflection rather than lethal force, she learned to use the "art of the palm" to neutralize enemies. Her time with the Army also opened her eyes to the deep-seated corruption of the World Government, turning her music into a tool for hope and truth.
+                                </div>
+                                <div style="text-indent: 50px;">
+                                    After two years of rigorous training, the sisters were dispatched to Water 7 for a final test before becoming official recruits. While ᛖᛊᛏᛖᛚᚨ scouted concert venues, Kokone managed the logistics of their residence. When her sister finally asked if she would join the fight to bring peace to the world, Kokone accepted with a smile, ready to stand by ᛖᛊᛏᛖᛚᚨ's side until the very end.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 40px; text-align: center; color: #555; font-size: 0.75em; font-family: 'Special Elite', monospace; letter-spacing: 2px;">
+                            --- END OF RECORDED CHRONICLE ---
+                        </div>
+                    </div>
+                </details>
+
+                <details id="Trivia" open>
+                    <summary>[ Trivia ]</summary>
+                    <p><strong>ᛖᛊᛏᛖᛚᚨ's Height and Weight through the ages:</strong></p>
+                    <table style="width:100%; border-collapse: collapse; font-size: 0.8em; text-align: left;">
+                        <tr style="background:#2C2C2C; color:#fff;">
+                            <th style="padding:8px;">Age</th>
+                            <th style="padding:8px;">Height(nanometers)</th>
+                            <th style="padding:8px;">Height (ft'in)</th>
+                            <th style="padding:8px;">Weight (nanograms)</th>
+                            <th style="padding:8px;">Weight (lbs)</th>
+                        </tr>
+                        <tr style="border-bottom:1px solid #2C2C2C;"><td>6</td><td>1'512'482'937 nm</td><td>4'11.5"</td><td>66'432'198'412'583 ng</td><td>146.4 lbs</td></tr>
+                        <tr style="border-bottom:1px solid #2C2C2C;"><td>8</td><td>1'883'612'237 nm</td><td>6'2.1"</td><td>112'564'321'988'483 ng</td><td>248.1 lbs</td></tr>
+                        <tr style="border-bottom:1px solid #2C2C2C;"><td>12</td><td>2'314'905'237 nm</td><td>7'7.1"</td><td>198'725'116'472'183 ng</td><td>438.1 lbs</td></tr>
+                        <tr style="border-bottom:1px solid #2C2C2C;"><td>15</td><td>2'764'218'837 nm</td><td>9'.08"</td><td>314'892'335'166'783 ng</td><td>694.2 lbs</td></tr>
+                        <tr style="border-bottom:1px solid #2C2C2C;"><td>17</td><td>3'128'471'137 nm</td><td>10'3.2"</td><td>448'612'904'755'983 ng</td><td>989.1 lbs</td></tr>
+                        <tr style="border-bottom:1px solid #2C2C2C;"><td>20</td><td>3'624'565'737 nm</td><td>11'10.7"</td><td>684'219'883'197'183 ng</td><td>1'508.4 lbs</td></tr>
+                        <tr style="border-bottom:1px solid #2C2C2C;"><td>24</td><td>4'172'394'637 nm</td><td>13'8.3"</td><td>952'441'706'311'283 ng</td><td>2'099.8 lbs</td></tr>
+                    </table>
+                </details>
+
+                <details id="Gallery" open>
+                    <summary>[ Gallery ]</summary>
+                    <div class="discord-header"># Active Bounty Poster</div>
+                    <div class="poster-workspace-wrapper" style="width: 386px; margin-bottom: 30px;">
+                        <div class="export-controls" style="margin-bottom: 15px; display: flex; gap: 10px; justify-content: center;">
+                            <button onclick="exportBountyPoster('color')" class="btn-export">Export Color</button>
+                            <button onclick="exportBountyPoster('bw')" class="btn-export">Export B&W</button>
+                        </div>
+                        <div id="export-wrapper" style="width: 386px; height: 577px; overflow: hidden;">
+                            <div id="smart-poster-inject"></div>
+                        </div>
+                    </div>
+                    <div class="discord-header"># Face Claim: Hatsune Miku</div>
+                    <div class="gallery-grid">
+                        <!--<div class="gallery-item"><img src="images/gallery/Ninomiya-Asuka1.png" alt="Profile"><span>Profile Reference</span></div>
+                        <div class="gallery-item"><img src="images/gallery/Ninomiya-Asuka2.png" alt="Combat"><span>Combat Stance</span></div>
+                        <div class="gallery-item"><img src="images/gallery/Ninomiya-Asuka3.png" alt="Overview"><span>Detailed Overview</span></div>
+                        <div class="gallery-item"><img src="images/gallery/Ninomiya-Asuka4.png" alt="Action"><span>Dynamic Action</span></div>-->
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+    <div id="tab-Stats" class="section-content active">
+        <div class="indent">
+            <div class="content-well">
+
+                <details id="Profession" open>
+                    <summary>[ Profession ]</summary>
+                    <div id="dynamic-jobs-inject"></div>
+                </details>
+
+                <details id="FightingStyle" open>
+                    <summary>[ Fighting Style ]</summary>
+                    <div id="dynamic-fight-inject"></div>
+                </details>
+
+                <details id="Techniques" open>
+                    <summary>[ Techniques ]</summary>
+                    <div style="background: var(--accent-color); color: #fff; text-align: center; font-family: 'Special Elite'; padding: 5px; letter-spacing: 5px; font-weight: bold; margin-bottom: 2px; opacity: 0.8;">TECHNIQUES</div>
+                    
+                    <div id="tech-list-container">
+                        </div>
+                </details>
+
+                <details id="Inventory" open>
+                    <summary>[ Inventory ]</summary>
+                    
+                    <div style="background: #6D9E73; color: #fff; text-align: center; font-family: 'Special Elite'; padding: 5px; letter-spacing: 5px; font-weight: bold; margin-bottom: 2px;">WEAPON</div>
+                    <table class="tech-table" style="width: 100%; border-collapse: collapse; background: #1A1A1A; border: 1px solid #2C2C2C; margin-bottom: 20px;">
+                        <tr>
+                            <td style="width: 250px; background: #000; height: 150px; border: 1px solid #2C2C2C;">
+                                <img src="images/maka-albarn-soul-eater.gif" alt="𝐏𝐄𝐍𝐀𝐍𝐂𝐄𝐑𝐒" style="width:100%; height:100%; object-fit: cover;">
+                            </td>
+                            <td style="padding: 15px; border: 1px solid #2C2C2C; vertical-align: top;">
+                                <div style="text-align: center; margin-bottom: 10px;">
+                                    <span style="font-family: 'Special Elite'; font-size: 1.2em; color: #fff;">ᛊᚻᛟᚲᚢᛉᚨᛁ (𝐏𝐄𝐍𝐀𝐍𝐂𝐄𝐑𝐒)</span><br>
+                                    <span style="color: #FFFFFF55; font-size: 0.8em;">⚓ (Graded Famous Blade) ⚓</span>
+                                </div>
+                                <p style="font-size: 0.85em; margin-bottom: 5px;"><strong>⦿ 𝐒𝐔𝐏𝐄𝐑𝐒𝐓𝐀𝐑 (Ability):</strong></p>
+                                <p style="font-size: 0.8em; margin-left: 10px; line-height: 1.4;">A Microphone Stand that houses a Scythe that can extend to a Grim/Farm Scythe or War-Scythe and retract back into the stand hilt easily.</p>
+                                <div style="text-align: center; margin-top: 10px;"><span style="color: #BB86FC; font-weight: bold;">Power: ▰▰▰▱▱ (D3) | Handling: ▰▰▱▱▱ (T2) | Durability: ▰▰▰▰▰ (D5)</span></div>
+                            </td>
+                            <td style="width: 150px; text-align: center; font-family: 'Special Elite'; color: #BB86FC; border: 1px solid #2C2C2C; border-left: 2px solid #BB86FC; padding: 10px;">
+                                <span style="color: #FFFFFF55; font-size: 0.7em;">KEN — THUR</span><br><span style="font-size: 1.1em;">ᚲᛖᚾ — ᚦᚢᚱ</span><br><span style="color: #BB86FC; font-size: 0.7em;">[ TORCH ] — [ FORCE ]</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div style="background: #6D9E73; color: #fff; text-align: center; font-family: 'Special Elite'; padding: 5px; letter-spacing: 5px; font-weight: bold; margin-bottom: 2px;">INVENTIONS</div>
+                    <table class="tech-table" style="width: 100%; border-collapse: collapse; background: #1A1A1A; border: 1px solid #2C2C2C; margin-bottom: 20px;">
+                        <tr>
+                            <td style="width: 250px; background: #000; height: 150px; border: 1px solid #2C2C2C;"><div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#555;">[ HAIRPIN VISUAL ]</div></td>
+                            <td style="padding: 15px; border: 1px solid #2C2C2C; vertical-align: top;">
+                                <div style="text-align: center; margin-bottom: 10px;">
+                                    <span style="font-family: 'Special Elite'; font-size: 1.2em; color: #fff;">Lineage Factor Limiting Hairpin</span><br>
+                                    <span style="color: #FFFFFF55; font-size: 0.8em;">⚓ (Suppression Device) ⚓</span>
+                                </div>
+                                <p style="font-size: 0.85em;">Scientific device used to regulate her innate Lunarian lineage factor and stabilize thermal output.</p>
+                            </td>
+                            <td style="width: 150px; text-align: center; font-family: 'Special Elite'; color: #BB86FC; border: 1px solid #2C2C2C; border-left: 2px solid #BB86FC; padding: 10px;">
+                                <span style="color: #FFFFFF55; font-size: 0.7em;">HAL — KIN</span><br><span style="font-size: 1.1em;">ᚻᚨᛚ — ᚲᛁᚾ</span><br><span style="color: #BB86FC; font-size: 0.7em;">[ CALM ] — [ BIND ]</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div style="background: #6D9E73; color: #fff; text-align: center; font-family: 'Special Elite'; padding: 5px; letter-spacing: 5px; font-weight: bold; margin-bottom: 2px;">ITEMS</div>
+                    <table class="tech-table" style="width: 100%; border-collapse: collapse; background: #1A1A1A; border: 1px solid #2C2C2C;">
+                        <tr>
+                            <td style="width: 250px; background: #000; height: 150px; border: 1px solid #2C2C2C;"><div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#555;">[ SNAIL VISUAL ]</div></td>
+                            <td style="padding: 15px; border: 1px solid #2C2C2C; vertical-align: top;">
+                                <div style="text-align: center; margin-bottom: 10px;">
+                                    <span style="font-family: 'Special Elite'; font-size: 1.2em; color: #fff;">Gray Transponder Snail</span><br>
+                                    <span style="color: #FFFFFF55; font-size: 0.8em;">⚓ (Secure Comms) ⚓</span>
+                                </div>
+                                <p style="font-size: 0.85em;">A covert communication device used for secure, encrypted transmissions. Often favored by spies and underground organizations.</p>
+                                <div style="text-align: center; margin-top: 10px; font-family: 'Special Elite'; color: #BB86FC;">ID: 110-419-SING</div>
+                            </td>
+                            <td style="width: 150px; text-align: center; font-family: 'Special Elite'; color: #BB86FC; border: 1px solid #2C2C2C; border-left: 2px solid #BB86FC; padding: 10px;">
+                                <span style="color: #FFFFFF55; font-size: 0.7em;">DEN — DEN</span><br><span style="font-size: 1.1em;">ᛞᛖᚾ — ᛞᛖᚾ</span><br><span style="color: #BB86FC; font-size: 0.7em;">[ CALL ] — [ LINK ]</span>
+                            </td>
+                        </tr>
+                    </table>
+                </details>
+
+                <details id="Statistics" open>
+                    <summary>[ Combat Ratings ]</summary>
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                        <div id="radar-container" style="flex: 1; min-width: 300px; height: 400px; background: #1a1a1a; border: 1px solid #442200;"></div>
+                        
+                        <div id="stat-bars-container" style="flex: 1; min-width: 300px;">
+                            <div style="background: #1A1A1A; border: 1px solid #442200; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 20px;">
+                                <div style="font-family: 'Special Elite'; font-size: 0.9em; color: #FFFFFF55; text-transform: uppercase;">Total Power Level (DKI)</div>
+                                <div style="font-size: 3em; font-weight: bold; color: #fff; margin: 5px 0;"><span id="display-doriki">0</span> DKI</div>
+                                
+                                <div style="width: 80%; height: 6px; background: #000; margin: 10px auto; border-radius: 3px; overflow: hidden; border: 1px solid #2C2C2C;">
+                                    <div id="tier-progress-fill" style="width: 0%; height: 100%; transition: width 1.5s ease-in-out;"></div>
+                                </div>
+
+                                <div id="rank-badge" style="display: inline-block; padding: 5px 20px; background: #2C2C2C; border-radius: 20px; font-weight: bold; border: 1px solid;">RANK: <span id="display-tier">F</span></div>
+                            </div>
+
+                            <div id="dynamic-mastery-list" style="background: #1A1A1A; border: 1px solid #2C2C2C; padding: 20px; border-radius: 4px; font-family: 'Special Elite';">
+                                </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details id="TribalPerks" open>
+                    <summary>[ Tribal Perks & Limits ]</summary>
+                    <div style="background: #1A1A1A; border: 1px solid #2C2C2C; padding: 20px; border-radius: 4px;">
+                        <p style="color: #BB86FC; font-weight: bold; text-transform: uppercase;">⦿ 𝐆𝐎𝐃'𝐒 𝐖𝐈𝐋𝐋 (高いスタミナ)</p>
+                        <p style="font-size: 0.9em; margin-left: 15px; border-left: 2px solid #F44336; padding-left: 10px;">
+                            <strong>Mechanic:</strong> Speed & Durability Trade-off.<br>
+                            ⊢ <span style="color: #4CAF50;">[Fortissimo] (Back-Flame ON):</span> +2x Durability / -2x Speed.<br>
+                            ⊢ <span style="color: #4CAF50;">[Accelerando] (Back-Flame OFF):</span> +2x Speed / -2x Durability.<br>
+                            <span style="color: #FFFFFF55;">[Cooldown: 1 Turn between swaps]</span>
+                        </p>
+                        <p style="color: #BB86FC; font-weight: bold; text-transform: uppercase; margin-top: 20px;">⦿ 𝐅𝐋𝐀𝐌𝐈𝐍𝐆 𝐁𝐎𝐃𝐘 (炎の体)</p>
+                        <p style="font-size: 0.9em; margin-left: 15px;">Manipulate fire generated from the body. <span style="color: #4CAF50;">[+25% Doriki to Flame-Based Techniques]</span></p>
+                        <p style="color: #BB86FC; font-weight: bold; text-transform: uppercase; margin-top: 20px;">⦿ 𝐅𝐋𝐈𝐆𝐇𝐓 (フライト)</p>
+                        <p style="font-size: 0.9em; margin-left: 15px;">Native flight via wings. <span style="color: #FFFFFF55;">[Early Game: Limited Combat Use]</span></p>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-Songs" class="section-content">
+        <div class="indent">
+            <div class="content-well">
+                <h2 class="spaced-header">ᛗᚢᛊᛁᚲᚨᛚ ᚱᛖᛈᛖᚱᛏᛟᛁᚱᛖ (Musical Repertoire)</h2>
+
+                <details id="S1GL" open>
+                    <summary>[ Track 01: Giant's Lullaby ]</summary>
+                    <div style="background: #1A1A1A; border: 1px solid #442200; padding: 0; border-radius: 4px; overflow: hidden; margin-bottom: 20px;">
+                        <div style="background: #BB86FC22; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #442200;">
+                            <span style="font-family: 'Special Elite'; color: #BB86FC; font-weight: bold; letter-spacing: 2px;">♪ ᚷᛁᚨᚾᛏᛊ ᛚᚢᛚᚨᛒᛁ ♪</span>
+                            <button onclick="copySong('S1GL')" style="background: #2C2C2C; border: 1px solid #BB86FC; color: #BB86FC; font-family: 'Special Elite'; font-size: 0.7em; padding: 5px 10px; cursor: pointer; border-radius: 3px;">S1GL [ COPY ]</button>
+                        </div>
+
+                        <div id="lyrics-S1GL" style="padding: 20px; font-family: 'Special Elite', monospace; font-size: 0.85em; line-height: 1.8; color: #fff;">
+                            <span style="color: #BB86FC;">[Verse]</span><br>
+                            ♪ ᚦᛖ ᛊᛁ ᚨ ᚹᛟᛚ ᚦᛖ ᛊᛁ ᚨ ᛒᛚᛖᛞ ♪ <span style="color: #FFFFFF55;">(The si a wol the si a bled)</span> They see a wall, they see a blade<br>
+                            ♪ ᚨ ᚹᛖᛈᛟᚾ ᚦᚨᛏ ᚦᛖ ᚷᛟᛞᛊ ᚺᚨᚹ ᛗᛖᛞ ♪ <span style="color: #FFFFFF55;">(A wepon that the gods hav med)</span> A weapon that the gods have made<br>
+                            ♪ ᛒᚢᛏ ᛁ ᛊᛁ ᚨ ᛊᛗᛁᛚ ᛁᚾ ᚦᛖ ᛗᛟᚱᚾᛁᛜ ᛚᛁᛏ ♪ <span style="color: #FFFFFF55;">(But i si a smil in the morniŋ lit)</span> But I see a smile in the morning light<br>
+                            ♪ ᚨ ᛊᛟᛚ ᚦᚨᛏ ᛊᛁᚾᛊ ᛊᛟ ᚲᛟᛗ ᚨᚾᛞ ᛒᚱᛁᛏ ♪ <span style="color: #FFFFFF55;">(A sol that sins so kom and brit)</span> A soul that shines so calm and bright<br><br>
+                            
+                            <span style="color: #BB86FC;">[Chorus]</span><br>
+                            ♪ ᚷᛖᚾᛏᛖᛚ ᚺᚨᚾᛞᛊ ᚨᚾᛞ ᚨ ᚺᚨᚱᛏ ᛊᛟ ᛞᛖᛈ ♪ <span style="color: #FFFFFF55;">(Gentel hands and a hart so dep)</span> Gentle hands and a heart so deep<br>
+                            ♪ ᚨ ᛈᚱᛟᛗᛁᛊ ᚦᚨᛏ ᚦᛖ ᛗᚢᚾᛏᛁᚾᛊ ᚲᛖᛈ ♪ <span style="color: #FFFFFF55;">(A promis that the muntins kep)</span> A promise that the mountains keep<br>
+                            ♪ ᛃᚢ ᚨᚱ ᛗᛟᚱ ᚦᛖᚾ ᚦᛖ ᚦᚢᚾᛞᛖᚱ ♪ <span style="color: #FFFFFF55;">(Ju ar mor then the thunder)</span> You’re more than the thunder, more than the gale<br>
+                            ♪ ᚨ ᚺᛖᚱᛟᛊ ᚺᚨᚱᛏ ᛒᛖᚾᛖᚦ ᚦᛖ ᛊᚲᛖᛚ ♪ <span style="color: #FFFFFF55;">(A heros hart beneth the skel)</span> A hero’s heart beneath the scale<br><br>
+
+                            <span style="color: #BB86FC;">[Verse 2]</span><br>
+                            ♪ ᛞᛟᚾᛏ ᛚᚢᚲ ᚹᛁᚦ ᚠᛖᚱ ᛞᛟᚾᛏ ᛚᚢᚲ ᚨᚹᛖ ♪ <span style="color: #FFFFFF55;">(Dont luk with fer dont luk awe)</span> Don't look with fear, don't look away<br>
+                            ♪ ᚹᛁ ᚹᛟᛚᚲ ᚦᛖ ᛊᛟᛚ ᛁᚾ ᚨ ᛞᛁᚠᛖᚱᛖᚾᛏ ᚹᛖ ♪ <span style="color: #FFFFFF55;">(Wi wolk the sol in a diferent we)</span> We walk the soil in a different way<br>
+                            ♪ ᚹᛖᚦᛖᚱ ᛊᛗᛟᛚ ᚨᛊ ᚨ ᛚᛖᚠ ᛟᚱ ᛏᛟᛚ ᚨᛊ ᚨ ᛈᛁᚾ ♪ <span style="color: #FFFFFF55;">(Wether smol as a lef or tol as a pin)</span> Whether small as a leaf or tall as a pine<br>
+                            ♪ ᚦᛖ ᛊᛈᚨᚱᚲ ᛟᚠ ᛚᛁᚠ ᛁᛊ ᛃᚢᚱᛊ ᚨᚾᛞ ᛗᛁᚾ ♪ <span style="color: #FFFFFF55;">(The spark of lif is jurs and min)</span> The spark of life is yours and mine
+                        </div>
+                    </div>
+                </details>
+
+                <details id="S2SU">
+                    <summary>[ Track 02: The Serpent's Unbending ]</summary>
+                    <div style="background: #1A1A1A; border: 1px solid #442200; padding: 0; border-radius: 4px; overflow: hidden;">
+                        <div style="background: #BB86FC22; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #442200;">
+                            <span style="font-family: 'Special Elite'; color: #BB86FC; font-weight: bold; letter-spacing: 2px;">♪ ᚦᛖ ᛊᛖᚱᛈᛖᚾᛏᛊ ᚢᚾᛒᛖᚾᛞᛁᛜ ♪</span>
+                            <button onclick="copySong('S2SU')" style="background: #2C2C2C; border: 1px solid #BB86FC; color: #BB86FC; font-family: 'Special Elite'; font-size: 0.7em; padding: 5px 10px; cursor: pointer; border-radius: 3px;">S2SU [ COPY ]</button>
+                        </div>
+
+                        <div id="lyrics-S2SU" style="padding: 20px; font-family: 'Special Elite', monospace; font-size: 0.85em; line-height: 1.8; color: #fff;">
+                            <span style="color: #BB86FC;">[Verse 1]</span><br>
+                            ♪ ᛁᚾ ᚨ ᛚᚨᚾᛞ ᚹᚺᛖᚱ ᚦᛖ ᛒᛟᚱᛞᛖᚱ ᚹᚨᛊ ᚨ ᛊᚨᚲᚱᛖᛞ ᛚᛁᚾ ♪ <span style="color: #FFFFFF55;">(in a land wher þe border was a sakred lin)</span> In a land where the border was a sacred line,<br>
+                            ♪ ᚨ ᛚᛖᚷᚨᛊ ᛟᚠ ᛈᛟᚹᛖᚱ, ᚨᚾᛊᛁᛖᚾᛏ ᚨᚾᛞ ᛞᛁᚠᛁᚾ ♪ <span style="color: #FFFFFF55;">(a legas of power, ansient and difin)</span> A legacy of power, ancient and divine.<br>
+                            ♪ ᚦᛖ ᛊᛖᚱᛈᛖᚾᛏ ᛁᛊ ᚦᛖ ᛊᚺᚨᛞᛟᚹ, ᚦᛖ ᚷᚢᚨᚱᛞᛁᚨᚾ, ᚦᛖ ᚠᚱᛁᛖᚾᛞ ♪ <span style="color: #FFFFFF55;">(þe serpent is þe shadow, þe guardian, þe friend)</span> The serpent is the shadow, the guardian, the friend,<br>
+                            ♪ ᚨ ᛊᛟᚢᛚ-ᛒᛟᚢᚾᛞ ᚹᛖᚨᛈᛟᚾ ᚦᚨᛏ ᚹᛁᛚ ᚾᛖᚠᛖᚱ ᛒᛖᚾᛞ ♪ <span style="color: #FFFFFF55;">(a soul-bound weapon þat wil nefer bend)</span> A soul-bound weapon that will never bend.<br>
+                            ♪ ᛒᚢᛏ ᚦᛖ ᚨᛁᚱ ᛁᛊ ᚲᚨᛜᛁᛜ ♪ <span style="color: #FFFFFF55;">(but þe air is kaŋiŋ, þe horizon turns grai)</span> But the air is changing, the horizon turns gray,<br>
+                            ♪ ᚨᛊ ᚦᛖ ᚹᛟᛚᚲ ᛟᚢᛏᛊᛁᛞ ᛒᛖᚷᛁᚾᛊ ᛏᛟ ᛈᚢᛊᚺ ᛁᛏᛊ ᚹᚨᛁ! ♪ <span style="color: #FFFFFF55;">(as þe world outsid begins to push its wai!)</span> As the world outside begins to push its way!<br><br>
+
+                            <span style="color: #BB86FC;">[Chorus]</span><br>
+                            ♪ ᛞᚱᚨᚹ ᚦᛖ ᛒᛟᚹ! ᚠᛁᛚ ᚦᛖ ᛊᚲᚨᛚ ᚨᚷᚨᛁᚾᛏᛏ ᚦᛖ ᛊᚲᛁᚾ ♪ <span style="color: #FFFFFF55;">(draw þe bow! fil þe skal against þe skin)</span> Draw the bow! Feel the scale against the skin,<br>
+                            ♪ ᚨ ᛞᛖᚠᚨᛛᛏᚨᛏᛁᛜ ᛈᛟᚹᛖᚱ ᚦᚨᛏ ᚹᛖ ᚺᛟᛚᛞ ᚹᛁᚦᛁᚾ! ♪ <span style="color: #FFFFFF55;">(a defastatiŋ power þat we hold wiþin!)</span> A devastating power that we hold within!<br>
+                            ♪ ᛒᚢᛏ ᚹᚺᚨᛏ ᛁᛊ ᚦᛖ ᛊᛏᚱᛖᛜᚦ ᛟᚠ ᚨ ᛗᚨᛊᛏᛖᚱ’ᛊ ᛟᚹᚺ ᚺᚨᚾᛞ ♪ <span style="color: #FFFFFF55;">(but what is þe streŋþ of a master’s own hand)</span> But what is the strength of a master’s own hand,<br>
+                            ♪ ᚹᚺᛖᚾ ᚨ ᚠᛟᚱᛇᚾ ᛒᛟᛏ ᛁᛊ ᛏᚱᛖᚨᛞᛁᛜ ᛟᚾ ᚦᛖ ᛊᚨᚾᛞ? ♪ <span style="color: #FFFFFF55;">(when a forïgn bot is treadiŋ on þe sand?)</span> When a foreign boot is treading on the sand?<br>
+                            ♪ ᛟᚺ, ᛞᚨᚢᛏᛖᚱᛊ ᛟᚠ ᚦᛖ ᛊᚾᚨᚲ ♪ <span style="color: #FFFFFF55;">(oh, dauters of þe snak, do iou fil þe pul?)</span> Oh, daughters of the snake, do you feel the pull?<br>
+                            ♪ ᛟᚠ ᚨ ᛚᛖᚷᚨᛊ ᛒᚱᛟᚲᛖᚾ, ᚨᚾᛊᛁᛖᚾᛏ ᚨᚾᛞ ᚨ ᚲᚨᚷ ᚺᚨᛚᚠ-ᚠᚢᛚ! ♪ <span style="color: #FFFFFF55;">(of a legas broken, and a kag half-ful!)</span> Of a legacy broken, and a cage half-full!<br><br>
+
+                            <span style="color: #BB86FC;">[Verse 2]</span><br>
+                            ♪ ᚨᛒᛊᛟᛚᚢᛏ ᚨᚢᚦᛟᚱᛁᛏᛁ, ᚨ ᚦᚱᛟᚾ ᛗᚨᛞ ᛟᚠ ᛈᚱᛁᛞ ♪ <span style="color: #FFFFFF55;">(absolut auþoriti, a þron mad of prid)</span> Absolute authority, a throne made of pride,<br>
+                            ♪ ᛈᚱᛟᛏᛖᚲᛏᛁᛜ ᚦᛖ ᛊᛖᚲᚱᛖᛏᛊ ♪ <span style="color: #FFFFFF55;">(protektiŋ þe sekrets þat we’r forsed to hid)</span> Protecting the secrets that we’re forced to hide.<br>
+                            ♪ ᚦᛖ "ᚠᛟᚱᛒᛁᛞᛖᚾ ᛊᛟᛁᛚ" ᛁᛊ ᚨ ᛗᛖᛗᛟᚱᛁ ᛟᛚᛞ ♪ <span style="color: #FFFFFF55;">(þe "forbiden soil" is a memori of old)</span> The "forbidden soil" is a memory of old,<br>
+                            ♪ ᚨᛊ ᚦᛖ ᛚᚨᚹᛊ ᛟᚠ ᚦᛖ ᛁᛊᛚᚨᚾᛞ ᚨᚱ ᛒᛟᚢᛏ ♪ <span style="color: #FFFFFF55;">(as þe laws of þe island ar bout and ar sold!)</span> As the laws of the island are bought and are sold!<br>
+                            ♪ ᛞᛁᛊᚷᚱᚢᚾᛏᛚᛖᛞ ᚹᚺᛁᛊᛈᛖᚱᛊ ♪ <span style="color: #FFFFFF55;">(disgruntled whispers in þe shadow of þe law)</span> Disgruntled whispers in the shadow of the law,<br>
+                            ♪ ᚨ ᚲᚢᛚᛏᚢᚱ ᛒᛇᛜ ᚲᛁᛈᛖᛞ ᛒᛁ ᚨ ᚷᛚᛟᛒᚨᛚ ᚲᛚᚨᚹ! ♪ <span style="color: #FFFFFF55;">(a kultur bïŋ kiped bi a global klaw!)</span> A culture being chipped by a global claw!<br><br>
+
+                            <span style="color: #BB86FC;">[Bridge]</span><br>
+                            ♪ ᚦᛖᛁ ᛗᚨᛞ ᚨᚾ ᛖᚲᛊᛊᛖᛈᛏᛁᛟᚾ, ᚦᛖᛁ ᛟᛈᛖᚾᛖᛞ ᚦᛖ ᚷᚨᛏ ♪ <span style="color: #FFFFFF55;">(þei mad an eksseption, þei opened þe gat)</span> They made an exception, they opened the gate,<br>
+                            ♪ ᛏᛟ ᛏᚱᚨᛞ ᚨᚹᚨᛁ ᚠᚱᛁᛞᛟᛗ ᚠᛟᚱ ᚨ ᛏᚱᛖᚨᛏᛁ’ᛊ ᚹᛇᛏ ♪ <span style="color: #FFFFFF55;">(to trad awai fridom for a treati’s wït)</span> To trade away freedom for a treaty’s weight.<br>
+                            ♪ ᛁᛟᚢ ᚹᛖᚱ ᚾᛖᚠᛖᚱ ᛗᛖᚨᚾᛏ ᛏᛟ ᛒᛖ ᚨ ᛞᛖᚨᛚ ᛟᚱ ᚨ ᛊᛁᚷᚾ ♪ <span style="color: #FFFFFF55;">(iou wer nefer meant to be a deal or a sign)</span> You were never meant to be a deal or a sign,<br>
+                            ♪ ᛃᚢᛊᛏ ᚨ ᚠᛁᚱ ᛒᚢᚱᚾᛁᛜ ᛟᚾ ᚨ ᛞᛁᛊᛏᚨᚾᛏ ᛚᛁᚾ! ♪ <span style="color: #FFFFFF55;">(just a fir burniŋ on a distant lin!)</span> Just a fire burning on a distant line!<br><br>
+
+                            <span style="color: #BB86FC;">[Outro]</span><br>
+                            ♪ ᛊᛁᛜ ᚠᛟᚱ ᚦᛖ ᚷᚢᚨᚱᛞᛁᚨᚾᛊ, ᛊᛁᛜ ᚠᛟᚱ ᚦᛖ ᛈᛖᛏᛊ ♪ <span style="color: #FFFFFF55;">(siŋ for þe guardians, siŋ for þe pets)</span> Sing for the guardians, sing for the pets,<br>
+                            ♪ ᛊᛁᛜ ᚠᛟᚱ ᚦᛖ ᛏᚱᛁᛒ ᚦᚨᛏ ᚾᛖᚠᛖᚱ ᚠᛟᚱᚷᛖᛏᛊ! ♪ <span style="color: #FFFFFF55;">(siŋ for þe trib þat nefer forgets!)</span> Sing for the tribe that never forgets!<br>
+                            ♪ ᚦᛖ ᛊᛟᛜ ᛟᚠ ᚦᛖ ᚲᚢᛃᚨ ᛁᛊ ᚨ ᛊᛟᛜ ᛟᚠ ᚦᛖ ᛒᛟᚢᚾᛞ ♪ <span style="color: #FFFFFF55;">(þe soŋ of þe kuja is a soŋ of þe bound)</span> The song of the Kuja is a song of the bound,<br>
+                            ♪ ᚹᚨᛁᛏᛁᛜ ᚠᛟᚱ ᚦᛖ ᛞᚨᛁ ᚦᛖᛁ ᚱᛖᚲᛚᚨᛁᛗ ᚦᛇᚱ ᚷᚱᛟᚢᚾᛞ! ♪ <span style="color: #FFFFFF55;">(waitiŋ for þe dai þei reklaim þïr ground!)</span> Waiting for the day they reclaim their ground!
+                        </div>
+                    </div>
+                </details>
+
+                <details id="S3PS">
+                    <summary>[ Track 03: The Price of the Surface ]</summary>
+                    <div style="background: #1A1A1A; border: 1px solid #004444; padding: 0; border-radius: 4px; overflow: hidden;">
+                        <div style="background: #80DEEA22; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #004444;">
+                            <span style="font-family: 'Special Elite'; color: #80DEEA; font-weight: bold; letter-spacing: 2px;">♪ ᚦᛖ ᛈᚱᛁᛊ ᛟᚠ ᚦᛖ ᛊᚢᚱᚠᚨᛊ ♪</span>
+                            <button onclick="copySong('S3PS')" style="background: #2C2C2C; border: 1px solid #80DEEA; color: #80DEEA; font-family: 'Special Elite'; font-size: 0.7em; padding: 5px 10px; cursor: pointer; border-radius: 3px;">S3PS [ COPY ]</button>
+                        </div>
+
+                        <div id="lyrics-S3PS" style="padding: 20px; font-family: 'Special Elite', monospace; font-size: 0.85em; line-height: 1.8; color: #fff;">
+                            <span style="color: #80DEEA;">[Verse 1]</span><br>
+                            ♪ ᛒᛖᛁᛟᚾᛞ ᚦᛖ ᛚᛁᚾ ᚹᛖᚱ ᚦᛖ ᛒᛚᚢ ᛗᛁᛏᛊ ᚦᛖ ᚨᛁᚱ ♪ <span style="color: #FFFFFF55;">(beiond þe lin wer þe blu mits þe air)</span> Beyond the line where the blue meets the air,<br>
+                            ♪ ᚨ ᛞᚱᛁᛗ ᛟᚠ ᚦᛖ ᛊᚢᚾᛚᛁᛏ ♪ <span style="color: #FFFFFF55;">(a drim of þe sunlit is a hevi snare)</span> A dream of the sunlight is a heavy snare.<br>
+                            ♪ ᚦᛖᛁ ᛊᛁ ᛟᚾᛚᛁ ᛊᚲᛖᛚᛊ ♪ <span style="color: #FFFFFF55;">(þei si onli skels, þei si onli lit)</span> They see only scales, they see only light,<br>
+                            ♪ ᚹᛁᛚ ᚦᛖ ᛊᛟᛚ ᛁᛊ ᚲᛖᛈᛏ ᚠᚱᛟᛗ ᛊᛁᛏ ♪ <span style="color: #FFFFFF55;">(wil þe sōl is kept from sit)</span> While the soul of the ocean is kept from their sight.<br><br>
+
+                            <span style="color: #80DEEA;">[Chorus]</span><br>
+                            ♪ ᛚᚢᚲ ᛈᚨᛊᛏ ᚦᛖ ᛊᛁᛗᛖᚱ ♪ <span style="color: #FFFFFF55;">(luk past þe simmer, luk past þe skin)</span> Look past the shimmer, look past the skin,<br>
+                            ♪ ᛊᛁ ᚦᛖ ᚹᚨᛊᛏ ᛟᛊᛖᚨᚾ ᛒᛁᛏᛇᚷ ᚹᛁᚦᛁᚾ! ♪ <span style="color: #FFFFFF55;">(si þe wast osean bitïᚷ wiþin!)</span> See the vast ocean that’s beating within!<br>
+                            ♪ ᚨ ᛚᛁᚠ ᛟᚾ ᚨ ᛊᛖᛚᚠ ♪ <span style="color: #FFFFFF55;">(a lif on a shelf, forsed to bi silens)</span> A life in a gallery, forced to be silence.<br>
+                            ♪ ᛟ ᛊᛁᛊᛏᛖᚱᛊ ᛟᚠ ᛊᚨᛚᛏ, ᛞᚢ ᛃᚢ ᚺᛁᚱ ᚦᛖ ᛊᛟᚢᚾᛞ ♪ <span style="color: #FFFFFF55;">(o sisters of salt, du ju hir þe sound)</span> Oh, sisters of salt, do you hear the sound?<br><br>
+
+                            <span style="color: #80DEEA;">[Verse 2]</span><br>
+                            ♪ ᚲᛁᛞᚾᚨᛈᛖᛞ ᚨᚾᛞ ᛒᚨᚱᛏᛖᚱᛞ ♪ <span style="color: #FFFFFF55;">(kidnaped and barterd bi þe rich)</span> A majority bartered, a pet for the rich,<br>
+                            ♪ ᚨ ᚦᛟᚢᛊᚨᚾᛞ ᚨᚱ ᛚᛟᚲᛏ ♪ <span style="color: #FFFFFF55;">(a þousand ar lokt behind a Nobel’s dōr!)</span> A thousand are locked behind a Noble’s door!<br>
+                            ♪ ᚠᛟᚱ ᛖᚠᚱᛁ ᚹᚢᚾ ᛊᛁᛜᛇᚷ ♪ <span style="color: #FFFFFF55;">(for efri wun siŋïᚷ a soŋ on þe shore)</span> For every one singing a song on the shore,<br>
+                            ♪ ᚨ ᚦᛟᚢᛊᚨᚾᛞ ᛗᛟᚱ ᚨᚱ ᛒᛟᚢᚾᛞ ♪ <span style="color: #FFFFFF55;">(a þousand mor ar bound)</span> A thousand more are bound!<br><br>
+
+                            <span style="color: #80DEEA;">[Outro]</span><br>
+                            ♪ ᛊᛁᛜ ᚠᛟᚱ ᚦᛖ ᛊᛁᛊᛏᛖᚱᛊ ♪ <span style="color: #FFFFFF55;">(siŋ for þe sisters, siŋ for þe glass)</span> Sing for the sisters, sing for the glass,<br>
+                            ♪ ᚦᛖ ᛊᛟᛜ ᛟᚠ ᚦᛖ ᚠᛁᛊᛗᚨᚾ ᛁᛊ ᛞᛁᛈ ♪ <span style="color: #FFFFFF55;">(þe soŋ of þe fishman is dip)</span> The song of the Fishman is deep and is wide,<br>
+                            ♪ ᚨᚹᛖᛏᛇᚷ ᚦᛖ ᛏᛁᛞ ♪ <span style="color: #FFFFFF55;">(awetïᚷ þe ultimate tid!)</span> Awaiting the turn of the ultimate tide!
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+<div id="tab-DF" class="section-content">
+    <div class="indent">
+        <div class="content-well" style="display: block; clear: both;">
+            
+            <aside class="infobox" style="float: right; margin-left: 20px; position: relative; z-index: 10;">
+                <table>
+                    <tr><th colspan="2" class="pink-row">Uta Uta no Mi</th></tr>
+                    <tr><td colspan="2" class="portrait-cell"><img src="../devil_fruits/images/sing.png" alt="Sing-Sing Fruit"></td></tr>
+                    <tr><th colspan="2" class="pink-row">Statistics</th></tr>
+                    <tr class="white-row"><td><strong style="color: #BB86FC;">Japanese Name:</strong></td><td>ウタウタの実</td></tr>
+                    <tr class="white-row"><td><strong style="color: #BB86FC;">Romanized Name:</strong></td><td>Uta Uta no Mi</td></tr>
+                    <tr class="white-row"><td><strong style="color: #BB86FC;">English Name:</strong></td><td>Sing-Sing Fruit</td></tr>
+                    <tr class="white-row"><td><strong style="color: #BB86FC;">Meaning:</strong></td><td>Song</td></tr>
+                    <tr class="white-row"><td><strong style="color: #BB86FC;">Type:</strong></td><td>Special Paramecia</td></tr>
+                    <tr class="white-row"><td><strong style="color: #BB86FC;">Current User:</strong></td><td>ᛖᛊᛏᛖᛚᚨ</td></tr>
+                </table>
+            </aside>
+
+            <h2 class="spaced-header">UTA UTA NO MI (Sing-Sing Fruit)</h2>
+
+            <details id="DF-Documentation" open>
+                <summary>[ Overview ]</summary>
+                <div style="background: #1A1A1A; border: 1px solid #442200; padding: 25px; border-radius: 4px; margin-bottom: 20px; width: auto; overflow: hidden;">
+                    <h2 style="font-family: 'Special Elite'; color: #fff; border-bottom: 2px solid #BB86FC; padding-bottom: 10px; margin-top: 0; text-align: center; text-transform: uppercase;">
+                        𝐃𝐄𝐕𝐈𝐋 𝐅𝐑𝐔𝐈𝐓 𝐎𝐕𝐄𝐑𝐕𝐈𝐄𝐖 
+                    </h2>
+                    <p style="font-size: 0.9em;"><strong style="color: #BB86FC;">Name:</strong> Uta Uta no Mi</p>
+                    <p style="font-size: 0.9em;"><strong style="color: #BB86FC;">Model Classification:</strong> Special Paramecia (Substance Generation, Environmental Manipulation)</p>
+                    <p style="font-size: 0.9em; line-height: 1.6; margin-top: 15px;"><strong>Description:</strong> A fruit that weaponizes vocal resonance, allowing the user to generate physical musical notes and "carve" a space-time dome known as the <strong>Sing-World</strong>.</p>
+                    <p style="color: #F44336; font-weight: bold; margin-top: 20px; text-transform: uppercase;">Weakness:</p>
+                    <ul style="list-style: none; padding-left: 0; font-size: 0.85em; line-height: 1.8;">
+                        <li><span style="color: #BB86FC;">⦿</span> Standard Devil Fruit weaknesses apply (Seastone/Water).</li>
+                        <li><span style="color: #BB86FC;">⦿</span> <strong style="color: #BB86FC;">Acoustic Isolation:</strong> Blocking Sound or preventing the user from singing nullifies all effects.</li>
+                        <li><span style="color: #BB86FC;">⦿</span> <strong style="color: #BB86FC;">Willpower Gap:</strong> Targets 50% stronger than the user are immune to environmental manipulation.</li>
+                        <li><span style="color: #BB86FC;">⦿</span> <strong style="color: #BB86FC;">Sensory Immunity:</strong> A Deaf target is immune to the Fruit's Environmental Manipulation abilities.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details id="DF-Progression" open>
+                <summary>[ Tier Progression ]</summary>
+                <div style="background: #1A1A1A; border: 1px solid #2C2C2C; padding: 25px; border-radius: 4px; margin-bottom: 20px; width: auto; overflow: hidden;">
+                    <h3 style="font-family: 'Special Elite'; color: #BB86FC; text-transform: uppercase; border-bottom: 1px solid #2C2C2C; padding-bottom: 10px; margin-bottom: 20px;">𝐓𝐈𝐄𝐑 𝐏𝐑𝐎𝐆𝐑𝐄𝐒𝐒𝐈𝐎𝐍</h3>
+                    
+                    <p><strong style="color: #BB86FC;">◈ Tier 1 — Property Control [F-D Rank]</strong><br>
+                    ⊢ <strong style="color: #BB86FC;">Note Potency (20%):</strong> Scales to D-Rank (1.5x). Constructs reach <strong>Iron</strong> durability.<br>
+                    ⊢ <strong style="color: #BB86FC;">Note Creation:</strong> Singing creates solid musical note constructs.<br>
+                    ⊢ <strong style="color: #BB86FC;">Drowsiness (5%):</strong> Lullabies induce sleep. (3 uses, 2 rounds each).</p>
+
+                    <p><strong style="color: #BB86FC;">◇ Tier 2 — Skilled Mastery [C Rank]</strong><br>
+                    ⊢ <strong style="color: #BB86FC;">Sing-World Manifest:</strong> Scales to C-Rank (2x).<br>
+                    ⊢ <strong style="color: #BB86FC;">Space-Time Carving:</strong> Dome manifests size of vocal range. Constructs reach <strong>Steel</strong> durability.</p>
+
+                    <p><strong style="color: #BB86FC;">◇ Tier 3 — Advanced Mastery [B Rank]</strong><br>
+                    ⊢ <strong style="color: #BB86FC;">Elemental Control:</strong> Scales to B-Rank (3x).<br>
+                    ⊢ <strong style="color: #BB86FC;">Tuning:</strong> Infuse constructs with Fire, Water, Electricity, or Snow. Constructs reach <strong>Titanium</strong> durability.</p>
+
+                    <p><strong style="color: #BB86FC;">◇ Tier 4 — Potential Awakening [A Rank]</strong><br>
+                    ⊢ <strong style="color: #BB86FC;">Lyric Manipulation:</strong> Scales to A-Rank (4x).<br>
+                    ⊢ <strong style="color: #BB86FC;">Armor Morph:</strong> World-morphing armor protects against specific damage types per song.</p>
+
+                    <p><strong style="color: #BB86FC;">◇ Tier 5 — Awakening [S Rank]</strong><br>
+                    ⊢ <strong style="color: #BB86FC;">Tot-Musica Potential:</strong> Scales to S-Rank (5x).<br>
+                    ⊢ <strong style="color: #BB86FC;">Requiem Attribute:</strong> Copy physical attributes. Infuse Sing-World objects with <strong style="color: #BB86FC;">Conqueror's Haki</strong>.</p>
+                </div>
+            </details>
+
+            <div style="clear: both;"></div>
+
+            <details id="DF-Techniques-Header" open>
+                <summary>[ Techniques ]</summary>
+                <div style="background: #6D9E73; color: #fff; text-align: center; font-family: 'Special Elite'; padding: 5px; letter-spacing: 5px; font-weight: bold; margin-bottom: 2px; margin-top: 20px;">FRUIT TECHNIQUES</div>
+                <table class="tech-table" style="width: 100%; border-collapse: collapse; background: #1A1A1A; border: 1px solid #2C2C2C;">
+                    
+                    <tr style="border-bottom: 1px solid #2C2C2C;">
+                        <td style="width: 250px; background: #000; height: 150px; border: 1px solid #2C2C2C;"><div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#555;">[ GIF ]</div></td>
+                        <td style="padding: 15px; border: 1px solid #2C2C2C; vertical-align: top;">
+                            <div style="text-align: center; margin-bottom: 10px;">
+                                <span style="font-family: 'Special Elite'; font-size: 1.2em; color: #fff;">ᚲᚹᛟᚱᛏᛖᚱ ᚱᛖᛁᚾ</span><br>
+                                <span style="color: #fff; font-weight: bold;">[ Quarter Rain ]</span><br>
+                                <span style="color: #FFFFFF55; font-size: 0.8em;">⚓ (Offensive) ⚓</span>
+                            </div>
+                            <p style="font-size: 0.85em;">Causes a needle rain using quarter note senbon. Denser singing increases rain density. <span style="color: #F44336;">(Cannot be used with Sing-World active)</span>.</p>
+                            <div style="text-align: center;"><span style="color: #BB86FC; font-weight: bold;">▰▰▱▱▱ [D] [1.5x Doriki]</span></div>
+                        </td>
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #2C2C2C;">
+                        <td style="width: 250px; background: #000; height: 150px; border: 1px solid #2C2C2C;"><div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#555;">[ GIF ]</div></td>
+                        <td style="padding: 15px; border: 1px solid #2C2C2C; vertical-align: top;">
+                            <div style="text-align: center; margin-bottom: 10px;">
+                                <span style="font-family: 'Special Elite'; font-size: 1.2em; color: #fff;">ᛚᚢᛚᚨᛒᛁ ᛟᚠ ᚦᛖ ᚺᛖᚨᚹᛖᚾᛊ</span><br>
+                                <span style="color: #fff; font-weight: bold;">[ Lullaby of the Heavens ]</span><br>
+                                <span style="color: #FFFFFF55; font-size: 0.8em;">⚓ (Support) ⚓</span>
+                            </div>
+                            <p style="font-size: 0.85em;">Puts all within unamplified voice range to sleep for a round. Leaves untrained users immobile for a duration.</p>
+                            <div style="text-align: center;"><span style="color: #BB86FC; font-weight: bold;">▰▰▰▱▱ [C] [2x Doriki]</span></div>
+                        </td>
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #2C2C2C;">
+                        <td style="width: 250px; background: #000; height: 150px; border: 1px solid #2C2C2C;"><div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#555;">[ GIF ]</div></td>
+                        <td style="padding: 15px; border: 1px solid #2C2C2C; vertical-align: top;">
+                            <div style="text-align: center; margin-bottom: 10px;">
+                                <span style="font-family: 'Special Elite'; font-size: 1.2em; color: #fff;">ᚱᛁᚦᛗᛁᚲ ᛊᚺᛟᚲ</span><br>
+                                <span style="color: #fff; font-weight: bold;">[ Rhythmic Shock ]</span><br>
+                                <span style="color: #FFFFFF55; font-size: 0.8em;">⚓ (Offensive) ⚓</span>
+                            </div>
+                            <p style="font-size: 0.85em;">Summons sticky lightning measures (3x user height). Shocks targets magnetically until pitch is matched or 2 seconds pass.</p>
+                            <div style="text-align: center;"><span style="color: #BB86FC; font-weight: bold;">▰▰▰▰▱ [B] [3x Mastery]</span></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 250px; background: #000; height: 150px; border: 1px solid #2C2C2C;"><div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#555;">[ GIF ]</div></td>
+                        <td style="padding: 15px; border: 1px solid #2C2C2C; vertical-align: top;">
+                            <div style="text-align: center; margin-bottom: 10px;">
+                                <span style="font-family: 'Special Elite'; font-size: 1.2em; color: #fff;">ᛊᚲᛖᚹᛖᚱ ᛒᚨᚱᚨᚷᛖ</span><br>
+                                <span style="color: #fff; font-weight: bold;">[ Sing-World Morph: Skewer ]</span><br>
+                                <span style="color: #FFFFFF55; font-size: 0.8em;">🔱 (Ultimate) 🔱</span>
+                            </div>
+                            <p style="font-size: 0.85em;">While inside the Sing-World, the user morphs reality into a quick Gatling-style barrage of note constructs to skewer targets.</p>
+                            <div style="text-align: center;"><span style="color: #BB86FC; font-weight: bold;">▰▰▰▰▰ [A] [4x Doriki]</span></div>
+                        </td>
+                    </tr>
+                </table>
+            </details>
+
+            <div style="margin-top: 30px; border-top: 1px solid #2C2C2C; padding-top: 10px; font-size: 0.8em; color: #FFFFFF55; font-family: 'Special Elite'; text-align: right;">
+                EATEN BY <span style="color: #BB86FC;">@Æstella</span> | Made by: <span style="color: #BB86FC;">@MECHDRAGON777</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <!-- 1. Data Definitions First -->
+    <script src="../js/database.js"></script>
+    <script src="../js/jobs.js"></script>
+    <script src="../js/fight.js"></script>
+    <script src="../js/techniques.js"></script>
+    <script src="../js/items.js"></script>
+    <script src="../js/tribe.js"></script>
+    <script src="../js/trait.js"></script>
+    
+    <!-- 2. Logic & Config Middle -->
+    <script src="../js/config.js"></script>
+    <script src="../js/bounty.js"></script> 
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/character.js"></script>
+
+    <!-- 3. Execution Engine Last (Reads the data defined above) -->
+    <script src="../js/stats.js"></script>
+</body>
+</html>

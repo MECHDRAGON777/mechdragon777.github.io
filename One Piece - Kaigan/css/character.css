@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Scheherazade+New:wght@400;700&display=swap');
+
+/* --- KAIGAN OS: CHARACTER CORE STYLES v1.6 (Sidebar Fixed) --- */
+
+:root {
+    --accent-color: #BB86FC; /* Default Fallback overwritten dynamically by config/stats */
+}
+
+/* 1. STRUCTURAL TIMELINE LAYER */
+body { 
+    background-color: #121212; 
+    color: #FFFFFF83; 
+    font-family: sans-serif; 
+    line-height: 1.6; 
+    padding: 40px;
+    box-sizing: border-box;
+    display: block;
+    overflow-x: hidden;
+    
+    /* Clears King Saggy's sidebar width cleanly on desktop viewports */
+    margin: 0 0 0 350px; 
+    width: calc(100% - 350px);
+    transition: margin-left 0.4s, width 0.4s;
+}
+
+/* 2. BASELINE TYPOGRAPHY & LINKS */
+a { 
+    color: var(--accent-color); 
+    text-decoration: underline; 
+}
+
+.discord-header { 
+    font-family: 'Special Elite', monospace; 
+    font-size: 2em; 
+    color: var(--accent-color); 
+    border-bottom: 1px solid #2C2C2C; 
+    margin: 20px 0 10px 0; 
+    padding-bottom: 5px; 
+}
+
+/* 3. CORE CONTENT ACCORDIONS & DROPDOWNS */
+.indent { 
+    padding-left: 48px; 
+    border-left: 1px solid #2C2C2C; 
+    margin-left: 15px; 
+    position: relative; 
+}
+
+.section-content { 
+    display: none; 
+    padding-top: 20px; 
+}
+
+.section-content.active { 
+    display: block; 
+}
+
+details { 
+    margin-bottom: 10px; 
+    border-bottom: 1px solid #2C2C2C; 
+}
+
+summary { 
+    font-family: 'Special Elite', system-ui; 
+    padding: 10px 0; 
+    letter-spacing: 2px; 
+    text-align: left; 
+    color: #FFFFFF83; 
+    text-transform: uppercase; 
+    font-size: 1.5em; 
+    cursor: pointer; 
+    list-style: none; 
+    outline: none; 
+}
+
+summary:hover { 
+    color: var(--accent-color); 
+}
+
+details[open] summary { 
+    border-bottom: 2px solid var(--accent-color); 
+    margin-bottom: 15px; 
+}
+
+/* 4. BIOGRAPHICAL INFOBOX DECK */
+aside.infobox { 
+    float: right; 
+    width: 320px; 
+    background-color: #1A1A1A; 
+    border: 1px solid #442200; 
+    margin-left: 20px; 
+    margin-bottom: 20px; 
+    position: relative; 
+    z-index: 10; 
+    font-size: 0.8em; 
+}
+
+aside.infobox .header { 
+    background: #2C2C2C; 
+    color: #FFFFFF83; 
+    text-align: center; 
+    padding: 10px; 
+    font-family: 'Special Elite'; 
+    text-transform: uppercase; 
+    border-bottom: 1px solid #442200; 
+}
+
+aside.infobox .subheader { 
+    background: #121212; 
+    color: #FFFFFF55; 
+    text-align: center; 
+    padding: 3px; 
+    font-size: 0.8em; 
+    text-transform: uppercase; 
+    border-top: 1px solid #442200; 
+    border-bottom: 1px solid #442200; 
+}
+
+aside.infobox table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    table-layout: fixed; 
+}
+
+aside.infobox td { 
+    padding: 6px; 
+    border-bottom: 1px solid #2C2C2C; 
+    vertical-align: top; 
+}
+
+aside.infobox .label { 
+    color: #FFFFFF55; 
+    font-weight: bold; 
+    width: 45%; 
+}
+
+aside.infobox .data { 
+    color: #FFFFFF83; 
+    text-align: right; 
+    word-wrap: break-word; 
+}
+
+aside.infobox .portrait-cell { 
+    padding: 0 !important; 
+    line-height: 0; 
+    background: #000; 
+}
+
+aside.infobox .portrait-cell img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* 5. NAVIGATION NAVBAR MATRIX */
+.navbar { 
+    background-color: #1A1A1A; 
+    border: 1px solid #442200; 
+    padding: 10px; 
+    margin-top: 10px; 
+    text-align: center; 
+}
+
+.nav-buttons { 
+    display: flex; 
+    width: 100%; 
+    margin-top: 10px; 
+    gap: 2px; 
+}
+
+.nav-buttons button { 
+    flex: 1; 
+    padding: 10px; 
+    cursor: pointer; 
+    border: 1px solid #442200; 
+    background: #121212; 
+    color: #fff; 
+    font-weight: bold; 
+    font-size: 0.8em; 
+}
+
+.nav-buttons button.active { 
+    background: #2C2C2C; 
+    color: var(--accent-color); 
+    border-bottom: 2px solid var(--accent-color); 
+    text-decoration: none !important; 
+}
+
+/* 6. DYNAMIC OVERLAYS & PROGRESS TRACKERS */
+.bounty-bar-bg { 
+    width: 100%; 
+    height: 12px; 
+    background: #1a1a1a; 
+    border-radius: 6px; 
+    margin-top: 5px; 
+    overflow: hidden; 
+    border: 1px solid #2C2C2C; 
+}
+
+.bounty-bar-fill { 
+    height: 100%; 
+    background: var(--accent-color); 
+    transition: 1s; 
+}
+
+/* 7. VISUAL MEDIA GALLERY GRIDS */
+.gallery-grid {
+    display: grid;
+    /* Increase the 280px value below to make the cards larger before they wrap to a new row */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.gallery-item { 
+    flex: 1; 
+    min-width: 150px; 
+    border: 1px solid #442200; 
+    padding: 5px; 
+    background: #1A1A1A; 
+    text-align: center; 
+}
+
+.gallery-item img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-bottom: 1px solid #442200; 
+    margin-bottom: 5px; 
+}
+
+.gallery-item span { 
+    font-size: 0.75em; 
+    font-family: 'Special Elite'; 
+    color: #FFFFFF83; 
+}
+
+/* 8. COMBAT RATINGS DYNAMIC LAYOUT */
+#mastery-haki-wrapper { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    width: 100%; 
+}
+
+.mastery-column { 
+    flex: 1; 
+    min-width: 280px; 
+}
+
+.haki-column { 
+    flex: 1; 
+    min-width: 280px; 
+    border-left: 1px solid #333; 
+    padding-left: 20px; 
+}
+
+/* 9. RESPONSIVE BREAKPOINT SWITCHBOARD */
+@media screen and (max-width: 800px) { 
+    body { 
+        margin-left: 0; 
+        width: 100%;
+        padding: 20px; 
+    } 
+    .indent { 
+        padding-left: 20px; 
+        margin-left: 5px; 
+    } 
+    aside.infobox { 
+        float: none; 
+        width: 100%; 
+        margin: 0 0 20px 0; 
+    } 
+    .haki-column { 
+        border-left: none; 
+        padding-left: 0; 
+        border-top: 1px solid #333; 
+        padding-top: 20px; 
+    } 
+}
+
+/* NAME AREA: Fixed at 35px left for horizontal balance */
+.poster-name-text {
+    position: absolute;
+    top: 414px; 
+    left: 35px; 
+    width: 311px; 
+    height: 56px;
+    display: flex;
+    align-items: center;
+    /*text-transform: uppercase;*/
+    font-weight: 700; 
+    color: #3e2723;
+    mix-blend-mode: multiply;
+    opacity: 0.95;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.poster-name-text span {
+    display: inline-block;
+    transform: scaleY(2.2); 
+    transform-origin: center;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+/* BOUNTY AREA: Vertical scale reduced to 1.55 for a tighter fit */
+.poster-reward-text {
+    position: absolute;
+    top: 474px; 
+    left: 42px;
+    width: 295px;
+    height: 32px; 
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 38px; 
+    color: #3e2723;
+    mix-blend-mode: multiply;
+    opacity: 0.95;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.poster-reward-text span {
+    display: inline-block;
+    /* Reduced from 1.8 to 1.55 to shrink the vertical height slightly */
+    transform: scaleY(1.55);
+    transform-origin: center;
+}
+
+/* --- BOUNTY POSTER INK COLOR CORRECTION --- */
+.poster-name-text, 
+.poster-name-text span,
+.poster-reward-text, 
+.poster-reward-text span {
+    color: #3e2723 !important;
+}

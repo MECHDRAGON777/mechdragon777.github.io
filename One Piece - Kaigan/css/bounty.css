@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Scheherazade+New:wght@400;700&display=swap');
+
+/* --- KAIGAN BOUNTY SYSTEM v3.9: THE FINAL PRECISION --- */
+
+.bounty-poster-container {
+    width: 386px; 
+    height: 577px;
+    background-size: 100% 100%;
+    position: relative;
+    font-family: 'Scheherazade New', 'EB Garamond', serif;
+    color: #3e2723; 
+    overflow: hidden;
+    z-index: 1;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+.poster-portrait {
+    position: absolute;
+    top: 127px; 
+    left: 39px;
+    width: 314px;
+    height: 238px;
+    background-size: cover; 
+    background-position: center;
+    filter: sepia(0.2) contrast(1.1);
+    z-index: -1; 
+}
+
+/* NAME AREA: Fixed at 35px left for horizontal balance */
+.poster-name-text {
+    position: absolute;
+    top: 414px; 
+    left: 35px; 
+    width: 311px; 
+    height: 56px;
+    display: flex;
+    align-items: center;
+    /*text-transform: uppercase;*/
+    font-weight: 700; 
+    color: #3e2723;
+    mix-blend-mode: multiply;
+    opacity: 0.95;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.poster-name-text span {
+    display: inline-block;
+    transform: scaleY(2.2); 
+    transform-origin: center;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+/* BOUNTY AREA: Vertical scale reduced to 1.55 for a tighter fit */
+.poster-reward-text {
+    position: absolute;
+    top: 474px; 
+    left: 42px;
+    width: 295px;
+    height: 32px; 
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 38px; 
+    color: #3e2723;
+    mix-blend-mode: multiply;
+    opacity: 0.95;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.poster-reward-text span {
+    display: inline-block;
+    /* Reduced from 1.8 to 1.55 to shrink the vertical height slightly */
+    transform: scaleY(1.55);
+    transform-origin: center;
+}
+
+.belly-symbol-img {
+    width: 28px !important; 
+    height: 38px !important;
+    object-fit: contain;
+    margin-right: 5px;
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#export-wrapper {
+    width: 386px;
+    height: 577px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}

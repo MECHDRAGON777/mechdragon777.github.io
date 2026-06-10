@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mellow Pirates | One Piece Kaigan</title>
+    <style>
+        /* PAGE BASE */
+        body { background-color: #121212; background-attachment: fixed; background-size: cover; color: #FFFFFF33; margin-left: 15vw; margin-right: 15vw; font-family: sans-serif; }
+        .indent { padding-left: 48px; border-left: 1px solid #2C2C2C; margin-left: 15px; }
+
+        /* CHARACTER SHEET ROW STYLES */
+        .white-row { background-color: #1F1F1F; color: #FFFFFF33; }
+        .pink-row { background-color: #2C2C2C; color: #FFFFFF83; }
+
+        /* WIKI MODULES: INFOBOX & GALLERY */
+        .wiki-header-container { display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; margin-bottom: 40px; }
+        aside.infobox { flex: 1; min-width: 280px; background-color: #1A1A1A; border: 1px solid #442200; }
+        .infobox-img-container { background: #000; text-align: center; padding: 20px; }
+
+        /* MEMBER GRID */
+        .member-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2px; background-color: #442200; border: 2px solid #442200; margin-top: 20px; width: 100%; }
+        .member-card { background-color: #121212; text-align: center; text-decoration: none; display: flex; flex-direction: column; border-bottom: 3px solid transparent; transition: 0.3s; }
+        .member-card:hover { filter: brightness(1.2); }
+        .member-portrait { aspect-ratio: 1 / 1; width: 100%; height: auto; background: radial-gradient(#ccc, #444); overflow: hidden; }
+        .member-portrait img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* TABLE & DIVIDER STYLES */
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+        hr { border: none; height: 2px; background-color: #2C2C2C; }
+        h1 { color: #FFFFFF83; margin-top: 25px; }
+
+        /* WIKI POPUPS (Bounty & Doriki) */
+        .wiki-wrapper { position: relative; cursor: help; display: inline-block; border-bottom: 1px dotted #BB86FC; }
+        .wiki-popup { display: none; position: absolute; bottom: 125%; left: 50%; transform: translateX(-50%); background-color: #ffffc5; color: #000; border: 1px solid #aaa; padding: 10px; width: 220px; z-index: 100; box-shadow: 3px 3px 5px rgba(0,0,0,0.5); font-size: 0.85em; text-align: left; }
+        .wiki-popup::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #ffffc5 transparent transparent transparent; }
+        .wiki-wrapper:hover .wiki-popup { display: block; }
+        
+        /* MINI DORIKI HOVER (Mouse Follow) */
+        .d-popup { position: absolute; background: #ffffc5; color: #000; border: 1px solid #aaa; padding: 5px 8px; font-size: 0.75em; z-index: 3000; pointer-events: none; box-shadow: 2px 2px 4px rgba(0,0,0,0.4); display: none; white-space: nowrap; }
+
+        /* PROGRESS BAR CONTAINER */
+        .containerH { width: 100%; height: 12px; border-radius: 5px; background-color: #2C2C2C; position: relative; overflow: hidden; }
+    </style>
+</head>
+<body>
+    <hr>
+    <div style="position: relative; width: 100%; height: 250px; overflow: hidden; background-color: #000;">
+        <img src="../general_images/background.gif" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center;">
+            <img src="../general_images/logo.png" style="max-height: 200px; width: auto;">
+        </div>
+    </div>
+    <hr>
+
+    <div class="indent">
+        <div class="wiki-header-container">
+            <div style="flex: 3; min-width: 320px;">
+                <h1>[ Overview ]</h1>
+                <p>The <strong>Mellow Pirates</strong> are an emerging force in the New World, led by <strong>Captain Alva</strong>.</p>
+
+                <div style="background-color: #1F1F1F; border: 1px solid #2C2C2C; width: fit-content; padding: 15px; margin: 20px 0;">
+                    <div style="color: #FFFFFF83; border-bottom: 1px solid #2C2C2C; font-weight: bold; margin-bottom: 10px; text-align: center;">Contents</div>
+                    <ol style="margin: 0; padding-left: 25px; line-height: 2;">
+                        <li><a href="#Members" style="color:#BB86FC;">Main Crew</a></li>
+                        <li><a href="#Bounties" style="color:#BB86FC;">Bounty Distribution</a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <aside class="infobox">
+                <div class="pink-row" style="text-align: center; padding: 10px; font-weight: bold;">MELLOW PIRATES</div>
+                <div class="infobox-img-container"><img src="../general_images/logo.png" style="max-width: 100%;"></div>
+                <div class="pink-row" style="text-align: center; font-size: 0.85em; padding: 5px;">STATISTICS</div>
+                <table>
+                    <tr class="white-row"><td style="padding:10px; font-weight:bold;">Captain:</td><td style="padding:10px;">Alva</td></tr>
+                    
+                    <tr class="white-row">
+                        <td style="padding:10px; font-weight:bold;">Total Bounty:</td>
+                        <td style="padding:10px;">
+                            <div class="wiki-wrapper">
+                                <span id="total-bounty-val">฿0</span>
+                                <div class="wiki-popup" id="bounty-list">
+                                    <div style="font-weight:bold; border-bottom:1px solid #ccc; margin-bottom:5px; color:#000;">Bounty Breakdown</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="white-row">
+                        <td style="padding:10px; font-weight:bold;">Avg. Power:</td>
+                        <td style="padding:10px;">
+                            <div class="wiki-wrapper">
+                                <span id="avg-doriki-val">0</span> DKI
+                                <div class="wiki-popup" id="doriki-list">
+                                    <div style="font-weight:bold; border-bottom:1px solid #ccc; margin-bottom:5px; color:#000;">Power Breakdown</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </aside>
+        </div>
+
+        <h1 id="Members">[ Main Crew ]</h1>
+        <div class="member-grid">
+            <a href="../characters/alva.html" class="member-card"><div class="member-portrait"><img src="mellow_pirates/Alva.webp"></div><div class="pink-row" style="padding: 5px;">Alva</div></a>
+            <a href="../characters/aestella.html" class="member-card"><div class="member-portrait"><img src="mellow_pirates/stella.png"></div><div class="pink-row" style="padding: 5px;">ᛖᛊᛏᛖᛚᚨ</div></a>
+            <a href="../characters/kokone.html" class="member-card"><div class="member-portrait"><img src="mellow_pirates/kokone.png"></div><div class="pink-row" style="padding: 5px;">Kokone</div></a>
+            <a href="../characters/akira.html" class="member-card"><div class="member-portrait"><img src="mellow_pirates/akira.png"></div><div class="pink-row" style="padding: 5px;">Akira</div></a>
+            <a href="../characters/zetsushi.html" class="member-card"><div class="member-portrait"><img src="mellow_pirates/zetsushi.png"></div><div class="pink-row" style="padding: 5px;">Zetsushi</div></a>
+            <a href="../characters/tigress.html" class="member-card"><div class="member-portrait"><img src="mellow_pirates/tigress.png"></div><div class="pink-row" style="padding: 5px;">Tigress</div></a>
+            <a href="../characters/rexiama.html" class="member-card"><div class="member-portrait"><img src="mellow_pirates/rexiama.png"></div><div class="pink-row" style="padding: 5px;">Rexiama</div></a>
+        </div>
+
+        <h1 id="Bounties">[ Crew Bounty Distribution ]</h1>
+        <div id="bounty-share-bar" class="containerH" style="display: flex; margin-top: 15px; border: 1px solid #442200;"></div>
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+            /* 1. DATA */
+            const MAX_DORIKI = 5000000;
+            const crewData = [
+                { short: "Alva", full: "Alva", bounty: 0, doriki: 1100, hex: "#FFB6C1" },
+                { short: "Kokone", full: "Kokone Fukuhara", bounty: 0, doriki: 1270, hex: "#0eeadf" },
+                { short: "Akira", full: "Akira", bounty: 0, doriki: 950, hex: "#df1919" },
+                { short: "Zetsushi", full: "Zetsushi Sin", bounty: 0, doriki: 950, hex: "#537235" },
+                { short: "Tigress", full: "Tigress", bounty: 0, doriki: 1000, hex: "#355E3B" },
+                { short: "ᛖᛊᛏᛖᛚᚨ", full: "ᛖᛊᛏᛖᛚᚨ ᛞᛖᚠᚨ ᚠᚢᚲᚨᚺᚨᚱᚨ", bounty: 0, doriki: 1500, hex: "#BB86FC" },
+                { short: "Rexiama", full: "Rexiama Ragnameil", bounty: 129000000, doriki: 1500, hex: "#463234" }
+            ];
+
+            /* 2. LOGIC */
+            function getTierData(d) { const tiers = [ { t: "F1", min: 0, max: 10 }, { t: "F2", min: 11, max: 20 }, { t: "F3", min: 21, max: 30 }, { t: "F4", min: 31, max: 40 }, { t: "F5", min: 41, max: 50 }, { t: "D1", min: 51, max: 100 }, { t: "D2", min: 101, max: 200 }, { t: "D3", min: 201, max: 300 }, { t: "D4", min: 301, max: 400 }, { t: "D5", min: 401, max: 500 }, { t: "C1", min: 501, max: 1000 }, { t: "C2", min: 1001, max: 2000 }, { t: "C3", min: 2001, max: 3000 }, { t: "C4", min: 3001, max: 4000 }, { t: "C5", min: 4001, max: 5000 } ]; let c = tiers.find(r => d >= r.min && d <= r.max) || { t: "B1", min: 5001, max: 10000 }; return { label: c.t, percent: ((d - c.min) / (c.max - c.min)) * 100, next: c.max }; }
+            const totalBounty = crewData.reduce((sum, m) => sum + m.bounty, 0);
+            const avgDoriki = Math.floor(crewData.reduce((sum, m) => sum + m.doriki, 0) / crewData.length);
+            
+            document.getElementById("total-bounty-val").innerText = `฿${totalBounty.toLocaleString()}`;
+            document.getElementById("avg-doriki-val").innerText = `${avgDoriki.toLocaleString()}`;
+
+            /* 3. INJECTION */
+            const dPopup = document.createElement("div"); dPopup.className = "d-popup"; document.body.appendChild(dPopup);
+            crewData.forEach(member => {
+                // Bounty Popup List
+                const bItem = document.createElement("div"); bItem.style.cssText = "color:#000; padding:2px 0;"; bItem.innerHTML = `<span style="color:${member.hex}; font-weight:bold;">${member.full}</span> - ฿${member.bounty.toLocaleString()}`; document.getElementById("bounty-list").appendChild(bItem);
+                
+                // Doriki Popup List
+                const dItem = document.createElement("div"); dItem.style.cssText = "color:#000; padding:2px 0;"; dItem.innerHTML = `<span style="color:${member.hex}; font-weight:bold;">${member.full}</span> - ${member.doriki.toLocaleString()} DKI`; document.getElementById("doriki-list").appendChild(dItem);
+
+                // Share Bar
+                const segment = document.createElement("div"); segment.style.cssText = `background-color:${member.hex}; width:${totalBounty > 0 ? (member.bounty/totalBounty)*100 : (100/crewData.length)}%; height:100%; border-right:1px solid #121212;`; segment.title = `${member.full}`; document.getElementById("bounty-share-bar").appendChild(segment);
+                
+                // Card Updates
+                document.querySelectorAll('.member-card').forEach(card => {
+                    if (card.innerText.trim().includes(member.short)) {
+                        card.style.borderBottom = `3px solid ${member.hex}`;
+                        const tData = getTierData(member.doriki); const nameLabel = card.querySelector('.pink-row'); if (nameLabel) nameLabel.innerHTML = `${member.short} <span style="font-size:0.75em; color:${member.hex};">[${tData.label}]</span>`;
+                        const portrait = card.querySelector('.member-portrait'); if (portrait) { 
+                            const dCont = document.createElement("div"); dCont.style.cssText = "height:6px; background:#1a1a1a; cursor:crosshair;"; 
+                            const dFill = document.createElement("div"); dFill.style.cssText = `height:100%; background-color:${member.hex}; width:${tData.percent}%;`; 
+                            dCont.onmousemove = (e) => { dPopup.style.display = "block"; dPopup.style.left = e.pageX + 10 + "px"; dPopup.style.top = e.pageY + 10 + "px"; dPopup.innerHTML = `<strong>${member.full}</strong><br>DKI: ${member.doriki.toLocaleString()}<br>Tier: ${tData.label}`; };
+                            dCont.onmouseleave = () => { dPopup.style.display = "none"; };
+                            dCont.appendChild(dFill); portrait.after(dCont);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
