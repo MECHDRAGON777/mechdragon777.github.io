@@ -1,14 +1,25 @@
-/* --- KAIGAN GLOBAL CONFIGURATION v1.6 --- */
-
-// --- CENTRALIZED KAIGAN ENGINE CONFIGURATION ---
+/* --- CENTRALIZED KAIGAN ENGINE CONFIGURATION --- */
 const path = window.location.pathname;
 
-// Detect if the currently loading HTML page is executing from any of your Level 1 subfolders
-const isSubFolder = path.includes('/characters/') || 
-                    path.includes('/crews/') || 
-                    path.includes('/templates/');
+// Split the URL path into clean directory chunks, removing empty slashes
+const pathSegments = path.split('/').filter(Boolean);
 
-// Universal step-back modifier: either jump up one folder level or stay local
+// Find the segment representing the file name itself (the very last item)
+const currentFileName = pathSegments[pathSegments.length - 1] || "";
+
+// Find the direct parent folder name that houses this file (the second-to-last item)
+const parentFolder = pathSegments.length > 1 ? pathSegments[pathSegments.length - 2] : "";
+
+// Define our strict Level 1 subdirectories
+const knownSubfolders = ["characters", "crews", "templates"];
+
+// It is ONLY a subfolder page if its direct parent is one of our three target directories, 
+// AND the file isn't one of our root core database indexes sitting elsewhere.
+const isSubFolder = knownSubfolders.includes(parentFolder.toLowerCase()) && 
+                    !currentFileName.includes("Kaigan Database.html") &&
+                    !currentFileName.includes("df_encyclopedia.html");
+
+// Strict ceiling rule: Exactly one jump back if inside a subfolder, otherwise stay local!
 const root = isSubFolder ? "../" : "./";
 
 const paths = {
@@ -32,6 +43,9 @@ const paths = {
     posters: `${root}bounty_posters/`,
     posterBase: `${root}bounty_posters/base.png`
 };
+
+// Console logger sanity check to confirm mapping inside your browser development tools
+console.log(`[Kaigan Paths Engine] Parent: "${parentFolder}" | File: "${currentFileName}" | Root Prefix resolves to: "${paths.rootPathPrefix}"`);
 
 // Console logger sanity check to confirm mapping in your browser development tools
 console.log(`[Kaigan Paths Engine] Environment: ${isSubFolder ? 'Subfolder Layer' : 'Root Layer'} | Prefix: "${paths.rootPathPrefix}"`);
