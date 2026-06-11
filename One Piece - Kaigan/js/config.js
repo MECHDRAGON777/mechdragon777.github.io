@@ -1,32 +1,40 @@
 /* --- KAIGAN GLOBAL CONFIGURATION v1.6 --- */
 
-// 1. Root & Path Calculation
+// --- CENTRALIZED KAIGAN ENGINE CONFIGURATION ---
 const path = window.location.pathname;
-const segments = path.split('/').filter(Boolean);
 
-// Determine depth based on the folder structure from the file itself
-let depth = 0;
-if (segments.length > 0) {
-    // If the file is inside a subfolder directory (characters, devil_fruits, items)
-    if (path.includes('/characters/') || path.includes('/devil_fruits/') || path.includes('/items/') || path.includes('/previews/')) {
-        depth = 1;
-    } else if (path.includes('/bounty_posters/')) {
-        depth = 1;
-    }
-}
+// Detect if the currently loading HTML page is executing from any of your Level 1 subfolders
+const isSubFolder = path.includes('/characters/') || 
+                    path.includes('/crews/') || 
+                    path.includes('/templates/');
 
-// Enforce a maximum fallback check to ensure it never throws more than one parent jump block
-const root = depth === 1 ? "../" : "./";
+// Universal step-back modifier: either jump up one folder level or stay local
+const root = isSubFolder ? "../" : "./";
 
 const paths = {
+    isProjectRoot: !isSubFolder,
+    rootPathPrefix: root,
+    
+    // Core Root Page Layout Endpoints
     database: `${root}Kaigan Database.html`,
+    bounties: `${root}bounties.html`,
+    guides: `${root}guides.html`,
+    systemsGuide: `${root}systems_guide.html`,
+    dfEncyclopedia: `${root}df_encyclopedia.html`,
+    items: `${root}items.html`,
+    
+    // Media, Sub-Directories, & Content Data Modules
     characters: `${root}characters/`,
-    fruits: `${root}devil_fruits/`,
-    items: `${root}items/`,
+    crews: `${root}crews/`,
+    templates: `${root}templates/`,
+    fruitsData: `${root}js/df/`,
     previews: `${root}previews/`,
     posters: `${root}bounty_posters/`,
-    posterBase: `${root}bounty_posters/base.png` 
+    posterBase: `${root}bounty_posters/base.png`
 };
+
+// Console logger sanity check to confirm mapping in your browser development tools
+console.log(`[Kaigan Paths Engine] Environment: ${isSubFolder ? 'Subfolder Layer' : 'Root Layer'} | Prefix: "${paths.rootPathPrefix}"`);
 
 /**
  * SYSTEM UTILITY: Identify Active Character
@@ -85,11 +93,13 @@ function injectAffiliationData() {
         crewMembers.forEach(([key, member]) => {
             const isSelf = member.name === char.name ? `style="color: ${themeColor}; font-weight: bold;"` : '';
             const mRole = Array.isArray(member.role) ? member.role.join(', ') : (member.role || 'Member');
-            crewListHTML += `<li><a href="${key}.html" ${isSelf}>${member.name}</a> ~ ${mRole}</li>`;
+            // Fixed: Prepended paths.characters so character cross-links don't break on root-level layout files
+            crewListHTML += `<li><a href="${paths.characters}${key}.html" ${isSelf}>${member.name}</a> ~ ${mRole}</li>`;
         });
-        crewListHTML += `</ol>`;
+        crewListHTML += '</ol>';
     }
 
+    // Fixed: Swapped hardcoded "../crews/" loop fallback with paths.crews to maintain flawless routing
     container.innerHTML = `
         <details id="Affiliation" open>
             <summary style="color: ${themeColor}">[ Affiliation ]</summary>
@@ -100,7 +110,7 @@ function injectAffiliationData() {
             <p><strong>Occupation:</strong> ${occDisp}</p>
             <p><strong>Alignment:</strong> ${char.alignment || 'TBD'}</p>
             <hr style="border-color: ${themeColor}33">
-            <p><strong>${isMarine ? 'Unit:' : 'Crew Name:'}</strong> <a href="../crews/${char.crew.toLowerCase().replace(/ /g, '_')}.html" style="color: ${themeColor}">${char.crew}</a></p>
+            <p><strong>${isMarine ? 'Unit:' : 'Crew Name:'}</strong> <a href="${paths.crews}${char.crew.toLowerCase().replace(/ /g, '_')}.html" style="color: ${themeColor}">${char.crew}</a></p>
             ${crewListHTML}
         </details>
     `;
@@ -116,13 +126,11 @@ function injectMasteries() {
     if (!window.KaiganDatabase || !window.JobLibrary || !char) return;
 
     const buildBlock = (dataArray, library) => {
-        // SAFEGUARD: Only proceed if dataArray is a valid array
         if (!dataArray || !Array.isArray(dataArray) || dataArray.length === 0) return "";
         
         let finalHTML = "";
         
         dataArray.forEach((entry) => {
-            // Support both ["Name", tier] and raw strings ["Name"]
             const [name, tier] = Array.isArray(entry) ? entry : [entry, 0];
             const info = library[name];
             if (!info || !info.tiers) return;
