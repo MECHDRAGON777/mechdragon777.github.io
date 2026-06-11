@@ -279,7 +279,7 @@ window.KaiganDatabase = {
         fruit_tier: 0,
         fruit_desire: 0,
         acquisition: "N/A",
-        dki: "783",
+        dki: "933",
         haki: { armament: 0, observation: 0, conquerors: 0 },
         tsNumber: "88-333-MEOW",
         inventory: [{ id: "item_id" }]
