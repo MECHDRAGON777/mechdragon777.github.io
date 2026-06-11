@@ -599,14 +599,24 @@ window.injectBio = function() {
     const nameEl = document.getElementById('bio-name');
     if (nameEl) nameEl.innerText = char.name;
     
-    // Use a hardcoded fallback path if window.paths is missing to stop the crash
-    const posterBase = (window.paths && window.paths.posters) ? window.paths.posters : "/bounty_posters/";
-    const portraitPath = `${posterBase}${charId.split('_')[0]}.webp`;
+    // FIXED: Changed window.paths check to the true global paths object variable.
+    // Falls back gracefully to standard level-1 subfolder navigation ("../") if undefined.
+    const posterBase = (typeof paths !== "undefined" && paths.posters) ? paths.posters : "../bounty_posters/";
+    const portraitPath = `${posterBase}${charId.split('_')[0].toLowerCase()}.webp`;
     
     const portImg = document.getElementById('bio-portrait');
     const portLink = document.getElementById('bio-portrait-link');
     if (portImg) portImg.src = portraitPath;
     if (portLink) portLink.href = portraitPath;
+
+    // Optional Error Fallback: If the webp doesn't exist, draw your base poster frame asset cleanly
+    if (portImg && typeof paths !== "undefined" && paths.posterBase) {
+        portImg.onerror = function() {
+            console.warn(`[Portrait Engine] Missing custom profile image for ${charId}, dropping fallback layout framework.`);
+            portImg.src = paths.posterBase;
+            if (portLink) portLink.href = paths.posterBase;
+        };
+    }
 
     const demTable = document.getElementById('bio-demographics-table');
     if (demTable) demTable.innerHTML = row("Romanized Name", char.name) + row("Race", char.tribe || "Human");
