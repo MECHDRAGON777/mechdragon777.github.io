@@ -315,24 +315,53 @@ window.injectFightingStyle = function() {
         const info = window.FightingLibrary ? window.FightingLibrary[name] : null;
         if (!info) return;
 
+        // Color fallback selector to keep UI styles unified
+        const styleColor = info.color || "#BB86FC";
+
+        // Build out the dynamic Skills HTML list block
+        let skillsHTML = "";
+        if (info.skills && info.skills.length > 0) {
+            skillsHTML += `<h2 style="font-family: 'Special Elite'; color: #fff; text-decoration: underline; margin-top:20px;">𝐒𝐊𝐈𝐋𝐋𝐒</h2>`;
+            skillsHTML += `<ul style="list-style: none; padding-left: 0; line-height: 1.6;">`;
+            
+            info.skills.forEach(skill => {
+                if (typeof skill === 'object' && skill !== null) {
+                    // Handles formatted objects like Bladesmanship and SixPowers
+                    skillsHTML += `
+                        <li style="margin-bottom: 10px;">
+                            <strong style="color: ${styleColor};">◈ ${skill.name}:</strong> ${skill.effect || ''} 
+                            ${skill.mod ? `<span style="color: #6a6a6a; font-size: 0.9em; font-style: italic;">${skill.mod}</span>` : ''}
+                        </li>`;
+                } else if (typeof skill === 'string') {
+                    // Handles raw string arrays like Dragon Claw Fist smoothly
+                    skillsHTML += `<li style="margin-bottom: 8px; color: #fff;">◈ ${skill}</li>`;
+                }
+            });
+            skillsHTML += `</ul>`;
+        }
+
         // 2. Build the full data display
         finalHTML += `
             <div style="background: #1A1A1A; border: 1px solid #2C2C2C; padding: 25px; border-radius: 4px; margin-bottom: 20px;">
-                <h1 style="font-family: 'Special Elite'; color: #BB86FC; border-bottom: 2px solid #BB86FC; padding-bottom: 10px;">
+                <h1 style="font-family: 'Special Elite'; color: ${styleColor}; border-bottom: 2px solid ${styleColor}; padding-bottom: 10px;">
                     ⬤ ${name.toUpperCase()}
                 </h1>
                 <p style="text-align: right; font-style: italic; color: #FFFFFF55;">(${info.jp || 'N/A'})</p>
-                <div style="background: #121212; border-left: 4px solid #BB86FC; padding: 15px; margin: 20px 0;">
+                <div style="background: #121212; border-left: 4px solid ${styleColor}; padding: 15px; margin: 20px 0;">
                     <p>${info.desc || 'No description available.'}</p>
                 </div>
+                
                 <h2 style="font-family: 'Special Elite'; color: #fff; text-decoration: underline;">𝐓𝐎𝐎𝐋𝐒</h2>
                 <ul style="list-style:none; padding-left:0;">
-                    ${info.tools ? info.tools.map(t => `<li style="color:#BB86FC;">◇ ${t}</li>`).join('') : '<li>No tools listed.</li>'}
+                    ${info.tools ? info.tools.map(t => `<li style="color:${styleColor};">◇ ${t}</li>`).join('') : '<li>No tools listed.</li>'}
                 </ul>
+
+                ${skillsHTML}
+
                 <h2 style="font-family: 'Special Elite'; color: #fff; text-decoration: underline; margin-top:20px;">𝐓𝐈𝐄𝐑 𝐏𝐑𝐎𝐆𝐑𝐄𝐒𝐒𝐈𝐎𝐍</h2>
                 <div style="font-size: 0.9em; line-height: 1.8;">
                     ${info.tiers ? info.tiers.map((t, i) => `
-                        <p><strong style="color: ${i+1 <= tier ? '#BB86FC' : '#666'}">${i+1 <= tier ? '◈' : '◇'} Tier ${i+1} (${t.name}):</strong> 
+                        <p><strong style="color: ${i+1 <= tier ? styleColor : '#666'}">${i+1 <= tier ? '◈' : '◇'} Tier ${i+1} (${t.name}):</strong> 
                         <br><span style="color: #FFFFFF55; padding-left: 20px;">${t.desc || ''}</span>
                         ${t.perks ? t.perks.map(p => `<br><span style="color: #FFFFFF55; padding-left: 20px;">↳ ${p}</span>`).join('') : ''}
                         </p>
