@@ -1,0 +1,8 @@
+title = Entrusting This World to Idols (marasy piano ver.)
+artists = marasy
+
+chart_type = BMS
+
+uuid = unknownxentrustingthisworldtoidolsmarasypianover
+sort_title = entrustingthisworldtoidolsmarasypianover
+sort_id = 0

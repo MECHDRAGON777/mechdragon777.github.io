@@ -1,0 +1,2 @@
+name = Touhou Danmaku Kagura Phantasia Lost
+id = 8350

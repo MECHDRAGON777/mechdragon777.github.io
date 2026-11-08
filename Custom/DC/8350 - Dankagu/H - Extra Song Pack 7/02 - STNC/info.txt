@@ -1,0 +1,8 @@
+title = STNC
+artists = Morimori Atsushi (non-retrogradable rhythm)
+
+chart_type = BMS
+
+uuid = unknownxstnc
+sort_title = stnc
+sort_id = 2

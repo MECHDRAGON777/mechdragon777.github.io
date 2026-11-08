@@ -1,0 +1,8 @@
+title = HANIPAGANDA
+artists = Akatsuki Records
+
+chart_type = BMS
+
+uuid = unknownxhanipaganda
+sort_title = hanipaganda
+sort_id = 13
