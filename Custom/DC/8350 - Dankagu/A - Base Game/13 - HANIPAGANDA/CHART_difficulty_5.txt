@@ -1,5 +1,5 @@
 charted_by = Unknown X
-difficulty = 18
+difficulty = 15
 chart_data = 
 touch|1|3977|0
 touch|2|3977|1
